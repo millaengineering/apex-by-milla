@@ -685,6 +685,26 @@ img {
   margin-bottom: 1rem;
 }
 
+/* ---------- DNF / DNS Cards ---------- */
+.dnf-card {
+  border-color: #333333;
+  opacity: 0.75;
+}
+
+.dnf-pos {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  color: var(--muted) !important;
+  line-height: 1;
+}
+
+.dnf-reason {
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   .nav-links {
@@ -758,7 +778,7 @@ img {
       <div class="blog-round">Round 02 · Shanghai International Circuit · 23 March 2026</div>
       <h1 class="blog-title">Chinese Grand Prix 2026</h1>
       <p style="color: var(--muted); font-size: 0.95rem; margin-top: 1rem;">
-        [Add your one-line race summary here.]
+        Kimi Antonelli makes history with a maiden victory as Mercedes dominates a dramatic Shanghai Sprint weekend.
       </p>
       <div class="blog-meta">
         <span>📅 23 March 2026</span>
@@ -772,19 +792,22 @@ img {
   <!-- ===== BLOG CONTENT ===== -->
   <article class="blog-content">
 
-    <!-- ── PASTE YOUR CHINESE GP BLOG BELOW THIS LINE ── -->
+    <!-- ── CHINESE GP BLOG CONTENT ── -->
 
     <h2>Race Overview</h2>
     <p>
-      [Paste your race overview paragraph here.]
+      The 2026 Chinese Grand Prix was a weekend of historic milestones and technical heartbreak. Kimi Antonelli etched his name into the record books as F1's second-youngest race winner, bringing home a Mercedes 1-2 finish after a high-speed battle with the Ferraris. While Lewis Hamilton surged into an early lead, displaying Ferrari's dominant launch mapping under the new regulations, the pure pace of the Mercedes eventually caught up to the Ferraris as both teammates reclaimed the front positions.
+    </p>
+    <p>
+      The afternoon unravelled completely for last year's constructors' champions, McLaren. Due to critical, yet unrelated Power Unit issues, both drivers could not start the race. Max Verstappen, to add to his already frustrating season, had to retire late in the race due to a cooling system problem.
     </p>
 
     <h2>Starting Grid & Qualifying</h2>
     <p>
-      [Write about qualifying at Shanghai.]
+      Antonelli secured his first-ever Grand Prix pole position on Saturday, becoming the youngest polesitter in F1 history. Mercedes locked out the front row with Russell in P2, while the Ferraris of Hamilton and Leclerc took the second row. Qualifying further displayed the early-season struggles for Red Bull, as Max Verstappen could only manage a mere P8 on the grid ahead of his teammate Isack Hadjar.
     </p>
 
-    <!-- ── SPRINT WEEKEND SECTION ── Only included for sprint weekends like China ── -->
+    <!-- ── SPRINT WEEKEND SECTION ── -->
     <div class="sprint-box">
       <div class="sprint-header">
         <span class="sprint-badge">⚡ Sprint Weekend</span>
@@ -792,80 +815,80 @@ img {
       </div>
       <h3>Sprint Shootout</h3>
       <p>
-        [Write about the Sprint Shootout qualifying session — who set the pace, any surprises on the grid for the sprint.]
+        George Russell set the pace during Friday's Sprint Shootout, securing the first Sprint pole of the new era. The session saw a strong performance from McLaren, with Norris and Piastri qualifying well, while Kimi Antonelli had a more difficult time, lining up further back than his teammate.
       </p>
       <h3>Sprint Race Breakdown</h3>
       <p>
-        [Break down the sprint race itself — who won, key battles, and what the short format revealed technically about the cars.]
+        The short-form Sprint revealed just how effective the new Overtake Mode (+0.5MJ boost) is for enabling wheel-to-wheel racing. Lewis Hamilton managed to gain the lead at the start, but Russell utilised his Mercedes' superior aerodynamic efficiency to fight back and take the win. Further back, Antonelli's race was compromised by a 10-second penalty for a collision with Hadjar, while a late-race Safety Car for Nico Hülkenberg's stranded Audi bunched up the field for an action-packed finish.
       </p>
       <h3>Sprint Result — Top 8</h3>
       <div class="driver-grid">
         <div class="driver-card">
           <div class="driver-pos">P1</div>
-          <div class="driver-name">[Driver Name]</div>
-          <div class="driver-team">[Team]</div>
+          <div class="driver-name">George Russell</div>
+          <div class="driver-team">Mercedes</div>
         </div>
         <div class="driver-card">
           <div class="driver-pos">P2</div>
-          <div class="driver-name">[Driver Name]</div>
-          <div class="driver-team">[Team]</div>
+          <div class="driver-name">Charles Leclerc</div>
+          <div class="driver-team">Ferrari</div>
         </div>
         <div class="driver-card">
           <div class="driver-pos">P3</div>
-          <div class="driver-name">[Driver Name]</div>
-          <div class="driver-team">[Team]</div>
+          <div class="driver-name">Lewis Hamilton</div>
+          <div class="driver-team">Ferrari</div>
         </div>
         <div class="driver-card">
           <div class="driver-pos">P4</div>
-          <div class="driver-name">[Driver Name]</div>
-          <div class="driver-team">[Team]</div>
+          <div class="driver-name">Lando Norris</div>
+          <div class="driver-team">McLaren</div>
         </div>
         <div class="driver-card">
           <div class="driver-pos">P5</div>
-          <div class="driver-name">[Driver Name]</div>
-          <div class="driver-team">[Team]</div>
+          <div class="driver-name">Kimi Antonelli</div>
+          <div class="driver-team">Mercedes</div>
         </div>
         <div class="driver-card">
           <div class="driver-pos">P6</div>
-          <div class="driver-name">[Driver Name]</div>
-          <div class="driver-team">[Team]</div>
+          <div class="driver-name">Oscar Piastri</div>
+          <div class="driver-team">McLaren</div>
         </div>
         <div class="driver-card">
           <div class="driver-pos">P7</div>
-          <div class="driver-name">[Driver Name]</div>
-          <div class="driver-team">[Team]</div>
+          <div class="driver-name">Liam Lawson</div>
+          <div class="driver-team">Racing Bulls</div>
         </div>
         <div class="driver-card">
           <div class="driver-pos">P8</div>
-          <div class="driver-name">[Driver Name]</div>
-          <div class="driver-team">[Team]</div>
+          <div class="driver-name">Oliver Bearman</div>
+          <div class="driver-team">Haas</div>
         </div>
       </div>
       <h3>What the Sprint Told Us</h3>
       <p>
-        [What did the sprint race reveal that the grand prix then confirmed or contradicted? Any technical insights unique to the shorter format?]
+        The sprint confirmed that Ferrari has established a clear dominance off the line under the 2026 regulations, consistently outaccelerating rivals to take early track position. It also revealed that the new 768kg cars are significantly more precise in close battles. However, the lighter chassis remains sensitive to lock-ups and contact under heavy braking — a lesson Antonelli took into Sunday after his earlier collision.
       </p>
     </div>
     <!-- ── END SPRINT SECTION ── -->
 
     <h2>Technical Breakdown</h2>
     <p>
-      [Your engineering analysis for the Chinese GP.]
+      Shanghai provided an unforgiving assessment of Energy Recovery System (ERS) thermal management. Verstappen was running in P6 when an ERS cooling issue forced him to pull off the track with 10 laps remaining. This underlines the extreme cooling requirements of the new 50/50 power split between the internal combustion engine and the electrical hybrid system. Additionally, McLaren's failure to start both cars — a start-up issue for Norris and an electrical PU problem for Piastri — demonstrates the developmental challenges that are inevitable with such a major technical reboot.
     </p>
 
     <h3>Tyre Strategy</h3>
     <p>
-      [Tyre analysis for Shanghai.]
+      The high lateral loads of Turn 1 and the aggressive braking zones of Turn 14 put the new, narrower Pirelli tyres — reduced by 25mm at the front — to the test. Drivers had to balance energy harvesting via lift-off regeneration to reduce the risk of front-left thermal degradation. Antonelli's late-race lock-up displayed the sensitivity of the lighter car under braking, yet the Mercedes preserved enough tyre life to keep the lead ahead of the Ferraris.
     </p>
 
     <h3>Aerodynamics & Setup</h3>
     <p>
-      [Aero notes for Shanghai — a circuit with a long back straight that rewards efficient drag reduction.]
+      Shanghai's 1.2km long back straight and high-load corners highlighted the success of the simplified front wings and in-washing bargeboards. Instead of the massive aerodynamic washouts of the past, this "cleaner" air profile allowed the Ferraris and Mercedes to remain within half a second of each other even through the technical sectors. The fact that this was possible places the emphasis on mechanical grip and harvesting profiles rather than pure aero-load dominance. Drivers also had to strategically manage lift-off regeneration, which manually disables active aero elements, adding a layer of drag-management complexity to their defensive moves.
     </p>
 
     <div class="highlight-box">
       <p>
-        💡 [Key technical insight from the Chinese GP.]
+        💡 "It was an electrical problem on the power unit… different to Lando's. Just very unfortunate to both have issues." — Oscar Piastri, underlining the extreme complexity and lingering fragility of the 2026 integrated electrical systems.
       </p>
     </div>
 
@@ -873,64 +896,110 @@ img {
     <div class="driver-grid">
       <div class="driver-card">
         <div class="driver-pos">P1</div>
-        <div class="driver-name">[Driver Name]</div>
-        <div class="driver-team">[Team]</div>
+        <div class="driver-name">Kimi Antonelli</div>
+        <div class="driver-team">Mercedes</div>
       </div>
       <div class="driver-card">
         <div class="driver-pos">P2</div>
-        <div class="driver-name">[Driver Name]</div>
-        <div class="driver-team">[Team]</div>
+        <div class="driver-name">George Russell</div>
+        <div class="driver-team">Mercedes</div>
       </div>
       <div class="driver-card">
         <div class="driver-pos">P3</div>
-        <div class="driver-name">[Driver Name]</div>
-        <div class="driver-team">[Team]</div>
+        <div class="driver-name">Lewis Hamilton</div>
+        <div class="driver-team">Ferrari</div>
       </div>
       <div class="driver-card">
         <div class="driver-pos">P4</div>
-        <div class="driver-name">[Driver Name]</div>
-        <div class="driver-team">[Team]</div>
+        <div class="driver-name">Charles Leclerc</div>
+        <div class="driver-team">Ferrari</div>
       </div>
       <div class="driver-card">
         <div class="driver-pos">P5</div>
-        <div class="driver-name">[Driver Name]</div>
-        <div class="driver-team">[Team]</div>
+        <div class="driver-name">Oliver Bearman</div>
+        <div class="driver-team">Haas</div>
       </div>
       <div class="driver-card">
         <div class="driver-pos">P6</div>
-        <div class="driver-name">[Driver Name]</div>
-        <div class="driver-team">[Team]</div>
+        <div class="driver-name">Pierre Gasly</div>
+        <div class="driver-team">Alpine</div>
       </div>
       <div class="driver-card">
         <div class="driver-pos">P7</div>
-        <div class="driver-name">[Driver Name]</div>
-        <div class="driver-team">[Team]</div>
+        <div class="driver-name">Liam Lawson</div>
+        <div class="driver-team">Racing Bulls</div>
       </div>
       <div class="driver-card">
         <div class="driver-pos">P8</div>
-        <div class="driver-name">[Driver Name]</div>
-        <div class="driver-team">[Team]</div>
+        <div class="driver-name">Isack Hadjar</div>
+        <div class="driver-team">Red Bull</div>
       </div>
       <div class="driver-card">
         <div class="driver-pos">P9</div>
-        <div class="driver-name">[Driver Name]</div>
-        <div class="driver-team">[Team]</div>
+        <div class="driver-name">Carlos Sainz</div>
+        <div class="driver-team">Williams</div>
       </div>
       <div class="driver-card">
         <div class="driver-pos">P10</div>
-        <div class="driver-name">[Driver Name]</div>
-        <div class="driver-team">[Team]</div>
+        <div class="driver-name">Franco Colapinto</div>
+        <div class="driver-team">Alpine</div>
+      </div>
+    </div>
+
+    <h2>DNF / DNS</h2>
+    <div class="driver-grid">
+      <div class="driver-card dnf-card">
+        <div class="driver-pos dnf-pos">DNS</div>
+        <div class="driver-name">Lando Norris</div>
+        <div class="driver-team">McLaren</div>
+        <div class="dnf-reason">Electrical issue</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="driver-pos dnf-pos">DNS</div>
+        <div class="driver-name">Oscar Piastri</div>
+        <div class="driver-team">McLaren</div>
+        <div class="dnf-reason">Electrical issue</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="driver-pos dnf-pos">DNS</div>
+        <div class="driver-name">Gabriel Bortoleto</div>
+        <div class="driver-team">Audi</div>
+        <div class="dnf-reason">Hydraulics failure</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="driver-pos dnf-pos">DNS</div>
+        <div class="driver-name">Alexander Albon</div>
+        <div class="driver-team">Williams</div>
+        <div class="dnf-reason">Hydraulics failure</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="driver-pos dnf-pos">DNF</div>
+        <div class="driver-name">Max Verstappen</div>
+        <div class="driver-team">Red Bull</div>
+        <div class="dnf-reason">Cooling system failure</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="driver-pos dnf-pos">DNF</div>
+        <div class="driver-name">Fernando Alonso</div>
+        <div class="driver-team">Aston Martin</div>
+        <div class="dnf-reason">Vibration-related issue</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="driver-pos dnf-pos">DNF</div>
+        <div class="driver-name">Lance Stroll</div>
+        <div class="driver-team">Aston Martin</div>
+        <div class="dnf-reason">Battery failure</div>
       </div>
     </div>
 
     <h2>Key Takeaways</h2>
     <p>
-      [What did we learn from Shanghai?]
+      Shanghai proved that while Mercedes holds a pure pace advantage, the 2026 technical reset has significantly narrowed the gap to the midfield, with Haas and Alpine showing they can challenge for top-five positions. However, the reliability of these new regulations is currently the sport's biggest variable. The failure of major contenders like McLaren and Red Bull to finish the race proves that managing the electrical components and ERS cooling is just as critical as raw speed.
     </p>
 
     <h2>Looking Ahead</h2>
     <p>
-      [What does this tell us going into Suzuka?]
+      The championship heads to Suzuka for the Japanese Grand Prix. The high-speed "S" Curves will be the ultimate proving ground for the nimble 2026 chassis and the reaction speed of the active aero flaps. Red Bull and McLaren must urgently address their ERS and power unit cooling issues if they hope to challenge Mercedes' early season dominance on one of the most technically demanding tracks in the world.
     </p>
 
     <!-- ── END OF BLOG CONTENT ── -->
