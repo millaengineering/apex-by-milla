@@ -631,6 +631,60 @@ img {
   color: var(--muted);
 }
 
+/* ---------- Sprint Weekend ---------- */
+.sprint-box {
+  background: rgba(255, 180, 0, 0.05);
+  border: 1px solid rgba(255, 180, 0, 0.25);
+  border-radius: 6px;
+  padding: 1.8rem;
+  margin: 2.5rem 0;
+}
+
+.sprint-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.sprint-badge {
+  background: rgba(255, 180, 0, 0.15);
+  border: 1px solid rgba(255, 180, 0, 0.4);
+  color: #f0b400;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.sprint-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  border-bottom: 2px solid #f0b400 !important;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  margin: 0 !important;
+}
+
+.sprint-box h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.sprint-box p {
+  color: #b0b0b0;
+  font-size: 0.97rem;
+  margin-bottom: 1rem;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   .nav-links {
@@ -709,7 +763,7 @@ img {
       <div class="blog-meta">
         <span>📅 23 March 2026</span>
         <span>📍 Shanghai International Circuit</span>
-        <span>🏁 Round 2 of 24</span>
+        <span>🏁 Round 2 of 22</span>
         <span>✍️ Written by Milla</span>
       </div>
     </div>
@@ -729,6 +783,70 @@ img {
     <p>
       [Write about qualifying at Shanghai.]
     </p>
+
+    <!-- ── SPRINT WEEKEND SECTION ── Only included for sprint weekends like China ── -->
+    <div class="sprint-box">
+      <div class="sprint-header">
+        <span class="sprint-badge">⚡ Sprint Weekend</span>
+        <h2 class="sprint-title">Sprint Race</h2>
+      </div>
+      <h3>Sprint Shootout</h3>
+      <p>
+        [Write about the Sprint Shootout qualifying session — who set the pace, any surprises on the grid for the sprint.]
+      </p>
+      <h3>Sprint Race Breakdown</h3>
+      <p>
+        [Break down the sprint race itself — who won, key battles, and what the short format revealed technically about the cars.]
+      </p>
+      <h3>Sprint Result — Top 8</h3>
+      <div class="driver-grid">
+        <div class="driver-card">
+          <div class="driver-pos">P1</div>
+          <div class="driver-name">[Driver Name]</div>
+          <div class="driver-team">[Team]</div>
+        </div>
+        <div class="driver-card">
+          <div class="driver-pos">P2</div>
+          <div class="driver-name">[Driver Name]</div>
+          <div class="driver-team">[Team]</div>
+        </div>
+        <div class="driver-card">
+          <div class="driver-pos">P3</div>
+          <div class="driver-name">[Driver Name]</div>
+          <div class="driver-team">[Team]</div>
+        </div>
+        <div class="driver-card">
+          <div class="driver-pos">P4</div>
+          <div class="driver-name">[Driver Name]</div>
+          <div class="driver-team">[Team]</div>
+        </div>
+        <div class="driver-card">
+          <div class="driver-pos">P5</div>
+          <div class="driver-name">[Driver Name]</div>
+          <div class="driver-team">[Team]</div>
+        </div>
+        <div class="driver-card">
+          <div class="driver-pos">P6</div>
+          <div class="driver-name">[Driver Name]</div>
+          <div class="driver-team">[Team]</div>
+        </div>
+        <div class="driver-card">
+          <div class="driver-pos">P7</div>
+          <div class="driver-name">[Driver Name]</div>
+          <div class="driver-team">[Team]</div>
+        </div>
+        <div class="driver-card">
+          <div class="driver-pos">P8</div>
+          <div class="driver-name">[Driver Name]</div>
+          <div class="driver-team">[Team]</div>
+        </div>
+      </div>
+      <h3>What the Sprint Told Us</h3>
+      <p>
+        [What did the sprint race reveal that the grand prix then confirmed or contradicted? Any technical insights unique to the shorter format?]
+      </p>
+    </div>
+    <!-- ── END SPRINT SECTION ── -->
 
     <h2>Technical Breakdown</h2>
     <p>
