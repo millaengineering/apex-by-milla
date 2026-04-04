@@ -631,6 +631,26 @@ img {
   color: var(--muted);
 }
 
+/* ---------- DNF / DNS Cards ---------- */
+.dnf-card {
+  border-color: #333333;
+  opacity: 0.75;
+}
+
+.dnf-pos {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  color: var(--muted) !important;
+  line-height: 1;
+}
+
+.dnf-reason {
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   .nav-links {
@@ -818,6 +838,46 @@ img {
         <div class="driver-pos">P10</div>
         <div class="driver-name">Pierre Gasly</div>
         <div class="driver-team">Alpine</div>
+      </div>
+    </div>
+
+    <h2>DNF / DNS</h2>
+    <div class="driver-grid">
+      <div class="driver-card dnf-card">
+        <div class="driver-pos dnf-pos">DNS</div>
+        <div class="driver-name">Oscar Piastri</div>
+        <div class="driver-team">McLaren</div>
+        <div class="dnf-reason">Crash on reconnaissance lap</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="driver-pos dnf-pos">DNS</div>
+        <div class="driver-name">Nico Hülkenberg</div>
+        <div class="driver-team">Audi</div>
+        <div class="dnf-reason">Pre-race technical issue</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="driver-pos dnf-pos">DNF</div>
+        <div class="driver-name">Fernando Alonso</div>
+        <div class="driver-team">Aston Martin</div>
+        <div class="dnf-reason">Power unit failure</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="driver-pos dnf-pos">DNF</div>
+        <div class="driver-name">Valtteri Bottas</div>
+        <div class="driver-team">Cadillac</div>
+        <div class="dnf-reason">Mechanical failure</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="driver-pos dnf-pos">DNF</div>
+        <div class="driver-name">Isack Hadjar</div>
+        <div class="driver-team">Red Bull</div>
+        <div class="dnf-reason">Mechanical failure</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="driver-pos dnf-pos">CL</div>
+        <div class="driver-name">Lance Stroll</div>
+        <div class="driver-team">Aston Martin</div>
+        <div class="dnf-reason">Classified — severe mechanical issues (+15 laps down)</div>
       </div>
     </div>
 
