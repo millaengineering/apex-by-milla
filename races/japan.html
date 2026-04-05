@@ -631,6 +631,26 @@ img {
   color: var(--muted);
 }
 
+/* ---------- DNF / DNS Cards ---------- */
+.dnf-card {
+  border-color: #333333;
+  opacity: 0.75;
+}
+
+.dnf-pos {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  color: var(--muted) !important;
+  line-height: 1;
+}
+
+.dnf-reason {
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   .nav-links {
@@ -704,12 +724,12 @@ img {
       <div class="blog-round">Round 03 · Suzuka International Racing Course · 6 April 2026</div>
       <h1 class="blog-title">Japanese Grand Prix 2026</h1>
       <p style="color: var(--muted); font-size: 0.95rem; margin-top: 1rem;">
-        [Add your one-line race summary here.]
+        Kimi Antonelli makes history as the youngest championship leader following a perfectly executed strategy and a dominant Mercedes performance in Suzuka.
       </p>
       <div class="blog-meta">
         <span>📅 6 April 2026</span>
         <span>📍 Suzuka International Racing Course</span>
-        <span>🏁 Round 3 of 24</span>
+        <span>🏁 Round 3 of 22</span>
         <span>✍️ Written by Milla</span>
       </div>
     </div>
@@ -718,36 +738,36 @@ img {
   <!-- ===== BLOG CONTENT ===== -->
   <article class="blog-content">
 
-    <!-- ── PASTE YOUR JAPANESE GP BLOG BELOW THIS LINE ── -->
+    <!-- ── JAPANESE GP BLOG CONTENT ── -->
 
     <h2>Race Overview</h2>
     <p>
-      [Paste your race overview paragraph here.]
+      The 2026 Japanese Grand Prix was defined by a massive shift in momentum that saw Kimi Antonelli secure his second consecutive win and a climb to the top of the rankings in the championship. The race began with a poor start from both Mercedes cars, allowing McLaren's Oscar Piastri to seize an early lead into Turn 1. However, a strong 50G crash for Ollie Bearman on Lap 22 triggered a critical Safety Car period that changed the course of the entire race. Antonelli, who had yet to pit, was able to change tyres under the Safety Car and rejoin the race in P1. From there, the young Italian led the restart and managed to build a 13.7-second lead over Piastri in second place by the finish line. Behind Piastri, a battle between Charles Leclerc and George Russell for the final podium spot ultimately ended with Leclerc victorious.
     </p>
 
     <h2>Starting Grid & Qualifying</h2>
     <p>
-      [Write about qualifying at Suzuka — one of the most technically demanding qualifying laps on the calendar.]
+      Suzuka's technical layout provided one of the most interesting qualifying sessions of the season so far. Kimi Antonelli dominated in his Mercedes on Saturday, claiming pole position by nearly three-tenths over his teammate Russell. Piastri secured P3, finally getting a chance to race after his two consecutive DNS's in Australia and China. The session's biggest shock was Max Verstappen, who suffered a Q2 exit after being pipped by Racing Bulls rookie Arvid Lindblad, getting forced to start the race from P11 on the grid.
     </p>
 
     <h2>Technical Breakdown</h2>
     <p>
-      [Your engineering analysis for the Japanese GP.]
+      The high-speed nature of Suzuka placed an immense strain on the 2026 power units' energy recovery efficiency. After his poor start, Antonelli noted that he needed to investigate the battery mapping, reflecting Russell's frustrations with energy management from earlier this season. Once in clean air, Mercedes' car setup demonstrated superior energy harvesting via "super clipping": topping up the battery at full throttle on the run to Turn 130R without sacrificing the top speed required to maintain a gap over Piastri. The race also provided a grim validation of the 2026 safety regulations, as Bearman's survival of a 50G impact without any fractures is a testament to the increased roll-hoop strength (now 20g) and the structural integrity of the new 768kg chassis.
     </p>
 
     <h3>Tyre Strategy</h3>
     <p>
-      [Tyre analysis for Suzuka — how did the high-speed corners affect degradation?]
+      Suzuka was expected to be a standard one-stop race, with the entire grid, besides Valtteri Bottas, who took a gamble with the hard compound, on the medium tyres. The high-speed lateral loads of the "S" Curves led to significant thermal degradation, forcing many drivers to switch to the hard compound early. While Russell voiced his disagreements with the team's decision of an earlier pitstop, which ended up costing him time due to the unlucky Safety Car timing, Antonelli's long first stint strategy allowed him to take the "free" stop required to win the race.
     </p>
 
     <h3>Aerodynamics & Setup</h3>
     <p>
-      [Aero notes for Suzuka — a circuit that demands maximum downforce through 130R and the Esses.]
+      Teams prioritised maximum downforce to handle Suzuka's Esses and the 130R. The new, smaller 3.4m wheelbase of the 2026 cars allowed for much more reactive handling through the technical first sector. Drivers frequently used lift-off regeneration through the technical corners to their advantage. Although this manually disables the active aero elements to top up the battery, the simplified front wings and in-washing bargeboards provided enough mechanical stability to prevent the "wash out" effect previously seen in high-speed following.
     </p>
 
     <div class="highlight-box">
       <p>
-        💡 [Key technical insight from the Japanese GP.]
+        💡 "The pace was just incredible and it was really nice second stint. I felt very good with the car and very pleased with that." — Kimi Antonelli, highlighting how the Mercedes setup has optimised the balance between the 50/50 power split and the 2026 nimble chassis dimensions.
       </p>
     </div>
 
@@ -755,64 +775,80 @@ img {
     <div class="driver-grid">
       <div class="driver-card">
         <div class="driver-pos">P1</div>
-        <div class="driver-name">[Driver Name]</div>
-        <div class="driver-team">[Team]</div>
+        <div class="driver-name">Kimi Antonelli</div>
+        <div class="driver-team">Mercedes</div>
       </div>
       <div class="driver-card">
         <div class="driver-pos">P2</div>
-        <div class="driver-name">[Driver Name]</div>
-        <div class="driver-team">[Team]</div>
+        <div class="driver-name">Oscar Piastri</div>
+        <div class="driver-team">McLaren</div>
       </div>
       <div class="driver-card">
         <div class="driver-pos">P3</div>
-        <div class="driver-name">[Driver Name]</div>
-        <div class="driver-team">[Team]</div>
+        <div class="driver-name">Charles Leclerc</div>
+        <div class="driver-team">Ferrari</div>
       </div>
       <div class="driver-card">
         <div class="driver-pos">P4</div>
-        <div class="driver-name">[Driver Name]</div>
-        <div class="driver-team">[Team]</div>
+        <div class="driver-name">George Russell</div>
+        <div class="driver-team">Mercedes</div>
       </div>
       <div class="driver-card">
         <div class="driver-pos">P5</div>
-        <div class="driver-name">[Driver Name]</div>
-        <div class="driver-team">[Team]</div>
+        <div class="driver-name">Lando Norris</div>
+        <div class="driver-team">McLaren</div>
       </div>
       <div class="driver-card">
         <div class="driver-pos">P6</div>
-        <div class="driver-name">[Driver Name]</div>
-        <div class="driver-team">[Team]</div>
+        <div class="driver-name">Lewis Hamilton</div>
+        <div class="driver-team">Ferrari</div>
       </div>
       <div class="driver-card">
         <div class="driver-pos">P7</div>
-        <div class="driver-name">[Driver Name]</div>
-        <div class="driver-team">[Team]</div>
+        <div class="driver-name">Pierre Gasly</div>
+        <div class="driver-team">Alpine</div>
       </div>
       <div class="driver-card">
         <div class="driver-pos">P8</div>
-        <div class="driver-name">[Driver Name]</div>
-        <div class="driver-team">[Team]</div>
+        <div class="driver-name">Max Verstappen</div>
+        <div class="driver-team">Red Bull</div>
       </div>
       <div class="driver-card">
         <div class="driver-pos">P9</div>
-        <div class="driver-name">[Driver Name]</div>
-        <div class="driver-team">[Team]</div>
+        <div class="driver-name">Liam Lawson</div>
+        <div class="driver-team">Racing Bulls</div>
       </div>
       <div class="driver-card">
         <div class="driver-pos">P10</div>
-        <div class="driver-name">[Driver Name]</div>
-        <div class="driver-team">[Team]</div>
+        <div class="driver-name">Esteban Ocon</div>
+        <div class="driver-team">Haas</div>
+      </div>
+    </div>
+
+    <h2>DNF / DNS</h2>
+    <div class="driver-grid">
+      <div class="driver-card dnf-card">
+        <div class="driver-pos dnf-pos">DNF</div>
+        <div class="driver-name">Ollie Bearman</div>
+        <div class="driver-team">Haas</div>
+        <div class="dnf-reason">Heavy crash at Turn 13</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="driver-pos dnf-pos">DNF</div>
+        <div class="driver-name">Lance Stroll</div>
+        <div class="driver-team">Aston Martin</div>
+        <div class="dnf-reason">Suspected water pressure issue</div>
       </div>
     </div>
 
     <h2>Key Takeaways</h2>
     <p>
-      [What did we learn from Suzuka?]
+      Suzuka confirmed that Mercedes currently holds a significant aerodynamic and pace advantage once they clear the "dirty air" of the field, allowing Antonelli to extend his lead seemingly at will. Oscar Piastri's second-place finish marks a crucial recovery for McLaren after their double retirement in China, proving their cooling and electrical issues, as well as driver confidence, may finally be under control. Ferrari continues to be a podium threat, but their struggle to match Mercedes' late-race energy deployment suggests that they are still fine-tuning their high-speed harvesting profiles. Meanwhile, Alpine's Pierre Gasly proved that defensive battery management is a powerful skill to harness in the 2026 era, as he successfully held off a much faster Max Verstappen for nearly the entire second half of the race.
     </p>
 
     <h2>Looking Ahead</h2>
     <p>
-      [What does this result tell us heading further into the season?]
+      The paddock now enters a brief April break following the cancellation of the Bahrain and Saudi Arabian Grand Prix amid ongoing safety concerns surrounding the current political climate. In May, teams will be back and racing at the Miami Grand Prix, using this extra time to analyse the massive 50G data from Bearman's crash and to refine their battery mapping for the flat-out straights of Miami. Red Bull, in particular, will be under immense pressure to solve the qualifying issues that have left Max Verstappen fighting in the midfield for two consecutive rounds.
     </p>
 
     <!-- ── END OF BLOG CONTENT ── -->
