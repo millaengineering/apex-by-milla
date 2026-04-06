@@ -75,17 +75,10 @@ img {
 }
 
 .nav-logo {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.6rem;
-  letter-spacing: 0.08em;
-  color: var(--white);
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-}
-
-.nav-logo span {
-  color: var(--red);
+  text-decoration: none;
+  flex-shrink: 0;
 }
 
 .nav-links {
@@ -697,14 +690,16 @@ img {
   }
 }
 
-  </style>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏎️</text></svg>" />
+</style>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>🏎</text></svg>" />
 </head>
 <body>
 
   <!-- ===== NAVIGATION ===== -->
   <nav class="navbar">
-    <a href="../index.html" class="nav-logo">Apex <span>by Milla</span></a>
+    <a href="../index.html" class="nav-logo" aria-label="Apex by Milla — Home">
+          <img src="../logo.png" alt="Apex by Milla" style="height:48px;width:auto;">
+        </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="../index.html">Home</a></li>
       <li><a href="australia.html" class="race-link active">🇦🇺 Australia</a></li>
@@ -897,7 +892,10 @@ img {
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <p>© 2026 <span>Apex by Milla</span> · Formula One Technical Analysis · All Rights Reserved</p>
+    <div class="footer-logo">
+          <img src="../logo.png" alt="Apex by Milla" style="height:70px;width:auto;opacity:0.55;">
+        </div>
+    <p>© 2026 · Formula One Technical Analysis · All Rights Reserved</p>
   </footer>
 
   <script>
