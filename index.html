@@ -75,17 +75,10 @@ img {
 }
 
 .nav-logo {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.6rem;
-  letter-spacing: 0.08em;
-  color: var(--white);
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-}
-
-.nav-logo span {
-  color: var(--red);
+  text-decoration: none;
+  flex-shrink: 0;
 }
 
 .nav-links {
@@ -814,15 +807,18 @@ img {
     grid-template-columns: 1fr;
   }
 }
-  </style>
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏎️</text></svg>" />
+</style>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'><rect width='160' height='160' rx='28' fill='%230d0d0d'/><path d='M 25 10 L 25 108 Q 25 148 65 148 L 150 148 L 150 115 L 75 115 Q 58 115 58 98 L 58 10 Z' fill='%23161616'/><path d='M 25 10 L 25 108 Q 25 148 65 148 L 150 148' stroke='%23d0d0d0' stroke-width='9' fill='none' stroke-linecap='round'/><path d='M 58 10 L 58 98 Q 58 115 75 115 L 150 115' stroke='%23d0d0d0' stroke-width='9' fill='none' stroke-linecap='round'/><circle cx='62' cy='109' r='18' fill='%23E10600'/></svg>" />
 </head>
 <body>
 
   <!-- ===== NAVIGATION ===== -->
   <nav class="navbar">
-    <a href="index.html" class="nav-logo">Apex <span>by Milla</span></a>
+    <a href="index.html" class="nav-logo" aria-label="Apex by Milla — Home">
+          <img src="logo.png" alt="Apex by Milla" style="height:48px;width:auto;">
+        </a>
 
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html" class="active">Home</a></li>
@@ -854,41 +850,48 @@ img {
       <a href="#races" class="hero-cta">Read the Blogs →</a>
     </div>
     <div class="hero-right">
-      <svg viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;opacity:0.85;">
-        <!-- Outer ring -->
-        <circle cx="210" cy="210" r="190" stroke="#2a2a2a" stroke-width="1"/>
-        <!-- Red arc top -->
-        <path d="M 80 210 A 130 130 0 0 1 340 210" stroke="#E10600" stroke-width="2" stroke-linecap="round"/>
-        <!-- Speed lines left -->
-        <line x1="20" y1="180" x2="100" y2="180" stroke="#E10600" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
-        <line x1="40" y1="200" x2="95" y2="200" stroke="#E10600" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
-        <line x1="10" y1="220" x2="90" y2="220" stroke="#E10600" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
-        <!-- Speed lines right -->
-        <line x1="320" y1="180" x2="400" y2="180" stroke="#E10600" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
-        <line x1="325" y1="200" x2="380" y2="200" stroke="#E10600" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
-        <line x1="330" y1="220" x2="410" y2="220" stroke="#E10600" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
-        <!-- Inner circuit path -->
-        <path d="M 140 270 L 140 200 Q 140 160 180 150 L 240 150 Q 280 150 280 190 L 280 230 Q 280 270 240 270 Z" stroke="#333" stroke-width="1.5" fill="none"/>
-        <!-- Centre dot -->
-        <circle cx="210" cy="210" r="6" fill="#E10600"/>
-        <circle cx="210" cy="210" r="12" stroke="#E10600" stroke-width="1" opacity="0.4"/>
-        <circle cx="210" cy="210" r="20" stroke="#E10600" stroke-width="0.5" opacity="0.2"/>
-        <!-- Tick marks around ring -->
-        <line x1="210" y1="20" x2="210" y2="36" stroke="#333" stroke-width="1.5"/>
-        <line x1="210" y1="384" x2="210" y2="400" stroke="#333" stroke-width="1.5"/>
-        <line x1="20" y1="210" x2="36" y2="210" stroke="#333" stroke-width="1.5"/>
-        <line x1="384" y1="210" x2="400" y2="210" stroke="#333" stroke-width="1.5"/>
-        <!-- Corner ticks -->
-        <line x1="55" y1="55" x2="66" y2="66" stroke="#2a2a2a" stroke-width="1"/>
-        <line x1="354" y1="55" x2="365" y2="66" stroke="#2a2a2a" stroke-width="1"/>
-        <line x1="55" y1="365" x2="66" y2="354" stroke="#2a2a2a" stroke-width="1"/>
-        <line x1="354" y1="365" x2="365" y2="354" stroke="#2a2a2a" stroke-width="1"/>
-        <!-- RPM-style arc segments -->
-        <path d="M 60 300 A 165 165 0 0 1 60 120" stroke="#1a1a1a" stroke-width="8" stroke-linecap="round"/>
-        <path d="M 60 300 A 165 165 0 0 1 150 68" stroke="#E10600" stroke-width="8" stroke-linecap="round" opacity="0.6"/>
-        <!-- Label text -->
-        <text x="210" y="355" text-anchor="middle" fill="#444" font-size="9" font-family="monospace" letter-spacing="4">2026 SEASON</text>
-        <text x="210" y="80" text-anchor="middle" fill="#444" font-size="9" font-family="monospace" letter-spacing="3">APEX BY MILLA</text>
+      <svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px;height:auto;" aria-hidden="true">
+        <defs>
+          <linearGradient id="rl1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#E10600" stop-opacity="0"/>
+            <stop offset="30%" stop-color="#E10600" stop-opacity="0.45"/>
+            <stop offset="100%" stop-color="#E10600" stop-opacity="0.04"/>
+          </linearGradient>
+          <linearGradient id="rl2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+            <stop offset="40%" stop-color="#ffffff" stop-opacity="0.3"/>
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+          </linearGradient>
+          <filter id="rglow">
+            <feGaussianBlur stdDeviation="4"/>
+          </filter>
+        </defs>
+        <!-- Vanishing point: 480, 150 -->
+        <!-- Red lines above -->
+        <line x1="0" y1="0"   x2="480" y2="150" stroke="url(#rl1)" stroke-width="3"   opacity="0.7"/>
+        <line x1="0" y1="18"  x2="480" y2="150" stroke="url(#rl1)" stroke-width="2.5" opacity="0.6"/>
+        <line x1="0" y1="40"  x2="480" y2="150" stroke="url(#rl1)" stroke-width="2"   opacity="0.5"/>
+        <line x1="0" y1="65"  x2="480" y2="150" stroke="url(#rl1)" stroke-width="1.5" opacity="0.35"/>
+        <line x1="0" y1="92"  x2="480" y2="150" stroke="url(#rl1)" stroke-width="1"   opacity="0.22"/>
+        <!-- Red lines below -->
+        <line x1="0" y1="300" x2="480" y2="150" stroke="url(#rl1)" stroke-width="3"   opacity="0.7"/>
+        <line x1="0" y1="282" x2="480" y2="150" stroke="url(#rl1)" stroke-width="2.5" opacity="0.6"/>
+        <line x1="0" y1="260" x2="480" y2="150" stroke="url(#rl1)" stroke-width="2"   opacity="0.5"/>
+        <line x1="0" y1="235" x2="480" y2="150" stroke="url(#rl1)" stroke-width="1.5" opacity="0.35"/>
+        <line x1="0" y1="208" x2="480" y2="150" stroke="url(#rl1)" stroke-width="1"   opacity="0.22"/>
+        <!-- White lines mid -->
+        <line x1="0" y1="120" x2="480" y2="150" stroke="url(#rl2)" stroke-width="1.5" opacity="0.6"/>
+        <line x1="0" y1="135" x2="480" y2="150" stroke="url(#rl2)" stroke-width="2.5" opacity="0.8"/>
+        <line x1="0" y1="148" x2="480" y2="150" stroke="url(#rl2)" stroke-width="1"   opacity="0.4"/>
+        <line x1="0" y1="155" x2="480" y2="150" stroke="url(#rl2)" stroke-width="1"   opacity="0.4"/>
+        <line x1="0" y1="165" x2="480" y2="150" stroke="url(#rl2)" stroke-width="1.5" opacity="0.6"/>
+        <line x1="0" y1="180" x2="480" y2="150" stroke="url(#rl2)" stroke-width="2.5" opacity="0.8"/>
+        <!-- Soft glow on outer red lines -->
+        <line x1="0" y1="0"   x2="480" y2="150" stroke="#E10600" stroke-width="6" opacity="0.06" filter="url(#rglow)"/>
+        <line x1="0" y1="300" x2="480" y2="150" stroke="#E10600" stroke-width="6" opacity="0.06" filter="url(#rglow)"/>
+        <!-- Vanishing point -->
+        <circle cx="480" cy="150" r="2.5" fill="#ffffff" opacity="0.3"/>
+        <circle cx="480" cy="150" r="10"  fill="#ffffff" opacity="0.04" filter="url(#rglow)"/>
       </svg>
     </div>
   </section>
@@ -1065,7 +1068,10 @@ img {
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <p>© 2026 <span>Apex by Milla</span> · Formula One Technical Analysis · All Rights Reserved</p>
+    <div class="footer-logo">
+          <img src="logo.png" alt="Apex by Milla" style="height:70px;width:auto;opacity:0.55;">
+        </div>
+    <p>© 2026 · Formula One Technical Analysis · All Rights Reserved</p>
   </footer>
 
   <!-- ===== MOBILE MENU SCRIPT ===== -->
