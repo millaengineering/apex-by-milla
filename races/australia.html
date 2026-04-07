@@ -130,14 +130,39 @@ img {
   color: var(--muted);
   padding: 0.45rem 0.85rem;
   border-radius: 4px;
-  transition: color 0.2s, background 0.2s;
+  transition: color 0.2s;
   white-space: nowrap;
+  position: relative;
 }
 
-.nav-links a:hover,
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0.85rem;
+  right: 0.85rem;
+  height: 2px;
+  background: var(--red);
+  border-radius: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.22s ease;
+}
+
+.nav-links a:hover {
+  color: var(--white);
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
 .nav-links a.active {
   color: var(--white);
-  background: var(--border);
+}
+
+.nav-links a.active::after {
+  transform: scaleX(1);
 }
 
 .nav-links a.race-link {
@@ -145,8 +170,12 @@ img {
 }
 
 .nav-links a.race-link:hover {
-  color: var(--red);
-  background: rgba(225,6,0,0.1);
+  color: var(--white);
+}
+
+/* Australia active — blue underline matching page accent */
+.nav-links a.race-link.active::after {
+  background: #003DA5;
 }
 
 /* Hamburger for mobile */
