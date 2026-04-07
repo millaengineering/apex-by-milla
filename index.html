@@ -462,8 +462,8 @@ img {
 /* ---------- About Section ---------- */
 .about-section {
   background: var(--dark);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  border-top: none;
+  border-bottom: none;
 }
 
 .about-inner {
@@ -471,9 +471,9 @@ img {
   margin: 0 auto;
   padding: 5rem 2rem;
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 1.6fr;
   gap: 4rem;
-  align-items: center;
+  align-items: start;
 }
 
 .about-label {
@@ -492,6 +492,13 @@ img {
   color: var(--white);
   line-height: 1;
   margin-bottom: 1.5rem;
+}
+
+/* Photo column wrapper */
+.about-visual-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .about-visual {
@@ -521,8 +528,61 @@ img {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 4px;
+  height: 3px;
   background: var(--red);
+  z-index: 1;
+}
+
+/* Caption strip below photo */
+.about-caption {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.9rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.about-caption-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.06em;
+  color: var(--white);
+}
+.about-caption-role {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+/* Stats row */
+.about-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+}
+.about-stat-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.75rem 0.5rem;
+  text-align: center;
+}
+.about-stat-box-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  color: var(--red);
+  line-height: 1;
+}
+.about-stat-box-label {
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 2px;
 }
 
 .about-text p {
@@ -534,6 +594,29 @@ img {
 .about-text p strong {
   color: var(--text);
   font-weight: 600;
+}
+
+/* Goal highlight box */
+.about-goal {
+  background: rgba(225,6,0,0.06);
+  border: 1px solid rgba(225,6,0,0.25);
+  border-left: 3px solid var(--red);
+  border-radius: 4px;
+  padding: 1rem 1.2rem;
+  margin: 1.2rem 0;
+}
+.about-goal-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 0.35rem;
+}
+.about-goal p {
+  color: var(--text);
+  font-size: 0.88rem;
+  margin-bottom: 0 !important;
 }
 
 .tags {
@@ -824,6 +907,26 @@ img {
 .reveal-delay-1 { transition-delay: 0.1s; }
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
+
+/* ---------- Section Dividers ---------- */
+.section-divider {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, #E10600 30%, #E10600 70%, transparent 100%);
+  opacity: 0.35;
+  margin: 0;
+}
+.section-divider::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 6px;
+  background: radial-gradient(ellipse at center, rgba(225,6,0,0.18) 0%, transparent 70%);
+  filter: blur(3px);
+}
 </style>
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>🏎</text></svg>" />
@@ -915,6 +1018,7 @@ img {
   </div>
 
   <!-- ===== ABOUT THIS PROJECT ===== -->
+  <div class="section-divider"></div>
   <section class="project-section">
     <div class="project-inner">
       <div class="section-header">
@@ -947,15 +1051,36 @@ img {
   </section>
 
   <!-- ===== ABOUT SECTION ===== -->
+  <div class="section-divider"></div>
   <section class="about-section" id="about">
     <div class="about-inner">
 
-      <div class="about-visual">
-        <!-- Photo goes here — will be added once you send your image! -->
-        <img src="me.jpg" alt="Milla" onerror="this.style.display='none'; this.parentElement.innerHTML += '🏎️'" />
+      <div class="about-visual-col reveal">
+        <div class="about-visual">
+          <!-- Photo goes here — will be added once you send your image! -->
+          <img src="me.jpg" alt="Milla" onerror="this.style.display='none'; this.parentElement.innerHTML += '🏎️'" />
+        </div>
+        <div class="about-caption">
+          <span class="about-caption-name">Milla</span>
+          <span class="about-caption-role">Aspiring Race Engineer</span>
+        </div>
+        <div class="about-stats-row">
+          <div class="about-stat-box">
+            <div class="about-stat-box-num">3</div>
+            <div class="about-stat-box-label">Races</div>
+          </div>
+          <div class="about-stat-box">
+            <div class="about-stat-box-num">2026</div>
+            <div class="about-stat-box-label">Season</div>
+          </div>
+          <div class="about-stat-box">
+            <div class="about-stat-box-num">16</div>
+            <div class="about-stat-box-label">Age</div>
+          </div>
+        </div>
       </div>
 
-      <div class="about-text reveal">
+      <div class="about-text reveal reveal-delay-1">
         <p class="about-label">About the Author</p>
         <h2 class="about-name">Hi, I'm Milla. <span style="font-size:2rem;">🏎️</span></h2>
 
@@ -971,10 +1096,11 @@ img {
           <strong>Apex by Milla</strong> is my way of documenting what I learn and sharing it with
           anyone who loves engineering as much as I do.
         </p>
-        <p>
-          My goal is to study data analysis or performance engineering and one day work in an F1
-          team's race engineering department. This blog is part of that journey.
-        </p>
+
+        <div class="about-goal">
+          <div class="about-goal-label">Long-Term Goal</div>
+          <p>Study data analysis or performance engineering and one day work in an F1 team's race engineering department. This blog is part of that journey.</p>
+        </div>
 
         <!--
           ✏️ TO EDIT YOUR ABOUT-ME:
@@ -1018,6 +1144,7 @@ img {
 
   <!-- ===== RACE BLOGS GRID ===== -->
   <div id="races">
+  <div class="section-divider"></div>
     <div class="section">
       <div class="section-header">
         <h2 class="section-title">2026 Race Blogs</h2>
