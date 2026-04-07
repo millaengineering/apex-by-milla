@@ -773,21 +773,47 @@ img {
     display: flex;
   }
 
-  .hero h1 {
-    font-size: clamp(2.8rem, 12vw, 5rem);
+  /* Blog hero */
+  .blog-hero {
+    padding: 3.5rem 1.5rem 2rem;
   }
 
-  .about-inner {
+  .blog-meta {
+    gap: 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  /* Blog content */
+  .blog-content {
+    padding: 2.5rem 1.5rem 4rem;
+  }
+
+  .blog-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .driver-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
   }
 
-  .about-visual {
-    max-width: 200px;
+  .stat-cards {
+    grid-template-columns: 1fr 1fr;
   }
 
-  .races-grid {
+  /* Footer */
+  .footer-inner {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .footer-bottom-right {
+    justify-content: center;
   }
 }
 
