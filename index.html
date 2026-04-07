@@ -798,15 +798,121 @@ img {
 
 /* ---------- Footer ---------- */
 .footer {
-  padding: 2.5rem 2rem;
-  text-align: center;
-  color: var(--muted);
-  font-size: 0.8rem;
+  background: var(--dark);
   border-top: 1px solid var(--border);
+  padding: 3.5rem 2rem 2rem;
+  color: var(--muted);
+  font-size: 0.85rem;
 }
 
-.footer span {
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.footer-brand img {
+  height: 48px;
+  width: auto;
+  opacity: 0.7;
+  margin-bottom: 1rem;
+}
+
+.footer-brand p {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 260px;
+}
+
+.footer-col-title {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.footer-links a {
+  font-size: 0.85rem;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
   color: var(--red);
+}
+
+.footer-social-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  padding: 0.45rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.footer-social-link:hover {
+  color: var(--text);
+  border-color: var(--red);
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.footer-bottom-right {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-bottom-right a {
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.footer-bottom-right a:hover {
+  color: var(--red);
+}
+
+@media (max-width: 768px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
 }
 
 /* ---------- Blog / Race Page Styles ---------- */
@@ -1359,10 +1465,45 @@ img {
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <div class="footer-logo">
-          <img src="logo.png" alt="Apex by Milla" style="height:70px;width:auto;opacity:0.55;">
+    <div class="footer-inner">
+
+      <!-- Brand col -->
+      <div class="footer-brand">
+        <img src="logo.png" alt="Apex by Milla">
+        <p>Technical F1 race analysis covering every round of the 2026 season. Written by an aspiring race engineer.</p>
+      </div>
+
+      <!-- Races col -->
+      <div>
+        <div class="footer-col-title">2026 Races</div>
+        <ul class="footer-links">
+          <li><a href="races/australia.html">🇦🇺 Australian GP</a></li>
+          <li><a href="races/china.html">🇨🇳 Chinese GP</a></li>
+          <li><a href="races/japan.html">🇯🇵 Japanese GP</a></li>
+        </ul>
+      </div>
+
+      <!-- Socials col -->
+      <div>
+        <div class="footer-col-title">Follow Along</div>
+        <div class="footer-social-grid">
+          <a href="https://instagram.com/apexbymilla" class="footer-social-link">📸 Instagram</a>
+          <a href="https://x.com/apexbymilla" class="footer-social-link">𝕏 Twitter</a>
+          <a href="https://tiktok.com/@apexbymilla" class="footer-social-link">🎵 TikTok</a>
+          <a href="https://facebook.com/apexbymilla" class="footer-social-link">📘 Facebook</a>
         </div>
-    <p>© 2026 · Formula One Technical Analysis · All Rights Reserved</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Apex by Milla · All Rights Reserved</span>
+      <div class="footer-bottom-right">
+        <a href="mailto:apexbymilla@gmail.com">apexbymilla@gmail.com</a>
+        <a href="#about">About</a>
+        <a href="#races">Races</a>
+      </div>
+    </div>
   </footer>
 
   <!-- ===== MOBILE MENU SCRIPT ===== -->
