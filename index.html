@@ -386,6 +386,65 @@ img {
   color: var(--red);
 }
 
+/* ---------- Season Progress ---------- */
+.season-progress {
+  margin-bottom: 2.5rem;
+}
+
+.season-progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+
+.season-progress-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.season-progress-count {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.06em;
+  color: var(--white);
+}
+
+.season-progress-count span {
+  color: var(--red);
+}
+
+.progress-track {
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 13.6%; /* 3 of 22 */
+  background: linear-gradient(90deg, var(--red-dark), var(--red));
+  border-radius: 2px;
+  position: relative;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: var(--red);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(225,6,0,0.7);
+}
+
 /* ---------- Race Cards Grid ---------- */
 .races-grid {
   display: grid;
@@ -1178,6 +1237,17 @@ img {
       <div class="section-header">
         <h2 class="section-title">2026 Race Blogs</h2>
         <span class="section-label">Season in Progress</span>
+      </div>
+
+      <!-- Season Progress Bar -->
+      <div class="season-progress reveal">
+        <div class="season-progress-header">
+          <span class="season-progress-label">2026 Season Progress</span>
+          <span class="season-progress-count"><span>3</span> / 22 Races</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill"></div>
+        </div>
       </div>
 
       <div class="races-grid">
