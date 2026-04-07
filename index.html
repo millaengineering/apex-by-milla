@@ -1089,10 +1089,11 @@ img {
     display: flex;
   }
 
+  /* Hero */
   .hero {
     grid-template-columns: 1fr;
     min-height: auto;
-    padding: 5rem 2rem 3rem;
+    padding: 5rem 1.5rem 3rem;
   }
 
   .hero-right {
@@ -1103,21 +1104,81 @@ img {
     font-size: clamp(2.8rem, 12vw, 5rem);
   }
 
+  .hero-sub {
+    font-size: 0.9rem;
+  }
+
+  /* Section */
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  /* Project cards */
   .project-cards {
     grid-template-columns: 1fr;
   }
 
+  /* Season progress */
+  .season-progress-count {
+    font-size: 0.95rem;
+  }
+
+  /* Race grid */
+  .races-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* About section */
   .about-inner {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2rem;
+    padding: 3rem 1.5rem;
   }
 
   .about-visual {
-    max-width: 200px;
+    max-width: 180px;
   }
 
-  .races-grid {
+  .about-stats-row {
+    gap: 0.5rem;
+  }
+
+  .about-stat-box {
+    padding: 0.6rem 0.5rem;
+  }
+
+  .about-stat-box-num {
+    font-size: 1.6rem;
+  }
+
+  .about-stat-box-label {
+    font-size: 0.6rem;
+  }
+
+  /* Footer */
+  .footer-inner {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .footer-bottom-right {
+    justify-content: center;
+  }
+
+  .footer-social-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
