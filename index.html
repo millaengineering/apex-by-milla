@@ -547,6 +547,40 @@ img {
   gap: 0.6rem;
 }
 
+.card-winner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.4rem;
+  border-top: 1px solid var(--border);
+  background: rgba(225,6,0,0.05);
+}
+
+.card-winner-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.card-winner-name {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-winner-team {
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
 /* ---------- About Section ---------- */
 .about-section {
   background: var(--dark);
@@ -1264,6 +1298,11 @@ img {
               Mercedes executed a strategic masterclass as Formula One's new technical era made its debut at Albert Park.
             </p>
           </div>
+          <div class="card-winner">
+            <span class="card-winner-label">Winner</span>
+            <span class="card-winner-name">George Russell</span>
+            <span class="card-winner-team">Mercedes</span>
+          </div>
           <div class="card-footer">
             <span class="card-date">16 March 2026</span>
             <span class="card-arrow">Read →</span>
@@ -1280,6 +1319,11 @@ img {
               Antonelli takes his maiden F1 victory in Shanghai as reliability failures take out three championship contenders.
             </p>
           </div>
+          <div class="card-winner">
+            <span class="card-winner-label">Winner</span>
+            <span class="card-winner-name">Kimi Antonelli</span>
+            <span class="card-winner-team">Mercedes</span>
+          </div>
           <div class="card-footer">
             <span class="card-date">23 March 2026</span>
             <span class="card-arrow">Read →</span>
@@ -1295,6 +1339,11 @@ img {
             <p class="card-excerpt">
               Kimi Antonelli makes history as the youngest championship leader following a perfectly executed strategy and a dominant Mercedes performance in Suzuka.
             </p>
+          </div>
+          <div class="card-winner">
+            <span class="card-winner-label">Winner</span>
+            <span class="card-winner-name">Kimi Antonelli</span>
+            <span class="card-winner-team">Mercedes</span>
           </div>
           <div class="card-footer">
             <span class="card-date">6 April 2026</span>
