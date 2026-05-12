@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║   APEX BY MILLA — MIAMI GP 2026 (TEMPLATE READY FOR YOUR TEXT)   ║
+  ║                                                                  ║
+  ║   ROUND 06 · Miami International Autodrome · 1–3 May 2026        ║
+  ║   SPRINT WEEKEND (gold accent kept in)                           ║
+  ║                                                                  ║
+  ║   STAGE 2 markers (NEW for Miami onwards):                       ║
+  ║     [STAGE 2 ▸ NEW] Pace & Performance Comparison subsection     ║
+  ║     [STAGE 2 ▸ NEW] Engineering Question of the Race subsection  ║
+  ║     [STAGE 2 ▸ NEW] Race Engineer's View paragraph               ║
+  ║                                                                  ║
+  ║   Just replace the [SQUARE BRACKET] bits with your real writing. ║
+  ║   Keep, rename or remove any section to suit the race.           ║
+  ╚══════════════════════════════════════════════════════════════════╝
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 Miami GP Technical Analysis — Apex by Milla</title>
+  <meta name="description" content="[150–160 CHAR DESCRIPTION: e.g. 'Sprint weekend in Miami: technical breakdown of tyre strategy, energy management and aero setup at the Miami International Autodrome.']" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://apexbymilla.com/races/miami.html" />
+  <meta property="og:title"       content="2026 Miami GP Technical Analysis — Apex by Milla" />
+  <meta property="og:description" content="[SAME AS META DESCRIPTION ABOVE]" />
+  <meta property="og:image"       content="https://apexbymilla.com/logo.png" />
+  <meta property="article:published_time" content="2026-05-03" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@apexbymilla" />
+  <meta name="twitter:title"       content="2026 Miami GP Technical Analysis — Apex by Milla" />
+  <meta name="twitter:description" content="[SAME AS META DESCRIPTION ABOVE]" />
+  <meta name="twitter:image"       content="https://apexbymilla.com/logo.png" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://apexbymilla.com/races/miami.html" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "2026 Miami GP Technical Analysis",
+    "description": "[SAME AS META DESCRIPTION ABOVE]",
+    "author": { "@type": "Person", "name": "Milla", "url": "https://apexbymilla.com" },
+    "publisher": { "@type": "Organization", "name": "Apex by Milla", "url": "https://apexbymilla.com" },
+    "datePublished": "2026-05-03",
+    "url": "https://apexbymilla.com/races/miami.html",
+    "mainEntityOfPage": "https://apexbymilla.com/races/miami.html"
+  }
+  </script>
+
+  <style>
+/* ================================================
+   APEX BY MILLA — Global Stylesheet (inline)
+   ================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Bebas+Neue&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --red:       #E10600;
+  --red-dark:  #b00400;
+  --black:     #0a0a0a;
+  --dark:      #111111;
+  --card:      #181818;
+  --border:    #2a2a2a;
+  --text:      #f0f0f0;
+  --muted:     #888888;
+  --white:     #ffffff;
+  --gold:      #F5C842;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--black);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: var(--red); border-radius: 3px; }
+
+/* ---------- Navigation ---------- */
+.navbar {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(10,10,10,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+.nav-logo { display: flex; align-items: center; flex-shrink: 0; }
+.nav-links { display: flex; align-items: center; gap: 0.25rem; list-style: none; }
+.nav-links a {
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted);
+  padding: 0.45rem 0.85rem; border-radius: 4px;
+  transition: color 0.2s, background 0.2s; white-space: nowrap;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--white); background: var(--border); }
+.nav-links a.race-link { color: var(--text); }
+.nav-links a.race-link:hover { color: var(--red); background: rgba(225,6,0,0.1); }
+.nav-links a.race-link.active { color: var(--red); background: rgba(225,6,0,0.1); }
+
+.hamburger {
+  display: none; flex-direction: column; gap: 5px; cursor: pointer;
+  background: none; border: none; padding: 4px;
+}
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+
+/* ---------- Blog Hero ---------- */
+.blog-hero { background: var(--dark); border-bottom: 1px solid var(--border); padding: 5rem 2rem 3rem; }
+.blog-hero-inner { max-width: 800px; margin: 0 auto; }
+.blog-back {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 2rem; transition: color 0.2s;
+}
+.blog-back:hover { color: var(--text); }
+.blog-round {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--red); margin-bottom: 0.8rem;
+}
+.blog-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  letter-spacing: 0.03em; color: var(--white); line-height: 1; margin-bottom: 1rem;
+}
+.blog-meta {
+  display: flex; gap: 1.5rem; flex-wrap: wrap;
+  font-size: 0.8rem; color: var(--muted);
+  margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border);
+}
+.blog-meta span { display: flex; align-items: center; gap: 0.4rem; }
+
+/* ---------- Blog Content ---------- */
+.blog-content { max-width: 800px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+.blog-content h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem; letter-spacing: 0.04em; color: var(--white);
+  margin-top: 2.5rem; margin-bottom: 1rem;
+  padding-bottom: 0.5rem; border-bottom: 2px solid var(--red); display: inline-block;
+}
+.blog-content h3 {
+  font-size: 1.1rem; font-weight: 600; color: var(--text);
+  margin-top: 2rem; margin-bottom: 0.75rem;
+}
+.blog-content p { color: #b0b0b0; margin-bottom: 1.2rem; font-size: 0.97rem; }
+.blog-content strong { color: var(--text); font-weight: 600; }
+
+.highlight-box {
+  background: rgba(225,6,0,0.08);
+  border-left: 3px solid var(--red);
+  padding: 1.2rem 1.5rem; border-radius: 0 4px 4px 0;
+  margin: 2rem 0;
+}
+.highlight-box p { margin: 0; color: var(--text); font-style: italic; }
+
+/* ---------- Driver / DNF Cards ---------- */
+.driver-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem; margin: 1.5rem 0;
+}
+.driver-card { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 1rem; }
+.driver-pos { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--red); line-height: 1; }
+.driver-name { font-weight: 600; font-size: 0.9rem; color: var(--text); margin-top: 0.25rem; }
+.driver-team { font-size: 0.78rem; color: var(--muted); }
+
+.dnf-card { border-color: #333333; opacity: 0.75; }
+.dnf-pos { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--muted) !important; line-height: 1; }
+.dnf-reason { font-size: 0.72rem; color: var(--muted); margin-top: 0.3rem; font-style: italic; }
+
+/* Penalty / position-change note under driver cards */
+.position-note {
+  font-size: 0.7rem;
+  color: var(--gold);
+  margin-top: 0.4rem;
+  font-style: italic;
+  line-height: 1.3;
+}
+.penalty-footnote {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 1rem;
+  padding-left: 0.8rem;
+  border-left: 2px solid var(--gold);
+}
+
+/* ---------- Sprint Weekend ---------- */
+.sprint-box {
+  background: rgba(255, 180, 0, 0.05);
+  border: 1px solid rgba(255, 180, 0, 0.25);
+  border-radius: 6px;
+  padding: 1.8rem;
+  margin: 2.5rem 0;
+}
+.sprint-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem; }
+.sprint-badge {
+  background: rgba(255, 180, 0, 0.15);
+  border: 1px solid rgba(255, 180, 0, 0.4);
+  color: #f0b400;
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 2px; white-space: nowrap;
+}
+.sprint-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem; letter-spacing: 0.04em; color: var(--white);
+  border-bottom: 2px solid #f0b400 !important;
+  display: inline-block; padding-bottom: 0.3rem; margin: 0 !important;
+}
+.sprint-box h3 { font-size: 1rem; font-weight: 600; color: var(--text); margin-top: 1.5rem; margin-bottom: 0.6rem; }
+.sprint-box p { color: #b0b0b0; font-size: 0.97rem; margin-bottom: 1rem; }
+
+/* ---------- Stage 2 Pace Table ---------- */
+.pace-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2rem 0 2rem;
+  font-size: 0.9rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.pace-table th, .pace-table td {
+  padding: 0.7rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.pace-table th {
+  background: rgba(225,6,0,0.08);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.pace-table tr:last-child td { border-bottom: none; }
+.pace-table td { color: #b0b0b0; }
+.pace-table td strong { color: var(--text); }
+
+/* ---------- Engineer's View Box ---------- */
+.engineer-box {
+  background: rgba(0, 120, 200, 0.06);
+  border-left: 3px solid #2898d8;
+  padding: 1.2rem 1.5rem;
+  border-radius: 0 4px 4px 0;
+  margin: 2rem 0;
+}
+.engineer-box .engineer-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #2898d8;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.engineer-box p { margin: 0; color: var(--text); }
+
+/* ---------- Footer ---------- */
+.footer {
+  padding: 2.5rem 2rem; text-align: center;
+  color: var(--muted); font-size: 0.8rem;
+  border-top: 1px solid var(--border);
+}
+.footer span { color: var(--red); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; position: fixed; top: 64px; left: 0; right: 0;
+    background: var(--dark); border-bottom: 1px solid var(--border);
+    flex-direction: column; align-items: stretch; padding: 1rem; gap: 0.25rem;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 0.7rem 1rem; font-size: 0.85rem; }
+  .hamburger { display: flex; }
+  .blog-hero { padding: 3.5rem 1.5rem 2rem; }
+  .blog-meta { gap: 0.8rem; font-size: 0.75rem; }
+  .blog-content { padding: 2.5rem 1.5rem 4rem; }
+  .blog-content h2 { font-size: 1.4rem; }
+  .driver-grid { grid-template-columns: 1fr; }
+  .pace-table { font-size: 0.82rem; }
+  .pace-table th, .pace-table td { padding: 0.55rem 0.7rem; }
+}
+
+/* ---------- Scroll Animations ---------- */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+</style>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>🏎</text></svg>" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo" aria-label="Apex by Milla — Home">
+      <img src="../logo.png" alt="Apex by Milla" style="height:48px;width:auto;">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="australia.html" class="race-link">🇦🇺 Australia</a></li>
+      <li><a href="china.html"     class="race-link">🇨🇳 China</a></li>
+      <li><a href="japan.html"     class="race-link">🇯🇵 Japan</a></li>
+      <li><a href="miami.html"     class="race-link active">🇺🇸 Miami</a></li>
+      <li><a href="../index.html#about">About</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== BLOG HERO ===== -->
+  <div class="blog-hero">
+    <div class="blog-hero-inner">
+      <a href="../index.html" class="blog-back">← Back to All Races</a>
+      <div class="blog-round reveal">Round 04 · Miami International Autodrome · 3 May 2026</div>
+      <h1 class="blog-title reveal reveal-delay-1">Miami Grand Prix 2026</h1>
+
+      <p style="color: var(--muted); font-size: 0.95rem; margin-top: 1rem;">
+        Kimi Antonelli makes history with a hat-trick of victories as McLaren breaks the Mercedes win streak in a high-stakes Sprint weekend.
+      </p>
+
+      <div class="blog-meta reveal reveal-delay-2">
+        <span>📅 3 May 2026</span>
+        <span>📍 Miami International Autodrome</span>
+        <span>🏁 Round 4 of 22</span>
+        <span>⚡ Sprint Weekend</span>
+        <span>✍️ Written by Milla</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BLOG CONTENT ===== -->
+  <article class="blog-content">
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 1 · RACE OVERVIEW
+         What happened, the storyline of the weekend.
+         ───────────────────────────────────────────── -->
+    <h2>Race Overview</h2>
+    <p>
+      The 2026 Miami Grand Prix was a showcase of high-speed defensive driving and strategic resilience. As the lights went out, chaos unfolded as polesitter Kimi Antonelli and Max Verstappen both suffered heavy lock-ups into the first corner. Leclerc seized the moment and took the lead, but surprised Verstappen as he was rejoining the track, and he ended up doing a full 360-degree spin. Although he miraculously was able to regain control of his car, the spin caused him to fall back to the midfield. Verstappen did manage to clamber his way out of the midfield and back into a competitive position, but his methodology sparked some criticism from other drivers. Carlos Sainz notably quoted, "He thinks he can do whatever he wants because he's racing in the midfield!" By the 5th lap, the mayhem still hadn't subsided. But, the drivers were given a chance to catch their breath after Isack Hadjar's crash into the outside barriers at turn 14 triggered a yellow flag and then by the next lap, a safety car as Pierre Gasly flipped over and into the barriers due to contact with Liam Lawson at turn 17 – a completely different incident to Hadjar's. During this safety car, Verstappen made the risky move to pit and change from the medium compound (C4) to the hard compound (C3), and although dropping down to 16th from this bold move, it paid off in the end as he was able to remain on those same tyres for a staggering 51 laps. Once the race started to settle down a little bit, the focus shifted to the battle between Antonelli and Lando Norris for the lead. Despite gearbox concerns and a late-race charge from Norris, Antonelli reigned champion of this race. He secured his win by a gap of 3.264 seconds and became the first driver ever to convert his first three career pole positions into three consecutive wins. The podium was completed by a revitalised McLaren team, while George Russell and Verstappen took advantage of Leclerc's last-lap spin to gain some extra positions and valuable championship points.
+    </p>
+    <p>
+      The Miami International Autodrome presented a brutal test for the 2026 technical regulations. Drivers battled a low-grip surface that was the cause of multiple incidents during the race, while the intense Florida heat and humidity placed immense strain on the cars' cooling systems and active aero components.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 2 · STARTING GRID & QUALIFYING
+         Saturday breakdown, surprises, who underperformed.
+         ───────────────────────────────────────────── -->
+    <h2>Starting Grid & Qualifying</h2>
+    <p>
+      Antonelli secured his third consecutive pole position, followed closely by the Red Bull of Verstappen, only 0.166 seconds behind. The surprise disqualification of Hadjar from qualifying due to a technical infringement and, as a result, changes made during parc fermé shook the grid as the rookie was forced to start the race from the pit lane. The session revealed that many teams opted for low-drag setups to maximise speed on Miami's 1.2km back straight, leaving the cars sensitive under braking.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 3 · SPRINT WEEKEND
+         Gold-accented box. Sprint Shootout + Sprint Race + Top 8 grid.
+         ───────────────────────────────────────────── -->
+    <div class="sprint-box">
+      <div class="sprint-header">
+        <span class="sprint-badge">⚡ Sprint Weekend</span>
+        <h2 class="sprint-title">Sprint Race</h2>
+      </div>
+
+      <h3>Sprint Shootout</h3>
+      <p>
+        Norris claimed the first non-Mercedes pole of 2026 during Friday's Sprint Shootout. He led a McLaren 1-3 with Oscar Piastri, while Antonelli split the duo for P2. The session was held in hot, dry conditions, though several drivers, including Alex Albon struggled with track limits, even with the new and more nimble chassis.
+      </p>
+
+      <h3>Sprint Race Breakdown</h3>
+      <p>
+        The 19-lap Sprint saw Norris deliver a dominant victory, proving McLaren's upgrade package had closed the gap to the previously indomitable Mercedes car. Behind him, the race was a chaotic confirmation of Overtake Mode, where the field engaged in a "train" of energy-management battles where the +0.5MJ boost was critical for defending against the slipstream on the back straight. Antonelli's race was tainted by "squabbles" with his teammate and a track-limits penalty that demoted him from P4 to P6. Before the Sprint started during the reconnaissance lap, Nico Hulkenberg's car caught fire and he was forced to retire. Then, during post-Sprint technical checks, it was discovered that Gabriel Bortoleto's Audi engine intake air pressure was above the maximum allowed by the FIA, so he was subsequently eliminated from the Sprint.
+      </p>
+
+      <h3>Sprint Result — Top 8</h3>
+      <div class="driver-grid reveal">
+        <div class="driver-card"><div class="driver-pos">P1</div><div class="driver-name">Lando Norris</div><div class="driver-team">McLaren</div></div>
+        <div class="driver-card"><div class="driver-pos">P2</div><div class="driver-name">Oscar Piastri</div><div class="driver-team">McLaren</div></div>
+        <div class="driver-card"><div class="driver-pos">P3</div><div class="driver-name">Charles Leclerc</div><div class="driver-team">Ferrari</div></div>
+        <div class="driver-card">
+          <div class="driver-pos">P4</div>
+          <div class="driver-name">George Russell</div>
+          <div class="driver-team">Mercedes</div>
+          <div class="position-note">* Finished P5 on track. Promoted by Antonelli's post-Sprint penalty.</div>
+        </div>
+        <div class="driver-card">
+          <div class="driver-pos">P5</div>
+          <div class="driver-name">Max Verstappen</div>
+          <div class="driver-team">Red Bull Racing</div>
+          <div class="position-note">* Finished P6 on track. Promoted by Antonelli's post-Sprint penalty.</div>
+        </div>
+        <div class="driver-card">
+          <div class="driver-pos">P6</div>
+          <div class="driver-name">Kimi Antonelli</div>
+          <div class="driver-team">Mercedes</div>
+          <div class="position-note">* Finished P4 on track. Track-limits penalty dropped him to P6.</div>
+        </div>
+        <div class="driver-card"><div class="driver-pos">P7</div><div class="driver-name">Lewis Hamilton</div><div class="driver-team">Ferrari</div></div>
+        <div class="driver-card"><div class="driver-pos">P8</div><div class="driver-name">Pierre Gasly</div><div class="driver-team">Alpine</div></div>
+      </div>
+      <p class="penalty-footnote">
+        * Post-Sprint penalty changed the classification. Antonelli received a track-limits penalty, dropping him from P4 on the road to P6.
+      </p>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 4 · TECHNICAL BREAKDOWN
+         The meat of the post.
+         ───────────────────────────────────────────── -->
+    <h2>Technical Breakdown</h2>
+    <p>
+      The primary technical theme of the Miami Grand Prix was the extreme thermal management of the Energy Recovery System (ERS) and drivetrain under sustained high-load conditions. Miami's layout, featuring a 1.2km back straight paired with a twisty, technical section of the track, exposed the fine margins of the 2026 PU's 50/50 split.
+    </p>
+    <p>
+      Drivers faced immense pressure to manage finite electrical energy, with Antonelli admitting to a critical "little mistake with energy management" while attempting to harvest energy behind Leclerc, which immediately cost him track position to Norris. Reliability also emerged as a major factor for the first time this season. Antonelli reported gearbox concerns as early as Lap 34, while Russell struggled with energy harvesting efficiency after being trapped in the "wrong strat mode" during his middle stint. These incidents highlight that software calibration and super clipping profiles are becoming as vital to race results as mechanical grip.
+    </p>
+
+    <h3>Tyre Strategy</h3>
+    <p>
+      The race was an intense positional battle defined by the transition from the Medium (C4) to the Hard (C3) compound. Miami's surface is notably abrasive and runs at high temperatures, making thermal degradation a primary performance issue. While the majority of the leaders opted for a conventional one-stop strategy, the lighter 2026 chassis allowed for unprecedented stint lengths.
+    </p>
+    <p>
+      The standout performance in tyre preservation came from Verstappen, who executed a massive 51-lap stint on hard tyres after a forced pit stop on Lap 6 following his opening-lap spin. This decision allowed him to recover to P5, proving that the reduced weight of the 2026 cars significantly extends the "life" of the narrower Pirelli rubber compared to previous eras. In contrast, Russell reported "sliding everywhere" on 22-lap-old hards, suggesting that setup-induced sliding still punishes the tyres even with a lower base vehicle mass.
+    </p>
+
+    <h3>Aerodynamics & Setup</h3>
+    <p>
+      Teams were forced to find a compromise between the low-drag requirements of the back straight and the high downforce needs of the technical sectors. Qualifying revealed that many teams gambled on low-drag setups to maximise speed on Miami's long runs, leaving the cars visibly nervous and prone to lock-ups under heavy braking at Turn 1 and Turn 11.
+    </p>
+    <p>
+      The physical strain on the Active Aero components became a headline story late in the race. Norris was instructed by McLaren to "cool off" and drop out of Antonelli's turbulent air, not because of engine temperatures, but due to a developing wing problem. This was likely a mechanical fatigue issue in the active flap actuators under the high-load conditions of the Florida humidity. Meanwhile, the in-washing bargeboard philosophy of the new regulations was validated again, as it allowed the lead pack to follow within a one-second "energy train" for over 15 laps without the lead car's wake causing the immediate front-end wash-out seen in previous years.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         [STAGE 2 ▸ NEW] · SECTION 5 · PACE & PERFORMANCE
+         All numbers below verified from formula1.com (Race Result,
+         Fastest Laps, Pit Stop Summary). The story this table tells:
+         McLaren had the raw pace (Norris fastest lap), but Mercedes
+         won the strategy through the pit stops — Russell's lap 20
+         undercut attempt forced Antonelli's hand on lap 26, and
+         Antonelli's stop covered Norris a lap later.
+         ───────────────────────────────────────────── -->
+    <h2>Pace &amp; Performance</h2>
+    <p>
+      McLaren possessed the outright pace this weekend, with Norris setting the fastest lap of the race (1:31.869), but Mercedes secured the victory by winning the strategic battle during the pit window. Russell's early stop on lap 20 acted as the catalyst, providing an undercut threat that eventually forced the entire lead group to react earlier than intended.
+    </p>
+
+    <table class="pace-table">
+      <thead>
+        <tr>
+          <th>Driver</th>
+          <th>Fastest lap</th>
+          <th>On lap</th>
+          <th>Pit stop (lap)</th>
+          <th>Stop time</th>
+          <th>Gap at flag</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Antonelli</strong> (Mercedes)</td><td>1:31.968</td><td>34</td><td>26</td><td>22.128s</td><td>WINNER</td></tr>
+        <tr><td><strong>Norris</strong> (McLaren)</td><td>1:31.869</td><td>35</td><td>27</td><td>22.565s</td><td>+3.264s</td></tr>
+        <tr><td><strong>Russell</strong> (Mercedes)</td><td>1:32.446</td><td>53</td><td>20</td><td>22.042s</td><td>+43.051s</td></tr>
+        <tr><td><strong>Verstappen</strong> (Red Bull)</td><td>1:33.110</td><td>24</td><td>6</td><td>22.547s</td><td>+48.949s</td></tr>
+      </tbody>
+    </table>
+
+    <p>
+      These numbers display that Norris was the fastest car on track, but he lost the race in the pits. Antonelli's 22.128s stop was more efficient than Norris's 22.565s, allowing the Mercedes to maintain the lead after the "massive undercut". Russell's stop was the fastest of the four (22.042s), proving the Mercedes crew remains the benchmark for consistency. Verstappen's pace throughout the race was impressive, but his drop-off in the final ten laps highlighted the extreme challenge of a one-stop recovery strategy in Miami.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         [STAGE 2 ▸ NEW] · SECTION 6 · ENGINEERING QUESTION OF THE RACE
+         Pick ONE specific moment and dig into the "why".
+         This is the section that demonstrates genuine engineering thinking.
+         ───────────────────────────────────────────── -->
+    <h2>Engineering Question of the Race</h2>
+    <h3>"Why did Ferrari pit Leclerc on Lap 21?"</h3>
+    <p>
+      By lap 18, Leclerc was holding P3, but he was trapped in a high-speed energy-management battle with the McLarens and Antonelli. When Russell drove into the pits for hard tyres on Lap 20, Ferrari felt forced into a "reactive" stance to protect track position against the Mercedes undercut.
+    </p>
+    <p>
+      The trade-off was complex: stay out and wait for a 40% chance of rain to hit, which would have granted a "free" stop for the intermediate tyres, or pit that lap to cover Russell. Ferrari chose to cover the undercut, but a slow 3.7s stationary time, combined with the fact that the rain remained only "light drops" that didn't warrant the switch to inters, was devastating for Leclerc. He ended up behind Russell after exiting the pits and was forced to use up his battery defending rather than attacking, eventually leading to his vocal radio demand for the team to "speak with me first" before making major tactical calls.
+    </p>
+    <p>
+      <strong>Verdict:</strong> It was the wrong call. Pitting into traffic with a slow stop neutralised Leclerc's pace advantage. If they had waited only four more laps, the lighter fuel load and clearer air would have allowed him to extend his lead over the midfield "train".
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 7 · KEY INSIGHT (HIGHLIGHT BOX)
+         One quote or one sentence that summarises the race.
+         ───────────────────────────────────────────── -->
+    <div class="highlight-box reveal">
+      <p>
+        💡 "I did a little mistake with the energy management, trying to overtake Charles, then I lost a place to Lando." – Kimi Antonelli, highlighting that even the championship leader is still finding the "sweet spot" for energy deployment under the new regulations.
+      </p>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 8 · RACE RESULT — TOP 10
+         Standard P1–P10 grid.
+         ───────────────────────────────────────────── -->
+    <h2>Race Result — Top 10</h2>
+    <!-- Top 10 verified from formula1.com.
+         Position changes vs. on-road order are flagged with an asterisk per driver card,
+         with a footnote underneath the grid explaining the penalties. -->
+    <div class="driver-grid reveal">
+      <div class="driver-card"><div class="driver-pos">P1</div><div class="driver-name">Kimi Antonelli</div><div class="driver-team">Mercedes</div></div>
+      <div class="driver-card"><div class="driver-pos">P2</div><div class="driver-name">Lando Norris</div><div class="driver-team">McLaren</div></div>
+      <div class="driver-card"><div class="driver-pos">P3</div><div class="driver-name">Oscar Piastri</div><div class="driver-team">McLaren</div></div>
+      <div class="driver-card"><div class="driver-pos">P4</div><div class="driver-name">George Russell</div><div class="driver-team">Mercedes</div></div>
+      <div class="driver-card"><div class="driver-pos">P5</div><div class="driver-name">Max Verstappen</div><div class="driver-team">Red Bull Racing</div></div>
+      <div class="driver-card">
+        <div class="driver-pos">P6</div>
+        <div class="driver-name">Lewis Hamilton</div>
+        <div class="driver-team">Ferrari</div>
+        <div class="position-note">* Finished P7 on track. Promoted by Leclerc's post-race penalty.</div>
+      </div>
+      <div class="driver-card">
+        <div class="driver-pos">P7</div>
+        <div class="driver-name">Franco Colapinto</div>
+        <div class="driver-team">Alpine</div>
+        <div class="position-note">* Finished P8 on track. Promoted by Leclerc's post-race penalty.</div>
+      </div>
+      <div class="driver-card">
+        <div class="driver-pos">P8</div>
+        <div class="driver-name">Charles Leclerc</div>
+        <div class="driver-team">Ferrari</div>
+        <div class="position-note">* Finished P6 on track. 20-second penalty for track limits dropped him to P8.</div>
+      </div>
+      <div class="driver-card"><div class="driver-pos">P9</div><div class="driver-name">Carlos Sainz</div><div class="driver-team">Williams</div></div>
+      <div class="driver-card"><div class="driver-pos">P10</div><div class="driver-name">Alexander Albon</div><div class="driver-team">Williams</div></div>
+    </div>
+    <p class="penalty-footnote">
+      * Post-race penalty changed the classification. Leclerc received a 20-second penalty for repeated track limits violations, dropping him from P6 on the road to P8. Verstappen also received a 5-second penalty for crossing the white line at pit exit, but it did not affect his P5.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 9 · DNF / DNS
+         Add cards for any retirements or non-starters with reason.
+         ───────────────────────────────────────────── -->
+    <h2>DNF / DNS</h2>
+    <!-- DNFs verified from formula1.com. Reasons: Hulkenberg early floor damage,
+         Lawson and Hadjar contact at the start, Gasly flipped after Lawson contact.
+         FILL IN THE EXACT REASONS once you've watched the highlights. -->
+    <div class="driver-grid reveal">
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">Nico Hulkenberg</div>
+        <div class="driver-team">Audi</div>
+        <div class="dnf-reason">Retired lap 7 — overheating drivetrain issue</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">Liam Lawson</div>
+        <div class="driver-team">Racing Bulls</div>
+        <div class="dnf-reason">Retired lap 6 — start contact</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">Pierre Gasly</div>
+        <div class="driver-team">Alpine</div>
+        <div class="dnf-reason">Retired lap 4 — flipped after Lawson contact</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">Isack Hadjar</div>
+        <div class="driver-team">Red Bull Racing</div>
+        <div class="dnf-reason">Retired lap 4 — start contact</div>
+      </div>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 10 · KEY TAKEAWAYS
+         What we learned from this race.
+         ───────────────────────────────────────────── -->
+    <h2>Key Takeaways</h2>
+    <p>
+      The Miami weekend proved that the 2026 era is no longer a Mercedes-only affair. McLaren's upgrades have effectively negated the Silver Arrows' early-season pace advantage. However, the race also exposed that reliability for the 768kg chassis is still a major variable, with leaders reporting gearbox and wing fatigue. Finally, energy management remains the ultimate differentiator, where a single lap of "wrong strat mode" can undo a 20-lap pace advantage.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         [STAGE 2 ▸ NEW] · SECTION 11 · RACE ENGINEER'S VIEW
+         Closing paragraph in your own voice: what you would have done.
+         This is the key recruiter-facing section. It signals you don't
+         just describe — you make calls.
+         ───────────────────────────────────────────── -->
+    <div class="engineer-box">
+      <span class="engineer-label">🎧 Race Engineer's View</span>
+      <p>
+        Regarding Leclerc's pit on Lap 21, I would have overruled that decision, as Ferrari's reaction to Russell's move was a tactical fumble that ignored the looming 40% probability of rain. Instead of switching to the hard compound and emerging in traffic, I would have kept him on track with his mediums while ordering a shift to a "super clipping" energy profile to aggressively harvest energy at full throttle without triggering lift-off regeneration. This strategy would have allowed Leclerc to exploit his pace in clean air, building a vital gap for the forecasted showers or a later, more effective undercut. Ferrari's reactive stance was inherently defective; staying out was the confident play to secure a podium and avoid the slow 3.7s stop that ultimately buried their fastest car in the midfield.
+      </p>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 12 · LOOKING AHEAD
+         Bridge to the next race.
+         ───────────────────────────────────────────── -->
+    <h2>Looking Ahead</h2>
+    <p>
+      The championship moves to Montreal for the Canadian Grand Prix, the third Sprint weekend of 2026. Teams will focus on refining "lift-off regeneration" profiles for the heavy braking zones of the Circuit Gilles-Villeneuve, where managing the trade-off between battery and charging, and Active Aero deployment will be the key to overtaking.
+    </p>
+
+  </article>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="../logo.png" alt="Apex by Milla" style="height:70px;width:auto;opacity:0.55;">
+    </div>
+    <p>© 2026 · Formula One Technical Analysis · All Rights Reserved</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+  </script>
+
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
