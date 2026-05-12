@@ -1212,6 +1212,60 @@ img {
 
 
 /* ---------- Scroll Animations ---------- */
+/* ---------- New Blog Announcement Banner ---------- */
+.new-blog-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  background: linear-gradient(90deg, var(--red-dark), var(--red));
+  color: var(--white);
+  padding: 0.7rem 1.5rem;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: filter 0.2s;
+}
+.new-blog-banner:hover {
+  filter: brightness(1.08);
+}
+.new-blog-badge {
+  background: var(--white);
+  color: var(--red);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  padding: 0.22rem 0.6rem;
+  border-radius: 2px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  animation: new-blog-pulse 1.6s ease-in-out infinite;
+}
+@keyframes new-blog-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0.55); }
+  50%      { box-shadow: 0 0 0 7px rgba(255,255,255,0); }
+}
+.new-blog-text { font-weight: 500; }
+.new-blog-cta { font-weight: 700; letter-spacing: 0.05em; flex-shrink: 0; }
+/* When older than 7 days, switch to neutral 'LATEST' style */
+.new-blog-banner.is-latest .new-blog-badge {
+  background: rgba(255,255,255,0.18);
+  color: var(--white);
+  animation: none;
+}
+@media (max-width: 768px) {
+  .new-blog-banner {
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.78rem;
+    text-align: center;
+  }
+  .new-blog-cta { width: 100%; }
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -1273,6 +1327,21 @@ img {
       <span></span><span></span><span></span>
     </button>
   </nav>
+
+  <!-- ===== NEW BLOG ANNOUNCEMENT BANNER ===== -->
+  <!--
+    ✏️ When a new race is published, update THREE things below:
+       1. href="races/[FILE].html"        → link to the new race
+       2. data-publish-date="YYYY-MM-DD"  → today's date when you publish
+       3. The text in .new-blog-text       → new race title
+    The "NEW" badge automatically pulses for 7 days from the publish date,
+    then auto-switches to "LATEST" with a calmer look. No edits needed for that.
+  -->
+  <a href="races/miami.html" class="new-blog-banner" id="latestRaceBanner" data-publish-date="2026-05-12">
+    <span class="new-blog-badge" data-new-text="NEW" data-latest-text="LATEST">NEW</span>
+    <span class="new-blog-text">2026 Miami Grand Prix Technical Analysis</span>
+    <span class="new-blog-cta">Read →</span>
+  </a>
 
   <!-- ===== HERO ===== -->
   <div style="position:relative; background: var(--black);">
@@ -1617,6 +1686,24 @@ img {
       </div>
     </div>
   </footer>
+
+  <!-- ===== NEW BLOG BANNER STATE SCRIPT ===== -->
+  <script>
+    (function() {
+      const banner = document.getElementById('latestRaceBanner');
+      if (!banner) return;
+      const publishDate = new Date(banner.dataset.publishDate);
+      const now = new Date();
+      const daysSince = (now - publishDate) / (1000 * 60 * 60 * 24);
+      if (daysSince > 7) {
+        const badge = banner.querySelector('.new-blog-badge');
+        if (badge) {
+          badge.textContent = badge.dataset.latestText;
+          banner.classList.add('is-latest');
+        }
+      }
+    })();
+  </script>
 
   <!-- ===== MOBILE MENU SCRIPT ===== -->
   <script>
