@@ -125,8 +125,24 @@ img { max-width: 100%; display: block; }
 .hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
 
 /* ---------- Blog Hero ---------- */
-.blog-hero { background: var(--dark); border-bottom: 1px solid var(--border); padding: 5rem 2rem 3rem; }
-.blog-hero-inner { max-width: 800px; margin: 0 auto; }
+.blog-hero {
+  background: var(--dark);
+  border-bottom: 1px solid var(--border);
+  border-top: 3px solid #00BFC4; /* Miami signature: turquoise */
+  padding: 5rem 2rem 3rem;
+  position: relative;
+}
+.blog-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 220px;
+  background: radial-gradient(ellipse 60% 100% at 90% 0%, rgba(0,191,196,0.14) 0%, transparent 70%);
+  pointer-events: none;
+}
+.blog-hero-inner { max-width: 800px; margin: 0 auto; position: relative; }
 .blog-back {
   display: inline-flex; align-items: center; gap: 0.4rem;
   font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
@@ -230,15 +246,19 @@ img { max-width: 100%; display: block; }
 .sprint-box p { color: #b0b0b0; font-size: 0.97rem; margin-bottom: 1rem; }
 
 /* ---------- Stage 2 Pace Table ---------- */
+.pace-table-wrapper {
+  margin: 1.2rem 0 2rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--card);
+}
 .pace-table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1.2rem 0 2rem;
+  margin: 0;
   font-size: 0.9rem;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  overflow: hidden;
 }
 .pace-table th, .pace-table td {
   padding: 0.7rem 1rem;
@@ -474,24 +494,26 @@ img { max-width: 100%; display: block; }
       McLaren possessed the outright pace this weekend, with Norris setting the fastest lap of the race (1:31.869), but Mercedes secured the victory by winning the strategic battle during the pit window. Russell's early stop on lap 20 acted as the catalyst, providing an undercut threat that eventually forced the entire lead group to react earlier than intended.
     </p>
 
-    <table class="pace-table">
-      <thead>
-        <tr>
-          <th>Driver</th>
-          <th>Fastest lap</th>
-          <th>On lap</th>
-          <th>Pit stop (lap)</th>
-          <th>Stop time</th>
-          <th>Gap at flag</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td><strong>Antonelli</strong> (Mercedes)</td><td>1:31.968</td><td>34</td><td>26</td><td>22.128s</td><td>WINNER</td></tr>
-        <tr><td><strong>Norris</strong> (McLaren)</td><td>1:31.869</td><td>35</td><td>27</td><td>22.565s</td><td>+3.264s</td></tr>
-        <tr><td><strong>Russell</strong> (Mercedes)</td><td>1:32.446</td><td>53</td><td>20</td><td>22.042s</td><td>+43.051s</td></tr>
-        <tr><td><strong>Verstappen</strong> (Red Bull)</td><td>1:33.110</td><td>24</td><td>6</td><td>22.547s</td><td>+48.949s</td></tr>
-      </tbody>
-    </table>
+    <div class="pace-table-wrapper">
+      <table class="pace-table">
+        <thead>
+          <tr>
+            <th>Driver</th>
+            <th>Fastest lap</th>
+            <th>On lap</th>
+            <th>Pit stop (lap)</th>
+            <th>Stop time</th>
+            <th>Gap at flag</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Antonelli</strong> (Mercedes)</td><td>1:31.968</td><td>34</td><td>26</td><td>22.128s</td><td>WINNER</td></tr>
+          <tr><td><strong>Norris</strong> (McLaren)</td><td>1:31.869</td><td>35</td><td>27</td><td>22.565s</td><td>+3.264s</td></tr>
+          <tr><td><strong>Russell</strong> (Mercedes)</td><td>1:32.446</td><td>53</td><td>20</td><td>22.042s</td><td>+43.051s</td></tr>
+          <tr><td><strong>Verstappen</strong> (Red Bull)</td><td>1:33.110</td><td>24</td><td>6</td><td>22.547s</td><td>+48.949s</td></tr>
+        </tbody>
+      </table>
+    </div>
 
     <p>
       These numbers display that Norris was the fastest car on track, but he lost the race in the pits. Antonelli's 22.128s stop was more efficient than Norris's 22.565s, allowing the Mercedes to maintain the lead after the "massive undercut". Russell's stop was the fastest of the four (22.042s), proving the Mercedes crew remains the benchmark for consistency. Verstappen's pace throughout the race was impressive, but his drop-off in the final ten laps highlighted the extreme challenge of a one-stop recovery strategy in Miami.
