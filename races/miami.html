@@ -323,6 +323,54 @@ img { max-width: 100%; display: block; }
   .pace-table th, .pace-table td { padding: 0.55rem 0.7rem; }
 }
 
+/* ---------- Sources Section ---------- */
+.sources-section {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+.sources-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+}
+.sources-subtitle {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+.sources-group { margin-bottom: 1.4rem; }
+.sources-group-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 0.5rem;
+}
+.sources-list { list-style: none; padding: 0; margin: 0; }
+.sources-list li {
+  font-size: 0.84rem;
+  color: #b0b0b0;
+  margin-bottom: 0.45rem;
+  line-height: 1.55;
+}
+.sources-list a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--border);
+  transition: color 0.2s, border-color 0.2s;
+}
+.sources-list a:hover {
+  color: var(--red);
+  border-bottom-color: var(--red);
+}
+
 /* ---------- Scroll Animations ---------- */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -470,6 +518,11 @@ img { max-width: 100%; display: block; }
     </p>
     <p>
       Drivers faced immense pressure to manage finite electrical energy, with Antonelli admitting to a critical "little mistake with energy management" while attempting to harvest energy behind Leclerc, which immediately cost him track position to Norris. Reliability also emerged as a major factor for the first time this season. Antonelli reported gearbox concerns as early as Lap 34, while Russell struggled with energy harvesting efficiency after being trapped in the "wrong strat mode" during his middle stint. These incidents highlight that software calibration and super clipping profiles are becoming as vital to race results as mechanical grip.
+    </p>
+
+    <h3>Regulation Refinements</h3>
+    <p>
+      New tweaks to the 2026 regulations based on data from the first three races were announced in April, and are now in effect from Miami onwards. Regarding super-clipping, the recharge was cut from 8MJ to 7MJ per lap, making the target super-clip window 2-4 seconds. But the peak power of this was raised from 250 to 350 kW. The recharge cut is the reason why energy mistakes such as the one Antonelli made behind Leclerc were more damaging to track position this weekend compared to the first three races. A race-start procedure change was tested in Miami (although it is still not formally adopted), where automatic MGU-K deploys if a car under-accelerates after clutch release, as well as rear and lateral warning lights, which turn on to alert any cars behind or alongside. To top it all off, the electrical boost was capped at +150 kW in race conditions, which directly shapes how the Overtake Mode "trains" seen on the back straight will play out for the rest of the year.
     </p>
 
     <h3>Tyre Strategy</h3>
@@ -666,6 +719,43 @@ img { max-width: 100%; display: block; }
     <p>
       The championship moves to Montreal for the Canadian Grand Prix, the third Sprint weekend of 2026. Teams will focus on refining "lift-off regeneration" profiles for the heavy braking zones of the Circuit Gilles-Villeneuve, where managing the trade-off between battery and charging, and Active Aero deployment will be the key to overtaking.
     </p>
+
+    <!-- ===== SOURCES SECTION ===== -->
+    <section class="sources-section reveal">
+      <h2 class="sources-title">Sources</h2>
+      <p class="sources-subtitle">Primary research used for this race report.</p>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Official Race Data</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/results/2026/races/1284/miami/race-result" target="_blank" rel="noopener">Formula1.com — 2026 Miami Grand Prix Race Result</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1284/miami/fastest-laps" target="_blank" rel="noopener">Formula1.com — Fastest Laps</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1284/miami/pit-stop-summary" target="_blank" rel="noopener">Formula1.com — Pit Stop Summary</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Tyre Strategy</div>
+        <ul class="sources-list">
+          <li><a href="https://press.pirelli.com/antonelli-wins-again-in-miami-three-consecutive-victories-for-the-italian/" target="_blank" rel="noopener">Pirelli — Race Debrief: Antonelli wins again in Miami (3 May 2026)</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Regulations</div>
+        <ul class="sources-list">
+          <li><a href="https://www.fia.com/news/refinements-2026-fia-formula-1-regulations-agreed-all-stakeholders" target="_blank" rel="noopener">FIA — Refinements to the 2026 FIA Formula 1 Regulations Agreed by All Stakeholders (20 April 2026)</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Post-Race Penalty Verification</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/latest/article/explained-why-leclerc-was-hit-with-a-20-second-time-penalty-after-the-miami-grand-prix.4EbZXOee2tXei29C5ktNMG" target="_blank" rel="noopener">Formula1.com — EXPLAINED: Why Leclerc was hit with a 20-second time penalty</a></li>
+          <li><a href="https://www.skysports.com/f1/news/12433/13539722/charles-leclerc-demoted-behind-lewis-hamilton-franco-colapinto-in-miami-gp-results-after-chaotic-finish-that-was-all-on-me" target="_blank" rel="noopener">Sky Sports F1 — Leclerc demoted behind Hamilton and Colapinto in Miami GP results</a></li>
+        </ul>
+      </div>
+    </section>
 
   </article>
 

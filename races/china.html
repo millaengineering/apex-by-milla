@@ -847,6 +847,54 @@ img {
 }
 
 
+/* ---------- Sources Section ---------- */
+.sources-section {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+.sources-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+}
+.sources-subtitle {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+.sources-group { margin-bottom: 1.4rem; }
+.sources-group-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 0.5rem;
+}
+.sources-list { list-style: none; padding: 0; margin: 0; }
+.sources-list li {
+  font-size: 0.84rem;
+  color: #b0b0b0;
+  margin-bottom: 0.45rem;
+  line-height: 1.55;
+}
+.sources-list a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--border);
+  transition: color 0.2s, border-color 0.2s;
+}
+.sources-list a:hover {
+  color: var(--red);
+  border-bottom-color: var(--red);
+}
+
 /* ---------- Scroll Animations ---------- */
 .reveal {
   opacity: 0;
@@ -1113,6 +1161,38 @@ img {
     <p>
       The championship heads to Suzuka for the Japanese Grand Prix. The high-speed "S" Curves will be the ultimate proving ground for the nimble 2026 chassis and the reaction speed of the active aero flaps. Red Bull and McLaren must urgently address their ERS and power unit cooling issues if they hope to challenge Mercedes' early season dominance on one of the most technically demanding tracks in the world.
     </p>
+
+    <!-- ===== SOURCES SECTION ===== -->
+    <section class="sources-section reveal">
+      <h2 class="sources-title">Sources</h2>
+      <p class="sources-subtitle">Primary research used for this race report.</p>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Official Race Data</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/results/2026/races/1280/china/race-result" target="_blank" rel="noopener">Formula1.com — 2026 Chinese Grand Prix Race Result</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1280/china/fastest-laps" target="_blank" rel="noopener">Formula1.com — Fastest Laps</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1280/china/pit-stop-summary" target="_blank" rel="noopener">Formula1.com — Pit Stop Summary</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1280/china/sprint-results" target="_blank" rel="noopener">Formula1.com — Sprint Result</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1280/china/sprint-qualifying" target="_blank" rel="noopener">Formula1.com — Sprint Qualifying</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Tyre Strategy</div>
+        <ul class="sources-list">
+          <li><a href="https://press.pirelli.com/kimi-antonelli-claims-his-first-grand-prix-victory/" target="_blank" rel="noopener">Pirelli — Race Debrief: Kimi Antonelli claims his first Grand Prix victory</a></li>
+          <li><a href="https://press.pirelli.com/the-first-sprint-of-the-season-in-shanghai/" target="_blank" rel="noopener">Pirelli — Sprint Debrief: The first Sprint of the season in Shanghai</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Race Report &amp; Driver Quotes</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/latest/article/antonelli-beats-russell-for-maiden-f1-victory-in-china-as-hamilton-takes.5aJsWCPiRhp2euZctEwEYA" target="_blank" rel="noopener">Formula1.com — 2026 Chinese Grand Prix Race Report and Highlights</a></li>
+        </ul>
+      </div>
+    </section>
 
     <!-- ── END OF BLOG CONTENT ── -->
 

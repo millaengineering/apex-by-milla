@@ -795,6 +795,54 @@ img {
 }
 
 
+/* ---------- Sources Section ---------- */
+.sources-section {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+.sources-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+}
+.sources-subtitle {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+.sources-group { margin-bottom: 1.4rem; }
+.sources-group-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 0.5rem;
+}
+.sources-list { list-style: none; padding: 0; margin: 0; }
+.sources-list li {
+  font-size: 0.84rem;
+  color: #b0b0b0;
+  margin-bottom: 0.45rem;
+  line-height: 1.55;
+}
+.sources-list a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--border);
+  transition: color 0.2s, border-color 0.2s;
+}
+.sources-list a:hover {
+  color: var(--red);
+  border-bottom-color: var(--red);
+}
+
 /* ---------- Scroll Animations ---------- */
 .reveal {
   opacity: 0;
@@ -1004,6 +1052,35 @@ img {
     <p>
       Teams now head to Shanghai for the Chinese Grand Prix with only one week to analyse data on energy harvesting rates and aero efficiency and translate it into performance upgrades. All eyes will be on Red Bull to see if they can solve their qualifying issues that hindered Verstappen, and whether Audi can solve the "pre-race technical issue" that prevented Nico Hulkenberg from starting the grand prix.
     </p>
+
+    <!-- ===== SOURCES SECTION ===== -->
+    <section class="sources-section reveal">
+      <h2 class="sources-title">Sources</h2>
+      <p class="sources-subtitle">Primary research used for this race report.</p>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Official Race Data</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/results/2026/races/1279/australia/race-result" target="_blank" rel="noopener">Formula1.com — 2026 Australian Grand Prix Race Result</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1279/australia/fastest-laps" target="_blank" rel="noopener">Formula1.com — Fastest Laps</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1279/australia/pit-stop-summary" target="_blank" rel="noopener">Formula1.com — Pit Stop Summary</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Tyre Strategy</div>
+        <ul class="sources-list">
+          <li><a href="https://press.pirelli.com/russell-wins-the-australian-gp-after-a-spectacular-opening-phase/" target="_blank" rel="noopener">Pirelli — Race Debrief: Russell wins the Australian GP after a spectacular opening phase</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Race Report &amp; Driver Quotes</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/latest/article/russell-wins-action-packed-australian-gp-from-antonelli-as-mercedes-secure-1.4WRxPAtF4dFtrKCsWIiQX2" target="_blank" rel="noopener">Formula1.com — 2026 Australian Grand Prix Race Report and Highlights</a></li>
+        </ul>
+      </div>
+    </section>
 
     <!-- ── END OF BLOG CONTENT ── -->
 

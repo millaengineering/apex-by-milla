@@ -793,6 +793,54 @@ img {
 }
 
 
+/* ---------- Sources Section ---------- */
+.sources-section {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+.sources-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+}
+.sources-subtitle {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+.sources-group { margin-bottom: 1.4rem; }
+.sources-group-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 0.5rem;
+}
+.sources-list { list-style: none; padding: 0; margin: 0; }
+.sources-list li {
+  font-size: 0.84rem;
+  color: #b0b0b0;
+  margin-bottom: 0.45rem;
+  line-height: 1.55;
+}
+.sources-list a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--border);
+  transition: color 0.2s, border-color 0.2s;
+}
+.sources-list a:hover {
+  color: var(--red);
+  border-bottom-color: var(--red);
+}
+
 /* ---------- Scroll Animations ---------- */
 .reveal {
   opacity: 0;
@@ -962,6 +1010,43 @@ img {
     <p>
       The paddock now enters a brief April break following the cancellation of the Bahrain and Saudi Arabian Grand Prix amid ongoing safety concerns surrounding the current political climate. In May, teams will be back and racing at the Miami Grand Prix, using this extra time to analyse the massive 50G data from Bearman's crash and to refine their battery mapping for the flat-out straights of Miami. Red Bull, in particular, will be under immense pressure to solve the qualifying issues that have left Max Verstappen fighting in the midfield for two consecutive rounds.
     </p>
+
+    <!-- ===== SOURCES SECTION ===== -->
+    <section class="sources-section reveal">
+      <h2 class="sources-title">Sources</h2>
+      <p class="sources-subtitle">Primary research used for this race report.</p>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Official Race Data</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/results/2026/races/1281/japan/race-result" target="_blank" rel="noopener">Formula1.com — 2026 Japanese Grand Prix Race Result</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1281/japan/fastest-laps" target="_blank" rel="noopener">Formula1.com — Fastest Laps</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1281/japan/pit-stop-summary" target="_blank" rel="noopener">Formula1.com — Pit Stop Summary</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Tyre Strategy</div>
+        <ul class="sources-list">
+          <li><a href="https://press.pirelli.com/second-consecutive-grand-prix-victory-for-antonelli/" target="_blank" rel="noopener">Pirelli — Race Debrief: Second consecutive Grand Prix victory for Antonelli</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Race Report &amp; Driver Quotes</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/latest/article/antonelli-takes-championship-lead-after-surging-to-victory-in-japan-from.4EC4uZc29IUEO2iE5nKpUp" target="_blank" rel="noopener">Formula1.com — 2026 Japanese Grand Prix Race Report and Highlights</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Bearman's 50G Crash</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/latest/article/bearman-reacts-to-50g-crash-during-japanese-grand-prix.7hiNVcluoZHH9AuiQGbQIO" target="_blank" rel="noopener">Formula1.com — Haas' Ollie Bearman reacts to 50G crash during Japanese Grand Prix</a></li>
+          <li><a href="https://www.skysports.com/f1/news/12433/13525701/japanese-gp-fia-to-assess-f1-2026-regulations-after-oliver-bearman-crash-at-suzuka-highlights-closing-speeds-issue" target="_blank" rel="noopener">Sky Sports F1 — FIA to assess F1 2026 regulations after Bearman's crash highlights 'closing speeds' issue</a></li>
+        </ul>
+      </div>
+    </section>
 
     <!-- ── END OF BLOG CONTENT ── -->
 
