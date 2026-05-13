@@ -460,6 +460,84 @@ img {
   position: relative;
 }
 
+/* ---------- Apex Index Promo Section ---------- */
+.apex-index-section {
+  background: var(--dark);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 5rem 2rem;
+}
+.apex-index-inner { max-width: 1200px; margin: 0 auto; }
+.apex-index-header { text-align: center; margin-bottom: 3rem; }
+.apex-index-eyebrow {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--red); margin-bottom: 0.8rem;
+}
+.apex-index-section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  letter-spacing: 0.04em; color: var(--white); line-height: 1; margin-bottom: 1.2rem;
+}
+.apex-index-section-sub {
+  color: var(--muted); font-size: 0.95rem; max-width: 600px; margin: 0 auto 2rem;
+}
+.apex-index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+.apex-index-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.4rem 1.2rem;
+  text-align: center;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.apex-index-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--red);
+  box-shadow: 0 6px 24px rgba(225,6,0,0.12);
+}
+.apex-index-card-icon {
+  font-size: 1.8rem; margin-bottom: 0.6rem;
+}
+.apex-index-card-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  margin-bottom: 0.3rem;
+}
+.apex-index-card-count {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 600;
+}
+.apex-index-cta-wrapper { text-align: center; }
+.apex-index-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--red);
+  color: var(--white);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.9rem 2rem;
+  border-radius: 3px;
+  transition: background 0.2s, transform 0.15s;
+}
+.apex-index-cta:hover {
+  background: var(--red-dark);
+  transform: translateY(-1px);
+}
+
 .progress-fill::after {
   content: '';
   position: absolute;
@@ -1644,6 +1722,51 @@ img {
     </div>
   </div>
 
+  <!-- ===== APEX INDEX PROMO ===== -->
+  <section class="apex-index-section">
+    <div class="apex-index-inner">
+      <div class="apex-index-header reveal">
+        <div class="apex-index-eyebrow">Technical Glossary</div>
+        <h2 class="apex-index-section-title">The Apex Index</h2>
+        <p class="apex-index-section-sub">
+          A reference for the engineering terms behind every race report — power units, aerodynamics, tyres, race control, chassis and safety. Updated as new terminology appears through the season.
+        </p>
+      </div>
+
+      <div class="apex-index-grid">
+        <a href="apex-index.html#power-unit" class="apex-index-card reveal">
+          <div class="apex-index-card-icon">⚡</div>
+          <div class="apex-index-card-title">Power Unit</div>
+          <div class="apex-index-card-count">10 Terms</div>
+        </a>
+        <a href="apex-index.html#race-control" class="apex-index-card reveal reveal-delay-1">
+          <div class="apex-index-card-icon">🏁</div>
+          <div class="apex-index-card-title">Race Control &amp; Strategy</div>
+          <div class="apex-index-card-count">9 Terms</div>
+        </a>
+        <a href="apex-index.html#aerodynamics" class="apex-index-card reveal reveal-delay-2">
+          <div class="apex-index-card-icon">💨</div>
+          <div class="apex-index-card-title">Aerodynamics</div>
+          <div class="apex-index-card-count">9 Terms</div>
+        </a>
+        <a href="apex-index.html#tyres" class="apex-index-card reveal reveal-delay-3">
+          <div class="apex-index-card-icon">🛞</div>
+          <div class="apex-index-card-title">Tyres</div>
+          <div class="apex-index-card-count">7 Terms</div>
+        </a>
+        <a href="apex-index.html#chassis-safety" class="apex-index-card reveal reveal-delay-3">
+          <div class="apex-index-card-icon">🛡️</div>
+          <div class="apex-index-card-title">Chassis &amp; Safety</div>
+          <div class="apex-index-card-count">5 Terms</div>
+        </a>
+      </div>
+
+      <div class="apex-index-cta-wrapper">
+        <a href="apex-index.html" class="apex-index-cta">Browse the full Apex Index <span>→</span></a>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="footer-inner">
@@ -1662,6 +1785,7 @@ img {
           <li><a href="races/china.html">🇨🇳 Chinese GP</a></li>
           <li><a href="races/japan.html">🇯🇵 Japanese GP</a></li>
           <li><a href="races/miami.html">🇺🇸 Miami GP</a></li>
+          <li style="margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px solid var(--border);"><a href="apex-index.html">📖 The Apex Index</a></li>
         </ul>
       </div>
 
