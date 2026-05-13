@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Apex Index — Apex by Milla</title>
+  <meta name="description" content="A technical glossary explaining the engineering terms used across Apex by Milla's 2026 F1 race reports — power unit, aerodynamics, tyres, race control, chassis and safety." />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://apexbymilla.com/apex-index.html" />
+  <meta property="og:title"       content="The Apex Index — Apex by Milla" />
+  <meta property="og:description" content="A technical glossary of the engineering terms behind every 2026 F1 race report." />
+  <meta property="og:image"       content="https://apexbymilla.com/social-share.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@apexbymilla" />
+  <meta name="twitter:title"       content="The Apex Index — Apex by Milla" />
+  <meta name="twitter:description" content="A technical glossary of the engineering terms behind every 2026 F1 race report." />
+  <meta name="twitter:image"       content="https://apexbymilla.com/social-share.png" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://apexbymilla.com/apex-index.html" />
+
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Bebas+Neue&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --red:       #E10600;
+  --red-dark:  #b00400;
+  --black:     #0a0a0a;
+  --dark:      #111111;
+  --card:      #181818;
+  --border:    #2a2a2a;
+  --text:      #f0f0f0;
+  --muted:     #888888;
+  --white:     #ffffff;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--black);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: var(--red); border-radius: 3px; }
+
+/* ---------- Navigation ---------- */
+.navbar {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(10,10,10,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+.nav-logo { display: flex; align-items: center; flex-shrink: 0; }
+.nav-links { display: flex; align-items: center; gap: 0.25rem; list-style: none; }
+.nav-links a {
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted);
+  padding: 0.45rem 0.85rem; border-radius: 4px;
+  transition: color 0.2s, background 0.2s; white-space: nowrap;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--white); background: var(--border); }
+.nav-links a.race-link { color: var(--text); }
+.nav-links a.race-link:hover { color: var(--red); background: rgba(225,6,0,0.1); }
+
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+
+/* ---------- Hero ---------- */
+.index-hero {
+  background: var(--dark);
+  border-bottom: 1px solid var(--border);
+  border-top: 3px solid var(--red);
+  padding: 5rem 2rem 3rem;
+  position: relative;
+}
+.index-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 220px;
+  background: radial-gradient(ellipse 60% 100% at 90% 0%, rgba(225,6,0,0.14) 0%, transparent 70%);
+  pointer-events: none;
+}
+.index-hero-inner { max-width: 900px; margin: 0 auto; position: relative; }
+.index-eyebrow {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--red); margin-bottom: 0.8rem;
+}
+.index-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  letter-spacing: 0.03em; color: var(--white); line-height: 1; margin-bottom: 1rem;
+}
+.index-subtitle {
+  color: #b0b0b0; font-size: 1rem; max-width: 700px;
+}
+
+/* ---------- Category Nav ---------- */
+.category-nav {
+  background: var(--dark);
+  border-bottom: 1px solid var(--border);
+  padding: 1.4rem 2rem;
+  position: sticky;
+  top: 64px;
+  z-index: 50;
+}
+.category-nav-inner {
+  max-width: 900px; margin: 0 auto;
+  display: flex; flex-wrap: wrap; gap: 0.6rem;
+  font-size: 0.78rem;
+}
+.category-nav a {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  color: var(--text);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: all 0.2s;
+}
+.category-nav a:hover {
+  background: rgba(225,6,0,0.1);
+  border-color: var(--red);
+  color: var(--red);
+}
+
+/* ---------- Content ---------- */
+.index-content { max-width: 900px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+
+.category-section { margin-bottom: 3.5rem; scroll-margin-top: 140px; }
+
+.category-header {
+  display: flex; align-items: baseline; gap: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--red);
+  padding-bottom: 0.6rem;
+}
+.category-header h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem; letter-spacing: 0.04em; color: var(--white);
+}
+.category-header span {
+  font-size: 0.78rem; color: var(--muted); font-weight: 500;
+}
+
+.term {
+  margin-bottom: 1.8rem;
+  scroll-margin-top: 140px;
+}
+.term-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.04em;
+  color: var(--red);
+  margin-bottom: 0.4rem;
+  display: inline-block;
+}
+.term-name .abbr { color: var(--text); opacity: 0.65; font-size: 0.95rem; font-weight: 400; }
+.term-definition { color: #b0b0b0; font-size: 0.97rem; }
+.term-definition strong { color: var(--text); font-weight: 600; }
+
+/* ---------- Footer ---------- */
+.footer {
+  padding: 2.5rem 2rem; text-align: center;
+  color: var(--muted); font-size: 0.8rem;
+  border-top: 1px solid var(--border);
+}
+.footer-logo img { margin: 0 auto; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; position: fixed; top: 64px; left: 0; right: 0;
+    background: var(--dark); border-bottom: 1px solid var(--border);
+    flex-direction: column; align-items: stretch; padding: 1rem; gap: 0.25rem;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 0.7rem 1rem; font-size: 0.85rem; }
+  .hamburger { display: flex; }
+  .index-hero { padding: 3.5rem 1.5rem 2rem; }
+  .index-content { padding: 2.5rem 1.5rem 4rem; }
+  .category-nav { top: 64px; padding: 1rem 1.5rem; }
+  .category-nav a { font-size: 0.72rem; padding: 0.4rem 0.75rem; }
+  .category-header h2 { font-size: 1.6rem; }
+}
+
+/* ---------- Scroll Animations ---------- */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>🏎</text></svg>" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo" aria-label="Apex by Milla — Home">
+      <img src="logo.png" alt="Apex by Milla" style="height:48px;width:auto;">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="races/australia.html" class="race-link">🇦🇺 Australia</a></li>
+      <li><a href="races/china.html"     class="race-link">🇨🇳 China</a></li>
+      <li><a href="races/japan.html"     class="race-link">🇯🇵 Japan</a></li>
+      <li><a href="races/miami.html"     class="race-link">🇺🇸 Miami</a></li>
+      <li><a href="apex-index.html" class="active">The Apex Index</a></li>
+      <li><a href="index.html#about">About</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <div class="index-hero">
+    <div class="index-hero-inner">
+      <div class="index-eyebrow">Technical Glossary</div>
+      <h1 class="index-title">The Apex Index</h1>
+      <p class="index-subtitle">
+        A reference for the engineering terms used across Apex by Milla's 2026 race reports. Grouped by category and updated as new terminology appears through the season. Each entry can be linked directly from a race post.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== CATEGORY NAV (sticky jump links) ===== -->
+  <div class="category-nav">
+    <div class="category-nav-inner">
+      <a href="#power-unit">⚡ Power Unit</a>
+      <a href="#race-control">🏁 Race Control &amp; Strategy</a>
+      <a href="#aerodynamics">💨 Aerodynamics</a>
+      <a href="#tyres">🛞 Tyres</a>
+      <a href="#chassis-safety">🛡️ Chassis &amp; Safety</a>
+    </div>
+  </div>
+
+  <!-- ===== CONTENT ===== -->
+  <main class="index-content">
+
+    <!-- ============= POWER UNIT ============= -->
+    <section class="category-section" id="power-unit">
+      <div class="category-header">
+        <h2>Power Unit</h2>
+        <span>The engine and electric systems that drive the car</span>
+      </div>
+
+      <div class="term" id="ice">
+        <div class="term-name">1.6L V6 Turbo ICE <span class="abbr">(Internal Combustion Engine)</span></div>
+        <p class="term-definition">The traditional fuel-burning part of an F1 power unit: a 1.6-litre, six-cylinder, turbocharged petrol engine. In 2026 it remains, but it now provides only about half the car's total power. The other half comes from the electric system.</p>
+      </div>
+
+      <div class="term" id="mgu-k">
+        <div class="term-name">MGU-K <span class="abbr">(Motor Generator Unit – Kinetic)</span></div>
+        <p class="term-definition">An electric motor-generator connected to the drivetrain. It harvests energy when the driver brakes (converting braking force into electricity stored in the battery), and deploys energy when the driver accelerates (adding power to the wheels). For 2026 it's been beefed up to handle roughly three times as much energy as before.</p>
+      </div>
+
+      <div class="term" id="mgu-h">
+        <div class="term-name">MGU-H <span class="abbr">(Motor Generator Unit – Heat)</span></div>
+        <p class="term-definition">The component that used to harvest energy from exhaust gas heat in earlier hybrid F1 cars. <strong>Removed for 2026</strong>, because it was considered too complex and not relevant to road-car technology.</p>
+      </div>
+
+      <div class="term" id="ers">
+        <div class="term-name">ERS <span class="abbr">(Energy Recovery System)</span></div>
+        <p class="term-definition">The collective name for all the electric components in an F1 power unit: the battery, the control electronics, and the MGU-K. The system that captures energy from braking and lift-offs and reuses it as extra power.</p>
+      </div>
+
+      <div class="term" id="power-split">
+        <div class="term-name">50/50 Power Split</div>
+        <p class="term-definition">The 2026 target where roughly half the car's total power comes from the petrol engine and the other half from the electric system. A major shift from previous years, when the electric contribution was a smaller boost on top of the engine.</p>
+      </div>
+
+      <div class="term" id="super-clipping">
+        <div class="term-name">Super-clipping</div>
+        <p class="term-definition">Running the engine at slightly less than maximum power while harvesting electrical energy at the same time. Lets the car top up the battery during a flat-out lap without significantly losing top speed. The FIA targets a super-clip window of about 2-4 seconds per lap.</p>
+      </div>
+
+      <div class="term" id="lift-off-regen">
+        <div class="term-name">Lift-off Regeneration</div>
+        <p class="term-definition">Energy harvesting that happens when the driver lifts off the throttle without braking. The MGU-K acts as a generator, slowing the car slightly while topping up the battery. Common through medium-load corners.</p>
+      </div>
+
+      <div class="term" id="boost-button">
+        <div class="term-name">Boost Button</div>
+        <p class="term-definition">A manual control the driver presses to deploy a burst of stored electrical power. Unlike Overtake Mode (which is proximity-triggered), Boost is at the driver's discretion. From Miami 2026 onwards, the boost is capped at +150 kW in race conditions.</p>
+      </div>
+
+      <div class="term" id="recharge">
+        <div class="term-name">Recharge</div>
+        <p class="term-definition">The general term for the act of harvesting energy back into the battery, whether through braking, throttle lift, or super-clipping. The maximum permitted recharge per lap was reduced from 8MJ to 7MJ from Miami onwards.</p>
+      </div>
+
+      <div class="term" id="sustainable-fuels">
+        <div class="term-name">100% Advanced Sustainable Fuels</div>
+        <p class="term-definition">From 2026, all F1 cars run on fuels made either from non-food biomass (waste material) or as e-fuels (synthesised from atmospheric CO₂ and hydrogen). Part of F1's roadmap to net-zero carbon by 2030.</p>
+      </div>
+    </section>
+
+    <!-- ============= RACE CONTROL & STRATEGY ============= -->
+    <section class="category-section" id="race-control">
+      <div class="category-header">
+        <h2>Race Control &amp; Strategy</h2>
+        <span>The rules, penalties and tactical decisions that shape a race</span>
+      </div>
+
+      <div class="term" id="overtake-mode">
+        <div class="term-name">Overtake Mode</div>
+        <p class="term-definition">A proximity-triggered power boost introduced in 2026 that replaces DRS as the primary overtaking aid. When a driver is within one second of the car ahead at a detection point, they get +0.5MJ of extra electrical energy to use on the next lap. Peak power available rises to 350 kW, available all the way up to 337 km/h before tapering.</p>
+      </div>
+
+      <div class="term" id="undercut">
+        <div class="term-name">Undercut</div>
+        <p class="term-definition">A pit-stop tactic where you pit BEFORE the car you're chasing, so you can use fresh, faster tyres to set quicker lap times. By the time the opponent pits, you've gained enough through-the-air time that you emerge ahead of them.</p>
+      </div>
+
+      <div class="term" id="overcut">
+        <div class="term-name">Overcut</div>
+        <p class="term-definition">The opposite of an undercut. You stay out LONGER than your rival, hoping their fresher tyres degrade enough that you maintain your lead when you eventually pit. Works best when track conditions favour older tyres, or when traffic clears late.</p>
+      </div>
+
+      <div class="term" id="sprint-shootout">
+        <div class="term-name">Sprint Shootout</div>
+        <p class="term-definition">A short qualifying session held on Friday at Sprint weekends. It sets the grid for Saturday's Sprint race only. Separate from the main Qualifying session, which sets Sunday's race grid.</p>
+      </div>
+
+      <div class="term" id="sprint-race">
+        <div class="term-name">Sprint Race</div>
+        <p class="term-definition">A short race (roughly 100km, no mandatory pit stops) held on Saturday at six weekends of the season. Points are awarded for the top 8 finishers. Sprint weekends compress the Friday practice schedule to make room for the Sprint Shootout.</p>
+      </div>
+
+      <div class="term" id="time-penalty">
+        <div class="term-name">Time Penalty</div>
+        <p class="term-definition">A penalty added to a driver's race time by the stewards. Common values are 5 seconds (minor infraction, e.g. crossing the pit-exit white line), 10 seconds (mid-level, e.g. causing a collision), and 20 seconds (serious, e.g. repeated track-limits violations). Stewards can also issue a drive-through (drive through the pit lane without stopping) or stop-go (stop in the pit lane for a set time with no team work allowed).</p>
+      </div>
+
+      <div class="term" id="parc-ferme">
+        <div class="term-name">Parc Fermé</div>
+        <p class="term-definition">French for "closed park." A regulatory state that begins at the start of qualifying and ends when the car crosses the finish line on Sunday. Once a car is in parc fermé, teams cannot change setup or major components without permission from the FIA. The rule stops teams from running radically different setups in qualifying versus the race.</p>
+      </div>
+
+      <div class="term" id="dsq">
+        <div class="term-name">Disqualification <span class="abbr">(DSQ)</span></div>
+        <p class="term-definition">When a car is removed from the official classification entirely, usually due to a technical infringement (illegal floor, illegal fuel sample, etc.) or a serious sporting violation. Points are forfeited and the result moves on to the next-classified driver.</p>
+      </div>
+
+      <div class="term" id="pit-lane-start">
+        <div class="term-name">Pit Lane Start</div>
+        <p class="term-definition">A penalty where the driver starts the race from the pit lane rather than their grid position. Happens when changes are made under parc fermé without FIA permission, or as a separate stewards' sanction.</p>
+      </div>
+    </section>
+
+    <!-- ============= AERODYNAMICS ============= -->
+    <section class="category-section" id="aerodynamics">
+      <div class="category-header">
+        <h2>Aerodynamics</h2>
+        <span>How the car uses airflow to generate grip and reduce drag</span>
+      </div>
+
+      <div class="term" id="active-aero">
+        <div class="term-name">Active Aerodynamics</div>
+        <p class="term-definition">The 2026 system where moveable front and rear wings change shape during a lap, controlled automatically by the engine maps. They open on straights (for low drag and high top speed) and close in corners (for high downforce and grip). Available all the time, on all cars, replacing the DRS system that was only usable when within one second of the car ahead.</p>
+      </div>
+
+      <div class="term" id="straight-mode">
+        <div class="term-name">Straight Mode</div>
+        <p class="term-definition">The active aero configuration with wings open and flat. Minimum drag, allowing maximum top speed. Activated automatically on straights.</p>
+      </div>
+
+      <div class="term" id="corner-mode">
+        <div class="term-name">Corner Mode</div>
+        <p class="term-definition">The active aero configuration with wings closed. Maximum downforce for cornering grip. Activated automatically entering and through corners.</p>
+      </div>
+
+      <div class="term" id="in-washing-bargeboards">
+        <div class="term-name">In-Washing Bargeboards</div>
+        <p class="term-definition">Aerodynamic devices fitted behind the front wheels that push turbulent airflow INWARDS, towards the centre of the car. The opposite philosophy of the previous generation's "out-washing." The goal is to leave a cleaner wake behind the car so a following driver can stay close without losing front-end grip.</p>
+      </div>
+
+      <div class="term" id="venturi-tunnels">
+        <div class="term-name">Venturi Tunnels</div>
+        <p class="term-definition">The deep channels under previous-generation F1 cars (2022-2025) that created ground-effect downforce by accelerating airflow under the floor. <strong>Removed for 2026.</strong> Floors are now flatter, with much of the downforce work shifted to a larger rear diffuser.</p>
+      </div>
+
+      <div class="term" id="front-wing">
+        <div class="term-name">Front Wing</div>
+        <p class="term-definition">The aerodynamic device at the front of the car. In 2026 it's been simplified with fewer elements (the razor-like cascade is gone), and the "eyebrow" winglets above the front wheels have been removed. The new shape directs airflow inward rather than outward.</p>
+      </div>
+
+      <div class="term" id="floor">
+        <div class="term-name">Floor</div>
+        <p class="term-definition">The underside of the car. The single biggest source of downforce on any modern F1 car. In 2026 it's 100-150mm narrower than the previous generation, and the deep Venturi tunnels have been removed in favour of a flatter design.</p>
+      </div>
+
+      <div class="term" id="diffuser">
+        <div class="term-name">Diffuser</div>
+        <p class="term-definition">The upward-curving section at the rear of the floor. It accelerates air under the car as it exits at the back, creating a low-pressure zone that sucks the car onto the track. In 2026 it's much larger than before, to compensate for the removal of Venturi tunnels.</p>
+      </div>
+
+      <div class="term" id="drs">
+        <div class="term-name">DRS <span class="abbr">(Drag Reduction System, historical)</span></div>
+        <p class="term-definition">The previous overtaking aid (2011-2025) that opened a flap in the rear wing to reduce drag and increase straight-line speed. Available only to cars within one second of the car ahead, and only on designated straights. <strong>Replaced for 2026</strong> by Active Aerodynamics (the mechanical successor) and Overtake Mode (the strategic successor).</p>
+      </div>
+    </section>
+
+    <!-- ============= TYRES ============= -->
+    <section class="category-section" id="tyres">
+      <div class="category-header">
+        <h2>Tyres</h2>
+        <span>Pirelli's role in race performance and strategy</span>
+      </div>
+
+      <div class="term" id="compounds">
+        <div class="term-name">Pirelli Compounds <span class="abbr">(C1-C5)</span></div>
+        <p class="term-definition">Pirelli brings five dry-weather slick compounds, numbered C1 (hardest) to C5 (softest). At each race they nominate three of these compounds and rename them Hard, Medium, and Soft for that weekend. For example, Miami 2026 used C3/C4/C5 — the softest possible trio.</p>
+      </div>
+
+      <div class="term" id="hard-medium-soft">
+        <div class="term-name">Hard / Medium / Soft</div>
+        <p class="term-definition">The three race-weekend nicknames for the three compounds Pirelli has brought, regardless of which actual C-grade they are. Hard wears slowest and goes longest. Soft is fastest but degrades quickly. Medium is the compromise. The actual rubber inside each varies from race to race.</p>
+      </div>
+
+      <div class="term" id="stint">
+        <div class="term-name">Tyre Stint</div>
+        <p class="term-definition">The period during which a driver uses one set of tyres before pitting. A "21-lap stint on the medium compound," for example. A "long stint" is one that stretches close to the limit of the tyre's life.</p>
+      </div>
+
+      <div class="term" id="thermal-degradation">
+        <div class="term-name">Thermal Degradation</div>
+        <p class="term-definition">Loss of tyre grip caused by the rubber overheating beyond its optimal working window. Affects lap times progressively, even before the tread physically wears out. A key factor on hot, abrasive circuits.</p>
+      </div>
+
+      <div class="term" id="tyre-blanket">
+        <div class="term-name">Tyre Blanket</div>
+        <p class="term-definition">A heated cover that wraps around the tyres before they're fitted to the car, pre-warming them to optimal temperature. Without blankets, the first lap or two out of the pits would be on cold (and therefore low-grip) tyres.</p>
+      </div>
+
+      <div class="term" id="intermediate-wet">
+        <div class="term-name">Intermediate &amp; Wet Tyres</div>
+        <p class="term-definition">Pirelli's two tread-patterned tyres for wet conditions. Intermediates are for damp tracks with no standing water. Full wets are for heavy rain with standing water on the surface.</p>
+      </div>
+
+      <div class="term" id="tread-width">
+        <div class="term-name">Tread Width</div>
+        <p class="term-definition">The width of rubber that contacts the road. In 2026 the tread width has been reduced by 25mm at the front and 30mm at the rear, making the tyres noticeably narrower than the previous generation.</p>
+      </div>
+    </section>
+
+    <!-- ============= CHASSIS & SAFETY ============= -->
+    <section class="category-section" id="chassis-safety">
+      <div class="category-header">
+        <h2>Chassis &amp; Safety</h2>
+        <span>The car's physical structure and the systems that protect the driver</span>
+      </div>
+
+      <div class="term" id="minimum-weight">
+        <div class="term-name">768kg Minimum Weight</div>
+        <p class="term-definition">The minimum allowable weight of a 2026 F1 car, including the driver but not the fuel. Down from 800kg in the previous generation. The weight cut was achieved by shrinking the car's dimensions and components.</p>
+      </div>
+
+      <div class="term" id="wheelbase">
+        <div class="term-name">3.4m Wheelbase</div>
+        <p class="term-definition">The distance between the front and rear axles. In 2026 the maximum has been reduced from 3.6m to 3.4m, making the cars 200mm shorter overall and noticeably more agile in slow corners.</p>
+      </div>
+
+      <div class="term" id="roll-hoop">
+        <div class="term-name">Roll Hoop</div>
+        <p class="term-definition">The reinforced structure above and behind the driver's head, designed to protect them if the car flips upside-down. In 2026 the roll hoop must pass a vertical impact test at 20g of force, up from 16g in the previous generation. The change was made following the FIA's review after Zhou Guanyu's Silverstone 2022 crash, where the roll hoop detached.</p>
+      </div>
+
+      <div class="term" id="halo">
+        <div class="term-name">Halo</div>
+        <p class="term-definition">The titanium loop fitted above the cockpit, surrounding the driver's head. Mandatory in all F1 cars since 2018. It protects the driver from debris (loose wheels, body panels) and from objects intruding into the cockpit during a crash. Widely regarded as the single biggest driver-safety innovation of the modern era.</p>
+      </div>
+
+      <div class="term" id="nose-impact">
+        <div class="term-name">Two-Stage Nose Impact Structure</div>
+        <p class="term-definition">A new feature for 2026. The nose is designed to crumple in TWO stages during a crash: the front absorbs the initial impact, and if the car spins and hits something else (a secondary impact), a separate crash structure behind the first remains intact. Addresses an issue in previous generations where one bad impact left no protection for a second.</p>
+      </div>
+    </section>
+
+    <!-- ============= SOURCES ============= -->
+    <section class="category-section" style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+      <div class="category-header" style="border-bottom-color: var(--muted);">
+        <h2 style="font-size: 1.4rem; color: var(--muted);">Sources</h2>
+        <span>Primary references used to verify these definitions</span>
+      </div>
+      <ul style="list-style: none; padding: 0; font-size: 0.84rem; line-height: 1.7;">
+        <li style="margin-bottom: 0.4rem;"><a href="https://www.fia.com/F126" target="_blank" rel="noopener" style="color: var(--text); border-bottom: 1px dotted var(--border);">FIA — 2026 Formula 1 Regulations Hub</a></li>
+        <li style="margin-bottom: 0.4rem;"><a href="https://www.formula1.com/en/page/2026-f1-regulations" target="_blank" rel="noopener" style="color: var(--text); border-bottom: 1px dotted var(--border);">Formula1.com — 2026 Regulations Explained</a></li>
+        <li style="margin-bottom: 0.4rem;"><a href="https://www.formula1.com/en/latest/article/2026-regulations-explained-all-you-need-to-know-about-f1s-new-aerodynamics.7IAt0auc32UkCEFE5ypkTB" target="_blank" rel="noopener" style="color: var(--text); border-bottom: 1px dotted var(--border);">Formula1.com — 2026 Aerodynamics Explained</a></li>
+        <li style="margin-bottom: 0.4rem;"><a href="https://www.mclaren.com/racing/formula-1/2026/explaining-f1s-new-2026-regulations/" target="_blank" rel="noopener" style="color: var(--text); border-bottom: 1px dotted var(--border);">McLaren — Explaining F1's New 2026 Regulations</a></li>
+        <li style="margin-bottom: 0.4rem;"><a href="https://www.fia.com/news/refinements-2026-fia-formula-1-regulations-agreed-all-stakeholders" target="_blank" rel="noopener" style="color: var(--text); border-bottom: 1px dotted var(--border);">FIA — Refinements to the 2026 Regulations (20 April 2026)</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="logo.png" alt="Apex by Milla" style="height:70px;width:auto;opacity:0.55;">
+    </div>
+    <p>© 2026 · Formula One Technical Analysis · All Rights Reserved</p>
+    <p style="font-size: 0.72rem; opacity: 0.65; margin-top: 0.5rem; font-style: italic;">Independent technical analysis. Not affiliated with Formula 1, the FIA, or any F1 team.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+  </script>
+</body>
+</html>
