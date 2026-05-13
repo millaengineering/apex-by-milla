@@ -93,3 +93,9 @@ apexbymilla@gmail.com
 ---
 
 *Apex by Milla is an independent technical analysis project. Not affiliated with Formula 1, the FIA, or any F1 team.*
+
+---
+
+## Licence
+
+© 2026 Apex by Milla. All Rights Reserved. The source code is publicly visible for transparency and portfolio purposes only. No part of this repository may be copied, reproduced, or redistributed without prior written permission. See [LICENSE.md](LICENSE.md) for full terms.
