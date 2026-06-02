@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║   APEX BY MILLA — CANADA GP 2026 (TEMPLATE READY FOR YOUR TEXT) ║
+  ║                                                                  ║
+  ║   ROUND 05 · Circuit Gilles-Villeneuve · 13–15 Jun 2026         ║
+  ║   SPRINT WEEKEND (gold accent kept in)                           ║
+  ║                                                                  ║
+  ║   STAGE 2 sections:                                              ║
+  ║     Pace & Performance Comparison (Section 5)                    ║
+  ║     Engineering Question of the Race (Section 6)                 ║
+  ║     Race Engineer's View (Section 11)                            ║
+  ║                                                                  ║
+  ║   Just replace the [SQUARE BRACKET] bits with your real writing. ║
+  ║   Keep, rename or remove any section to suit the race.           ║
+  ╚══════════════════════════════════════════════════════════════════╝
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 Canadian GP Technical Analysis — Apex by Milla</title>
+  <meta name="description" content="[150–160 CHAR DESCRIPTION: e.g. 'Sprint weekend in Montreal: technical breakdown of tyre strategy, energy management and braking performance at Circuit Gilles-Villeneuve.']" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://apexbymilla.com/races/canada.html" />
+  <meta property="og:title"       content="2026 Canadian GP Technical Analysis — Apex by Milla" />
+  <meta property="og:description" content="[SAME AS META DESCRIPTION ABOVE]" />
+  <meta property="og:image"       content="https://apexbymilla.com/social-share.png" />
+  <meta property="article:published_time" content="2026-06-15" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@apexbymilla" />
+  <meta name="twitter:title"       content="2026 Canadian GP Technical Analysis — Apex by Milla" />
+  <meta name="twitter:description" content="[SAME AS META DESCRIPTION ABOVE]" />
+  <meta name="twitter:image"       content="https://apexbymilla.com/social-share.png" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://apexbymilla.com/races/canada.html" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "2026 Canadian GP Technical Analysis",
+    "description": "[SAME AS META DESCRIPTION ABOVE]",
+    "author": { "@type": "Person", "name": "Milla", "url": "https://apexbymilla.com" },
+    "publisher": { "@type": "Organization", "name": "Apex by Milla", "url": "https://apexbymilla.com" },
+    "datePublished": "2026-06-15",
+    "url": "https://apexbymilla.com/races/canada.html",
+    "mainEntityOfPage": "https://apexbymilla.com/races/canada.html"
+  }
+  </script>
+
+  <style>
+/* ================================================
+   APEX BY MILLA — Global Stylesheet (inline)
+   ================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Bebas+Neue&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --red:       #E10600;
+  --red-dark:  #b00400;
+  --black:     #0a0a0a;
+  --dark:      #111111;
+  --card:      #181818;
+  --border:    #2a2a2a;
+  --text:      #f0f0f0;
+  --muted:     #888888;
+  --white:     #ffffff;
+  --gold:      #F5C842;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--black);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: var(--red); border-radius: 3px; }
+
+/* ---------- Navigation ---------- */
+.navbar {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(10,10,10,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+.nav-logo { display: flex; align-items: center; flex-shrink: 0; }
+.nav-links { display: flex; align-items: center; gap: 0.25rem; list-style: none; }
+.nav-links a {
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted);
+  padding: 0.45rem 0.85rem; border-radius: 4px;
+  transition: color 0.2s, background 0.2s; white-space: nowrap;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--white); background: var(--border); }
+.nav-links a.race-link { color: var(--text); }
+.nav-links a.race-link:hover { color: var(--red); background: rgba(225,6,0,0.1); }
+.nav-links a.race-link.active { color: var(--red); background: rgba(225,6,0,0.1); }
+
+.hamburger {
+  display: none; flex-direction: column; gap: 5px; cursor: pointer;
+  background: none; border: none; padding: 4px;
+}
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+
+/* ---------- Blog Hero ---------- */
+.blog-hero {
+  background: var(--dark);
+  border-bottom: 1px solid var(--border);
+  border-top: 3px solid #D4500A; /* Canada signature: maple orange */
+  padding: 5rem 2rem 3rem;
+  position: relative;
+}
+.blog-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 220px;
+  background: radial-gradient(ellipse 60% 100% at 90% 0%, rgba(212,80,10,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.blog-hero-inner { max-width: 800px; margin: 0 auto; position: relative; }
+.blog-back {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 2rem; transition: color 0.2s;
+}
+.blog-back:hover { color: var(--text); }
+.blog-round {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--red); margin-bottom: 0.8rem;
+}
+.blog-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  letter-spacing: 0.03em; color: var(--white); line-height: 1; margin-bottom: 1rem;
+}
+.blog-meta {
+  display: flex; gap: 1.5rem; flex-wrap: wrap;
+  font-size: 0.8rem; color: var(--muted);
+  margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border);
+}
+.blog-meta span { display: flex; align-items: center; gap: 0.4rem; }
+
+/* ---------- Blog Content ---------- */
+.blog-content { max-width: 800px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+.blog-content h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem; letter-spacing: 0.04em; color: var(--white);
+  margin-top: 2.5rem; margin-bottom: 1rem;
+  padding-bottom: 0.5rem; border-bottom: 2px solid var(--red); display: inline-block;
+}
+.blog-content h3 {
+  font-size: 1.1rem; font-weight: 600; color: var(--text);
+  margin-top: 2rem; margin-bottom: 0.75rem;
+}
+.blog-content p { color: #b0b0b0; margin-bottom: 1.2rem; font-size: 0.97rem; }
+.blog-content strong { color: var(--text); font-weight: 600; }
+
+.highlight-box {
+  background: rgba(225,6,0,0.08);
+  border-left: 3px solid var(--red);
+  padding: 1.2rem 1.5rem; border-radius: 0 4px 4px 0;
+  margin: 2rem 0;
+}
+.highlight-box p { margin: 0; color: var(--text); font-style: italic; }
+
+/* ---------- Driver / DNF Cards ---------- */
+.driver-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem; margin: 1.5rem 0;
+}
+.driver-card { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 1rem; }
+.driver-pos { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--red); line-height: 1; }
+.driver-name { font-weight: 600; font-size: 0.9rem; color: var(--text); margin-top: 0.25rem; }
+.driver-team { font-size: 0.78rem; color: var(--muted); }
+
+.dnf-card { border-color: #333333; opacity: 0.75; }
+.dnf-pos { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--muted) !important; line-height: 1; }
+.dnf-reason { font-size: 0.72rem; color: var(--muted); margin-top: 0.3rem; font-style: italic; }
+
+/* Penalty / position-change note under driver cards */
+.position-note {
+  font-size: 0.7rem;
+  color: var(--gold);
+  margin-top: 0.4rem;
+  font-style: italic;
+  line-height: 1.3;
+}
+.penalty-footnote {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 1rem;
+  padding-left: 0.8rem;
+  border-left: 2px solid var(--gold);
+}
+
+/* ---------- Sprint Weekend ---------- */
+.sprint-box {
+  background: rgba(255, 180, 0, 0.05);
+  border: 1px solid rgba(255, 180, 0, 0.25);
+  border-radius: 6px;
+  padding: 1.8rem;
+  margin: 2.5rem 0;
+}
+.sprint-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem; }
+.sprint-badge {
+  background: rgba(255, 180, 0, 0.15);
+  border: 1px solid rgba(255, 180, 0, 0.4);
+  color: #f0b400;
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 2px; white-space: nowrap;
+}
+.sprint-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem; letter-spacing: 0.04em; color: var(--white);
+  border-bottom: 2px solid #f0b400 !important;
+  display: inline-block; padding-bottom: 0.3rem; margin: 0 !important;
+}
+.sprint-box h3 { font-size: 1rem; font-weight: 600; color: var(--text); margin-top: 1.5rem; margin-bottom: 0.6rem; }
+.sprint-box p { color: #b0b0b0; font-size: 0.97rem; margin-bottom: 1rem; }
+
+/* ---------- Stage 2 Pace Table ---------- */
+.pace-table-wrapper {
+  margin: 1.2rem 0 2rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+.pace-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 0.9rem;
+}
+.pace-table th, .pace-table td {
+  padding: 0.7rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.pace-table th {
+  background: rgba(225,6,0,0.08);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.pace-table tr:last-child td { border-bottom: none; }
+.pace-table td { color: #b0b0b0; }
+.pace-table td strong { color: var(--text); }
+
+/* ---------- Engineer's View Box ---------- */
+.engineer-box {
+  background: rgba(0, 120, 200, 0.06);
+  border-left: 3px solid #2898d8;
+  padding: 1.2rem 1.5rem;
+  border-radius: 0 4px 4px 0;
+  margin: 2rem 0;
+}
+.engineer-box .engineer-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #2898d8;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.engineer-box p { margin: 0; color: var(--text); }
+
+/* ---------- Footer ---------- */
+.footer {
+  padding: 2.5rem 2rem; text-align: center;
+  color: var(--muted); font-size: 0.8rem;
+  border-top: 1px solid var(--border);
+}
+.footer span { color: var(--red); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; position: fixed; top: 64px; left: 0; right: 0;
+    background: var(--dark); border-bottom: 1px solid var(--border);
+    flex-direction: column; align-items: stretch; padding: 1rem; gap: 0.25rem;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 0.7rem 1rem; font-size: 0.85rem; }
+  .hamburger { display: flex; }
+  .blog-hero { padding: 3.5rem 1.5rem 2rem; }
+  .blog-meta { gap: 0.8rem; font-size: 0.75rem; }
+  .blog-content { padding: 2.5rem 1.5rem 4rem; }
+  .blog-content h2 { font-size: 1.4rem; }
+  .driver-grid { grid-template-columns: 1fr; }
+  .pace-table { font-size: 0.82rem; }
+  .pace-table th, .pace-table td { padding: 0.55rem 0.7rem; }
+}
+
+/* ---------- Sources Section ---------- */
+.sources-section {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+.sources-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+}
+.sources-subtitle {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+.sources-group { margin-bottom: 1.4rem; }
+.sources-group-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 0.5rem;
+}
+.sources-list { list-style: none; padding: 0; margin: 0; }
+.sources-list li {
+  font-size: 0.84rem;
+  color: #b0b0b0;
+  margin-bottom: 0.45rem;
+  line-height: 1.55;
+}
+.sources-list a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--border);
+  transition: color 0.2s, border-color 0.2s;
+}
+.sources-list a:hover {
+  color: var(--red);
+  border-bottom-color: var(--red);
+}
+
+/* ---------- Scroll Animations ---------- */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+</style>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-tab.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon.png" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="shortcut icon" href="../favicon.ico" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo" aria-label="Apex by Milla — Home">
+      <img src="../logo.png" alt="Apex by Milla" style="height:48px;width:auto;">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="australia.html" class="race-link">🇦🇺 Australia</a></li>
+      <li><a href="china.html"     class="race-link">🇨🇳 China</a></li>
+      <li><a href="japan.html"     class="race-link">🇯🇵 Japan</a></li>
+      <li><a href="miami.html"     class="race-link">🇺🇸 Miami</a></li>
+      <li><a href="canada.html"    class="race-link active">🇨🇦 Canada</a></li>
+      <li><a href="../apex-index.html">The Apex Index</a></li>
+      <li><a href="../index.html#about">About</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== BLOG HERO ===== -->
+  <div class="blog-hero">
+    <div class="blog-hero-inner">
+      <a href="../index.html" class="blog-back">← Back to All Races</a>
+      <div class="blog-round reveal">Round 05 · Circuit Gilles-Villeneuve · 15 Jun 2026</div>
+      <h1 class="blog-title reveal reveal-delay-1">Canadian Grand Prix 2026</h1>
+
+      <p style="color: var(--muted); font-size: 0.95rem; margin-top: 1rem;">
+        [ONE-LINE SUMMARY: e.g. "Who won and what was the storyline of the weekend."]
+      </p>
+
+      <div class="blog-meta reveal reveal-delay-2">
+        <span>📅 15 Jun 2026</span>
+        <span>📍 Circuit Gilles-Villeneuve, Montreal</span>
+        <span>🏁 Round 5 of 22</span>
+        <span>⚡ Sprint Weekend</span>
+        <span>✍️ Written by Milla</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BLOG CONTENT ===== -->
+  <article class="blog-content">
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 1 · RACE OVERVIEW
+         What happened, the storyline of the weekend.
+         ───────────────────────────────────────────── -->
+    <h2>Race Overview</h2>
+    <p>
+      [YOUR RACE OVERVIEW — describe what happened across the weekend, the headline result, and the general narrative of the race. What were the key moments? What made this race interesting from a technical and engineering perspective?]
+    </p>
+    <p>
+      [CONTINUE YOUR OVERVIEW HERE if needed — safety cars, incidents, championship implications, etc.]
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 2 · STARTING GRID & QUALIFYING
+         Saturday breakdown, surprises, who underperformed.
+         ───────────────────────────────────────────── -->
+    <h2>Starting Grid &amp; Qualifying</h2>
+    <p>
+      [YOUR QUALIFYING ANALYSIS — who took pole, by how much, any surprises or shock eliminations. What did the session reveal about car setups at Circuit Gilles-Villeneuve? Did teams go high downforce or low drag? Any technical infractions or parc fermé issues?]
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 3 · SPRINT WEEKEND
+         Gold-accented box. Sprint Shootout + Sprint Race + Top 8 grid.
+         ───────────────────────────────────────────── -->
+    <div class="sprint-box">
+      <div class="sprint-header">
+        <span class="sprint-badge">⚡ Sprint Weekend</span>
+        <h2 class="sprint-title">Sprint Race</h2>
+      </div>
+
+      <h3>Sprint Shootout</h3>
+      <p>
+        [YOUR SPRINT SHOOTOUT SUMMARY — who took Sprint pole, what the order was, any notable moments or incidents during the session. How did conditions compare to qualifying?]
+      </p>
+
+      <h3>Sprint Race Breakdown</h3>
+      <p>
+        [YOUR SPRINT RACE ANALYSIS — what happened in the 19-lap Sprint, who won, key battles, strategy calls, Overtake Mode usage, any incidents or retirements.]
+      </p>
+      <p>
+        [ANY ADDITIONAL SPRINT RACE DETAIL — penalties, technical infringements, post-Sprint classification changes if applicable.]
+      </p>
+
+      <h3>Sprint Result — Top 8</h3>
+      <div class="driver-grid reveal">
+        <div class="driver-card"><div class="driver-pos">P1</div><div class="driver-name">[DRIVER]</div><div class="driver-team">[TEAM]</div></div>
+        <div class="driver-card"><div class="driver-pos">P2</div><div class="driver-name">[DRIVER]</div><div class="driver-team">[TEAM]</div></div>
+        <div class="driver-card"><div class="driver-pos">P3</div><div class="driver-name">[DRIVER]</div><div class="driver-team">[TEAM]</div></div>
+        <div class="driver-card"><div class="driver-pos">P4</div><div class="driver-name">[DRIVER]</div><div class="driver-team">[TEAM]</div></div>
+        <div class="driver-card"><div class="driver-pos">P5</div><div class="driver-name">[DRIVER]</div><div class="driver-team">[TEAM]</div></div>
+        <div class="driver-card"><div class="driver-pos">P6</div><div class="driver-name">[DRIVER]</div><div class="driver-team">[TEAM]</div></div>
+        <div class="driver-card"><div class="driver-pos">P7</div><div class="driver-name">[DRIVER]</div><div class="driver-team">[TEAM]</div></div>
+        <div class="driver-card"><div class="driver-pos">P8</div><div class="driver-name">[DRIVER]</div><div class="driver-team">[TEAM]</div></div>
+      </div>
+      <!-- DELETE the penalty-footnote below if there were no post-Sprint position changes -->
+      <p class="penalty-footnote">
+        [* DELETE THIS LINE if no penalties. Otherwise explain any post-Sprint classification changes here.]
+      </p>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 4 · TECHNICAL BREAKDOWN
+         The meat of the post.
+         ───────────────────────────────────────────── -->
+    <h2>Technical Breakdown</h2>
+    <p>
+      [YOUR MAIN TECHNICAL ANALYSIS — the primary technical theme of the Canadian GP. What were the key engineering challenges at Circuit Gilles-Villeneuve? Heavy braking zones, ERS management, tyre deg on the abrasive surface, wall proximity and downforce tradeoffs?]
+    </p>
+    <p>
+      [CONTINUE TECHNICAL ANALYSIS — any reliability issues, software/strategy modes, interesting engineer-driver radio exchanges about the car's behaviour?]
+    </p>
+
+    <h3>[SUBHEADING — e.g. "Tyre Strategy"]</h3>
+    <p>
+      [YOUR TYRE STRATEGY ANALYSIS — which compounds were used, one-stop vs two-stop, who got it right, who got it wrong, degradation rates at CGV.]
+    </p>
+
+    <h3>[SUBHEADING — e.g. "Aerodynamics &amp; Setup"]</h3>
+    <p>
+      [YOUR AERO/SETUP ANALYSIS — how teams set up for the unique demands of the Circuit Gilles-Villeneuve layout. The Wall of Champions at the final chicane, DRS zones, active aero behaviour on the long straights.]
+    </p>
+
+    <h3>[SUBHEADING — e.g. "Energy Management"]</h3>
+    <p>
+      [YOUR ERS/ENERGY ANALYSIS — how the 50/50 PU split played out at a circuit with heavy braking and long straights. Overtake Mode deployment, super-clipping profiles, any energy-related incidents or radio messages.]
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 5 · PACE & PERFORMANCE (STAGE 2)
+         Fill in the table with verified data from formula1.com
+         ───────────────────────────────────────────── -->
+    <h2>Pace &amp; Performance</h2>
+    <p>
+      [YOUR PACE ANALYSIS INTRO — who had the outright pace this weekend vs who won the strategic battle. What does the data tell you about the gaps between the top teams?]
+    </p>
+
+    <div class="pace-table-wrapper">
+      <table class="pace-table">
+        <thead>
+          <tr>
+            <th>Driver</th>
+            <th>Fastest lap</th>
+            <th>On lap</th>
+            <th>Pit stop (lap)</th>
+            <th>Stop time</th>
+            <th>Gap at flag</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>[DRIVER]</strong> ([TEAM])</td><td>[TIME]</td><td>[LAP]</td><td>[LAP]</td><td>[TIME]s</td><td>WINNER</td></tr>
+          <tr><td><strong>[DRIVER]</strong> ([TEAM])</td><td>[TIME]</td><td>[LAP]</td><td>[LAP]</td><td>[TIME]s</td><td>+[GAP]s</td></tr>
+          <tr><td><strong>[DRIVER]</strong> ([TEAM])</td><td>[TIME]</td><td>[LAP]</td><td>[LAP]</td><td>[TIME]s</td><td>+[GAP]s</td></tr>
+          <tr><td><strong>[DRIVER]</strong> ([TEAM])</td><td>[TIME]</td><td>[LAP]</td><td>[LAP]</td><td>[TIME]s</td><td>+[GAP]s</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      [YOUR PACE TABLE ANALYSIS — what story do those numbers tell? Who was fastest but lost out on strategy? Which team had the best pit crew performance? What do the gaps suggest about the pecking order?]
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 6 · ENGINEERING QUESTION OF THE RACE (STAGE 2)
+         Pick ONE specific moment and dig into the "why".
+         ───────────────────────────────────────────── -->
+    <h2>Engineering Question of the Race</h2>
+    <h3>"[YOUR QUESTION — e.g. 'Why did X team pit under the safety car when others stayed out?']"</h3>
+    <p>
+      [SET UP THE QUESTION — explain the context. What was the situation, what were the competing options, what data would the engineers have been looking at?]
+    </p>
+    <p>
+      [ANALYSE THE DECISION — what were the trade-offs? What did the team choose and why might they have made that call? Were there any radio messages or post-race quotes that give insight into their thinking?]
+    </p>
+    <p>
+      <strong>Verdict:</strong> [YOUR VERDICT — was it the right call? What would you have done differently and why?]
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 7 · KEY INSIGHT (HIGHLIGHT BOX)
+         One quote or one sentence that summarises the race.
+         ───────────────────────────────────────────── -->
+    <div class="highlight-box reveal">
+      <p>
+        💡 [YOUR KEY INSIGHT — a standout quote from team radio or a single sentence that captures the most important technical takeaway from this race.]
+      </p>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 8 · RACE RESULT — TOP 10
+         Verified from formula1.com
+         ───────────────────────────────────────────── -->
+    <h2>Race Result — Top 10</h2>
+    <div class="driver-grid reveal">
+      <div class="driver-card"><div class="driver-pos">P1</div><div class="driver-name">[DRIVER]</div><div class="driver-team">[TEAM]</div></div>
+      <div class="driver-card"><div class="driver-pos">P2</div><div class="driver-name">[DRIVER]</div><div class="driver-team">[TEAM]</div></div>
+      <div class="driver-card"><div class="driver-pos">P3</div><div class="driver-name">[DRIVER]</div><div class="driver-team">[TEAM]</div></div>
+      <div class="driver-card"><div class="driver-pos">P4</div><div class="driver-name">[DRIVER]</div><div class="driver-team">[TEAM]</div></div>
+      <div class="driver-card"><div class="driver-pos">P5</div><div class="driver-name">[DRIVER]</div><div class="driver-team">[TEAM]</div></div>
+      <div class="driver-card"><div class="driver-pos">P6</div><div class="driver-name">[DRIVER]</div><div class="driver-team">[TEAM]</div></div>
+      <div class="driver-card"><div class="driver-pos">P7</div><div class="driver-name">[DRIVER]</div><div class="driver-team">[TEAM]</div></div>
+      <div class="driver-card"><div class="driver-pos">P8</div><div class="driver-name">[DRIVER]</div><div class="driver-team">[TEAM]</div></div>
+      <div class="driver-card"><div class="driver-pos">P9</div><div class="driver-name">[DRIVER]</div><div class="driver-team">[TEAM]</div></div>
+      <div class="driver-card"><div class="driver-pos">P10</div><div class="driver-name">[DRIVER]</div><div class="driver-team">[TEAM]</div></div>
+    </div>
+    <!-- DELETE the penalty-footnote below if there were no post-race position changes -->
+    <p class="penalty-footnote">
+      [* DELETE THIS LINE if no penalties. Otherwise explain any post-race classification changes here.]
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 9 · DNF / DNS
+         Add or remove cards to match actual retirements.
+         ───────────────────────────────────────────── -->
+    <h2>DNF / DNS</h2>
+    <div class="driver-grid reveal">
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">[DRIVER]</div>
+        <div class="driver-team">[TEAM]</div>
+        <div class="dnf-reason">[REASON — e.g. "Retired lap 12 — power unit failure"]</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">[DRIVER]</div>
+        <div class="driver-team">[TEAM]</div>
+        <div class="dnf-reason">[REASON]</div>
+      </div>
+      <!-- Add or remove driver-card dnf-card blocks above to match the actual number of retirements -->
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 10 · KEY TAKEAWAYS
+         What we learned from this race.
+         ───────────────────────────────────────────── -->
+    <h2>Key Takeaways</h2>
+    <p>
+      [YOUR KEY TAKEAWAYS — what did the Canadian GP teach us about the 2026 cars, the championship battle, and the technical development race? What are the 3-5 big conclusions from an engineering perspective?]
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 11 · RACE ENGINEER'S VIEW (STAGE 2)
+         Written in your own voice — what would YOU have done?
+         ───────────────────────────────────────────── -->
+    <div class="engineer-box">
+      <span class="engineer-label">🎧 Race Engineer's View</span>
+      <p>
+        [YOUR RACE ENGINEER'S VIEW — write this in first person, as if you were the race engineer on the pit wall. What would you have been focused on during the race? What would the data have been telling you? Is there a decision made by one of the teams that you would have called differently, and why?]
+      </p>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 12 · LOOKING AHEAD
+         Bridge to the next race.
+         ───────────────────────────────────────────── -->
+    <h2>Looking Ahead</h2>
+    <p>
+      [YOUR LOOKING AHEAD — what does the Canadian GP result mean for the championship standings? What technical story will carry over into the next round? What should we watch for at the next circuit?]
+    </p>
+
+
+    <!-- ===== SOURCES SECTION ===== -->
+    <section class="sources-section reveal">
+      <h2 class="sources-title">Sources</h2>
+      <p class="sources-subtitle">Primary research used for this race report.</p>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Official Race Data</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/results/2026/races/[RACE-ID]/canada/race-result" target="_blank" rel="noopener">Formula1.com — 2026 Canadian Grand Prix Race Result</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/[RACE-ID]/canada/fastest-laps" target="_blank" rel="noopener">Formula1.com — Fastest Laps</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/[RACE-ID]/canada/pit-stop-summary" target="_blank" rel="noopener">Formula1.com — Pit Stop Summary</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Tyre Strategy</div>
+        <ul class="sources-list">
+          <li><a href="https://press.pirelli.com/[PIRELLI-SLUG]" target="_blank" rel="noopener">Pirelli — Race Debrief: [TITLE] ([DATE])</a></li>
+        </ul>
+      </div>
+
+      <!-- ADD MORE SOURCE GROUPS AS NEEDED — e.g. Regulations, Penalties, Team Radio, etc. -->
+      <!-- Example extra group:
+      <div class="sources-group">
+        <div class="sources-group-label">[GROUP LABEL]</div>
+        <ul class="sources-list">
+          <li><a href="[URL]" target="_blank" rel="noopener">[SOURCE TITLE]</a></li>
+        </ul>
+      </div>
+      -->
+
+    </section>
+
+  </article>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="../logo.png" alt="Apex by Milla" style="height:70px;width:auto;opacity:0.55;">
+    </div>
+    <p>© 2026 · Formula One Technical Analysis · All Rights Reserved</p>
+    <p style="font-size: 0.72rem; opacity: 0.65; margin-top: 0.5rem; font-style: italic;">Independent technical analysis. Not affiliated with Formula 1, the FIA, or any F1 team.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+  </script>
+
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
