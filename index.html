@@ -1419,9 +1419,21 @@ img {
     The "NEW" badge automatically pulses for 7 days from the publish date,
     then auto-switches to "LATEST" with a calmer look. No edits needed for that.
   -->
-  <div class="new-blog-banner" id="latestRaceBanner" style="background: linear-gradient(90deg, #a83a06, #D4500A); cursor: default;">
-    <span class="new-blog-badge" style="background: rgba(255,255,255,0.18); color: var(--white); animation: none;">COMING SOON</span>
-    <span class="new-blog-text">🇨🇦 Canadian Grand Prix Technical Analysis</span>
+  <div style="display: flex; align-items: stretch; flex-wrap: wrap; border-bottom: 1px solid rgba(255,255,255,0.08);">
+    <a href="races/canada.html"
+       class="new-blog-banner"
+       id="latestRaceBanner"
+       data-publish-date="2026-06-10"
+       style="flex: 1; min-width: 260px; border-bottom: none;">
+      <span class="new-blog-badge" data-new-text="NEW" data-latest-text="LATEST">NEW</span>
+      <span class="new-blog-text">🇨🇦 Canadian Grand Prix Technical Analysis</span>
+      <span class="new-blog-cta">Read →</span>
+    </a>
+    <div style="width: 1px; background: rgba(255,255,255,0.15); flex-shrink: 0;"></div>
+    <div style="flex: 1; min-width: 260px; display: flex; align-items: center; justify-content: center; gap: 0.9rem; padding: 0.7rem 1.5rem; background: linear-gradient(90deg, #a0081e, #CF0A2C); font-size: 0.88rem; font-weight: 500; letter-spacing: 0.01em; color: var(--white); cursor: default;">
+      <span style="background: rgba(255,255,255,0.18); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 0.25rem 0.6rem; border-radius: 4px; letter-spacing: 0.08em; text-transform: uppercase; flex-shrink: 0;">UPCOMING</span>
+      <span style="font-weight: 500;">🇲🇨 Monaco Grand Prix Technical Analysis</span>
+    </div>
   </div>
 
   <!-- ===== HERO ===== -->
