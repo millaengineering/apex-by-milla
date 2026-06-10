@@ -309,6 +309,8 @@ img {
   text-transform: uppercase;
   animation: bounce 2s infinite;
   pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.5s ease;
 }
 
 .hero-scroll::after {
@@ -1898,6 +1900,21 @@ img {
     });
   </script>
 
+
+  <!-- Scroll indicator fade -->
+  <script>
+    (function() {
+      const scrollHint = document.querySelector('.hero-scroll');
+      if (!scrollHint) return;
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 80) {
+          scrollHint.style.opacity = '0';
+        } else {
+          scrollHint.style.opacity = '1';
+        }
+      }, { passive: true });
+    })();
+  </script>
 
   <!-- Scroll reveal -->
   <script>
