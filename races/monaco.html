@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 Monaco GP Technical Analysis — Apex by Milla</title>
+  <meta name="description" content="Kimi Antonelli wins a dramatic Monaco Grand Prix as Verstappen retires and brake failures end Leclerc and Stroll's races. Full technical breakdown by Milla." />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://apexbymilla.com/races/monaco.html" />
+  <meta property="og:title"       content="2026 Monaco GP Technical Analysis — Apex by Milla" />
+  <meta property="og:description" content="Kimi Antonelli wins a dramatic Monaco Grand Prix as Verstappen retires and brake failures end Leclerc and Stroll's races. Full technical breakdown by Milla." />
+  <meta property="og:image"       content="https://apexbymilla.com/social-share.png" />
+  <meta property="article:published_time" content="2026-07-10" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@apexbymilla" />
+  <meta name="twitter:title"       content="2026 Monaco GP Technical Analysis — Apex by Milla" />
+  <meta name="twitter:description" content="Kimi Antonelli wins a dramatic Monaco Grand Prix as Verstappen retires and brake failures end Leclerc and Stroll's races. Full technical breakdown by Milla." />
+  <meta name="twitter:image"       content="https://apexbymilla.com/social-share.png" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://apexbymilla.com/races/monaco.html" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "2026 Monaco GP Technical Analysis",
+    "description": "Kimi Antonelli wins a dramatic Monaco Grand Prix as Verstappen retires and brake failures end Leclerc and Stroll's races. Full technical breakdown by Milla.",
+    "author": { "@type": "Person", "name": "Milla", "url": "https://apexbymilla.com" },
+    "publisher": { "@type": "Organization", "name": "Apex by Milla", "url": "https://apexbymilla.com" },
+    "datePublished": "2026-07-10",
+    "url": "https://apexbymilla.com/races/monaco.html",
+    "mainEntityOfPage": "https://apexbymilla.com/races/monaco.html"
+  }
+  </script>
+
+  <style>
+/* ================================================
+   APEX BY MILLA — Global Stylesheet (inline)
+   ================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Bebas+Neue&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --red:       #E10600;
+  --red-dark:  #b00400;
+  --black:     #0a0a0a;
+  --dark:      #111111;
+  --card:      #181818;
+  --border:    #2a2a2a;
+  --text:      #f0f0f0;
+  --muted:     #888888;
+  --white:     #ffffff;
+  --gold:      #F5C842;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--black);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: var(--red); border-radius: 3px; }
+
+/* ---------- Navigation ---------- */
+.navbar {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(10,10,10,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+.nav-logo { display: flex; align-items: center; flex-shrink: 0; }
+.nav-links { display: flex; align-items: center; gap: 0.25rem; list-style: none; }
+.nav-links a {
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted);
+  padding: 0.45rem 0.85rem; border-radius: 4px;
+  transition: color 0.2s, background 0.2s; white-space: nowrap;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--white); background: var(--border); }
+.nav-links a.race-link { color: var(--text); }
+.nav-links a.race-link:hover { color: var(--red); background: rgba(225,6,0,0.1); }
+.nav-links a.race-link.active { color: var(--red); background: rgba(225,6,0,0.1); }
+
+.hamburger {
+  display: none; flex-direction: column; gap: 5px; cursor: pointer;
+  background: none; border: none; padding: 4px;
+}
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+
+/* ---------- Blog Hero ---------- */
+.blog-hero {
+  background: var(--dark);
+  border-bottom: 1px solid var(--border);
+  border-top: 3px solid #CF0A2C; /* Monaco signature: deep Monegasque red */
+  padding: 5rem 2rem 3rem;
+  position: relative;
+}
+.blog-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 220px;
+  background: radial-gradient(ellipse 60% 100% at 90% 0%, rgba(207,10,42,0.14) 0%, transparent 70%);
+  pointer-events: none;
+}
+.blog-hero-inner { max-width: 800px; margin: 0 auto; position: relative; }
+.blog-back {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 2rem; transition: color 0.2s;
+}
+.blog-back:hover { color: var(--text); }
+.blog-round {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--red); margin-bottom: 0.8rem;
+}
+.blog-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  letter-spacing: 0.03em; color: var(--white); line-height: 1; margin-bottom: 1rem;
+}
+.blog-meta {
+  display: flex; gap: 1.5rem; flex-wrap: wrap;
+  font-size: 0.8rem; color: var(--muted);
+  margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border);
+}
+.blog-meta span { display: flex; align-items: center; gap: 0.4rem; }
+
+/* ---------- Blog Content ---------- */
+.blog-content { max-width: 800px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+.blog-content h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem; letter-spacing: 0.04em; color: var(--white);
+  margin-top: 2.5rem; margin-bottom: 1rem;
+  padding-bottom: 0.5rem; border-bottom: 2px solid var(--red); display: inline-block;
+}
+.blog-content h3 {
+  font-size: 1.1rem; font-weight: 600; color: var(--text);
+  margin-top: 2rem; margin-bottom: 0.75rem;
+}
+.blog-content p { color: #b0b0b0; margin-bottom: 1.2rem; font-size: 0.97rem; }
+.blog-content strong { color: var(--text); font-weight: 600; }
+
+.highlight-box {
+  background: rgba(225,6,0,0.08);
+  border-left: 3px solid var(--red);
+  padding: 1.2rem 1.5rem; border-radius: 0 4px 4px 0;
+  margin: 2rem 0;
+}
+.highlight-box p { margin: 0; color: var(--text); font-style: italic; }
+
+/* ---------- Driver / DNF Cards ---------- */
+.driver-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem; margin: 1.5rem 0;
+}
+.driver-card { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 1rem; }
+.driver-pos { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--red); line-height: 1; }
+.driver-name { font-weight: 600; font-size: 0.9rem; color: var(--text); margin-top: 0.25rem; }
+.driver-team { font-size: 0.78rem; color: var(--muted); }
+
+.dnf-card { border-color: #333333; opacity: 0.75; }
+.dnf-pos { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--muted) !important; line-height: 1; }
+.dnf-reason { font-size: 0.72rem; color: var(--muted); margin-top: 0.3rem; font-style: italic; }
+
+/* Penalty / position-change note under driver cards */
+.position-note {
+  font-size: 0.7rem;
+  color: var(--gold);
+  margin-top: 0.4rem;
+  font-style: italic;
+  line-height: 1.3;
+}
+.penalty-footnote {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 1rem;
+  padding-left: 0.8rem;
+  border-left: 2px solid var(--gold);
+}
+
+/* ---------- Stage 2 Pace Table ---------- */
+.pace-table-wrapper {
+  margin: 1.2rem 0 2rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+.pace-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 0.9rem;
+}
+.pace-table th, .pace-table td {
+  padding: 0.7rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.pace-table th {
+  background: rgba(225,6,0,0.08);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.pace-table tr:last-child td { border-bottom: none; }
+.pace-table td { color: #b0b0b0; }
+.pace-table td strong { color: var(--text); }
+
+/* ---------- Engineer's View Box ---------- */
+.engineer-box {
+  background: rgba(0, 120, 200, 0.06);
+  border-left: 3px solid #2898d8;
+  padding: 1.2rem 1.5rem;
+  border-radius: 0 4px 4px 0;
+  margin: 2rem 0;
+}
+.engineer-box .engineer-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #2898d8;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.engineer-box p { margin: 0; color: var(--text); }
+
+/* ---------- Footer ---------- */
+.footer {
+  padding: 2.5rem 2rem; text-align: center;
+  color: var(--muted); font-size: 0.8rem;
+  border-top: 1px solid var(--border);
+}
+.footer span { color: var(--red); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; position: fixed; top: 64px; left: 0; right: 0;
+    background: var(--dark); border-bottom: 1px solid var(--border);
+    flex-direction: column; align-items: stretch; padding: 1rem; gap: 0.25rem;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 0.7rem 1rem; font-size: 0.85rem; }
+  .hamburger { display: flex; }
+  .blog-hero { padding: 3.5rem 1.5rem 2rem; }
+  .blog-meta { gap: 0.8rem; font-size: 0.75rem; }
+  .blog-content { padding: 2.5rem 1.5rem 4rem; }
+  .blog-content h2 { font-size: 1.4rem; }
+  .driver-grid { grid-template-columns: 1fr; }
+  .pace-table { font-size: 0.82rem; }
+  .pace-table th, .pace-table td { padding: 0.55rem 0.7rem; }
+}
+
+/* ---------- Sources Section ---------- */
+.sources-section {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+.sources-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+}
+.sources-subtitle {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+.sources-group { margin-bottom: 1.4rem; }
+.sources-group-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 0.5rem;
+}
+.sources-list { list-style: none; padding: 0; margin: 0; }
+.sources-list li {
+  font-size: 0.84rem;
+  color: #b0b0b0;
+  margin-bottom: 0.45rem;
+  line-height: 1.55;
+}
+.sources-list a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--border);
+  transition: color 0.2s, border-color 0.2s;
+}
+.sources-list a:hover {
+  color: var(--red);
+  border-bottom-color: var(--red);
+}
+
+/* ---------- Scroll Animations ---------- */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+</style>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-tab.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon.png" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="shortcut icon" href="../favicon.ico" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo" aria-label="Apex by Milla — Home">
+      <img src="../logo.png" alt="Apex by Milla" style="height:48px;width:auto;">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="australia.html" class="race-link">🇦🇺 Australia</a></li>
+      <li><a href="china.html"     class="race-link">🇨🇳 China</a></li>
+      <li><a href="japan.html"     class="race-link">🇯🇵 Japan</a></li>
+      <li><a href="miami.html"     class="race-link">🇺🇸 Miami</a></li>
+      <li><a href="canada.html"    class="race-link">🇨🇦 Canada</a></li>
+      <li><a href="monaco.html"    class="race-link active">🇲🇨 Monaco</a></li>
+      <li><a href="../apex-index.html">The Apex Index</a></li>
+      <li><a href="../index.html#about">About</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== BLOG HERO ===== -->
+  <div class="blog-hero">
+    <div class="blog-hero-inner">
+      <a href="../index.html" class="blog-back">← Back to All Races</a>
+      <div class="blog-round reveal">Round 06 · Circuit de Monaco, Monte Carlo · June 7th 2026</div>
+      <h1 class="blog-title reveal reveal-delay-1">Monaco Grand Prix 2026</h1>
+
+      <p style="color: var(--muted); font-size: 0.95rem; margin-top: 1rem;">
+        Kimi Antonelli took charge of the iconic Monte-Carlo race to extend his lead in the championship by 23 points, while his rivals faltered amidst a shocking front-row collapse, pit-lane chaos, and a late-race red flag.
+      </p>
+
+      <div class="blog-meta reveal reveal-delay-2">
+        <span>📅 June 7th 2026</span>
+        <span>📍 Circuit de Monaco, Monte Carlo</span>
+        <span>🏁 Round 6 of 22</span>
+        <span>⏱️ 14 min read</span>
+        <span>✍️ Written by Milla</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BLOG CONTENT ===== -->
+  <article class="blog-content">
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 1 · RACE OVERVIEW
+         What happened, the storyline of the weekend.
+         ───────────────────────────────────────────── -->
+    <h2>Race Overview</h2>
+    <p>
+      On a track where millimetres separate glory from disaster, the 2026 Monaco Grand Prix saw two sides of the same coin. Kimi Antonelli became the youngest-ever winner of the Monte-Carlo race, dominating throughout and finishing ahead by a gap of over 6 seconds, proving the Mercedes W17 to still be the superior car, while some of his closest rivals in the championship faced shock retirements and costly penalties. The first surprise of the race was Max Verstappen's retirement at the race start. He was starting from P2 and was expected to give Antonelli a challenge for the lead but never ended up doing so as his car suffered an engine failure, with the problem later revealed to have begun during the formation lap and pre-start procedures. It is said that the engine "just dropped out," although he managed to get a small amount of power out of the first corner. Verstappen claimed the engine sounded "awful." In the end, he was able to restart the car but was instructed to trundle back to the pits and retire.
+    </p>
+    <p>
+      The drivers who completed the top steps following Antonelli were Lewis Hamilton and Pierre Gasly, after post-race drama dropped Isack Hadjar into P4 and promoted Gasly back up to the podium.
+    </p>
+    <p>
+      Gasly was originally going to finish in P7 after crossing the line in third since he received two 5-second time penalties for speeding in the pit lane and did not serve them during the race, but after it, Alpine requested a Right of Review for them as they believed the penalties were unjustified. New evidence then came out that there was a problem with the measurement of the pit lane, producing incorrect speed readings for the cars. Because of these findings, the FIA promoted Gasly back to his original spot on the podium. Following in Alpine's footsteps, Mercedes also requested a Right of Review for this incident as George Russell faced very harsh penalties that made him lose his second place in the drivers' championship to Hamilton, although nothing came of it. Many teams were unhappy about this outcome, as all the other drivers who suffered from this miscalculation served their penalties in the race and couldn't have their places given back to them.
+    </p>
+    <p>
+      Facing an incident similar to Verstappen's, Lando Norris had to retire from this Grand Prix on Lap 45 due to a power unit failure and was ordered by McLaren to box and retire the car. They later found it was specifically a battery failure, proving the current cars to still be unreliable, even in top teams. Another big headline that came from this race was the retirement on Lap 66 of Monaco's own home hero, Charles Leclerc, from P3 during a safety car restart that was caused by Lance Stroll's Lap 60 crash. Both of the drivers mentioned actually crashed on the same corner, Turn 19, suffering what seemed like identical incidents. The reason was that there was a significant issue with the track surface, where the asphalt was breaking up, causing the two drivers to slide nose-first into the barriers. After the second crash, race control deployed a red flag to inspect the track and make some temporary repairs, so it wasn't as much of a threat to other drivers. Leclerc specifically was quite vocal over the radio about this, claiming, "I won't even take the blame," as he believed the crash was also partially caused by an ongoing issue that he had been dealing with for the entire race with his car's brakes.
+    </p>
+    <p>
+      The high number of retirements from this race allowed bottom-field teams to utilise long-game strategies, prioritising survival and energy management over raw race-pace. Aston Martin did the opposite of this though, taking on an "aggressive and ambitious" strategy leading to Fernando Alonso scoring their first championship point of the season.
+    </p>
+    <p>
+      On the other hand, Williams were on track to score a point but suffered when Carlos Sainz retired very late in the race after having 2 separate incidents with Nico Hulkenberg and Franco Colapinto. Cadillac were another team who were close to a point, but ultimately didn't end up with any. Although they were still happy with their results, the team viewed it as a sign of significant progress.
+    </p>
+    <p>
+      Racing Bulls was one team that did triumph, with both drivers scoring points, which they believe to be a "big turnaround" for the team's 2026 season. And although Hadjar just missed out on a podium, which was disappointing, P4 is still a great result for him and helped him increase his score in the drivers' championship. In total, 7 drivers did not finish this race and had to retire, highlighting the uncertainty and the unreliability still surrounding the new regulations and their refinements.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 2 · STARTING GRID & QUALIFYING
+         Saturday breakdown, surprises, who underperformed.
+         Monaco note: qualifying position matters more here than
+         almost anywhere else on the calendar, since overtaking is
+         so difficult. Worth calling that out explicitly if it
+         shaped the race.
+         ───────────────────────────────────────────── -->
+    <h2>Starting Grid &amp; Qualifying</h2>
+    <p>
+      Securing pole position in qualifying at Monaco is famously known to be the best path to victory, which has been true for the last 4 years now as Antonelli continued that streak, winning from pole in 2026. In qualifying, Kimi set a quick lap time of 1:12.051, which was only 0.043 seconds ahead of a threatening Verstappen. Ferrari managed to secure a double second-row lockout with Hamilton starting in P3 and Leclerc in P4. The two Ferraris were a bit more behind regarding pace (0.228 and 0.3 seconds behind Antonelli), which left Russell "scratching his head" regarding his teammate's pace and how he was only able to secure P6, as there was a big enough gap for him to slot into and claim P2 or P3 at least. Isack Hadjar's performance in qualifying was impressive, as he managed to claim P5 on the starting grid.
+    </p>
+    <p>
+      Originally, Ferrari entered the weekend as the fan favourites due to the SF-26's efficiency in low-speed corners, which closely aligns with the characteristics of the Monte-Carlo circuit. However, Mercedes managed to bridge this mechanical gap, with Antonelli noting that the car felt "incredible" and gave him the "confidence to push." While Mercedes' young prodigy had been making strides to becoming this year's champion, Russell has been struggling with the feel of the car for the last couple of races and has been off his usual pace, which may be mostly confidence-related as the W17 has proven to be the superior car.
+    </p>
+    <p>
+      For the starting grid, most of the teams, including Mercedes, Ferrari, Red Bull, McLaren, and also a handful of the midfield teams, opted for the Medium compound. With a one-stop strategy expected in the calm conditions, the Medium tyre was viewed as the safest way to execute one. At the back of the grid, Cadillac started both of their drivers on the Soft compound, and while Aston Martin chose to start Alonso on the Mediums, they aborted that plan very early on, pitting him to switch to Softs on Lap 3. Besides those three, Gabriel Bortoleto was unfortunate as his car stalled at the pit exit, leading him to abandon his original P16 starting position on the grid and instead start from the pit lane on the Soft compound.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 3 · TECHNICAL BREAKDOWN
+         The meat of the post.
+         Monaco note: this is the low-speed, high-downforce, bumpy,
+         barrier-lined circuit — the story is usually maximum wing
+         levels, mechanical grip over aero, brake and gearbox stress
+         from the constant stop-start rhythm, and how little margin
+         for error there is with walls on both sides.
+         ───────────────────────────────────────────── -->
+    <h2>Technical Breakdown</h2>
+    <p>
+      The Monaco Grand Prix featured one of the highest attrition rates of drivers this season, with 7 total for a wide span of reasons, ranging from track issues to mechanical issues and collisions between drivers. Prior to this year's race weekend, the track underwent resurfacing to try and prevent the issues faced in the race, but it was obviously not that effective. The asphalt at Turn 19 began to break up near the end stages of the race, causing Stroll and Leclerc's "mirror image" crashes and warranting a red flag to stop the session and inspect, making some temporary repairs so it could safely resume. Leclerc explained in a post-race interview that the mechanical failure that was part of the cause of his crash was because "The rear brakes were not working at all… and the front delivered a lot more than what it should."
+    </p>
+    <p>
+      Despite the Ferrari's SF-26 being the pre-race favourite for the low-speed mechanical grip, the Mercedes W17 proved to be the more stable platform in the "hardest conditions," as Hamilton claimed. Antonelli noted that the car felt "incredible" and gave him the "confidence to push," suggesting Mercedes has found the sweet spot that allows the driver to trust the car's front-end bite without triggering rear-end instability. Drivers reported extreme difficulty at Monaco's famous hairpin, where the field frequently bunched up, requiring drivers to "lift" and anticipate contact due to the tight radius and low speed, which ended up being reality for Sainz and Hulkenberg. Even though this year's chassis is much lighter, nimbler, and smaller, the struggle through the tight and twisting streets of Monaco highlights just how demanding and technical this track is.
+    </p>
+    <p>
+      The brakes were also under pressure this race, and the suspicious number of brake-related retirements (Leclerc, Bottas) suggests that the 2026 energy harvesting requirements may be placing higher-than-anticipated thermal stress on the traditional friction braking systems during low-speed recovery phases, which is an issue that teams may need to address or find a way through in the near future.
+    </p>
+
+    <h3>Tyre Strategy</h3>
+    <p>
+      The streets of Monte-Carlo are characteristically smooth, so for this weekend Pirelli allocated the softest set of tyres to ensure maximum grip. This set features the C3 (Hard), C4 (Medium), and the C5 (Soft) compounds. By Pirelli, Monaco's track evolution is rated 5/5, and tyres are subjected mostly to traction-related loads rather than lateral energy. Previously in 2025, the FIA experimented by making 2 stops in the Monaco Grand Prix mandatory, although ultimately abolished that for the 2026 season.
+    </p>
+    <p>
+      The majority of drivers started the race on the Medium compounds, aiming for flexibility and stint extension (targeting a window between Laps 33 and 39) to react to the almost inevitable Monaco neutralisations. The soft starters looked for maximum launch traction, in hopes of gaining immediate track position before the field settled. Track temperatures reached a high of 43°C, which combined with low-speed sectors created a "thermal ceiling" for following cars, making wheel-to-wheel racing especially hard as the lack of airflow rapidly increased thermal degradation. Hamilton reported on Lap 20 that "there's a lot of degradation… the rears are very hot," indicating that even the Medium compound struggled with surface overheating when running in the wake of the leader, who was roughly 3 seconds ahead.
+    </p>
+    <p>
+      Aston Martin had one of the more unique strategies with Alonso, as they pitted him on Lap 3 to change to softs, which he somehow managed to stay on for an impressive 57 laps before taking a fresh set under the Lap 60 Safety Car. This high-risk approach allowed him to recover from P21 on the grid to P10, securing the team's first point of 2026. Esteban Ocon took a similar strategy to Alonso as well, pitting on Lap 9 into the Hards in an attempt to undercut the midfield pack, which ended up pretty successful as he finished in P9 after the red flag. What's most surprising is the fact that Alonso was able to pull off a 57-lap stint on the Soft compound, which typically has a window of about 10-25 laps. It's usually only a compound that's used in Qualifying to get the quickest laps possible, so it seems that most teams overlooked it as an option for actual race day strategies. The reason such a long stint was even feasible was most likely due to the lighter chassis and low-speed nature of Monaco not putting as much energy through the tyre carcass as usual.
+    </p>
+
+    <h3>Aerodynamics &amp; Setup</h3>
+    <p>
+      As a circuit with such tight corners and short straights, Monaco calls for maximum downforce setups to compensate for the extremely low average speeds, which can drop to as low as 50 km/h in some sections. Because the asphalt in Monte-Carlo is famously smooth, the main priority beneath that downforce was mechanical grip, with traction-related loads dominant through corners like Turn 6 and Turn 10 rather than the lateral energy seen at permanent circuits. Pirelli rated Monaco's track evolution as a 5/5, the highest possible mark, meaning grip levels changed substantially throughout the weekend, and Gasly's Alpine showed exactly that. His time in FP3 was 1.4 seconds quicker than his best time from Friday's sessions as rubber went down on the street surface.
+    </p>
+    <p>
+      That change pushed most teams into a setup that was built almost entirely around Saturday's qualifying hour, since track position matters more than race-pace durability at a circuit where overtaking is nearly impossible. Even with the 2026 regulations' Active Aero, Saturday practice was largely spent fine-tuning for the flying lap rather than balancing race-day energy deployment. McLaren was the clearest example of a team caught out by this setup window, with Andrea Stella admitting the current package "does not lend itself to circuits with the characteristics present... in Monaco," a tell that their aero is built for higher-speed efficiency rather than a street circuit.
+    </p>
+
+    <h3>Energy Management</h3>
+    <p>
+      Monaco's stop-start rhythm meant drivers were harvesting energy almost continuously through the race but had very few chances to actually cool it back down, since there's so little full-throttle running to help dissipate the heat. Hadjar was told to "keep the car alive" over the closing laps just to hold onto his podium finish, a clear sign that even a car running well was still fighting that same thermal build-up.
+    </p>
+    <p>
+      Norris's retirement came down to the same root cause, with the battery pushed past what it could handle by that constant harvest-and-cool cycle in Monaco's low-airflow environment. Verstappen's problem was different though, happening right at the start instead of building up over a stint, which suggests it was more likely a synchronisation issue between the engine and the electrical system during the high-torque launch phase than a straightforward thermal failure. Alonso managed the opposite problem well, leaning on Recharge mode through the low-speed hairpins to top up the battery and saving Boost for defensive moments through the tunnel and into Turn 10 rather than spending it everywhere, a far more disciplined use of the energy budget than most of the grid managed on a circuit where it's easy to burn through it without gaining anything.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         [STAGE 2] · SECTION 4 · PACE & PERFORMANCE
+         Pull numbers from formula1.com (Race Result, Fastest Laps,
+         Pit Stop Summary) once verified.
+         ───────────────────────────────────────────── -->
+    <h2>Pace &amp; Performance</h2>
+    <p>
+      Mercedes carried a clear pace advantage into the race. Hamilton kept Ferrari as the closest challenger, but the fight for the final podium spot came down to under three-tenths of a second between Hadjar and Gasly on track, before the pit lane measurement error changed the final order.
+    </p>
+
+    <div class="pace-table-wrapper">
+      <table class="pace-table">
+        <thead>
+          <tr>
+            <th>Pos.</th>
+            <th>Driver</th>
+            <th>Fastest lap</th>
+            <th>On lap</th>
+            <th>Pit stop (lap)</th>
+            <th>Stop time</th>
+            <th>Gap at flag</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>P1</td><td><strong>Antonelli</strong> (Mercedes)</td><td>1:14.341</td><td>68</td><td>37</td><td>24.1s</td><td>WINNER</td></tr>
+          <tr><td>P2</td><td><strong>Hamilton</strong> (Ferrari)</td><td>1:14.812</td><td>70</td><td>29</td><td>24.0s</td><td>+8.421s</td></tr>
+          <tr><td>P3</td><td><strong>Gasly</strong> (Alpine)</td><td>1:15.221</td><td>65</td><td>33</td><td>24.2s</td><td>+15.901s*</td></tr>
+          <tr><td>P10</td><td><strong>Alonso</strong> (Aston Martin)</td><td>1:16.112</td><td>62</td><td>3</td><td>24.5s</td><td>+1:02.112s</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="penalty-footnote">
+      * Gasly's time on track was P4. He was reinstated to P3 after the race following a successful Right of Review into the pit lane speed monitoring errors.
+    </p>
+
+    <p>
+      Antonelli's fastest lap came on Lap 68, deep into his second stint and straight off the red flag restart, proving the W17 could still hold its tyre temperature that late in the race. He also pitted later than the rest of the front runners, coming in on Lap 37 compared to Hamilton's Lap 29, and still had enough pace in hand to set the fastest lap of anyone eight laps from the flag.
+    </p>
+    <p>
+      Hamilton's best lap of 1:14.812 was 0.471 seconds slower than Antonelli's, in line with the tyre temperatures he'd already been flagging mid-race, and suggests the SF-26 hits its thermal limit sooner than the Mercedes once the car is loaded up in high-downforce trim. He still finished second, 8.421 seconds behind at the flag. Gasly's own fastest lap came on Lap 65, right after that red flag, using peak Overtake Mode deployment early in the run to the flag to keep Hadjar behind rather than saving anything for a later attack.
+    </p>
+    <p>
+      Piastri finished P6, over 33 seconds behind Antonelli, which is the clearest number of the weekend for how far off the pace McLaren was. Alonso's fastest lap came on Lap 62, deep into the long opening stint on the Softs that started on Lap 3, and even at 1:16.112 it shows the underlying pace was still there for Aston Martin, even with everything else going on further up the road.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         [STAGE 2] · SECTION 5 · ENGINEERING QUESTION OF THE RACE
+         Pick ONE specific moment and dig into the "why".
+         ───────────────────────────────────────────── -->
+    <h2>Engineering Question of the Race</h2>
+    <h3>"How did the MGU-K energy recovery requirements of the 2026 Technical Refinements cause Leclerc's SF-26 to lose rear braking entirely, and what does this show about the thermal trade-offs between electrical harvesting and mechanical brakes on slow street circuits?"</h3>
+    <p>
+      In the new era of 2026 cars, braking is a combined effort between traditional friction material and the MGU-K's electromagnetic resistance during harvesting, which is known as brake migration. Under Appendix B2 Section 1.1 of the regulations, teams are permitted to service the friction material itself, but the system still relies on the Energy Store (ES) being able to accept harvesting current to provide stable rear-axle braking torque. On a circuit like Monaco, with average speeds getting as low as 50 km/h in the tighter sections, airflow through the brake ducts is at its lowest. If the ES hits its thermal limit or harvesting is disrupted, the MGU-K resistance can drop off, shifting 100% of the braking torque back to the mechanical friction brakes. This sudden "thermal debt" can flash-boil brake fluid or glaze pads that were already operating at the edge of their cooling window.
+    </p>
+    <p>
+      Prior to his crash, Leclerc had completed 66 laps of high-torque harvesting and braking cycles that were performed at a track temperature of 43°C. By the time the race reached the lap that the incident took place on, the rear braking system had reached a point of terminal failure, coincidentally at the same corner Stroll had crashed at. In a post-race interview, Leclerc explained that "The rear brakes were not working at all… and the front delivered a lot more than what it should." This statement confirms that it was a total failure of the brake torque distribution and that the SF-26 was unable to slow down correctly for Turn 19, leaving the front axle to take the entire load and inevitably locking up on the compromised track surface.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 6 · KEY INSIGHT (HIGHLIGHT BOX)
+         One quote or one sentence that summarises the race.
+         ───────────────────────────────────────────── -->
+    <div class="highlight-box reveal">
+      <p>
+        💡 "The implication of that loss of ICE power on the rest of the management is massive for the way these PUs are working." – Laurent Mekies, Red Bull Team Principal, highlighting the deep systemic integration required by the 2026 regulations, where a minor Internal Combustion Engine (ICE) anomaly forces a total breakdown of the hybrid energy recovery balance, and underscoring the "all-or-nothing" nature of the 50-50 power split that turned Hadjar's race into a struggle for mechanical survival rather than raw pace in Monaco's high-harvesting environment.
+      </p>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 7 · RACE RESULT — TOP 10
+         Standard P1–P10 grid.
+         ───────────────────────────────────────────── -->
+    <h2>Race Result — Top 10</h2>
+    <!-- Top 10 verified from formula1.com.
+         Position changes vs. on-road order are flagged with an asterisk per driver card,
+         with a footnote underneath the grid explaining the penalties. -->
+    <div class="driver-grid reveal">
+      <div class="driver-card"><div class="driver-pos">P1</div><div class="driver-name">Kimi Antonelli</div><div class="driver-team">Mercedes</div></div>
+      <div class="driver-card"><div class="driver-pos">P2</div><div class="driver-name">Lewis Hamilton</div><div class="driver-team">Ferrari</div></div>
+      <div class="driver-card">
+        <div class="driver-pos">P3</div>
+        <div class="driver-name">Pierre Gasly</div>
+        <div class="driver-team">Alpine</div>
+        <div class="position-note">* Finished P7 after penalties. Reinstated to P3 after a Right of Review.</div>
+      </div>
+      <div class="driver-card"><div class="driver-pos">P4</div><div class="driver-name">Isack Hadjar</div><div class="driver-team">Red Bull Racing</div></div>
+      <div class="driver-card"><div class="driver-pos">P5</div><div class="driver-name">Oscar Piastri</div><div class="driver-team">McLaren</div></div>
+      <div class="driver-card"><div class="driver-pos">P6</div><div class="driver-name">Liam Lawson</div><div class="driver-team">Racing Bulls</div></div>
+      <div class="driver-card"><div class="driver-pos">P7</div><div class="driver-name">Arvid Lindblad</div><div class="driver-team">Racing Bulls</div></div>
+      <div class="driver-card"><div class="driver-pos">P8</div><div class="driver-name">Alexander Albon</div><div class="driver-team">Williams</div></div>
+      <div class="driver-card"><div class="driver-pos">P9</div><div class="driver-name">Esteban Ocon</div><div class="driver-team">Haas</div></div>
+      <div class="driver-card"><div class="driver-pos">P10</div><div class="driver-name">Fernando Alonso</div><div class="driver-team">Aston Martin</div></div>
+    </div>
+    <p class="penalty-footnote">
+      * Gasly was demoted to P7 on the road after two five-second penalties for speeding in the pit lane. Alpine's Right of Review found the Monaco pit lane distance calibration was incorrect, so the FIA rescinded the penalties and reinstated him to P3.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 8 · DNF / DNS
+         Add cards for any retirements or non-starters with reason.
+         ───────────────────────────────────────────── -->
+    <h2>DNF / DNS</h2>
+    <!-- ✏️ Add a card for each retirement. Use exact reasons from F1.com classification + race report.
+         Status options: DNF (Did Not Finish), DNS (Did Not Start), CL (Classified — finished too far back). -->
+    <div class="driver-grid reveal">
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">Max Verstappen</div>
+        <div class="driver-team">Red Bull Racing</div>
+        <div class="dnf-reason">Retired at the start, power unit failure triggered anti-stall</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">Valtteri Bottas</div>
+        <div class="driver-team">Cadillac</div>
+        <div class="dnf-reason">Retired, persistent brake issues never resolved across the weekend</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">Ollie Bearman</div>
+        <div class="driver-team">Haas</div>
+        <div class="dnf-reason">Retired lap 30, brake failure compounded by aero imbalance from Lap 1 front wing damage</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">Lando Norris</div>
+        <div class="driver-team">McLaren</div>
+        <div class="dnf-reason">Retired lap 45, terminal battery failure</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">Lance Stroll</div>
+        <div class="driver-team">Aston Martin</div>
+        <div class="dnf-reason">Retired lap 60, crashed into the barriers at Turn 19, triggering the safety car that Leclerc crashed under during the restart</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">Charles Leclerc</div>
+        <div class="driver-team">Ferrari</div>
+        <div class="dnf-reason">Retired lap 66, terminal loss of rear brake torque, crashed at Turn 19</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">Carlos Sainz</div>
+        <div class="driver-team">Williams</div>
+        <div class="dnf-reason">Retired late in the race, suspension damage from separate collisions with Hulkenberg and Colapinto</div>
+      </div>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 9 · KEY TAKEAWAYS
+         What we learned from this race.
+         ───────────────────────────────────────────── -->
+    <h2>Key Takeaways</h2>
+    <p>
+      Monaco confirmed Antonelli's Grand Slam weekend and extended his championship lead to 66 points over Hamilton, control that showed itself most clearly in how long Mercedes could hold a ten-second gap before the safety car periods bunched the field back up. The reliability picture was the bigger story for everyone else, with a 32% retirement rate across the 22 cars and terminal failures for Verstappen, Norris, and Leclerc all pointing to the same problem, which was cooling margins that are still too thin for a high-harvesting, low-airflow circuit like this one.
+    </p>
+    <p>
+      Gasly's reinstatement to P3 also exposed a real weakness in the FIA's own systems, since the pit lane distance calibration error meant several drivers were penalised on speed calculations that were wrong from the start. Ferrari remained the closest team on pace, but even Hamilton admitted his side "can't quite keep up with them just yet," and the SF-26's mechanical grip advantage in Monaco's low-speed corners still wasn't enough to close the gap to the W17.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         [STAGE 2] · SECTION 10 · RACE ENGINEER'S VIEW
+         Closing paragraph in your own voice: what you would have done.
+         ───────────────────────────────────────────── -->
+    <div class="engineer-box">
+      <span class="engineer-label">🎧 Race Engineer's View</span>
+      <p>
+        The two most telling technical stories away from the front of the field this weekend were about whether a fix actually worked. McLaren spotted a Power Unit anomaly on Norris's car before it became terminal, and tried to manage it by having him adjust settings on the steering wheel to dial the issue out. It didn't work, and the car retired on Lap 45, which shows how little control teams actually have over a hybrid system once something inside it starts to go wrong. Aston Martin had the opposite result with a mechanical problem instead of an electrical one. The vibration issues that had held the AMR26 back in previous rounds were finally resolved coming into Monaco, and that fix is the real reason Alonso could build a setup around drivability rather than just survival, which is what made his long stint on the Softs possible in the first place. Getting the mechanical basics right still decides whether a strategy like that is even on the table, no matter how much attention goes to the electrical side of these cars now.
+      </p>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 11 · LOOKING AHEAD
+         Bridge to the next race.
+         ───────────────────────────────────────────── -->
+    <h2>Looking Ahead</h2>
+    <p>
+      The championship now heads to Barcelona for round 7, the Spanish Grand Prix, running June 12 to 14 as the second half of Europe's double-header with Monaco. Ferrari say they've already found the fix for Leclerc's brake failure, with Vasseur confirming a "solution" will be in place before Spain, and Leclerc himself pointing to a difference in configuration between the two cars as the root cause behind Monaco's "impossible" situation. McLaren are hoping for a different kind of circuit entirely, with Stella looking for a track that "better lends itself to the strengths" of the MCL40 after two rounds that clearly didn't suit it.
+    </p>
+    <p>
+      Mercedes have their own process to sort out too, with Shovlin confirming the team will "analyse our communication and processes" after the mix-up around Russell's pit lane penalty, while Antonelli arrives in Spain looking to keep his run going and his championship lead intact. Further down the grid, Cadillac's qualifying deficit has already shrunk from 3 seconds in Australia to 1.5 seconds in Monaco, and they'll keep bringing upgrades to close that gap further, while Aston Martin turn their attention to drivability and getting more out of their Honda-integrated chassis now that the car is finally reliable enough to build on.
+    </p>
+
+    <!-- ===== SOURCES SECTION ===== -->
+    <!-- ✏️ Fill with PRIMARY sources only — never fabricate. F1.com data + Pirelli debrief
+         + a race report URL are the minimum. Add a Regulations group if FIA changes are
+         mentioned. Add a Penalty Verification group if asterisks were applied. -->
+    <section class="sources-section reveal">
+      <h2 class="sources-title">Sources</h2>
+      <p class="sources-subtitle">Primary research used for this race report.</p>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Official Race Data</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/results/2026/races/1286/monaco/race-result" target="_blank" rel="noopener">Formula1.com — 2026 Monaco Grand Prix Race Result</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1286/monaco/starting-grid" target="_blank" rel="noopener">Formula1.com — Starting Grid</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1286/monaco/qualifying" target="_blank" rel="noopener">Formula1.com — Qualifying</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1286/monaco/fastest-laps" target="_blank" rel="noopener">Formula1.com — Fastest Laps</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1286/monaco/pit-stop-summary" target="_blank" rel="noopener">Formula1.com — Pit Stop Summary</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Tyre Strategy</div>
+        <ul class="sources-list">
+          <li><a href="https://press.pirelli.com/from-monaco-to-montreal-all-the-compounds-in-play/" target="_blank" rel="noopener">Pirelli — From Monaco to Montreal, all the compounds in play</a></li>
+          <li><a href="https://press.pirelli.com/the-jewel-of-formula-1-history-and-glamour-at-the-monaco-gp/" target="_blank" rel="noopener">Pirelli — The jewel of Formula 1: history and glamour at the Monaco GP</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Regulations</div>
+        <ul class="sources-list">
+          <li><a href="https://www.fia.com/system/files/documents/fia_2026_f1_regulations_-_section_b_sporting_-_iss_06_-_2026-04-28.pdf" target="_blank" rel="noopener">FIA — 2026 Formula 1 Sporting Regulations, Section B, Issue 6 (28 April 2026)</a></li>
+          <li><a href="https://www.fia.com/news/refinements-2026-fia-formula-1-regulations-agreed-all-stakeholders" target="_blank" rel="noopener">FIA — Refinements to the 2026 FIA Formula 1 Regulations Agreed by All Stakeholders</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-2026-regulations.6j0tS0hrHG2T01tpmK6XYz" target="_blank" rel="noopener">Formula1.com — The beginner's guide to the 2026 Formula 1 regulations</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Race Report &amp; Driver Quotes</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/latest/article/antonelli-secures-brilliant-victory-in-chaotic-monaco-grand-prix-amid-multiple-shock-retirements.27e644586K83z0NZd6efsz" target="_blank" rel="noopener">Formula1.com — 2026 Monaco Grand Prix Race Report and Highlights</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/antonelli-seizes-brilliant-pole-in-thrilling-monaco-qualifying-ahead-of-verstappen-and-hamilton.7lWc3kpARKr1Qnle1f8X3P" target="_blank" rel="noopener">Formula1.com — Antonelli seizes brilliant pole in thrilling Monaco Qualifying</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/monaco-lowdown-all-the-key-moments-as-antonelli-makes-it-five-wins-in-a-row-amid-plenty-of-drama.15V47eOZ3Gp6ZRRxg4F2TI" target="_blank" rel="noopener">Formula1.com — All the key moments from the 2026 Monaco Grand Prix</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/8-moments-you-missed-at-the-2026-monaco-grand-prix.PNtM4cdB3GLHzqIcmwCo3" target="_blank" rel="noopener">Formula1.com — 8 moments you might have missed at the 2026 Monaco Grand Prix</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Team Reports</div>
+        <ul class="sources-list">
+          <li><a href="https://www.mercedesamgf1.com/reports/race-report-kimi-makes-history-with-victory-in-monaco" target="_blank" rel="noopener">Mercedes-AMG PETRONAS F1 Team — Race Report: Kimi Makes History with Victory in Monaco</a></li>
+          <li><a href="https://www.ferrari.com/en-EN/formula1/monaco-gp" target="_blank" rel="noopener">Ferrari.com — 2026 Monaco Grand Prix</a></li>
+          <li><a href="https://www.mclaren.com/racing/formula-1/2026/monaco-grand-prix/race-report/" target="_blank" rel="noopener">McLaren — 2026 Monaco Grand Prix Race Report</a></li>
+          <li><a href="https://www.haasf1team.com/news/monaco-grand-prix-race-recap-5" target="_blank" rel="noopener">Haas F1 Team — Monaco Grand Prix: Race Recap</a></li>
+          <li><a href="https://www.williamsf1.com/articles/f97501e4-93ab-4c7e-b38d-7099126a4026/report-monaco-sunday-2026" target="_blank" rel="noopener">Atlassian Williams F1 Team — Report: Four points scored in the Principality</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Driver &amp; Team Reactions</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/latest/article/disappointed-sad-angry-leclerc-explains-painful-late-retirement-in-monaco-amid-impossible-brake-situation.7ajdujkiZ9fkwkf6pQVy5N" target="_blank" rel="noopener">Formula1.com — "Disappointed, sad, angry": Leclerc explains painful late retirement amid "impossible" brake situation</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/borderline-unacceptable-sainz-unhappy-after-retirement-costs-vital-points-for-williams-in-monaco-gp.23R33VoaR33iO7eCTsGTi0" target="_blank" rel="noopener">Formula1.com — "Borderline unacceptable": Sainz unhappy after retirement costs vital points for Williams</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/how-red-bull-helped-hadjar-keep-the-car-alive-to-claim-monaco-podium.4AanlBElJANxRWu7KfWgRi" target="_blank" rel="noopener">Formula1.com — How Red Bull helped Isack Hadjar "keep the car alive" to claim Monaco podium</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/how-aston-martins-aggressive-and-ambitious-strategy-earned-them-a-first-point-of-2026.693lqRXC0HX3AZps2gfVyn" target="_blank" rel="noopener">Formula1.com — How Aston Martin's "aggressive and ambitious" strategy earned them a first point of 2026</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/vasseur-insists-ferrari-have-to-stay-positive-amid-mixed-fortunes-in-monaco.2k4JRYz3TvPBQqESh5H7OC" target="_blank" rel="noopener">Formula1.com — Vasseur insists Ferrari "have to stay positive" amid mixed fortunes in Monaco</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/a-big-turnaround-lawson-and-lindblad-praise-racing-bulls-performance-after-monaco-double-points-finish.kcmkqXQQfKKhcUG2fYaey" target="_blank" rel="noopener">Formula1.com — "A big turnaround": Lawson and Lindblad praise Racing Bulls' performance</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/why-perezs-almost-point-in-monaco-shows-how-far-cadillac-have-come-already.3PXJIK6rq0mN5AoPuopu1M" target="_blank" rel="noopener">Formula1.com — Why Perez's "almost" point in Monaco shows how far Cadillac have come already</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Penalty Verification</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/latest/article/all-the-penalties-dished-out-at-the-2026-monaco-grand-prix.4QOQDEUjcA3Rp3pEz5iZFN" target="_blank" rel="noopener">Formula1.com — All the penalties dished out at the 2026 Monaco Grand Prix</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/gasly-regains-monaco-grand-prix-podium-place-after-alpines-right-of-review-successful.74q7jouVAIQxtDv4oGdEgz" target="_blank" rel="noopener">Formula1.com — Gasly regains Monaco Grand Prix podium place after Alpine's Right of Review successful</a></li>
+          <li><a href="https://www.skysports.com/f1/news/12433/13554271/monaco-gp-mercedes-request-right-of-review-of-race-result-after-pierre-gasly-podium-reinstatement" target="_blank" rel="noopener">Sky Sports F1 — Mercedes request right of review of race result after Pierre Gasly podium reinstatement</a></li>
+          <li><a href="https://www.motorsport.com/f1/news/pierre-gaslys-monaco-gp-penalty-rescinded-fia-stewards-report-in-full/10829447/" target="_blank" rel="noopener">Motorsport.com — Pierre Gasly's Monaco GP penalty rescinded: FIA stewards report in full</a></li>
+        </ul>
+      </div>
+
+      <!-- ✏️ Add additional .sources-group blocks below for race-specific topics:
+           Regulations (if FIA refinements mentioned), Post-Race Penalty Verification
+           (if penalty asterisks applied), or any specific incident article -->
+    </section>
+
+  </article>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="../logo.png" alt="Apex by Milla" style="height:70px;width:auto;opacity:0.55;">
+    </div>
+    <p>© 2026 · Formula One Technical Analysis · All Rights Reserved</p>
+    <p style="font-size: 0.72rem; opacity: 0.65; margin-top: 0.5rem; font-style: italic;">Independent technical analysis. Not affiliated with Formula 1, the FIA, or any F1 team.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+  </script>
+
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
