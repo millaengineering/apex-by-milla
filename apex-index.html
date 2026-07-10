@@ -247,22 +247,24 @@ img { max-width: 100%; display: block; }
   <!-- ===== CATEGORY NAV (sticky jump links) ===== -->
   <div class="category-nav">
     <div class="category-nav-inner">
-      <a href="#power-unit">⚡ Power Unit</a>
-      <a href="#race-control">🏁 Race Control &amp; Strategy</a>
+      <a href="#power-unit">⚡ Power Unit &amp; Energy</a>
       <a href="#aerodynamics">💨 Aerodynamics</a>
-      <a href="#tyres">🛞 Tyres</a>
-      <a href="#chassis-safety">🛡️ Chassis &amp; Safety</a>
+      <a href="#tyres">🛞 Tyres &amp; Compounds</a>
+      <a href="#braking-chassis">🛡️ Braking &amp; Chassis</a>
+      <a href="#strategy">♟️ Strategy &amp; Race Craft</a>
+      <a href="#race-control">🏁 Race Control &amp; Rules</a>
+      <a href="#the-grid">🏎️ The Grid</a>
     </div>
   </div>
 
   <!-- ===== CONTENT ===== -->
   <main class="index-content">
 
-    <!-- ============= POWER UNIT ============= -->
+    <!-- ============= POWER UNIT & ENERGY ============= -->
     <section class="category-section" id="power-unit">
       <div class="category-header">
-        <h2>Power Unit</h2>
-        <span>The engine and electric systems that drive the car</span>
+        <h2>Power Unit &amp; Energy</h2>
+        <span>The engine, hybrid systems and energy management that drive the car</span>
       </div>
 
       <div class="term" id="ice">
@@ -285,6 +287,31 @@ img { max-width: 100%; display: block; }
         <p class="term-definition">The collective name for all the electric components in an F1 power unit: the battery, the control electronics, and the MGU-K. The system that captures energy from braking and lift-offs and reuses it as extra power.</p>
       </div>
 
+      <div class="term" id="es">
+        <div class="term-name">ES <span class="abbr">(Energy Store)</span></div>
+        <p class="term-definition">The battery pack that stores the electrical energy harvested by the MGU-K. It is the reservoir the car draws from when it deploys electrical power. Its <strong>state of charge</strong> is managed carefully across every lap so the driver is never left with an empty battery at the wrong moment.</p>
+      </div>
+
+      <div class="term" id="ecu">
+        <div class="term-name">ECU <span class="abbr">(Electronic Control Unit)</span></div>
+        <p class="term-definition">The car's central control computer. It governs how and when energy is deployed and harvested, how the engine maps behave, and how the active aero switches between modes. Every team runs a standard FIA-supplied ECU so that software cannot be used to gain a hidden advantage.</p>
+      </div>
+
+      <div class="term" id="bms">
+        <div class="term-name">BMS <span class="abbr">(Battery Management System)</span></div>
+        <p class="term-definition">The system that monitors the battery's temperature, voltage and overall health, and protects it from damage. If it detects a dangerous fault, such as a problem inside the battery pack, it can trigger a shutdown to stop further harm. A BMS intervention can end a driver's race even when nothing has mechanically broken.</p>
+      </div>
+
+      <div class="term" id="soc">
+        <div class="term-name">SoC <span class="abbr">(State of Charge)</span></div>
+        <p class="term-definition">How full the battery is at any given moment, given as a percentage. Managing state of charge sits at the heart of 2026 racing. A driver who reaches a long straight with a low state of charge has less electrical power to deploy, which is why energy management across a lap matters so much.</p>
+      </div>
+
+      <div class="term" id="voltage-dispersion">
+        <div class="term-name">Voltage Dispersion</div>
+        <p class="term-definition">The spread in voltage between the individual cells inside the battery pack. Ideally every cell sits at a similar voltage. A large dispersion means some cells are working harder or degrading faster than others, which the <strong>BMS</strong> watches closely as an early warning sign of an unhealthy pack.</p>
+      </div>
+
       <div class="term" id="power-split">
         <div class="term-name">50/50 Power Split</div>
         <p class="term-definition">The 2026 target where roughly half the car's total power comes from the petrol engine and the other half from the electric system. A major shift from previous years, when the electric contribution was a smaller boost on top of the engine.</p>
@@ -295,14 +322,14 @@ img { max-width: 100%; display: block; }
         <p class="term-definition">Running the engine at slightly less than maximum power while harvesting electrical energy at the same time. Lets the car top up the battery during a flat-out lap without significantly losing top speed. The FIA targets a super-clip window of about 2-4 seconds per lap.</p>
       </div>
 
+      <div class="term" id="super-clip-window">
+        <div class="term-name">Super-clip Window</div>
+        <p class="term-definition">The slice of each lap during which <strong>super-clipping</strong> is allowed to happen. Rather than harvesting across the whole lap, the car is limited to a short burst, roughly 2-4 seconds of clipped running per lap in total, as targeted by the FIA. Keeping it to a small window lets the car top up the battery without giving away much lap time. Those 2-4 seconds do not have to come all at once, they are the combined amount of clipped running spread across the lap.</p>
+      </div>
+
       <div class="term" id="lift-off-regen">
         <div class="term-name">Lift-off Regeneration</div>
         <p class="term-definition">Energy harvesting that happens when the driver lifts off the throttle without braking. The MGU-K acts as a generator, slowing the car slightly while topping up the battery. Common through medium-load corners.</p>
-      </div>
-
-      <div class="term" id="boost-button">
-        <div class="term-name">Boost Button</div>
-        <p class="term-definition">A manual control the driver presses to deploy a burst of stored electrical power. Unlike Overtake Mode (which is proximity-triggered), Boost is at the driver's discretion. From Miami 2026 onwards, the boost is capped at +150 kW in race conditions.</p>
       </div>
 
       <div class="term" id="recharge">
@@ -310,62 +337,14 @@ img { max-width: 100%; display: block; }
         <p class="term-definition">The general term for the act of harvesting energy back into the battery, whether through braking, throttle lift, or super-clipping. The maximum permitted recharge per lap was reduced from 8MJ to 7MJ from Miami onwards.</p>
       </div>
 
+      <div class="term" id="boost-button">
+        <div class="term-name">Boost Button</div>
+        <p class="term-definition">A manual control the driver presses to deploy a burst of stored electrical power. Unlike Overtake Mode (which is proximity-triggered), Boost is at the driver's discretion. From Miami 2026 onwards, the boost is capped at +150 kW in race conditions.</p>
+      </div>
+
       <div class="term" id="sustainable-fuels">
         <div class="term-name">100% Advanced Sustainable Fuels</div>
         <p class="term-definition">From 2026, all F1 cars run on fuels made either from non-food biomass (waste material) or as e-fuels (synthesised from atmospheric CO₂ and hydrogen). Part of F1's roadmap to net-zero carbon by 2030.</p>
-      </div>
-    </section>
-
-    <!-- ============= RACE CONTROL & STRATEGY ============= -->
-    <section class="category-section" id="race-control">
-      <div class="category-header">
-        <h2>Race Control &amp; Strategy</h2>
-        <span>The rules, penalties and tactical decisions that shape a race</span>
-      </div>
-
-      <div class="term" id="overtake-mode">
-        <div class="term-name">Overtake Mode</div>
-        <p class="term-definition">A proximity-triggered power boost introduced in 2026 that replaces DRS as the primary overtaking aid. When a driver is within one second of the car ahead at a detection point, they get +0.5MJ of extra electrical energy to use on the next lap. Peak power available rises to 350 kW, available all the way up to 337 km/h before tapering.</p>
-      </div>
-
-      <div class="term" id="undercut">
-        <div class="term-name">Undercut</div>
-        <p class="term-definition">A pit-stop tactic where you pit BEFORE the car you're chasing, so you can use fresh, faster tyres to set quicker lap times. By the time the opponent pits, you've gained enough through-the-air time that you emerge ahead of them.</p>
-      </div>
-
-      <div class="term" id="overcut">
-        <div class="term-name">Overcut</div>
-        <p class="term-definition">The opposite of an undercut. You stay out LONGER than your rival, hoping their fresher tyres degrade enough that you maintain your lead when you eventually pit. Works best when track conditions favour older tyres, or when traffic clears late.</p>
-      </div>
-
-      <div class="term" id="sprint-shootout">
-        <div class="term-name">Sprint Shootout</div>
-        <p class="term-definition">A short qualifying session held on Friday at Sprint weekends. It sets the grid for Saturday's Sprint race only. Separate from the main Qualifying session, which sets Sunday's race grid.</p>
-      </div>
-
-      <div class="term" id="sprint-race">
-        <div class="term-name">Sprint Race</div>
-        <p class="term-definition">A short race (roughly 100km, no mandatory pit stops) held on Saturday at six weekends of the season. Points are awarded for the top 8 finishers. Sprint weekends compress the Friday practice schedule to make room for the Sprint Shootout.</p>
-      </div>
-
-      <div class="term" id="time-penalty">
-        <div class="term-name">Time Penalty</div>
-        <p class="term-definition">A penalty added to a driver's race time by the stewards. Common values are 5 seconds (minor infraction, e.g. crossing the pit-exit white line), 10 seconds (mid-level, e.g. causing a collision), and 20 seconds (serious, e.g. repeated track-limits violations). Stewards can also issue a drive-through (drive through the pit lane without stopping) or stop-go (stop in the pit lane for a set time with no team work allowed).</p>
-      </div>
-
-      <div class="term" id="parc-ferme">
-        <div class="term-name">Parc Fermé</div>
-        <p class="term-definition">French for "closed park." A regulatory state that begins at the start of qualifying and ends when the car crosses the finish line on Sunday. Once a car is in parc fermé, teams cannot change setup or major components without permission from the FIA. The rule stops teams from running radically different setups in qualifying versus the race.</p>
-      </div>
-
-      <div class="term" id="dsq">
-        <div class="term-name">Disqualification <span class="abbr">(DSQ)</span></div>
-        <p class="term-definition">When a car is removed from the official classification entirely, usually due to a technical infringement (illegal floor, illegal fuel sample, etc.) or a serious sporting violation. Points are forfeited and the result moves on to the next-classified driver.</p>
-      </div>
-
-      <div class="term" id="pit-lane-start">
-        <div class="term-name">Pit Lane Start</div>
-        <p class="term-definition">A penalty where the driver starts the race from the pit lane rather than their grid position. Happens when changes are made under parc fermé without FIA permission, or as a separate stewards' sanction.</p>
       </div>
     </section>
 
@@ -391,16 +370,6 @@ img { max-width: 100%; display: block; }
         <p class="term-definition">The active aero configuration with wings closed. Maximum downforce for cornering grip. Activated automatically entering and through corners.</p>
       </div>
 
-      <div class="term" id="in-washing-bargeboards">
-        <div class="term-name">In-Washing Bargeboards</div>
-        <p class="term-definition">Aerodynamic devices fitted behind the front wheels that push turbulent airflow INWARDS, towards the centre of the car. The opposite philosophy of the previous generation's "out-washing." The goal is to leave a cleaner wake behind the car so a following driver can stay close without losing front-end grip.</p>
-      </div>
-
-      <div class="term" id="venturi-tunnels">
-        <div class="term-name">Venturi Tunnels</div>
-        <p class="term-definition">The deep channels under previous-generation F1 cars (2022-2025) that created ground-effect downforce by accelerating airflow under the floor. <strong>Removed for 2026.</strong> Floors are now flatter, with much of the downforce work shifted to a larger rear diffuser.</p>
-      </div>
-
       <div class="term" id="front-wing">
         <div class="term-name">Front Wing</div>
         <p class="term-definition">The aerodynamic device at the front of the car. In 2026 it's been simplified with fewer elements (the razor-like cascade is gone), and the "eyebrow" winglets above the front wheels have been removed. The new shape directs airflow inward rather than outward.</p>
@@ -416,17 +385,42 @@ img { max-width: 100%; display: block; }
         <p class="term-definition">The upward-curving section at the rear of the floor. It accelerates air under the car as it exits at the back, creating a low-pressure zone that sucks the car onto the track. In 2026 it's much larger than before, to compensate for the removal of Venturi tunnels.</p>
       </div>
 
+      <div class="term" id="venturi-tunnels">
+        <div class="term-name">Venturi Tunnels</div>
+        <p class="term-definition">The deep channels under previous-generation F1 cars (2022-2025) that created ground-effect downforce by accelerating airflow under the floor. <strong>Removed for 2026.</strong> Floors are now flatter, with much of the downforce work shifted to a larger rear diffuser.</p>
+      </div>
+
+      <div class="term" id="in-washing-bargeboards">
+        <div class="term-name">In-Washing Bargeboards</div>
+        <p class="term-definition">Aerodynamic devices fitted behind the front wheels that push turbulent airflow INWARDS, towards the centre of the car. The opposite philosophy of the previous generation's "out-washing." The goal is to leave a cleaner wake behind the car so a following driver can stay close without losing front-end grip.</p>
+      </div>
+
+      <div class="term" id="dirty-air">
+        <div class="term-name">Dirty Air</div>
+        <p class="term-definition">The turbulent, disturbed air left behind a car. It helps on a straight, where it becomes the tow, but in corners it robs the following car of downforce because its wings and floor are working in messy airflow rather than clean air. Cutting dirty air was a core aim of the 2026 rules, using <strong>in-washing bargeboards</strong> to leave a cleaner wake for the car behind.</p>
+      </div>
+
+      <div class="term" id="tow">
+        <div class="term-name">Tow</div>
+        <p class="term-definition">The pull a following car gets from running in the wake of the car ahead. The lead car punches a hole in the air, leaving a pocket of lower-pressure, faster-moving air behind it that cuts drag for the car following. A driver uses the tow down a straight to close up and set up an overtake.</p>
+      </div>
+
+      <div class="term" id="slipstream">
+        <div class="term-name">Slipstream</div>
+        <p class="term-definition">Another word for the tow. The region of disturbed, lower-drag air directly behind a car that a following driver can sit in to gain straight-line speed. Slipstreaming is the act of choosing to run in that pocket to carry more speed than would be possible in clean air.</p>
+      </div>
+
       <div class="term" id="drs">
         <div class="term-name">DRS <span class="abbr">(Drag Reduction System, historical)</span></div>
         <p class="term-definition">The previous overtaking aid (2011-2025) that opened a flap in the rear wing to reduce drag and increase straight-line speed. Available only to cars within one second of the car ahead, and only on designated straights. <strong>Replaced for 2026</strong> by Active Aerodynamics (the mechanical successor) and Overtake Mode (the strategic successor).</p>
       </div>
     </section>
 
-    <!-- ============= TYRES ============= -->
+    <!-- ============= TYRES & COMPOUNDS ============= -->
     <section class="category-section" id="tyres">
       <div class="category-header">
-        <h2>Tyres</h2>
-        <span>Pirelli's role in race performance and strategy</span>
+        <h2>Tyres &amp; Compounds</h2>
+        <span>Pirelli's rubber, and how it wears, grips and drives strategy</span>
       </div>
 
       <div class="term" id="compounds">
@@ -439,6 +433,16 @@ img { max-width: 100%; display: block; }
         <p class="term-definition">The three race-weekend nicknames for the three compounds Pirelli has brought, regardless of which actual C-grade they are. Hard wears slowest and goes longest. Soft is fastest but degrades quickly. Medium is the compromise. The actual rubber inside each varies from race to race.</p>
       </div>
 
+      <div class="term" id="compound-tradeoffs">
+        <div class="term-name">Compound Trade-offs</div>
+        <p class="term-definition">The core compromise behind tyre choice. Softer compounds (a higher C number) give more grip and faster lap times but wear out and lose performance quickly. Harder compounds (a lower C number) are slower over one lap but last far longer and cope better with heat. Deciding which to run, and when, is the heart of race strategy.</p>
+      </div>
+
+      <div class="term" id="slicks">
+        <div class="term-name">Slicks</div>
+        <p class="term-definition">The everyday nickname for Pirelli's dry-weather tyres, the smooth treadless tyres used when the track is dry. When a driver is said to be on slicks it means any of the dry compounds (hard, medium or soft) rather than the grooved intermediate or wet tyres.</p>
+      </div>
+
       <div class="term" id="stint">
         <div class="term-name">Tyre Stint</div>
         <p class="term-definition">The period during which a driver uses one set of tyres before pitting. A "21-lap stint on the medium compound," for example. A "long stint" is one that stretches close to the limit of the tyre's life.</p>
@@ -449,9 +453,39 @@ img { max-width: 100%; display: block; }
         <p class="term-definition">Loss of tyre grip caused by the rubber overheating beyond its optimal working window. Affects lap times progressively, even before the tread physically wears out. A key factor on hot, abrasive circuits.</p>
       </div>
 
+      <div class="term" id="blistering">
+        <div class="term-name">Blistering</div>
+        <p class="term-definition">A form of tyre damage where the rubber overheats deep inside, and pockets of gas form and burst through to the surface, leaving raised blisters. It happens when a tyre runs too hot for too long, and it costs grip because the surface is no longer smooth and even.</p>
+      </div>
+
+      <div class="term" id="graining">
+        <div class="term-name">Graining</div>
+        <p class="term-definition">A surface tearing that happens when a tyre is too cold or is sliding too much. Small pieces of rubber tear away and roll up on the surface, so the tyre ends up running on top of its own shredded rubber. It costs grip until the graining clears, and it is most common early in a stint or in cold conditions.</p>
+      </div>
+
+      <div class="term" id="lock-up">
+        <div class="term-name">Lock-up</div>
+        <p class="term-definition">When a driver brakes so hard that a wheel stops turning while the car is still moving, so the tyre skids across the track. It usually happens under heavy braking into a corner, costs time as the car runs wide, and often leaves a flat-spot behind.</p>
+      </div>
+
+      <div class="term" id="flat-spot">
+        <div class="term-name">Flat-spot</div>
+        <p class="term-definition">A worn patch on one part of the tyre caused by a lock-up, where the wheel stops rotating and drags across the track. The flattened area sends vibration through the whole car and costs grip, and a bad flat-spot can force an early pit stop.</p>
+      </div>
+
       <div class="term" id="tyre-blanket">
         <div class="term-name">Tyre Blanket</div>
         <p class="term-definition">A heated cover that wraps around the tyres before they're fitted to the car, pre-warming them to optimal temperature. Without blankets, the first lap or two out of the pits would be on cold (and therefore low-grip) tyres.</p>
+      </div>
+
+      <div class="term" id="tread-width">
+        <div class="term-name">Tread Width</div>
+        <p class="term-definition">The width of rubber that contacts the road. In 2026 the tread width has been reduced by 25mm at the front and 30mm at the rear, making the tyres noticeably narrower than the previous generation.</p>
+      </div>
+
+      <div class="term" id="tread-blocks">
+        <div class="term-name">Tread Blocks</div>
+        <p class="term-definition">The raised chunks of rubber in the grooved pattern of intermediate and wet tyres, separated by channels that pump water away from the contact patch. Slick tyres have no tread blocks, because a smooth surface puts the most rubber on the road for maximum dry grip.</p>
       </div>
 
       <div class="term" id="intermediate-wet">
@@ -459,17 +493,52 @@ img { max-width: 100%; display: block; }
         <p class="term-definition">Pirelli's two tread-patterned tyres for wet conditions. Intermediates are for damp tracks with no standing water. Full wets are for heavy rain with standing water on the surface.</p>
       </div>
 
-      <div class="term" id="tread-width">
-        <div class="term-name">Tread Width</div>
-        <p class="term-definition">The width of rubber that contacts the road. In 2026 the tread width has been reduced by 25mm at the front and 30mm at the rear, making the tyres noticeably narrower than the previous generation.</p>
+      <div class="term" id="pirelli-ratings">
+        <div class="term-name">Pirelli Track Ratings</div>
+        <p class="term-definition">The set of characteristics Pirelli scores for every circuit, usually on a low-to-high scale, to explain the demands a track places on the tyres. They include traction (putting power down out of slow corners), braking, lateral energy (cornering loads), tyre stress, asphalt grip, asphalt abrasion (how rough the surface is and how quickly it wears tyres), downforce level and track evolution. Reading these ratings gives a strong clue about which compounds Pirelli will bring and how many stops a race is likely to need.</p>
       </div>
     </section>
 
-    <!-- ============= CHASSIS & SAFETY ============= -->
-    <section class="category-section" id="chassis-safety">
+    <!-- ============= BRAKING & CHASSIS ============= -->
+    <section class="category-section" id="braking-chassis">
       <div class="category-header">
-        <h2>Chassis &amp; Safety</h2>
-        <span>The car's physical structure and the systems that protect the driver</span>
+        <h2>Braking &amp; Chassis</h2>
+        <span>The car's physical structure, braking and the systems that protect the driver</span>
+      </div>
+
+      <div class="term" id="front-axle">
+        <div class="term-name">Front Axle</div>
+        <p class="term-definition">The line running through the centre of the two front wheels, and the assembly that connects them to the car. Many car measurements are taken relative to the front and rear axles, and the distance between the two is the wheelbase. Suspension geometry at the front axle has a big effect on how sharply the car turns into a corner.</p>
+      </div>
+
+      <div class="term" id="brake-migration">
+        <div class="term-name">Brake Migration</div>
+        <p class="term-definition">A setting that changes how the brake balance shifts during a single braking zone. As the driver brakes hard and then releases into the corner, the balance can migrate between the front and rear axles to keep the car stable under heavy braking and help it rotate on entry. It works alongside brake-by-wire on the rear axle, and drivers fine-tune it corner by corner.</p>
+      </div>
+
+      <div class="term" id="rear-axle">
+        <div class="term-name">Rear Axle</div>
+        <p class="term-definition">The line running through the centre of the two rear wheels, and the assembly that connects them to the car. It is where the power unit puts its drive down to the road, and together with the <strong>front axle</strong> it sets the wheelbase. Brake balance and brake migration shift braking force between the front and rear axles.</p>
+      </div>
+
+      <div class="term" id="braking-torque">
+        <div class="term-name">Braking Torque</div>
+        <p class="term-definition">The twisting force the brakes apply to slow a wheel down. More braking torque means harder stopping, but too much at one axle can stop the wheel turning and cause a lock-up. Balancing braking torque between the front and rear axles is exactly what brake balance and brake migration control.</p>
+      </div>
+
+      <div class="term" id="brake-ducts">
+        <div class="term-name">Brake Ducts</div>
+        <p class="term-definition">Openings that channel cool air onto the brakes to stop them overheating. Carbon brakes only work well in a fairly narrow temperature window, so teams size the ducts for each circuit, larger for heavy-braking tracks and smaller where cooling matters less. Too little cooling risks the brakes overheating, and too much adds drag and can leave them below their working temperature.</p>
+      </div>
+
+      <div class="term" id="brake-fluid">
+        <div class="term-name">Brake Fluid</div>
+        <p class="term-definition">The fluid that carries the pressure from the brake pedal, through the brake-by-wire system, to the calipers that squeeze the discs. It has a very high boiling point because F1 brakes run extremely hot. If the fluid boils, gas bubbles form and the pedal goes soft, which causes a dangerous loss of braking.</p>
+      </div>
+
+      <div class="term" id="glazed-pads">
+        <div class="term-name">Glazed Brake Pads</div>
+        <p class="term-definition">A hard, shiny layer that forms on the surface of the brake pads when they are run too cold or are not bedded in properly. The glazed surface is smooth and slippery, so the pads bite less and braking performance drops off. A driver can sometimes clear light glazing by working the brakes hard to bring their temperature back up.</p>
       </div>
 
       <div class="term" id="minimum-weight">
@@ -495,6 +564,190 @@ img { max-width: 100%; display: block; }
       <div class="term" id="nose-impact">
         <div class="term-name">Two-Stage Nose Impact Structure</div>
         <p class="term-definition">A new feature for 2026. The nose is designed to crumple in TWO stages during a crash: the front absorbs the initial impact, and if the car spins and hits something else (a secondary impact), a separate crash structure behind the first remains intact. Addresses an issue in previous generations where one bad impact left no protection for a second.</p>
+      </div>
+    </section>
+
+    <!-- ============= STRATEGY & RACE CRAFT ============= -->
+    <section class="category-section" id="strategy">
+      <div class="category-header">
+        <h2>Strategy &amp; Race Craft</h2>
+        <span>The tactical calls and racing dynamics that shape where drivers finish</span>
+      </div>
+
+      <div class="term" id="overtake-mode">
+        <div class="term-name">Overtake Mode</div>
+        <p class="term-definition">A proximity-triggered power boost introduced in 2026 that replaces DRS as the primary overtaking aid. When a driver is within one second of the car ahead at a detection point, they get +0.5MJ of extra electrical energy to use on the next lap. Peak power available rises to 350 kW, available all the way up to 337 km/h before tapering.</p>
+      </div>
+
+      <div class="term" id="undercut">
+        <div class="term-name">Undercut</div>
+        <p class="term-definition">A pit-stop tactic where you pit BEFORE the car you're chasing, so you can use fresh, faster tyres to set quicker lap times. By the time the opponent pits, you've gained enough through-the-air time that you emerge ahead of them.</p>
+      </div>
+
+      <div class="term" id="overcut">
+        <div class="term-name">Overcut</div>
+        <p class="term-definition">The opposite of an undercut. You stay out LONGER than your rival, hoping their fresher tyres degrade enough that you maintain your lead when you eventually pit. Works best when track conditions favour older tyres, or when traffic clears late.</p>
+      </div>
+
+      <div class="term" id="flying-lap">
+        <div class="term-name">Push Lap / Flying Lap</div>
+        <p class="term-definition">A lap driven at maximum attack, with everything optimised for the fastest possible time, as opposed to a slower preparation or cool-down lap. It matters most in qualifying, where a driver gets only a handful of flying laps to set their grid time, but it also appears in the race when a driver needs to build a gap quickly, for example just before a pit stop.</p>
+      </div>
+
+      <div class="term" id="track-evolution">
+        <div class="term-name">Track Evolution</div>
+        <p class="term-definition">The way a circuit gains grip across a weekend as more rubber is laid down and the surface cleans up. A track is usually at its slowest in FP1 and its fastest by qualifying and the race. Track evolution is a key reason lap times keep tumbling through a weekend, and teams factor it in when reading practice pace.</p>
+      </div>
+
+      <div class="term" id="tyre-allocation">
+        <div class="term-name">Tyre Allocation</div>
+        <p class="term-definition">The fixed number of tyre sets each driver is given for a weekend, and the rules on how they are used. A standard weekend allows a limited pool of dry sets that must be handed back to Pirelli at set points, so teams cannot simply run fresh rubber all the time. Because the pool is limited, teams plan carefully which compounds to save for the race, which shapes their whole strategy.</p>
+      </div>
+
+      <div class="term" id="mandatory-stops">
+        <div class="term-name">Mandatory Pit Stops</div>
+        <p class="term-definition">The rules require every driver to use at least two different dry compounds during a dry race, which forces at least one pit stop. At certain circuits the FIA can impose more. Monaco 2026 carried a mandatory two-stop rule, meaning drivers had to pit at least twice, brought in to force strategic variety at a track where overtaking is extremely hard.</p>
+      </div>
+
+      <div class="term" id="drs-train">
+        <div class="term-name">DRS Train <span class="abbr">(historical)</span></div>
+        <p class="term-definition">A queue of cars running within one second of each other in the DRS era from 2011 to 2025. Because every car in the line received the DRS boost from the car ahead, none could pull off a clean overtake, so the whole train stayed bunched together. Replaced in effect by the energy train under the 2026 rules.</p>
+      </div>
+
+      <div class="term" id="energy-train">
+        <div class="term-name">Energy Train</div>
+        <p class="term-definition">The 2026 equivalent of the DRS train. Because <strong>Overtake Mode</strong> hands a following car an electrical deployment boost when it is within a second of the car ahead, the lead car struggles to break away, and cars stay locked together in a line. This kept Antonelli and Russell glued together for 30 laps in Canada, as neither could escape the other's deployment window.</p>
+      </div>
+    </section>
+
+    <!-- ============= RACE CONTROL & RULES ============= -->
+    <section class="category-section" id="race-control">
+      <div class="category-header">
+        <h2>Race Control &amp; Rules</h2>
+        <span>The sessions, officials, penalties and flags that govern a race</span>
+      </div>
+
+      <div class="term" id="sessions">
+        <div class="term-name">Practice, Qualifying &amp; Sprint Sessions <span class="abbr">(FP1-3, Q1-3, SQ1-3)</span></div>
+        <p class="term-definition">FP1, FP2 and FP3 are the free practice sessions where teams test setups before qualifying. Q1, Q2 and Q3 are the three knockout stages of qualifying that set the grid for the main race, with the slowest drivers eliminated after each stage. SQ1, SQ2 and SQ3 are the equivalent knockout stages of the Sprint Shootout at Sprint weekends. Sprint weekends replace two practice sessions with the Sprint Shootout and the Sprint race.</p>
+      </div>
+
+      <div class="term" id="sprint-shootout">
+        <div class="term-name">Sprint Shootout</div>
+        <p class="term-definition">A short qualifying session held on Friday at Sprint weekends. It sets the grid for Saturday's Sprint race only. Separate from the main Qualifying session, which sets Sunday's race grid.</p>
+      </div>
+
+      <div class="term" id="sprint-race">
+        <div class="term-name">Sprint Race</div>
+        <p class="term-definition">A short race (roughly 100km, no mandatory pit stops) held on Saturday at six weekends of the season. Points are awarded for the top 8 finishers. Sprint weekends compress the Friday practice schedule to make room for the Sprint Shootout.</p>
+      </div>
+
+      <div class="term" id="championships">
+        <div class="term-name">Drivers' &amp; Constructors' Championships</div>
+        <p class="term-definition">Two separate season-long titles. The Drivers' Championship goes to the individual with the most points across the season. The Constructors' Championship goes to the team whose two cars score the most points combined. A Grand Prix awards points to the top ten finishers on a 25, 18, 15, 12, 10, 8, 6, 4, 2, 1 scale, and the fastest lap no longer scores a point. Sprint races award points to the top eight on an 8, 7, 6, 5, 4, 3, 2, 1 scale.</p>
+      </div>
+
+      <div class="term" id="time-penalty">
+        <div class="term-name">Time Penalty</div>
+        <p class="term-definition">A penalty added to a driver's race time by the stewards. Common values are 5 seconds (minor infraction, e.g. crossing the pit-exit white line), 10 seconds (mid-level, e.g. causing a collision), and 20 seconds (serious, e.g. repeated track-limits violations). Stewards can also issue a drive-through (drive through the pit lane without stopping) or stop-go (stop in the pit lane for a set time with no team work allowed).</p>
+      </div>
+
+      <div class="term" id="dsq">
+        <div class="term-name">Disqualification <span class="abbr">(DSQ)</span></div>
+        <p class="term-definition">When a car is removed from the official classification entirely, usually due to a technical infringement (illegal floor, illegal fuel sample, etc.) or a serious sporting violation. Points are forfeited and the result moves on to the next-classified driver.</p>
+      </div>
+
+      <div class="term" id="pit-lane-start">
+        <div class="term-name">Pit Lane Start</div>
+        <p class="term-definition">A penalty where the driver starts the race from the pit lane rather than their grid position. Happens when changes are made under parc fermé without FIA permission, or as a separate stewards' sanction.</p>
+      </div>
+
+      <div class="term" id="parc-ferme">
+        <div class="term-name">Parc Fermé</div>
+        <p class="term-definition">French for "closed park." A regulatory state that begins at the start of qualifying and ends when the car crosses the finish line on Sunday. Once a car is in parc fermé, teams cannot change setup or major components without permission from the FIA. The rule stops teams from running radically different setups in qualifying versus the race.</p>
+      </div>
+
+      <div class="term" id="safety-car">
+        <div class="term-name">Safety Car <span class="abbr">(SC)</span></div>
+        <p class="term-definition">A road car that leads the field at a controlled speed while a hazard is cleared, such as a crash or debris on track. Overtaking is banned and the pack bunches up behind it. When the track is clear the Safety Car pulls into the pit lane and racing resumes.</p>
+      </div>
+
+      <div class="term" id="vsc">
+        <div class="term-name">VSC <span class="abbr">(Virtual Safety Car)</span></div>
+        <p class="term-definition">A neutralisation of the race without deploying the physical Safety Car. Drivers must hold to a delta time set by race control, keeping everyone a fixed amount slower than normal so no one gains time while a hazard is dealt with. It is quicker to end than a full Safety Car because there is no car to bring back in.</p>
+      </div>
+
+      <div class="term" id="neutralisation">
+        <div class="term-name">Neutralisation</div>
+        <p class="term-definition">The general term for any period when the race is effectively paused or slowed for safety so a hazard can be handled. It covers the <strong>Safety Car</strong>, the <strong>Virtual Safety Car</strong> and a full red-flag stoppage. During a neutralisation drivers cannot race for position in the normal way.</p>
+      </div>
+
+      <div class="term" id="flags">
+        <div class="term-name">Flag Colours</div>
+        <p class="term-definition">The coloured flags race control uses to signal to drivers. <strong>Blue</strong> warns a driver they are about to be lapped and must let the faster car past. <strong>Yellow</strong> means danger ahead, slow down and no overtaking, and double yellow means be ready to stop. <strong>Green</strong> means the hazard is cleared and racing resumes. <strong>Red</strong> stops the session entirely. <strong>White</strong> warns of a slow car ahead. A <strong>yellow and red striped</strong> flag warns of a slippery surface. <strong>Black</strong> orders a driver to the pits for a penalty or serious problem, and the <strong>chequered</strong> flag ends the session.</p>
+      </div>
+    </section>
+
+    <!-- ============= THE GRID ============= -->
+    <section class="category-section" id="the-grid">
+      <div class="category-header">
+        <h2>The Grid</h2>
+        <span>The 2026 chassis names for all eleven teams</span>
+      </div>
+
+      <div class="term" id="car-mercedes">
+        <div class="term-name">Mercedes <span class="abbr">(W17)</span></div>
+        <p class="term-definition">Mercedes' 2026 challenger, carrying on their W-plus-number naming.</p>
+      </div>
+
+      <div class="term" id="car-ferrari">
+        <div class="term-name">Ferrari <span class="abbr">(SF-26)</span></div>
+        <p class="term-definition">Ferrari's 2026 car. SF stands for Scuderia Ferrari, followed by the year.</p>
+      </div>
+
+      <div class="term" id="car-redbull">
+        <div class="term-name">Red Bull Racing <span class="abbr">(RB22)</span></div>
+        <p class="term-definition">Red Bull's 2026 car, the first of the new regulations for the team.</p>
+      </div>
+
+      <div class="term" id="car-mclaren">
+        <div class="term-name">McLaren <span class="abbr">(MCL40)</span></div>
+        <p class="term-definition">McLaren's 2026 challenger, continuing their MCL naming.</p>
+      </div>
+
+      <div class="term" id="car-aston">
+        <div class="term-name">Aston Martin <span class="abbr">(AMR26)</span></div>
+        <p class="term-definition">Aston Martin Racing's 2026 car.</p>
+      </div>
+
+      <div class="term" id="car-alpine">
+        <div class="term-name">Alpine <span class="abbr">(A526)</span></div>
+        <p class="term-definition">Alpine's 2026 challenger.</p>
+      </div>
+
+      <div class="term" id="car-williams">
+        <div class="term-name">Williams <span class="abbr">(FW48)</span></div>
+        <p class="term-definition">Williams' 2026 car, carrying the FW initials of founder Frank Williams.</p>
+      </div>
+
+      <div class="term" id="car-racingbulls">
+        <div class="term-name">Racing Bulls <span class="abbr">(VCARB 03)</span></div>
+        <p class="term-definition">The 2026 car of Red Bull's sister team, Visa Cash App Racing Bulls.</p>
+      </div>
+
+      <div class="term" id="car-haas">
+        <div class="term-name">Haas <span class="abbr">(VF-26)</span></div>
+        <p class="term-definition">Haas' 2026 car. VF traces back to the team owner's first product, the VF-1 machine tool.</p>
+      </div>
+
+      <div class="term" id="car-audi">
+        <div class="term-name">Audi <span class="abbr">(R26)</span></div>
+        <p class="term-definition">Audi's first car as a full works team, taking over from Sauber for 2026.</p>
+      </div>
+
+      <div class="term" id="car-cadillac">
+        <div class="term-name">Cadillac <span class="abbr">(MAC-26)</span></div>
+        <p class="term-definition">The 2026 car of Cadillac, the eleventh team joining the grid this season.</p>
       </div>
     </section>
 
