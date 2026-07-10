@@ -456,7 +456,7 @@ img {
 
 .progress-fill {
   height: 100%;
-  width: 22.7%; /* 5 of 22 */
+  width: 27.3%; /* 6 of 22 */
   background: linear-gradient(90deg, var(--red-dark), var(--red));
   border-radius: 2px;
   position: relative;
@@ -1359,6 +1359,7 @@ img {
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
 
 /* ---------- Section Dividers ---------- */
 .section-divider {
@@ -1403,6 +1404,7 @@ img {
       <li><a href="races/japan.html"     class="race-link">🇯🇵 Japan</a></li>
       <li><a href="races/miami.html"     class="race-link">🇺🇸 Miami</a></li>
       <li><a href="races/canada.html"    class="race-link">🇨🇦 Canada</a></li>
+      <li><a href="races/monaco.html"   class="race-link">🇲🇨 Monaco</a></li>
       <!-- ── END RACE PAGES ── -->
       <li><a href="apex-index.html">The Apex Index</a></li>
 
@@ -1424,19 +1426,19 @@ img {
     then auto-switches to "LATEST" with a calmer look. No edits needed for that.
   -->
   <div style="display: flex; align-items: stretch; flex-wrap: wrap; border-bottom: 1px solid rgba(255,255,255,0.08);">
-    <a href="races/canada.html"
+    <a href="races/monaco.html"
        class="new-blog-banner"
        id="latestRaceBanner"
-       data-publish-date="2026-06-10"
-       style="flex: 1; min-width: 260px; border-bottom: none;">
+       data-publish-date="2026-07-10"
+       style="flex: 1; min-width: 260px; border-bottom: none; background: linear-gradient(90deg, #a0081e, #CF0A2C);">
       <span class="new-blog-badge" data-new-text="NEW" data-latest-text="LATEST">NEW</span>
-      <span class="new-blog-text">🇨🇦 Canadian Grand Prix Technical Analysis</span>
+      <span class="new-blog-text">🇲🇨 Monaco Grand Prix Technical Analysis</span>
       <span class="new-blog-cta">Read →</span>
     </a>
     <div style="width: 1px; background: rgba(255,255,255,0.15); flex-shrink: 0;"></div>
-    <div style="flex: 1; min-width: 260px; display: flex; align-items: center; justify-content: center; gap: 0.9rem; padding: 0.7rem 1.5rem; background: linear-gradient(90deg, #a0081e, #CF0A2C); font-size: 0.88rem; font-weight: 500; letter-spacing: 0.01em; color: var(--white); cursor: default;">
+    <div style="flex: 1; min-width: 260px; display: flex; align-items: center; justify-content: center; gap: 0.9rem; padding: 0.7rem 1.5rem; background: linear-gradient(90deg, #8B5E00, #F5A623); font-size: 0.88rem; font-weight: 500; letter-spacing: 0.01em; color: var(--white); cursor: default;">
       <span style="background: rgba(255,255,255,0.18); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 0.25rem 0.6rem; border-radius: 4px; letter-spacing: 0.08em; text-transform: uppercase; flex-shrink: 0;">UPCOMING</span>
-      <span style="font-weight: 500;">🇲🇨 Monaco Grand Prix Technical Analysis</span>
+      <span style="font-weight: 500;">🇪🇸 Spanish Grand Prix Technical Analysis</span>
     </div>
   </div>
 
@@ -1550,7 +1552,7 @@ img {
         </div>
         <div class="about-stats-row">
           <div class="about-stat-box">
-            <div class="about-stat-box-num">5</div>
+            <div class="about-stat-box-num">6</div>
             <div class="about-stat-box-label">Races</div>
           </div>
           <div class="about-stat-box">
@@ -1639,7 +1641,7 @@ img {
       <div class="season-progress reveal">
         <div class="season-progress-header">
           <span class="season-progress-label">2026 Season Progress</span>
-          <span class="season-progress-count"><span>5</span> / 22 Races</span>
+          <span class="season-progress-count"><span>6</span> / 22 Races</span>
         </div>
         <div class="progress-track">
           <div class="progress-fill"></div>
@@ -1755,6 +1757,27 @@ img {
           </div>
         </a>
 
+        <!-- Card 6: Monaco -->
+        <a href="races/monaco.html" class="race-card reveal reveal-delay-5">
+          <div class="card-flag">🇲🇨</div>
+          <div class="card-body">
+            <div class="card-round">Round 06 · Monaco</div>
+            <h3 class="card-title">Monaco Grand Prix</h3>
+            <p class="card-excerpt">
+              Antonelli wins from pole as Verstappen retires at the start, brake failures send Leclerc and Stroll into the wall at the same corner, and a pit lane measurement error reshapes the podium.
+            </p>
+          </div>
+          <div class="card-winner">
+            <span class="card-winner-label">Winner</span>
+            <span class="card-winner-name">Kimi Antonelli</span>
+            <span class="card-winner-team">Mercedes</span>
+          </div>
+          <div class="card-footer">
+            <span class="card-date">7 June 2026</span>
+            <span class="card-arrow">Read →</span>
+          </div>
+        </a>
+
         <!-- ── END RACE CARDS ── -->
 
       </div>
@@ -1825,6 +1848,7 @@ img {
           <li><a href="races/japan.html">🇯🇵 Japanese GP</a></li>
           <li><a href="races/miami.html">🇺🇸 Miami GP</a></li>
           <li><a href="races/canada.html">🇨🇦 Canadian GP</a></li>
+          <li><a href="races/monaco.html">🇲🇨 Monaco GP</a></li>
           <li style="margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px solid var(--border);"><a href="apex-index.html">📖 The Apex Index</a></li>
         </ul>
       </div>
