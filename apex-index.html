@@ -113,6 +113,43 @@ img { max-width: 100%; display: block; }
   color: #b0b0b0; font-size: 1rem; max-width: 700px;
 }
 
+/* ---------- Search ---------- */
+.index-search-wrap { position: relative; max-width: 480px; margin-top: 1.6rem; }
+.index-search {
+  width: 100%;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  padding: 0.7rem 2.4rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.index-search::placeholder { color: var(--muted); }
+.index-search:focus {
+  outline: none;
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgba(225,6,0,0.15);
+}
+/* hide the browser's native search clear button, we use our own */
+.index-search::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.index-search-icon {
+  position: absolute; left: 0.85rem; top: 50%; transform: translateY(-50%);
+  font-size: 0.9rem; pointer-events: none; opacity: 0.7;
+}
+.index-search-clear {
+  position: absolute; right: 0.55rem; top: 50%; transform: translateY(-50%);
+  background: none; border: none; color: var(--muted); cursor: pointer;
+  font-size: 1rem; line-height: 1; padding: 0.3rem; display: none;
+}
+.index-search-clear:hover { color: var(--text); }
+.search-no-results {
+  display: none; color: var(--muted); font-size: 0.95rem;
+  text-align: center; padding: 2.5rem 0;
+}
+.term.search-hidden, .category-section.search-hidden { display: none; }
+
 /* ---------- Category Nav ---------- */
 .category-nav {
   background: var(--dark);
@@ -241,6 +278,11 @@ img { max-width: 100%; display: block; }
       <p class="index-subtitle">
         A reference for the engineering terms used across Apex by Milla's 2026 race reports. Grouped by category and updated as new terminology appears through the season. Each entry can be linked directly from a race post.
       </p>
+      <div class="index-search-wrap">
+        <span class="index-search-icon" aria-hidden="true">🔍</span>
+        <input type="search" id="termSearch" class="index-search" placeholder="Search terms, e.g. undercut, ERS, graining" aria-label="Search the Apex Index" autocomplete="off" />
+        <button type="button" class="index-search-clear" id="termSearchClear" aria-label="Clear search">✕</button>
+      </div>
     </div>
   </div>
 
@@ -259,6 +301,8 @@ img { max-width: 100%; display: block; }
 
   <!-- ===== CONTENT ===== -->
   <main class="index-content">
+
+    <p class="search-no-results" id="searchNoResults">No terms match your search. Try another word.</p>
 
     <!-- ============= POWER UNIT & ENERGY ============= -->
     <section class="category-section" id="power-unit">
@@ -784,6 +828,72 @@ img { max-width: 100%; display: block; }
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => navLinks.classList.remove('open'));
     });
+  </script>
+
+  <!-- Term search / filter -->
+  <script>
+    (function () {
+      var input    = document.getElementById('termSearch');
+      var clearBtn = document.getElementById('termSearchClear');
+      var noResult = document.getElementById('searchNoResults');
+      if (!input) return;
+
+      var sections = Array.prototype.slice.call(
+        document.querySelectorAll('.index-content .category-section')
+      ).map(function (sec) {
+        return {
+          el: sec,
+          terms: Array.prototype.slice.call(sec.querySelectorAll('.term')).map(function (t) {
+            var nameEl = t.querySelector('.term-name');
+            return {
+              el: t,
+              name: (nameEl ? nameEl.textContent : '').toLowerCase(),
+              text: (t.textContent || '').toLowerCase()
+            };
+          })
+        };
+      });
+
+      function run() {
+        var q = input.value.trim().toLowerCase();
+        clearBtn.style.display = q ? 'block' : 'none';
+
+        if (!q) {
+          sections.forEach(function (sec) {
+            sec.el.classList.remove('search-hidden');
+            sec.terms.forEach(function (t) { t.el.classList.remove('search-hidden'); });
+          });
+          noResult.style.display = 'none';
+          return;
+        }
+
+        // Prefer term-name matches. Only fall back to searching definitions
+        // when nothing in the index has a name that matches.
+        var nameMatchExists = sections.some(function (sec) {
+          return sec.terms.some(function (t) { return t.name.indexOf(q) !== -1; });
+        });
+
+        var anyVisible = false;
+        sections.forEach(function (sec) {
+          var sectionMatch = false;
+          sec.terms.forEach(function (t) {
+            var hit = nameMatchExists ? (t.name.indexOf(q) !== -1) : (t.text.indexOf(q) !== -1);
+            t.el.classList.toggle('search-hidden', !hit);
+            if (hit) sectionMatch = true;
+          });
+          sec.el.classList.toggle('search-hidden', !sectionMatch);
+          if (sectionMatch) anyVisible = true;
+        });
+        noResult.style.display = anyVisible ? 'none' : 'block';
+      }
+
+      input.addEventListener('input', run);
+      clearBtn.addEventListener('click', function () {
+        input.value = '';
+        run();
+        input.focus();
+      });
+    })();
   </script>
 </body>
 </html>
