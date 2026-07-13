@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 Spanish GP Technical Analysis — Apex by Milla</title>
+  <meta name="description" content="Full technical breakdown of the 2026 Spanish Grand Prix at the Circuit de Barcelona-Catalunya by Milla. [Summary to be added once the report is written.]" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://apexbymilla.com/races/barcelona.html" />
+  <meta property="og:title"       content="2026 Spanish GP Technical Analysis — Apex by Milla" />
+  <meta property="og:description" content="Full technical breakdown of the 2026 Spanish Grand Prix at the Circuit de Barcelona-Catalunya by Milla. [Summary to be added once the report is written.]" />
+  <meta property="og:image"       content="https://apexbymilla.com/social-share.png" />
+  <meta property="article:published_time" content="2026-06-14" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@apexbymilla" />
+  <meta name="twitter:title"       content="2026 Spanish GP Technical Analysis — Apex by Milla" />
+  <meta name="twitter:description" content="Full technical breakdown of the 2026 Spanish Grand Prix at the Circuit de Barcelona-Catalunya by Milla. [Summary to be added once the report is written.]" />
+  <meta name="twitter:image"       content="https://apexbymilla.com/social-share.png" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://apexbymilla.com/races/barcelona.html" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "2026 Spanish GP Technical Analysis",
+    "description": "Full technical breakdown of the 2026 Spanish Grand Prix at the Circuit de Barcelona-Catalunya by Milla.",
+    "author": { "@type": "Person", "name": "Milla", "url": "https://apexbymilla.com" },
+    "publisher": { "@type": "Organization", "name": "Apex by Milla", "url": "https://apexbymilla.com" },
+    "datePublished": "2026-06-14",
+    "url": "https://apexbymilla.com/races/barcelona.html",
+    "mainEntityOfPage": "https://apexbymilla.com/races/barcelona.html"
+  }
+  </script>
+
+  <style>
+/* ================================================
+   APEX BY MILLA — Global Stylesheet (inline)
+   ================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Bebas+Neue&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --red:       #E10600;
+  --red-dark:  #b00400;
+  --black:     #0a0a0a;
+  --dark:      #111111;
+  --card:      #181818;
+  --border:    #2a2a2a;
+  --text:      #f0f0f0;
+  --muted:     #888888;
+  --white:     #ffffff;
+  --gold:      #F5C842;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--black);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: #F5A623; border-radius: 3px; }
+
+/* ---------- Navigation ---------- */
+.navbar {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(10,10,10,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+.nav-logo { display: flex; align-items: center; flex-shrink: 0; }
+.nav-links { display: flex; align-items: center; gap: 0.25rem; list-style: none; }
+.nav-links a {
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted);
+  padding: 0.45rem 0.85rem; border-radius: 4px;
+  transition: color 0.2s, background 0.2s; white-space: nowrap;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--white); background: var(--border); }
+.nav-links a.race-link { color: var(--text); }
+.nav-links a.race-link:hover { color: var(--red); background: rgba(225,6,0,0.1); }
+.nav-links a.race-link.active { color: var(--red); background: rgba(225,6,0,0.1); }
+
+.hamburger {
+  display: none; flex-direction: column; gap: 5px; cursor: pointer;
+  background: none; border: none; padding: 4px;
+}
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+
+/* ---------- Blog Hero ---------- */
+.blog-hero {
+  background: var(--dark);
+  border-bottom: 1px solid var(--border);
+  border-top: 3px solid #F5A623; /* Barcelona signature: warm Spanish amber */
+  padding: 5rem 2rem 3rem;
+  position: relative;
+}
+.blog-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 220px;
+  background: radial-gradient(ellipse 60% 100% at 90% 0%, rgba(245,166,35,0.14) 0%, transparent 70%);
+  pointer-events: none;
+}
+.blog-hero-inner { max-width: 800px; margin: 0 auto; position: relative; }
+.blog-back {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 2rem; transition: color 0.2s;
+}
+.blog-back:hover { color: var(--text); }
+.blog-round {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--red); margin-bottom: 0.8rem;
+}
+.blog-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  letter-spacing: 0.03em; color: var(--white); line-height: 1; margin-bottom: 1rem;
+}
+.blog-meta {
+  display: flex; gap: 1.5rem; flex-wrap: wrap;
+  font-size: 0.8rem; color: var(--muted);
+  margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border);
+}
+.blog-meta span { display: flex; align-items: center; gap: 0.4rem; }
+
+/* ---------- Blog Content ---------- */
+.blog-content { max-width: 800px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+.blog-content h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem; letter-spacing: 0.04em; color: var(--white);
+  margin-top: 2.5rem; margin-bottom: 1rem;
+  padding-bottom: 0.5rem; border-bottom: 2px solid var(--red); display: inline-block;
+}
+.blog-content h3 {
+  font-size: 1.1rem; font-weight: 600; color: var(--text);
+  margin-top: 2rem; margin-bottom: 0.75rem;
+}
+.blog-content p { color: #b0b0b0; margin-bottom: 1.2rem; font-size: 0.97rem; }
+.blog-content strong { color: var(--text); font-weight: 600; }
+
+.highlight-box {
+  background: rgba(225,6,0,0.08);
+  border-left: 3px solid var(--red);
+  padding: 1.2rem 1.5rem; border-radius: 0 4px 4px 0;
+  margin: 2rem 0;
+}
+.highlight-box p { margin: 0; color: var(--text); font-style: italic; }
+
+/* ---------- Driver / DNF Cards ---------- */
+.driver-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem; margin: 1.5rem 0;
+}
+.driver-card { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 1rem; }
+.driver-pos { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--red); line-height: 1; }
+.driver-name { font-weight: 600; font-size: 0.9rem; color: var(--text); margin-top: 0.25rem; }
+.driver-team { font-size: 0.78rem; color: var(--muted); }
+
+.dnf-card { border-color: #333333; opacity: 0.75; }
+.dnf-pos { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--muted) !important; line-height: 1; }
+.dnf-reason { font-size: 0.72rem; color: var(--muted); margin-top: 0.3rem; font-style: italic; }
+
+/* Penalty / position-change note under driver cards */
+.position-note {
+  font-size: 0.7rem;
+  color: var(--gold);
+  margin-top: 0.4rem;
+  font-style: italic;
+  line-height: 1.3;
+}
+.penalty-footnote {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 1rem;
+  padding-left: 0.8rem;
+  border-left: 2px solid var(--gold);
+}
+
+/* ---------- Stage 2 Pace Table ---------- */
+.pace-table-wrapper {
+  margin: 1.2rem 0 2rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+.pace-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 0.9rem;
+}
+.pace-table th, .pace-table td {
+  padding: 0.7rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.pace-table th {
+  background: rgba(225,6,0,0.08);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.pace-table tr:last-child td { border-bottom: none; }
+.pace-table td { color: #b0b0b0; }
+.pace-table td strong { color: var(--text); }
+
+/* ---------- Engineer's View Box ---------- */
+.engineer-box {
+  background: rgba(0, 120, 200, 0.06);
+  border-left: 3px solid #2898d8;
+  padding: 1.2rem 1.5rem;
+  border-radius: 0 4px 4px 0;
+  margin: 2rem 0;
+}
+.engineer-box .engineer-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #2898d8;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.engineer-box p { margin: 0; color: var(--text); }
+
+/* ---------- Footer ---------- */
+.footer {
+  padding: 2.5rem 2rem; text-align: center;
+  color: var(--muted); font-size: 0.8rem;
+  border-top: 1px solid var(--border);
+}
+.footer span { color: var(--red); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; position: fixed; top: 64px; left: 0; right: 0;
+    background: var(--dark); border-bottom: 1px solid var(--border);
+    flex-direction: column; align-items: stretch; padding: 1rem; gap: 0.25rem;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 0.7rem 1rem; font-size: 0.85rem; }
+  .hamburger { display: flex; }
+  .blog-hero { padding: 3.5rem 1.5rem 2rem; }
+  .blog-meta { gap: 0.8rem; font-size: 0.75rem; }
+  .blog-content { padding: 2.5rem 1.5rem 4rem; }
+  .blog-content h2 { font-size: 1.4rem; }
+  .driver-grid { grid-template-columns: 1fr; }
+  .pace-table { font-size: 0.82rem; }
+  .pace-table th, .pace-table td { padding: 0.55rem 0.7rem; }
+}
+
+/* ---------- Sources Section ---------- */
+.sources-section {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+.sources-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+}
+.sources-subtitle {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+.sources-group { margin-bottom: 1.4rem; }
+.sources-group-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 0.5rem;
+}
+.sources-list { list-style: none; padding: 0; margin: 0; }
+.sources-list li {
+  font-size: 0.84rem;
+  color: #b0b0b0;
+  margin-bottom: 0.45rem;
+  line-height: 1.55;
+}
+.sources-list a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--border);
+  transition: color 0.2s, border-color 0.2s;
+}
+.sources-list a:hover {
+  color: var(--red);
+  border-bottom-color: var(--red);
+}
+
+/* ---------- Scroll Animations ---------- */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+</style>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-tab.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon.png" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="shortcut icon" href="../favicon.ico" />
+  <style>
+    /* Reading progress bar: sits under the navbar in this race's signature colour, visible throughout */
+    .reading-progress {
+      position: fixed; top: 64px; left: 0; height: 3px; width: 0;
+      background: #F5A623; z-index: 90;
+      transition: width 0.08s linear; will-change: width; pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo" aria-label="Apex by Milla — Home">
+      <img src="../logo.png" alt="Apex by Milla" style="height:48px;width:auto;">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="australia.html" class="race-link">🇦🇺 Australia</a></li>
+      <li><a href="china.html"     class="race-link">🇨🇳 China</a></li>
+      <li><a href="japan.html"     class="race-link">🇯🇵 Japan</a></li>
+      <li><a href="miami.html"     class="race-link">🇺🇸 Miami</a></li>
+      <li><a href="canada.html"    class="race-link">🇨🇦 Canada</a></li>
+      <li><a href="monaco.html"    class="race-link">🇲🇨 Monaco</a></li>
+      <li><a href="barcelona.html" class="race-link active">🇪🇸 Barcelona</a></li>
+      <li><a href="../apex-index.html">The Apex Index</a></li>
+      <li><a href="../index.html#about">About</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== BLOG HERO ===== -->
+  <div class="blog-hero">
+    <div class="blog-hero-inner">
+      <a href="../index.html" class="blog-back">← Back to All Races</a>
+      <div class="blog-round reveal">Round 07 · Circuit de Barcelona-Catalunya · June 14th 2026</div>
+      <h1 class="blog-title reveal reveal-delay-1">Spanish Grand Prix 2026</h1>
+
+      <!-- ✏️ INTRO: one or two sentences setting up the race storyline. Replace the placeholder below. -->
+      <p style="color: var(--muted); font-size: 0.95rem; margin-top: 1rem;">
+        Lewis Hamilton scored his first win for Ferrari amidst on-track and strategic battles, while championship leader Kimi Antonelli suffered a power unit failure that ultimately ended his race.
+      </p>
+
+      <div class="blog-meta reveal reveal-delay-2">
+        <span>📅 June 14th 2026</span>
+        <span>📍 Circuit de Barcelona-Catalunya</span>
+        <span>🏁 Round 7 of 22</span>
+        <span>⏱️ 13 min read</span>
+        <span>✍️ Written by Milla</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BLOG CONTENT ===== -->
+  <article class="blog-content">
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 1 · RACE OVERVIEW
+         What happened, the storyline of the weekend.
+         ───────────────────────────────────────────── -->
+    <h2>Race Overview</h2>
+    <p>
+      At the high-speed, sweeping track of Circuit de Barcelona-Catalunya, 7-time world champion Lewis Hamilton secured his maiden victory for Ferrari after a risky but aggressive 3-stop strategy succeeded. George Russell, who did a 2-stop strategy, finished second, 19.561s behind him. Mercedes then admitted that they lacked the raw pace to build a gap to cover Hamilton's stops which was, in the end, what gave Hamilton the advantage.
+    </p>
+    <p>
+      The grid had already been reshaped before the start. Fernando Alonso was forced to start his home race from the pit lane after Aston Martin fitted fresh Power Unit elements to his car, taking a fourth MGU-K, energy store, and control electronics beyond his season allocation, having qualified last. At the front, Ferrari made an aggressive tyre call by starting Hamilton on the Soft tyre, but Russell launched cleanly from pole to keep the lead into Turn 1, and Hamilton settled into second, defending the inside line from Antonelli. Ferrari had committed to a shorter opening stint on the Softs, which set up the three-stop that would define their race.
+    </p>
+    <p>
+      That three-stop only worked because of how the race unfolded. Russell led the opening stint and initially pulled clear, but Ferrari had the pace to keep Hamilton in range, and the turning point came when Alonso's Aston Martin stopped on the approach to Turn 9 and brought out a Virtual Safety Car. Hamilton pitted from the lead under the neutralisation, effectively gaining a cheap stop, switched onto fresh tyres and rejoined still ahead of the two-stopping Mercedes duo. With clear air and newer rubber he pulled away over the closing stint, setting the fastest lap of the race with a 1:20.122. The three-stop had comprehensively beaten the two-stop of both Mercedes.
+    </p>
+    <p>
+      Behind Hamilton, the race was rejuvenated as a fight between the two Mercedes broke out. Kimi Antonelli reeled in a gap of around six seconds to his teammate in the closing stages and made the move stick down the main straight on Lap 61, forcing his way past Russell into Turn 1 for second. But it only lasted a moment. A few laps from the end his car stopped with an electrical and power unit failure, ending a run of five consecutive victories and handing second straight back to Russell. That left Lando Norris third for McLaren, the first time three British drivers shared a Formula 1 podium since 1968. Charles Leclerc retired moments after Antonelli with a loss of power steering, denying Ferrari a double points finish.
+    </p>
+    <p>
+      Further back, Franco Colapinto crossed the line inside the top eight but was handed a 10-second penalty for failing to slow for yellow flags, dropping him behind both Racing Bulls to P10 and lifting Liam Lawson and Arvid Lindblad to a double points finish. Pierre Gasly recovered well to take P7 and lead Alpine's points on the day.
+    </p>
+    <p>
+      The retirements displayed the bigger picture of the afternoon. Lance Stroll was out within the first five laps, Valtteri Bottas stopped with overheating around Lap 15, Nico Hulkenberg retired near Lap 29, and Alonso's failure at around Lap 37 was the one that shaped the results. With close to a third of the grid hitting complications, the race was a reminder that the 2026 Power Unit regulations are still being pushed to their thermal and mechanical limits. Toto Wolff was blunt about it, saying Mercedes "just can't compete for a championship if every second race, a car is losing fat points" and that the reliability was "not good enough". McLaren went the other way, with Andrea Stella crediting a "relatively calm and clean weekend" from a team that "definitely raised the bar" on reliability while others failed.
+    </p>
+    <p>
+      For Hamilton, it was a first win in red and his 106th career victory, his first of any kind since Belgium in 2024. There was a cool piece of history in it too, as he took his maiden Ferrari win at the same circuit where Michael Schumacher scored his first for the team back in 1996.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 2 · STARTING GRID & QUALIFYING
+         Saturday breakdown, surprises, who underperformed.
+         Barcelona note: the circuit is the traditional in-season test
+         venue, so teams know it inside out. Qualifying pace here is
+         seen as a true measure of a car's aero balance across the
+         full corner range (high, medium and low speed).
+         ───────────────────────────────────────────── -->
+    <h2>Starting Grid &amp; Qualifying</h2>
+    <p>
+      George Russell put his Mercedes on pole with a 1:14.679, his third pole of the season, and did it by the finest of margins. Hamilton was only 0.064s behind in the Ferrari, and the top four were within only 0.322s, with Antonelli third and Norris fourth. From Russell down to Hulkenberg in ninth, the drivers who set a Q3 time were separated by 1.978s, which shows how tightly the field has bunched up under the 2026 regulations.
+    </p>
+    <p>
+      Antonelli's 1:14.998 was enough for third but left the championship leader off the front row, a rare sight after his recent run of poles, with Russell leading a Mercedes that looked strong all weekend. Max Verstappen qualified fifth, 0.342s off pole, ahead of his teammate Isack Hadjar in sixth, while Oscar Piastri could only manage seventh and was unable to match Norris.
+    </p>
+    <p>
+      The biggest event of the session came from Charles Leclerc, who had shown strong pace through Q1 and Q2 but early in Q3 lost the rear of his SF-26 at the exit of Turn 4. He drifted onto the dustier line and slid into the barriers, leaving him without a time in the final session and was consequently set to start tenth.
+    </p>
+    <p>
+      Lawson was the only Racing Bulls driver to reach Q3, qualifying eighth, while his teammate Lindblad was knocked out in Q2 and lined up eleventh.
+    </p>
+    <p>
+      For Alonso, it was a weekend to forget as he qualified last in P22 at his home race. He was 4.136s off Russell's pole time, and was out-qualified by his teammate Stroll for the first time since the 2024 British Grand Prix. Aston Martin then equipped fresh Power Unit elements to Alonso's car, sending him to start from the pit lane and leaving 21 cars on the starting grid.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 3 · TECHNICAL BREAKDOWN
+         The meat of the post.
+         Barcelona note: Turn 3 is the classic long right-hander that
+         punishes any front-end weakness, and Sector 3's slow corners
+         reward mechanical grip. It is a high-energy, aero-dependent
+         lap, so tyre degradation (especially the front-left) and
+         cooling in the June heat usually shape the race.
+         ───────────────────────────────────────────── -->
+    <h2>Technical Breakdown</h2>
+    <p>
+      The defining technical theme of the Spanish Grand Prix was heat. Ambient temperatures sat around 31°C with the track climbing past 50°C, and since Pirelli brought in a softer set of tyre compounds than in previous years, thermal degradation became the central focus of the race. That turned strategy into a chess game, where the two-stop Pirelli had marked as the optimum became vulnerable to a more challenging 3-stop that maximised fresh-rubber grip, which is exactly the route Hamilton and Ferrari took to beat the Mercedes who had chosen the safer strategy. Stella put it simply, saying "the key differentiator in the race came down to tyre management."
+    </p>
+    <p>
+      The layout also split the field by corner type. Ferrari had the fastest chassis through the medium-speed corners, while McLaren were strong in the high-speed sections such as Turn 3 and Turn 9 but wanted more aerodynamic grip in the slower and medium-speed turns. Cadillac was the clearest example of a car caught out, with the combination of high-speed corners and high track temperatures exposing the new team's weaknesses. Sergio Perez admitted "we always knew Barcelona was going to show what we are lacking," and his teammate Bottas underlined it by retiring early with overheating.
+    </p>
+    <p>
+      Reliability was the wildcard. One of the highest retirement rates of the season pointed to teams still struggling to balance performance against cooling under the 2026 regulations. This is the first year for several new power unit manufacturers, including Red Bull Ford and Audi, and the theme of the season has been how fine the margins are for the new units. Laurent Mekies has described Red Bull's own power unit as having a very narrow window, and a mid-season rule refinement had already cut the maximum energy that can be recharged per lap from 8 MJ to 7 MJ to control excessive harvesting and encourage more consistent flat-out running.
+    </p>
+
+    <h3>Tyre Strategy</h3>
+    <p>
+      Pirelli brought the C2 Hard, C3 Medium, and C4 Soft, a step softer than Barcelona usually gets, on a surface that is the second most abrasive on the calendar after Bahrain. In the record heat the degradation was almost entirely thermal, hitting the front and rear left hardest, and the Medium and Soft were dropping off at nearly the same rate, only five to six tenths apart. That took away the usual reason to protect the harder tyre and run it longer.
+    </p>
+    <p>
+      Six of the front runners had identical allocation of one new Medium and two new Hards, so the difference came down to what Hamilton did with this. He was the only one to start on a used Soft, and because the Soft and Medium degraded so closely, it cost him nothing over a Medium while letting Ferrari stop early without signalling whether the tyre was struggling or a longer game was on. He pitted on Lap 11 for the Hard, dropping to seventh, and Mercedes reacted by calling Russell in a lap later rather than stretching their lead car. Pirelli's Dario Marrafuschi said Ferrari had "maximised the undercut, forcing their rivals to respond on the same strategy." A second stop on Lap 27 onto the Medium turned it into a clear three-stop, and that stint carried Hamilton back to the net lead.
+    </p>
+    <p>
+      The decisive detail was that Russell and Antonelli had both used their final stops early, on Laps 36 and 37, at the full green-flag cost of around 22 seconds. Four laps later Alonso's stopped Aston Martin brought out a VSC, and Hamilton took his third stop under it on Lap 41 for a fresh set of Hards at a fraction of the normal time loss, with neither Mercedes left with a stop to match him. He drove away from there, setting the fastest lap of the race, a 1:20.122 on Lap 44, on the Hard that ran 63% of all laps in the field.
+    </p>
+
+    <h3>Aerodynamics &amp; Setup</h3>
+    <p>
+      Barcelona is the perfect aerodynamic test on the calendar, a lap that mixes the high-speed lateral load of Turn 3 with a slower, more technical final sector, so the setup has to balance stability in the fast corners against mechanical grip in the slow ones. Pirelli rates the circuit's lateral energy at the maximum of 5 out of 5. With the track above 50°C and grip coming in slowly on the abrasive surface, the main priority was to keep the car settled and the tyres in their window, rather than chasing outright downforce.
+    </p>
+    <p>
+      For handling, Ferrari was the clear benchmark. Norris called their cornering "the class of the field" and admitted McLaren were "not even close," pointing to the upgrades Ferrari brought to Spain that increased their traction out of the slow corners. McLaren were quick in the high-speed sections, but losing out lower down. Stella was direct about the fix, saying they needed to "add grip to the car of an aerodynamic nature" to load the tyres more through the medium and low-speed turns.
+    </p>
+    <p>
+      The high ambient and track heat made the cars harder to handle, and once the tyres started to go off, Verstappen reported he was "even wobbling on the straight" while defending fifth. Norris also complained of "sliding everywhere," both symptoms of surface temperatures overshooting the drivers. Cadillac struggled the worst in high-load corners, and Haas threw away a promising weekend through setup, with Ayao Komatsu admitting the team "got it wrong this weekend from FP2 onwards." Even Russell, who was quick enough for pole, saw his early race pace fade as the balance drifted out of the window the heat allowed.
+    </p>
+
+    <h3>Energy Management</h3>
+    <p>
+      For all the focus on tyres, the race's most expensive incident was energy related. On Lap 61, moments after Antonelli had forced his way past Russell for second, his Mercedes suffered an electrical shutdown and rolled to a stop. It was the most costly failure of the weekend, taking a most-likely second place podium spot away from the championship leader and cutting his points advantage, becoming the clearest sign of how little margin the 2026 power units have when they slip outside their tight operating window.
+    </p>
+    <p>
+      The Barcelona heat made that window even harder to hold, with track temperatures above 50°C, cooling and energy recovery working against each other all afternoon, and the race carried one of the worst attrition rates of the year. Hulkenberg's Audi was another one of the unlucky group to go, coming to a halt around Lap 29 with a technical failure, part of a pattern of the new-for-2026 power units struggling to stay reliable in the worst conditions.
+    </p>
+    <p>
+      At the other end of the scale, Hamilton showed what effective energy management looks like. After his cheap stop under the Lap 41 VSC, he had a fresh set of Hards and a full battery to work with, and used his deployment to pull clear of Russell rather than burn it defensively. That was where the race's fastest lap came from, a 1:20.122 on Lap 44, by driver number 44, who had banked his energy through the neutralisation and then spent it in one clean sprint.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         [STAGE 2] · SECTION 4 · PACE & PERFORMANCE
+         Pull numbers from formula1.com (Race Result, Fastest Laps,
+         Pit Stop Summary) once verified.
+         ───────────────────────────────────────────── -->
+    <h2>Pace &amp; Performance</h2>
+    <p>
+      Ferrari had the fastest car in Barcelona, and it was clear through the medium-speed corners of the middle sector. Once Hamilton had track position, he pulled away, winning by 19.561 seconds. Fred Vasseur was open about how they used that pace, saying "our strategy was aggressive but that is what you can afford to do when you have the pace for the win."
+    </p>
+    <p>
+      Mercedes could not respond. Andrew Shovlin admitted the team "lacked the speed to control the race and that's what cost us the win," and that Russell was "kept honest throughout" by Hamilton and Norris. McLaren were the third force, quick through the high-speed corners such as Turn 3 and Turn 9 but short of the aerodynamic grip to match Ferrari in the slower sections, and Norris still brought his car home third, only 4.158 seconds behind Russell. Red Bull were another step back, around three tenths adrift in qualifying and never in the fight for the win.
+    </p>
+
+    <div class="pace-table-wrapper">
+      <table class="pace-table">
+        <thead>
+          <tr>
+            <th>Pos.</th>
+            <th>Driver</th>
+            <th>Fastest lap</th>
+            <th>On lap</th>
+            <th>Pit stops (lap)</th>
+            <th>Gap at flag</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>P1</td><td><strong>Hamilton</strong> (Ferrari)</td><td>1:20.122</td><td>44</td><td>11, 27, 41</td><td>WINNER</td></tr>
+          <tr><td>P2</td><td><strong>Russell</strong> (Mercedes)</td><td>1:20.640</td><td>43</td><td>12, 36</td><td>+19.561s</td></tr>
+          <tr><td>16</td><td><strong>Antonelli</strong> (Mercedes)</td><td>1:20.704</td><td>46</td><td>14, 37</td><td>DNF (Lap 61)</td></tr>
+          <tr><td>P6</td><td><strong>Hadjar</strong> (Red Bull)</td><td>1:20.150</td><td>61</td><td>15, 32, 58</td><td>+1 Lap</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      Hamilton's fastest lap, a 1:20.122 on Lap 44, came just three laps after his final stop and on the Hard tyre, not the Medium, showing how quickly the Ferrari switched on fresh rubber in clear air. It was nearly half a second quicker than Russell's best of 1:20.640, set on Lap 43 as he pushed to try and match Hamilton's post-VSC pace. The most striking number belongs to Hadjar, whose 1:20.150 on Lap 61 was the second-fastest lap of the whole race, set on the Soft late on despite finishing a lap down, a sign of the Red Bull's underlying efficiency once it was freed of its long-run struggles. Antonelli, meanwhile, was quicker than Russell in the closing stint as he caught and passed him for second, and it is possible the energy he spent doing so contributed to the electrical failure that stopped him moments later.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         [STAGE 2] · SECTION 5 · ENGINEERING QUESTION OF THE RACE
+         Pick ONE specific moment and dig into the "why".
+         ───────────────────────────────────────────── -->
+    <h2>Engineering Question of the Race</h2>
+    <h3>"How did a stray piece of gravel shut Hulkenberg's Audi down completely, and what does it reveal about how exposed the emergency kill switch is on the 2026 cars?"</h3>
+    <p>
+      Every car carries an externally accessible cut-off, a pull handle behind the cockpit that lets a marshal isolate the high-voltage Energy Store and shut the car down in the event of a fire or a heavy accident. It is a fail-safe, built so that moving the switch past its trigger point sends an immediate signal to the ECU to kill the power unit and stop all electrical deployment. On Lap 29 that trigger was pulled not by a marshal but by a mere pebble. Lawson had run wide into the gravel at Turn 12 just ahead of Hulkenberg, and as he rejoined, his rear tyres threw a clutter of gravel back down the track. One stone somehow struck the recessed safety switch on the Audi with enough force to move it, and the car shut down instantly while Hulkenberg was running inside the points, on course for his first score of the year.
+    </p>
+    <p>
+      Audi Racing Director Allan McNish confirmed the cause afterwards, saying "Nico's car shut down after Lawson ran wide and kicked up gravel, which struck the safety fire switch. That triggered an automatic safety function designed to shut the car down in an emergency situation." Hulkenberg had never come across it before, admitting he had never "seen or heard about this" in his career. The significant point is that this was not a failure of the power unit or the Energy Store at all. The Audi was healthy. What ended its race was a safety system doing exactly what it was designed to do, only it was triggered by the wrong thing.
+    </p>
+    <p>
+      That leaves the open question of why the switch was exposed enough to be caught at all. Part of it is likely the 2026 packaging, with cars run in maximum-cooling, minimal-shielding trim to save weight in the heat, which could have left the external switch more open to a hit than usual. My own theory though, is that aerodynamics played a part in this story too. The wake these cars throw off through the high-speed corners, such as Turn 3, is powerful enough that it could help lift and carry debris up towards the recessed switch area rather than letting it fall away. It is only a hypothesis, and something Audi would need to investigate to confirm, but it would help explain how a single stone found such a small and awkward target. Either way, a completely healthy car and a good race was ended by its own safety system.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 6 · KEY INSIGHT (HIGHLIGHT BOX)
+         One quote or one sentence that summarises the race.
+         ───────────────────────────────────────────── -->
+    <div class="highlight-box reveal">
+      <p>
+        💡 "Tyres played a central role: aided by pronounced degradation, due to the high temperatures and the choice of softer compounds compared to 2025, they became the key pieces in an intense game of chess, highlighting both the drivers' skills and the teams' strategic capabilities." – Dario Marrafuschi, Pirelli Motorsport Director. His summary captures why the race turned on strategy rather than raw pace, with the softer 2026 compounds and track temperatures above 50°C driving the degradation that left a two-stop exposed. It was that thermal sensitivity, more than any lack of Mercedes speed, that opened the door for Hamilton's three-stop to win.
+      </p>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 7 · RACE RESULT — TOP 10
+         Standard P1–P10 grid.
+         ───────────────────────────────────────────── -->
+    <h2>Race Result — Top 10</h2>
+    <!-- ✏️ Verify top 10 from formula1.com. Flag any position changes vs. on-road order
+         with an asterisk per driver card + a .penalty-footnote underneath. -->
+    <div class="driver-grid reveal">
+      <div class="driver-card"><div class="driver-pos">P1</div><div class="driver-name">Lewis Hamilton</div><div class="driver-team">Ferrari</div></div>
+      <div class="driver-card"><div class="driver-pos">P2</div><div class="driver-name">George Russell</div><div class="driver-team">Mercedes</div></div>
+      <div class="driver-card"><div class="driver-pos">P3</div><div class="driver-name">Lando Norris</div><div class="driver-team">McLaren</div></div>
+      <div class="driver-card"><div class="driver-pos">P4</div><div class="driver-name">Max Verstappen</div><div class="driver-team">Red Bull Racing</div></div>
+      <div class="driver-card"><div class="driver-pos">P5</div><div class="driver-name">Oscar Piastri</div><div class="driver-team">McLaren</div></div>
+      <div class="driver-card"><div class="driver-pos">P6</div><div class="driver-name">Isack Hadjar</div><div class="driver-team">Red Bull Racing</div></div>
+      <div class="driver-card"><div class="driver-pos">P7</div><div class="driver-name">Pierre Gasly</div><div class="driver-team">Alpine</div></div>
+      <div class="driver-card"><div class="driver-pos">P8</div><div class="driver-name">Liam Lawson</div><div class="driver-team">Racing Bulls</div></div>
+      <div class="driver-card"><div class="driver-pos">P9</div><div class="driver-name">Arvid Lindblad</div><div class="driver-team">Racing Bulls</div></div>
+      <div class="driver-card"><div class="driver-pos">P10</div><div class="driver-name">Franco Colapinto</div><div class="driver-team">Alpine</div></div>
+    </div>
+    <p class="penalty-footnote">
+      Colapinto crossed the line inside the top eight but a 10-second penalty for failing to slow for yellow flags dropped him to P10, promoting Lawson and Lindblad a place each.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 8 · DNF / DNS
+         Add cards for any retirements or non-starters with reason.
+         ───────────────────────────────────────────── -->
+    <h2>DNF / DNS</h2>
+    <!-- ✏️ Add a card for each retirement. Use exact reasons from F1.com classification + race report.
+         Status options: DNF (Did Not Finish), DNS (Did Not Start), CL (Classified — finished too far back). -->
+    <div class="driver-grid reveal">
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">Charles Leclerc</div>
+        <div class="driver-team">Ferrari</div>
+        <div class="dnf-reason">Retired lap 62, loss of power steering after going off track</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">Kimi Antonelli</div>
+        <div class="driver-team">Mercedes</div>
+        <div class="dnf-reason">Retired lap 61, electrical failure while running second</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">Fernando Alonso</div>
+        <div class="driver-team">Aston Martin</div>
+        <div class="dnf-reason">Retired lap 37, battery failure, the stopped car bringing out the Virtual Safety Car</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">Nico Hulkenberg</div>
+        <div class="driver-team">Audi</div>
+        <div class="dnf-reason">Retired lap 29, kicked-up gravel struck the external safety switch and shut the car down</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">Valtteri Bottas</div>
+        <div class="driver-team">Cadillac</div>
+        <div class="dnf-reason">Retired lap 15, overheating</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">Lance Stroll</div>
+        <div class="driver-team">Aston Martin</div>
+        <div class="dnf-reason">Retired lap 5, gearbox failure</div>
+      </div>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 9 · KEY TAKEAWAYS
+         What we learned from this race.
+         ───────────────────────────────────────────── -->
+    <h2>Key Takeaways</h2>
+    <p>
+      Hamilton's win reshaped the title picture, as Antonelli's retirement while running second, combined with the 25 points Hamilton banked, cut the junior drivers' championship lead to 41 points, with Hamilton now in second. Toto Wolff was quick to name the threat, saying he would "rather not fight with him for a title" and that "if he smells blood, he goes." With a single DNF worth 25 points, Wolff called the fight "wide open."
+    </p>
+    <p>
+      Strategically, Barcelona exposed Mercedes. Committing both cars to a two-stop on a track Pirelli rated 5 out of 5 for tyre stress and lateral energy left them with no answer to Hamilton's three-stop and no stop in hand when the VSC fell. The bigger story was reliability, as eight of the 22 cars failed to finish, more than a third of the grid. The mix of electrical, cooling and mechanical failures showed how fine the margins still are on the 2026 power units in the heat.
+    </p>
+    <p>
+      Further back, the midfield picture is shifting. Alpine took points with both cars and Gasly recovered to seventh from 14th on the grid, saying the "stars are aligning" for the team after he and Hamilton became the only two drivers to score at every round so far. McLaren left with a podium through Norris and a cleaner weekend on reliability, but Norris was blunt that they still lack the engine to match Ferrari's chassis.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         [STAGE 2] · SECTION 10 · RACE ENGINEER'S VIEW
+         Closing paragraph in your own voice: what you would have done.
+         ───────────────────────────────────────────── -->
+    <div class="engineer-box">
+      <span class="engineer-label">🎧 Race Engineer's View</span>
+      <p>
+        The thread running through the retirements was less about outright reliability and more about how exposed certain components are once the cars are trimmed for weight and cooling in intense kinds of heat. Stroll's early exit came from a gearbox problem, Albon's afternoon was wrecked by something as small as a loose onboard camera that had to be reattached, and Hulkenberg was taken out by a single stone finding his external safety switch. Three completely different failures, but each one traces back to a part left vulnerable rather than a core system breaking. On a weekend with track temperatures above 50°C and the highest lateral loads of the year, the cars that came unstuck were often the ones caught out by the small, exposed details rather than the big components.
+      </p>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 11 · LOOKING AHEAD
+         Bridge to the next race.
+         ───────────────────────────────────────────── -->
+    <h2>Looking Ahead</h2>
+    <p>
+      The championship heads to the Red Bull Ring for the Austrian Grand Prix on June 26 to 28, a standard weekend with no sprint. Antonelli still leads, but his retirement has cut the gap to Hamilton to 41 points and swung the momentum towards Ferrari. Antonelli was honest that he needed "a week of rest" to reset, and promised to "come back stronger" in Spielberg.
+    </p>
+    <p>
+      Austria brings its own test. The short lap packs in long full-throttle straights and fast corners, and after the heat that caused so many failures in Barcelona, cooling will again be under the spotlight at a circuit that sits at altitude. For the teams that struggled, from Mercedes' search for race pace to Haas and Williams sorting out their weekends, it is a quick chance to respond.
+    </p>
+
+    <!-- ===== SOURCES SECTION ===== -->
+    <!-- ✏️ Fill with PRIMARY sources only — never fabricate. F1.com data + Pirelli debrief
+         + a race report URL are the minimum. Add a Regulations group if FIA changes are
+         mentioned. Add a Penalty Verification group if asterisks were applied. -->
+    <section class="sources-section reveal">
+      <h2 class="sources-title">Sources</h2>
+      <p class="sources-subtitle">Primary research used for this race report.</p>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Official Race Data</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/results/2026/races/1287/barcelona-catalunya/race-result" target="_blank" rel="noopener">Formula1.com — 2026 Barcelona-Catalunya Grand Prix Race Result</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1287/barcelona-catalunya/starting-grid" target="_blank" rel="noopener">Formula1.com — Starting Grid</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1287/barcelona-catalunya/qualifying" target="_blank" rel="noopener">Formula1.com — Qualifying</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1287/barcelona-catalunya/fastest-laps" target="_blank" rel="noopener">Formula1.com — Fastest Laps</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1287/barcelona-catalunya/pit-stop-summary" target="_blank" rel="noopener">Formula1.com — Pit Stop Summary</a></li>
+          <li><a href="https://www.crash.net/f1/results/1098856/1/full-2026-f1-barcelona-grand-prix-race-results" target="_blank" rel="noopener">Crash.net — Full race results after Colapinto penalty</a></li>
+          <li><a href="https://www.crash.net/f1/results/1098058/1/2026-f1-barcelona-grand-prix-full-qualifying-results" target="_blank" rel="noopener">Crash.net — Full qualifying results</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Tyre Strategy</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/latest/article/what-tyres-will-the-teams-and-drivers-have-for-the-2026-barcelona-catalunya-grand-prix.2wVnaPZmlQUuj9P72FrjuA" target="_blank" rel="noopener">Formula1.com — What tyres will the teams have for the 2026 Barcelona-Catalunya Grand Prix?</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/strategy-guide-what-are-the-options-for-the-barcelona-catalunya-gp.30bhEEhYsL9XuuPBDleZ3Z" target="_blank" rel="noopener">Formula1.com — Strategy Guide: What are the options for the Barcelona-Catalunya Grand Prix?</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Race Report &amp; Team Quotes</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/latest/article/hamilton-claims-stellar-maiden-grand-prix-victory-for-ferrari-in-barcelona-as-antonelli-suffers-shock-retirement.4yCXiPLHUdcnl2BwNpqUIa" target="_blank" rel="noopener">Formula1.com — 2026 Barcelona-Catalunya Grand Prix Race Report and Highlights</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/russell-storms-to-barcelona-catalunya-gp-pole-ahead-of-hamilton-and-antonelli-as-leclerc-crashes-out.5TO9HsowvlMjmFJBPVP3qv" target="_blank" rel="noopener">Formula1.com — Russell storms to pole as Leclerc crashes out (Qualifying report)</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-barcelona-catalunya-2026.4fWikDvJzMjVCrHCUNG4Hr" target="_blank" rel="noopener">Formula1.com — What the teams said, race day in Barcelona-Catalunya</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/vasseur-praises-very-outstanding-hamilton-for-pushing-ferrari-to-victory-in-barcelona.4RCBH95KNxRLP9DJcQgyN7" target="_blank" rel="noopener">Formula1.com — Vasseur praises "very outstanding" Hamilton for pushing Ferrari to victory</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Reliability, Reactions &amp; Incidents</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/latest/article/if-he-smells-blood-he-goes-hamilton-is-absolutely-a-title-threat-insists-wolff.1HYi2XL2SjwRqkdsy8npmY" target="_blank" rel="noopener">Formula1.com — "If he smells blood, he goes": Wolff on Hamilton the title threat</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/not-good-enough-wolff-critical-of-mercedes-reliability-after-antonelli-retirement-in-barcelona-catalunya-grand-prix.6KLa3k3yay82ZUUWe5G09W" target="_blank" rel="noopener">Formula1.com — "Not good enough": Wolff critical of Mercedes' reliability</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/i-feel-a-bit-empty-antonelli-reflects-on-late-barcelona-catalunya-gp-retirement.6wpFZCfvdQgU4FKe3q1dic" target="_blank" rel="noopener">Formula1.com — "I feel a bit empty": Antonelli reflects on his late retirement</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/the-unusual-and-unfortunate-reason-why-hulkenbergs-race-in-barcelona-came-to-an-abrupt-end.1OZl98HX2B0gFbbrL2SSZa" target="_blank" rel="noopener">Formula1.com — The "unusual and unfortunate" reason Hulkenberg's race ended</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/we-have-definitely-raised-the-bar-stella-pleased-mclaren-could-shake-off-reliability-concerns-in-barcelona.2AvLwvXGQjjLx6sTa1WR2a" target="_blank" rel="noopener">Formula1.com — "We have definitely raised the bar": Stella on McLaren's reliability</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/we-always-knew-barcelona-was-going-to-show-what-we-are-lacking-admits-perez.1ctyLAqEjBt8PU8wOhgz1K" target="_blank" rel="noopener">Formula1.com — "We always knew Barcelona was going to show what we are lacking": Perez</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/operationally-we-werent-good-enough-in-barcelona-says-frustrated-komatsu.4OLSDe1QJT7LE2KmvXMSTh" target="_blank" rel="noopener">Formula1.com — "Operationally we weren't good enough": Komatsu on Haas</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/verstappen-admits-red-bull-have-a-lot-of-work-to-do-as-he-explains-issues-on-friday-in-barcelona.5giZLOvlhniLa89AVh9MQF" target="_blank" rel="noopener">Formula1.com — Verstappen admits Red Bull have "a lot of work to do"</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/we-couldnt-hope-for-any-better-gasly-believes-the-stars-are-aligning-for-alpine-after-barcelona-points-haul.3aWnaoOX5HaqdPlYvpSgrK" target="_blank" rel="noopener">Formula1.com — Gasly believes the "stars are aligning" for Alpine</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </article>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="../logo.png" alt="Apex by Milla" style="height:70px;width:auto;opacity:0.55;">
+    </div>
+    <p>© 2026 · Formula One Technical Analysis · All Rights Reserved</p>
+    <p style="font-size: 0.72rem; opacity: 0.65; margin-top: 0.5rem; font-style: italic;">Independent technical analysis. Not affiliated with Formula 1, the FIA, or any F1 team.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+  </script>
+
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+  <script>
+    (function () {
+      var bar = document.getElementById('readingProgress');
+      var endEl = document.querySelector('.sources-section');
+      function update() {
+        var end = endEl ? (endEl.getBoundingClientRect().top + window.scrollY) : document.documentElement.scrollHeight;
+        var target = end - window.innerHeight;
+        var pct = target > 0 ? window.scrollY / target : 1;
+        if (pct < 0) pct = 0; if (pct > 1) pct = 1;
+        bar.style.width = (pct * 100) + '%';
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      window.addEventListener('load', update);
+      update();
+    })();
+  </script>
+</body>
+</html>
