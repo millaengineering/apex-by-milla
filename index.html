@@ -456,7 +456,7 @@ img {
 
 .progress-fill {
   height: 100%;
-  width: 31.8%; /* 7 of 22 */
+  width: 36.4%; /* 8 of 22 */
   background: linear-gradient(90deg, var(--red-dark), var(--red));
   border-radius: 2px;
   position: relative;
@@ -1362,6 +1362,63 @@ img {
 .reveal-delay-5 { transition-delay: 0.5s; }
 .reveal-delay-6 { transition-delay: 0.6s; }
 
+/* ---------- Stage 3 Under-Construction Banner ---------- */
+.stage-banner {
+  display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(90deg, #b00400, #E10600);
+  color: var(--white);
+  font-size: 0.9rem; font-weight: 600; letter-spacing: 0.02em;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.stage-banner .hat { font-size: 1.05rem; }
+.loading-dots span { opacity: 0; animation: dotSeq 1.6s infinite; }
+.loading-dots span:nth-child(1) { animation-delay: 0s; }
+.loading-dots span:nth-child(2) { animation-delay: 0.25s; }
+.loading-dots span:nth-child(3) { animation-delay: 0.5s; }
+@keyframes dotSeq { 0% { opacity: 0; } 15% { opacity: 1; } 80% { opacity: 1; } 100% { opacity: 0; } }
+
+/* ---------- Stage Groups (race blogs) ---------- */
+.stage-group { margin-bottom: 3.5rem; }
+.stage-group:last-child { margin-bottom: 0; }
+.stage-group-header {
+  display: flex; align-items: baseline; gap: 0.85rem; flex-wrap: wrap;
+  margin-bottom: 1.4rem; padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--border);
+}
+.stage-group-num {
+  font-family: 'Bebas Neue', sans-serif; font-size: 1.7rem;
+  letter-spacing: 0.04em; color: var(--red); line-height: 1;
+}
+.stage-group-desc {
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--muted);
+}
+.stage-group.upcoming .stage-group-num { color: var(--muted); }
+
+/* Stage 3 under-construction placeholder */
+.stage3-coming {
+  border: 1px dashed var(--border); border-radius: 8px;
+  padding: 2.5rem 1.5rem; text-align: center; color: var(--muted);
+  background: rgba(255,255,255,0.015);
+}
+.stage3-coming .s3-emoji { font-size: 1.8rem; }
+.stage3-coming .s3-title {
+  font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem;
+  letter-spacing: 0.05em; color: var(--text); margin-top: 0.5rem;
+}
+.stage3-coming .s3-text { font-size: 0.85rem; margin-top: 0.4rem; max-width: 520px; margin-left: auto; margin-right: auto; }
+
+/* NEW badge on newest race card */
+.card-new-badge {
+  position: absolute; top: 0.85rem; right: 0.85rem;
+  background: var(--red); color: #fff;
+  font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.22rem 0.5rem; border-radius: 3px; z-index: 2;
+  animation: new-blog-pulse 1.6s ease-in-out infinite;
+}
+
 /* ---------- Section Dividers ---------- */
 .section-divider {
   position: relative;
@@ -1407,6 +1464,7 @@ img {
       <li><a href="races/canada.html"    class="race-link">🇨🇦 Canada</a></li>
       <li><a href="races/monaco.html"   class="race-link">🇲🇨 Monaco</a></li>
       <li><a href="races/barcelona.html" class="race-link">🇪🇸 Barcelona</a></li>
+      <li><a href="races/austria.html"   class="race-link">🇦🇹 Austria</a></li>
       <!-- ── END RACE PAGES ── -->
       <li><a href="apex-index.html">The Apex Index</a></li>
 
@@ -1427,21 +1485,10 @@ img {
     The "NEW" badge automatically pulses for 7 days from the publish date,
     then auto-switches to "LATEST" with a calmer look. No edits needed for that.
   -->
-  <div style="display: flex; align-items: stretch; flex-wrap: wrap; border-bottom: 1px solid rgba(255,255,255,0.08);">
-    <a href="races/barcelona.html"
-       class="new-blog-banner"
-       id="latestRaceBanner"
-       data-publish-date="2026-07-14"
-       style="flex: 1; min-width: 260px; border-bottom: none; background: linear-gradient(90deg, #c97e12, #F5A623);">
-      <span class="new-blog-badge" data-new-text="NEW" data-latest-text="LATEST">NEW</span>
-      <span class="new-blog-text">🇪🇸 Spanish Grand Prix Technical Analysis</span>
-      <span class="new-blog-cta">Read →</span>
-    </a>
-    <div style="width: 1px; background: rgba(255,255,255,0.15); flex-shrink: 0;"></div>
-    <div style="flex: 1; min-width: 260px; display: flex; align-items: center; justify-content: center; gap: 0.9rem; padding: 0.7rem 1.5rem; background: #3E9B4F; font-size: 0.88rem; font-weight: 500; letter-spacing: 0.01em; color: var(--white); cursor: default;">
-      <span style="background: rgba(255,255,255,0.18); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 0.25rem 0.6rem; border-radius: 4px; letter-spacing: 0.08em; text-transform: uppercase; flex-shrink: 0;">UPCOMING</span>
-      <span style="font-weight: 500;">🇦🇹 Austrian Grand Prix Technical Analysis</span>
-    </div>
+  <div class="stage-banner">
+    <span class="hat">🏗️</span>
+    <span>Stage 3 in development, preparing for launch<span class="loading-dots"><span>.</span><span>.</span><span>.</span></span></span>
+    <span class="hat">🏗️</span>
   </div>
 
   <!-- ===== HERO ===== -->
@@ -1520,7 +1567,7 @@ img {
       </div>
       <div class="project-cards">
         <!-- ✏️ Update this href to the newest race page every time a new race goes live -->
-        <a href="races/monaco.html" class="project-card reveal" style="text-decoration:none;cursor:pointer;">
+        <a href="races/austria.html" class="project-card reveal" style="text-decoration:none;cursor:pointer;">
           <div class="project-card-icon">🔬</div>
           <h3>Technical Analysis</h3>
           <p>Every race broken down from an engineering perspective: power units, active aero, ERS management, and tyre science.</p>
@@ -1555,7 +1602,7 @@ img {
         </div>
         <div class="about-stats-row">
           <div class="about-stat-box">
-            <div class="about-stat-box-num">7</div>
+            <div class="about-stat-box-num">8</div>
             <div class="about-stat-box-label">Races</div>
           </div>
           <div class="about-stat-box">
@@ -1644,16 +1691,20 @@ img {
       <div class="season-progress reveal" id="season-progress">
         <div class="season-progress-header">
           <span class="season-progress-label">2026 Season Progress</span>
-          <span class="season-progress-count"><span>7</span> / 22 Races</span>
+          <span class="season-progress-count"><span>8</span> / 22 Races</span>
         </div>
         <div class="progress-track">
           <div class="progress-fill"></div>
         </div>
       </div>
 
-      <div class="races-grid">
-
-        <!-- ── RACE CARD: Add a new card like this for every new race ── -->
+      <!-- ═══ STAGE 1 · CORE RACE ANALYSIS ═══ -->
+      <div class="stage-group">
+        <div class="stage-group-header">
+          <span class="stage-group-num">Stage 1</span>
+          <span class="stage-group-desc">Core Race Analysis</span>
+        </div>
+        <div class="races-grid">
 
         <!-- Card 1: Australia -->
         <a href="races/australia.html" class="race-card reveal">
@@ -1717,9 +1768,19 @@ img {
             <span class="card-arrow">Read →</span>
           </div>
         </a>
+        </div>
+      </div>
+
+      <!-- ═══ STAGE 2 · DEEPER TECHNICAL ANALYSIS ═══ -->
+      <div class="stage-group">
+        <div class="stage-group-header">
+          <span class="stage-group-num">Stage 2</span>
+          <span class="stage-group-desc">Deeper Technical Analysis</span>
+        </div>
+        <div class="races-grid">
 
         <!-- Card 4: Miami -->
-        <a href="races/miami.html" class="race-card reveal reveal-delay-3">
+        <a href="races/miami.html" class="race-card reveal">
           <div class="card-flag">🇺🇸</div>
           <div class="card-body">
             <div class="card-round">Round 04 · Miami</div>
@@ -1740,7 +1801,7 @@ img {
         </a>
 
         <!-- Card 5: Canada -->
-        <a href="races/canada.html" class="race-card reveal reveal-delay-4">
+        <a href="races/canada.html" class="race-card reveal reveal-delay-1">
           <div class="card-flag">🇨🇦</div>
           <div class="card-body">
             <div class="card-round">Round 05 · Montreal</div>
@@ -1761,7 +1822,7 @@ img {
         </a>
 
         <!-- Card 6: Monaco -->
-        <a href="races/monaco.html" class="race-card reveal reveal-delay-5">
+        <a href="races/monaco.html" class="race-card reveal reveal-delay-2">
           <div class="card-flag">🇲🇨</div>
           <div class="card-body">
             <div class="card-round">Round 06 · Monaco</div>
@@ -1782,7 +1843,7 @@ img {
         </a>
 
         <!-- Card 7: Barcelona -->
-        <a href="races/barcelona.html" class="race-card reveal reveal-delay-6">
+        <a href="races/barcelona.html" class="race-card reveal reveal-delay-3">
           <div class="card-flag">🇪🇸</div>
           <div class="card-body">
             <div class="card-round">Round 07 · Barcelona</div>
@@ -1802,8 +1863,44 @@ img {
           </div>
         </a>
 
+        <!-- Card 8: Austria (NEW) -->
+        <a href="races/austria.html" class="race-card reveal reveal-delay-4" style="position:relative;">
+          <span class="card-new-badge">New</span>
+          <div class="card-flag">🇦🇹</div>
+          <div class="card-body">
+            <div class="card-round">Round 08 · Spielberg</div>
+            <h3 class="card-title">Austrian Grand Prix</h3>
+            <p class="card-excerpt">
+              George Russell converts pole into victory as thermal management decides the race, Verstappen splits the two Mercedes for Red Bull, and Ferrari struggle for pace despite a power unit update.
+            </p>
+          </div>
+          <div class="card-winner">
+            <span class="card-winner-label">Winner</span>
+            <span class="card-winner-name">George Russell</span>
+            <span class="card-winner-team">Mercedes</span>
+          </div>
+          <div class="card-footer">
+            <span class="card-date">28 June 2026</span>
+            <span class="card-arrow">Read →</span>
+          </div>
+        </a>
+
         <!-- ── END RACE CARDS ── -->
 
+        </div>
+      </div>
+
+      <!-- ═══ STAGE 3 · ENHANCED REPORTS (IN DEVELOPMENT) ═══ -->
+      <div class="stage-group upcoming">
+        <div class="stage-group-header">
+          <span class="stage-group-num">Stage 3</span>
+          <span class="stage-group-desc">Enhanced Reports · In Development</span>
+        </div>
+        <div class="stage3-coming">
+          <div class="s3-emoji">🏗️</div>
+          <div class="s3-title">Under Construction</div>
+          <div class="s3-text">Enhanced race reports begin at Silverstone with new data and analysis features. Preparing for launch.</div>
+        </div>
       </div>
     </div>
   </div>
@@ -1815,35 +1912,45 @@ img {
         <div class="apex-index-eyebrow">Technical Glossary</div>
         <h2 class="apex-index-section-title">The Apex Index</h2>
         <p class="apex-index-section-sub">
-          A reference for the engineering terms behind every race report, covering power units, aerodynamics, tyres, race control, chassis and safety. Updated as new terminology appears through the season.
+          A reference for the engineering terms behind every race report, covering power units, aerodynamics, tyres, braking and chassis, strategy, race control, and the grid. Updated as new terminology appears through the season.
         </p>
       </div>
 
       <div class="apex-index-grid">
         <a href="apex-index.html#power-unit" class="apex-index-card reveal">
           <div class="apex-index-card-icon">⚡</div>
-          <div class="apex-index-card-title">Power Unit</div>
-          <div class="apex-index-card-count">10 Terms</div>
+          <div class="apex-index-card-title">Power Unit &amp; Energy</div>
+          <div class="apex-index-card-count">16 Terms</div>
         </a>
-        <a href="apex-index.html#race-control" class="apex-index-card reveal reveal-delay-1">
-          <div class="apex-index-card-icon">🏁</div>
-          <div class="apex-index-card-title">Race Control &amp; Strategy</div>
-          <div class="apex-index-card-count">9 Terms</div>
-        </a>
-        <a href="apex-index.html#aerodynamics" class="apex-index-card reveal reveal-delay-2">
+        <a href="apex-index.html#aerodynamics" class="apex-index-card reveal reveal-delay-1">
           <div class="apex-index-card-icon">💨</div>
           <div class="apex-index-card-title">Aerodynamics</div>
+          <div class="apex-index-card-count">12 Terms</div>
+        </a>
+        <a href="apex-index.html#tyres" class="apex-index-card reveal reveal-delay-2">
+          <div class="apex-index-card-icon">🛞</div>
+          <div class="apex-index-card-title">Tyres &amp; Compounds</div>
+          <div class="apex-index-card-count">15 Terms</div>
+        </a>
+        <a href="apex-index.html#braking-chassis" class="apex-index-card reveal reveal-delay-3">
+          <div class="apex-index-card-icon">🛡️</div>
+          <div class="apex-index-card-title">Braking &amp; Chassis</div>
+          <div class="apex-index-card-count">12 Terms</div>
+        </a>
+        <a href="apex-index.html#strategy" class="apex-index-card reveal reveal-delay-4">
+          <div class="apex-index-card-icon">🧠</div>
+          <div class="apex-index-card-title">Strategy &amp; Race Craft</div>
           <div class="apex-index-card-count">9 Terms</div>
         </a>
-        <a href="apex-index.html#tyres" class="apex-index-card reveal reveal-delay-3">
-          <div class="apex-index-card-icon">🛞</div>
-          <div class="apex-index-card-title">Tyres</div>
-          <div class="apex-index-card-count">7 Terms</div>
+        <a href="apex-index.html#race-control" class="apex-index-card reveal reveal-delay-5">
+          <div class="apex-index-card-icon">🏁</div>
+          <div class="apex-index-card-title">Race Control &amp; Rules</div>
+          <div class="apex-index-card-count">12 Terms</div>
         </a>
-        <a href="apex-index.html#chassis-safety" class="apex-index-card reveal reveal-delay-3">
-          <div class="apex-index-card-icon">🛡️</div>
-          <div class="apex-index-card-title">Chassis &amp; Safety</div>
-          <div class="apex-index-card-count">5 Terms</div>
+        <a href="apex-index.html#the-grid" class="apex-index-card reveal reveal-delay-6">
+          <div class="apex-index-card-icon">🏎️</div>
+          <div class="apex-index-card-title">The Grid</div>
+          <div class="apex-index-card-count">11 Terms</div>
         </a>
       </div>
 
@@ -1874,6 +1981,7 @@ img {
           <li><a href="races/canada.html">🇨🇦 Canadian GP</a></li>
           <li><a href="races/monaco.html">🇲🇨 Monaco GP</a></li>
           <li><a href="races/barcelona.html">🇪🇸 Spanish GP</a></li>
+          <li><a href="races/austria.html">🇦🇹 Austrian GP</a></li>
           <li style="margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px solid var(--border);"><a href="apex-index.html">📖 The Apex Index</a></li>
         </ul>
       </div>
