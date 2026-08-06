@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║   APEX BY MILLA — AUSTRIAN GP 2026 (BLANK SHELL — ADD YOUR TEXT)  ║
+  ║                                                                  ║
+  ║   ROUND 08 · Red Bull Ring, Spielberg · [DATE] 2026             ║
+  ║   STANDARD WEEKEND (no Sprint — Sprint box removed)             ║
+  ║   Signature colour: #3E9B4F (green)                             ║
+  ║                                                                  ║
+  ║   This is the LAST Stage 2 report. Silverstone begins Stage 3.  ║
+  ║                                                                  ║
+  ║   STAGE 2 sections included:                                    ║
+  ║     [STAGE 2 ▸ NEW] Pace & Performance Comparison subsection     ║
+  ║     [STAGE 2 ▸ NEW] Engineering Question of the Race subsection  ║
+  ║     [STAGE 2 ▸ NEW] Race Engineer's View paragraph               ║
+  ║                                                                  ║
+  ║   Just replace the [SQUARE BRACKET] bits with your real writing. ║
+  ║   Keep, rename or remove any section to suit the race.           ║
+  ╚══════════════════════════════════════════════════════════════════╝
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 Austrian GP Technical Analysis — Apex by Milla</title>
+  <meta name="description" content="Technical analysis of the 2026 Austrian Grand Prix at the Red Bull Ring, where George Russell won for Mercedes and heat and thermal management decided the race." />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://apexbymilla.com/races/austria.html" />
+  <meta property="og:title"       content="2026 Austrian GP Technical Analysis — Apex by Milla" />
+  <meta property="og:description" content="Technical analysis of the 2026 Austrian Grand Prix at the Red Bull Ring, where George Russell won for Mercedes and heat and thermal management decided the race." />
+  <meta property="og:image"       content="https://apexbymilla.com/social-share.png" />
+  <meta property="article:published_time" content="2026-06-28" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@apexbymilla" />
+  <meta name="twitter:title"       content="2026 Austrian GP Technical Analysis — Apex by Milla" />
+  <meta name="twitter:description" content="Technical analysis of the 2026 Austrian Grand Prix at the Red Bull Ring, where George Russell won for Mercedes and heat and thermal management decided the race." />
+  <meta name="twitter:image"       content="https://apexbymilla.com/social-share.png" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://apexbymilla.com/races/austria.html" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "2026 Austrian GP Technical Analysis",
+    "description": "Technical analysis of the 2026 Austrian Grand Prix at the Red Bull Ring, where George Russell won for Mercedes and heat and thermal management decided the race.",
+    "author": { "@type": "Person", "name": "Milla", "url": "https://apexbymilla.com" },
+    "publisher": { "@type": "Organization", "name": "Apex by Milla", "url": "https://apexbymilla.com" },
+    "datePublished": "2026-06-28",
+    "url": "https://apexbymilla.com/races/austria.html",
+    "mainEntityOfPage": "https://apexbymilla.com/races/austria.html"
+  }
+  </script>
+
+  <style>
+/* ================================================
+   APEX BY MILLA — Global Stylesheet (inline)
+   ================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Bebas+Neue&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --red:       #E10600;
+  --red-dark:  #b00400;
+  --black:     #0a0a0a;
+  --dark:      #111111;
+  --card:      #181818;
+  --border:    #2a2a2a;
+  --text:      #f0f0f0;
+  --muted:     #888888;
+  --white:     #ffffff;
+  --gold:      #F5C842;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--black);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: #3E9B4F; border-radius: 3px; }
+
+/* ---------- Navigation ---------- */
+.navbar {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(10,10,10,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+.nav-logo { display: flex; align-items: center; flex-shrink: 0; }
+.nav-links { display: flex; align-items: center; gap: 0.25rem; list-style: none; }
+.nav-links a {
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted);
+  padding: 0.45rem 0.85rem; border-radius: 4px;
+  transition: color 0.2s, background 0.2s; white-space: nowrap;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--white); background: var(--border); }
+.nav-links a.race-link { color: var(--text); }
+.nav-links a.race-link:hover { color: var(--red); background: rgba(225,6,0,0.1); }
+.nav-links a.race-link.active { color: var(--red); background: rgba(225,6,0,0.1); }
+
+.hamburger {
+  display: none; flex-direction: column; gap: 5px; cursor: pointer;
+  background: none; border: none; padding: 4px;
+}
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+
+/* ---------- Blog Hero ---------- */
+.blog-hero {
+  background: var(--dark);
+  border-bottom: 1px solid var(--border);
+  border-top: 3px solid #3E9B4F; /* Austria signature: green */
+  padding: 5rem 2rem 3rem;
+  position: relative;
+}
+.blog-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 220px;
+  background: radial-gradient(ellipse 60% 100% at 90% 0%, rgba(62,155,79,0.14) 0%, transparent 70%);
+  pointer-events: none;
+}
+.blog-hero-inner { max-width: 800px; margin: 0 auto; position: relative; }
+.blog-back {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 2rem; transition: color 0.2s;
+}
+.blog-back:hover { color: var(--text); }
+.blog-round {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--red); margin-bottom: 0.8rem;
+}
+.blog-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  letter-spacing: 0.03em; color: var(--white); line-height: 1; margin-bottom: 1rem;
+}
+.blog-meta {
+  display: flex; gap: 1.5rem; flex-wrap: wrap;
+  font-size: 0.8rem; color: var(--muted);
+  margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border);
+}
+.blog-meta span { display: flex; align-items: center; gap: 0.4rem; }
+
+/* ---------- Blog Content ---------- */
+.blog-content { max-width: 800px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+.blog-content h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem; letter-spacing: 0.04em; color: var(--white);
+  margin-top: 2.5rem; margin-bottom: 1rem;
+  padding-bottom: 0.5rem; border-bottom: 2px solid var(--red); display: inline-block;
+}
+.blog-content h3 {
+  font-size: 1.1rem; font-weight: 600; color: var(--text);
+  margin-top: 2rem; margin-bottom: 0.75rem;
+}
+.blog-content p { color: #b0b0b0; margin-bottom: 1.2rem; font-size: 0.97rem; }
+.blog-content strong { color: var(--text); font-weight: 600; }
+
+.highlight-box {
+  background: rgba(225,6,0,0.08);
+  border-left: 3px solid var(--red);
+  padding: 1.2rem 1.5rem; border-radius: 0 4px 4px 0;
+  margin: 2rem 0;
+}
+.highlight-box p { margin: 0; color: var(--text); font-style: italic; }
+
+/* ---------- Driver / DNF Cards ---------- */
+.driver-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem; margin: 1.5rem 0;
+}
+.driver-card { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 1rem; }
+.driver-pos { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--red); line-height: 1; }
+.driver-name { font-weight: 600; font-size: 0.9rem; color: var(--text); margin-top: 0.25rem; }
+.driver-team { font-size: 0.78rem; color: var(--muted); }
+
+.dnf-card { border-color: #333333; opacity: 0.75; }
+.dnf-pos { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--muted) !important; line-height: 1; }
+.dnf-reason { font-size: 0.72rem; color: var(--muted); margin-top: 0.3rem; font-style: italic; }
+
+/* Penalty / position-change note under driver cards */
+.position-note {
+  font-size: 0.7rem;
+  color: var(--gold);
+  margin-top: 0.4rem;
+  font-style: italic;
+  line-height: 1.3;
+}
+.penalty-footnote {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 1rem;
+  padding-left: 0.8rem;
+  border-left: 2px solid var(--gold);
+}
+
+/* ---------- Stage 2 Pace Table ---------- */
+.pace-table-wrapper {
+  margin: 1.2rem 0 2rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+.pace-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 0.9rem;
+}
+.pace-table th, .pace-table td {
+  padding: 0.7rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.pace-table th {
+  background: rgba(225,6,0,0.08);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.pace-table tr:last-child td { border-bottom: none; }
+.pace-table td { color: #b0b0b0; }
+.pace-table td strong { color: var(--text); }
+
+/* ---------- Engineer's View Box ---------- */
+.engineer-box {
+  background: rgba(0, 120, 200, 0.06);
+  border-left: 3px solid #2898d8;
+  padding: 1.2rem 1.5rem;
+  border-radius: 0 4px 4px 0;
+  margin: 2rem 0;
+}
+.engineer-box .engineer-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #2898d8;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.engineer-box p { margin: 0; color: var(--text); }
+
+/* ---------- Footer ---------- */
+.footer {
+  padding: 2.5rem 2rem; text-align: center;
+  color: var(--muted); font-size: 0.8rem;
+  border-top: 1px solid var(--border);
+}
+.footer span { color: var(--red); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; position: fixed; top: 64px; left: 0; right: 0;
+    background: var(--dark); border-bottom: 1px solid var(--border);
+    flex-direction: column; align-items: stretch; padding: 1rem; gap: 0.25rem;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 0.7rem 1rem; font-size: 0.85rem; }
+  .hamburger { display: flex; }
+  .blog-hero { padding: 3.5rem 1.5rem 2rem; }
+  .blog-meta { gap: 0.8rem; font-size: 0.75rem; }
+  .blog-content { padding: 2.5rem 1.5rem 4rem; }
+  .blog-content h2 { font-size: 1.4rem; }
+  .driver-grid { grid-template-columns: 1fr; }
+  .pace-table { font-size: 0.82rem; }
+  .pace-table th, .pace-table td { padding: 0.55rem 0.7rem; }
+}
+
+/* ---------- Sources Section ---------- */
+.sources-section {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+.sources-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+}
+.sources-subtitle {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+.sources-group { margin-bottom: 1.4rem; }
+.sources-group-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 0.5rem;
+}
+.sources-list { list-style: none; padding: 0; margin: 0; }
+.sources-list li {
+  font-size: 0.84rem;
+  color: #b0b0b0;
+  margin-bottom: 0.45rem;
+  line-height: 1.55;
+}
+.sources-list a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--border);
+  transition: color 0.2s, border-color 0.2s;
+}
+.sources-list a:hover {
+  color: var(--red);
+  border-bottom-color: var(--red);
+}
+
+/* ---------- Scroll Animations ---------- */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+</style>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-tab.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon.png" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="shortcut icon" href="../favicon.ico" />
+  <style>
+    /* Reading progress bar: sits under the navbar in this race's signature colour, visible throughout */
+    .reading-progress {
+      position: fixed; top: 64px; left: 0; height: 3px; width: 0;
+      background: #3E9B4F; z-index: 90;
+      transition: width 0.08s linear; will-change: width; pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo" aria-label="Apex by Milla — Home">
+      <img src="../logo.png" alt="Apex by Milla" style="height:48px;width:auto;">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="australia.html" class="race-link">🇦🇺 Australia</a></li>
+      <li><a href="china.html"     class="race-link">🇨🇳 China</a></li>
+      <li><a href="japan.html"     class="race-link">🇯🇵 Japan</a></li>
+      <li><a href="miami.html"     class="race-link">🇺🇸 Miami</a></li>
+      <li><a href="canada.html"    class="race-link">🇨🇦 Canada</a></li>
+      <li><a href="monaco.html"    class="race-link">🇲🇨 Monaco</a></li>
+      <li><a href="barcelona.html" class="race-link">🇪🇸 Barcelona</a></li>
+      <li><a href="austria.html"   class="race-link active">🇦🇹 Austria</a></li>
+      <li><a href="../apex-index.html">The Apex Index</a></li>
+      <li><a href="../index.html#about">About</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== BLOG HERO ===== -->
+  <div class="blog-hero">
+    <div class="blog-hero-inner">
+      <a href="../index.html" class="blog-back">← Back to All Races</a>
+      <div class="blog-round reveal">Round 08 · Red Bull Ring, Spielberg · 28 June 2026</div>
+      <h1 class="blog-title reveal reveal-delay-1">Austrian Grand Prix 2026</h1>
+
+      <p style="color: var(--muted); font-size: 0.95rem; margin-top: 1rem;">
+        George Russell converts pole into his second win of the 2026 season, holding off a late-race charge from Max Verstappen and teammate Kimi Antonelli, completing the top steps of Austria's podium.
+      </p>
+
+      <div class="blog-meta reveal reveal-delay-2">
+        <span style="background: rgba(225,6,0,0.12); color: var(--red); font-weight: 700; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 4px;">Stage 2 · Deeper Analysis</span>
+        <span>📅 28 June 2026</span>
+        <span>📍 Red Bull Ring, Spielberg</span>
+        <span>🏁 Round 8 of 22</span>
+        <span>⏱️ 18 min read</span>
+        <span>✍️ Written by Milla</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BLOG CONTENT ===== -->
+  <article class="blog-content">
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 1 · RACE OVERVIEW
+         What happened, the storyline of the weekend.
+         ───────────────────────────────────────────── -->
+    <h2>Race Overview</h2>
+    <p>
+      At the short, high-altitude Red Bull Ring, George Russell converted pole position into a well-controlled victory, finishing ahead of Max Verstappen at his team's home circuit and Kimi Antonelli, Russell's teammate. Verstappen finished 1.611s behind after a late push on fresher tyres, with Antonelli a further four tenths back in third, leaving the top three covered by under two seconds at the flag. It was a bounce-back for Mercedes after a difficult weekend in Barcelona, turning their pace into a win and a double podium. Verstappen ended up in a Mercedes sandwich with one of his strongest drives of the season, while Ferrari struggled for pace throughout and came away with Lewis Hamilton in fifth and Charles Leclerc in eighth.
+    </p>
+    <p>
+      Russell started from a pole position that had been in doubt until the stewards cleared it, set on a lap run under yellow flags after Verstappen crashed at Turn 9 late in qualifying. That left Verstappen fifth on the grid, with Leclerc and Hamilton splitting the two Mercedes in second and third. Russell held the lead cleanly into Turn 1, but the race behind him was chaotic. Antonelli ran wide at Turn 1 and again at Turn 3 on the opening lap, then went off once more at Turn 1 while trying to pass Leclerc and had to hand the place back. It cost him ground and let Verstappen close, and within a few corners Verstappen had passed both Antonelli and Leclerc to move up to third.
+    </p>
+    <p>
+      The opening laps also removed both Cadillacs. Valtteri Bottas stopped with a brake fire on Lap 2, and Sergio Perez followed on Lap 4 with overheating brakes and smoke in the cockpit, ending the team's race before either car had run a full stint.
+    </p>
+    <p>
+      At the front, Russell built a lead of around three seconds while Verstappen pressured Hamilton for second position, the pair trading it more than once before Verstappen made it stick. The race then turned on a Virtual Safety Car (VSC), brought out when Carlos Sainz stopped on the main straight with an electrical problem on Lap 24. Antonelli had pitted just before it was called and lost most of the benefit, dropping behind both Ferraris, while the timing pushed Ferrari onto a three-stop strategy for Hamilton that their pace could not support, unlike last race.
+    </p>
+    <p>
+      From there, the leading three broke clear from the rest of the pack and the race was settled on tyre strategy. Russell made his final stop on Lap 43, and Red Bull left Verstappen out another six laps to give him fresher tyres for the run to the flag, which brought him back out around ten seconds behind with 22 laps to go. Antonelli stopped later still, on Lap 51, and rejoined third, behind Verstappen. Over the closing laps, Verstappen used his newer tyres to cut into Russell's lead, and Antonelli held onto the championship lead, while the win lifted Russell back up to second in the standings.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 2 · STARTING GRID & QUALIFYING
+         Saturday breakdown, surprises, who underperformed.
+         ───────────────────────────────────────────── -->
+    <h2>Starting Grid & Qualifying</h2>
+    <p>
+      Russell took pole position with a 1:06.113, his fourth of the season and a continuation of Mercedes' now eight-pole streak. But, the lap itself was the talking point of the session. On his final push lap Verstappen lost the car at Turn 9 and crashed heavily into the barriers, bringing out single yellow flags in the last sector just as Russell was arriving to complete his lap. Russell lifted through the affected part of the track and still went quickest, and after looking at the data the stewards decided he had slowed enough and let the pole stand. Antonelli, on track behind him, backed out of his own final attempt believing he had seen double waved yellows, and with his earlier time no longer quick enough he slipped to fourth.
+    </p>
+    <p>
+      Leclerc and Hamilton lined up on the grid in second and third, 0.236s and 0.295s off pole, which was a far stronger performance in qualifying than Ferrari's race pace would later suggest. Hamilton had made it into his position the hard way, running wide at Turn 3 on his first Q3 attempt and setting no time, which left him needing to make his final lap count. Antonelli ended up fourth, 0.301s back, ahead of Verstappen in fifth after his crash and the McLarens of Lando Norris and Oscar Piastri in sixth and seventh. The front of the grid was extremely tight, the top seven covered by under four tenths on a lap of only around 66 seconds, where the smallest mistake dropped a driver several places.
+    </p>
+    <p>
+      Verstappen's afternoon had been finely balanced even before the crash. Red Bull ran him through only one push lap in Q2 and chose not to send him back out, saving a fresh set of softs for Q3, a gamble that left him exposed as rivals improved and briefly dropped him towards the Q2 cut before he scraped through. Because of this, everything rested on his final Q3 lap, which was the one that ended in the barriers at Turn 9. Further back, the midfield was just as close, with Pierre Gasly missing out on Q3 by a small margin and Franco Colapinto losing his final lap to a snap at Turn 1.
+    </p>
+    <p>
+      At the back, both Williams were eliminated in Q1, Sainz losing time with a slide at the final corner and Alexander Albon making an error at Turn 1. Both Cadillacs also went out early, leaving Fernando Alonso and Lance Stroll to fill the last row for Aston Martin in 21st and 22nd, Stroll's session compromised by a lock-up at Turn 4 that forced him to abort his final attempt. On tyres, the grid was almost unanimous, with the vast majority starting on the Medium C4 compound and only Gabriel Bortoleto and Sainz taking the Soft C5 in the hope of building early track position.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 3 · TECHNICAL BREAKDOWN
+         The meat of the post.
+         ───────────────────────────────────────────── -->
+    <h2>Technical Breakdown</h2>
+    <p>
+      The primary story of the Austrian Grand Prix was thermal management. Air temperatures reached 36°C and the track surface peaked at around 62°C, conditions severe enough for the FIA to declare a heat hazard and make driver cooling systems mandatory for the race. The Red Bull Ring is a short, stop-and-go lap with heavy braking and traction zones, so that heat pushed every cooling package close to its limit and made thermal headroom the main performance and reliability variable of the weekend. Cadillac showed the consequences most clearly, losing both cars in the opening laps when their brakes overheated, with Bottas suffering a brake fire within two laps and Perez retiring soon after with the same problem.
+    </p>
+    <p>
+      The circuit also poses a difficult aerodynamic question. The lap splits into a power-heavy opening sector that rewards low drag and a more technical second half that needs downforce and stability, and at 660m of altitude the thinner air cuts into both cooling and downforce, which narrows the setup window further. The high-speed direction changes through the closing corners were where cars most often ran out of grip, and the balance between straight-line efficiency and stability under braking shaped how each team approached the weekend.
+    </p>
+    <p>
+      The field ultimately split along thermal lines. Mercedes and Red Bull kept tyre and system temperatures in range well enough to hold pace through long stints, while the teams that could not, Ferrari and Cadillac among them, hit a ceiling that no amount of raw development could lift. That difference in cooling capacity, more than outright pace, defined the competitive order behind Russell.
+    </p>
+
+    <h3>Tyre Strategy</h3>
+    <p>
+      Pirelli brought the three softest compounds in the range, the Hard (C3), Medium (C4), and the Soft (C5). The choice was driven by the nature of the Red Bull Ring, where mechanical wear is low but thermal degradation is the main concern. The old, high-grip asphalt has a rough surface that generates heat inside the tyre on its own, and there is less downforce to lean on, which increases slip and adds even more heat. Most of the grid started on the Medium, with the entire top ten and 20 cars in total choosing it to get through the high-fuel opening stint. Only Bortoleto and Sainz went for the C5, starting from 12th and 17th and gambling on the softer tyre's launch and warm-up to gain early track position.
+    </p>
+    <p>
+      The limiting factor all afternoon was internal tyre temperature. With 36°C in the air and a top 62°C on the track, the compounds were pushed beyond their ideal window, and the altitude made it worse. Lower air density meant less downforce and more sliding through the technical second and third sectors, and that slip drove surface temperatures up and soaked heat into the carcass.
+    </p>
+    <p>
+      Once a driver began to slide, they were caught in a cycle where the sliding created more heat, the heat cut grip, and the lost grip produced still more sliding. Leclerc was the clearest victim of it, reporting that he "struggled mainly with the rear" and was "sliding around quite a bit" as his tyres fell out of the window, while Gasly described it as some of the worst degradation he had felt all season.
+    </p>
+    <p>
+      The C3 was the tyre that answered the conditions. Most teams had expected it to be slow to warm up, but it turned out to be the only compound that could hold consistent pace through stints beyond 20 laps. The top three all ran the same Medium-Hard-Hard strategy, and the difference at the front was thermal headroom, with Mercedes and Red Bull able to keep the Hard in its window where others could not.
+    </p>
+    <p>
+      The strategy that hurt most was Ferrari's. The team put both Hamilton and Leclerc on a three-stop to try to fight Mercedes and Verstappen, but Fred Vasseur admitted they had "overpushed" in the opening laps to hold track position, which "destroyed everything" in terms of tyre life and left them fifth and eighth. Antonelli's afternoon was also compromised in the pits, stopping on Lap 24 just as Sainz's Williams retired, and Dario Marrafuschi noted that he had come in "slightly early" and so missed the full time gain of the Virtual Safety Car.
+    </p>
+    <p>
+      At the front, the race was decided on pit timing. Russell took his final set of Hards on Lap 43, and Red Bull left Verstappen out another six laps to Lap 49 to give him a tyre-age advantage for the run to the flag, but the 10.9s gap he had to recover proved to be too large. The fastest stop of the race belonged to Leclerc, a 21.020s effort on Lap 37, with most of the competitive stops sitting around the low 21-second range.
+    </p>
+
+    <h3>Aerodynamics & Setup</h3>
+    <p>
+      The Red Bull Ring splits cleanly into two halves and asks opposite things of the car in each. The first sector rewards low drag, with long straights between Turn 1, Turn 3, and Turn 4, while the second and third sectors need downforce and stability through a series of fast corners. A setup optimised for the first sector loses stability in the final high-speed corners, including Turn 9, where Verstappen crashed in qualifying. Pirelli rated the track evolution at 4 out of 5, meaning grip improved over the weekend as rubber built up, but that only went so far, with downforce staying low and tyre slip high even as the surface improved.
+    </p>
+    <p>
+      The circuit's topography added its own mechanical stress. The steep run up to Turn 3 and its camber pull the cars into lifting an inside wheel off the ground at the apex, which tests the 2026 suspension geometry every lap. Turn 4, the downhill braking zone, was the easiest place on the lap to get wrong, and it was where Stroll locked up badly enough in Q1 to throw away his final attempt. The altitude made all of this harder to manage, because the lower air density left the cars more sensitive to sliding, and Leclerc described them as "very sensitive" and said that missing the setup window by even a small margin cost a significant amount of performance.
+    </p>
+    <p>
+      Several teams brought updates to Spielberg. Red Bull introduced what they called their biggest upgrade of the season, a new floor and rear suspension aimed at aerodynamic stability and reliability. Cadillac brought a substantial package that reworked the car from front to rear in an effort to climb off the back of the grid, though their race ended early with brake failures. Audi ran aerodynamic updates that Bortoleto said had worked as expected, and Ferrari added a minor power unit update. McLaren, by contrast, chose not to bring anything new, with Andrea Stella admitting the team still carried a deficit of a few tenths to the leaders.
+    </p>
+    <p>
+      The drivers' feedback split along the same lines as their pace. Hamilton admitted the Ferrari was "so slow" on outright pace, but he was comfortable enough with the car's balance early on to fight Verstappen for several laps before degradation became his limit. Verstappen felt the upgraded Red Bull was better than expected in the race, quick enough to split the two Mercedes, though a late issue at the rear of the car blunted his final attack on Russell. Leclerc had the least confidence of the front-runners, still chasing a setup direction close to the previous year that never came into its window in race conditions.
+    </p>
+
+    <h3>Energy Management</h3>
+    <p>
+      Energy deployment came down to the same thermal limits as everything else. In that heat, the cars that could keep their power unit and battery temperatures under control were able to use their full deployment consistently, while those that could not were forced to manage the system and gave up lap time on the straights. Mercedes and Red Bull sat in the first group, Ferrari and Alpine in the second.
+    </p>
+    <p>
+      Verstappen showed the value of stored energy early. On Lap 2 he used a big deployment to close on Antonelli and Leclerc and passed them at Turn 5 and Turn 6 in quick succession, moving up to third before either could build a defensive battery charge. Getting the energy down early, while his rivals were still recovering from the messy opening lap, was what let the move stick.
+    </p>
+    <p>
+      Ferrari spent the race the other way round, managing rather than deploying. Hamilton reported that they were "mostly just struggling with power", especially on the straights, and on Lap 35 he was switched to a setting the team called "mode TS", explaining only that the reason was "temperature". That points to the Ferrari being thermally de-rated, harvesting more or capping deployment to protect the ERS in the 62°C track heat, which left it exposed everywhere the lap asked for power.
+    </p>
+    <p>
+      Alpine had their own energy trouble at the start, with both Gasly and Colapinto reporting a lack of boost off the line. The bigger electrical failure was Sainz's. On Lap 24 his Williams switched off completely as he exited the final corner, and the team put it down to a power unit issue, the kind of abrupt shutdown that usually points to the control electronics or a safety cut rather than a gradual loss of performance.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         [STAGE 2 ▸ NEW] · SECTION 4 · PACE & PERFORMANCE
+         Verify all numbers from formula1.com (Race Result,
+         Fastest Laps, Pit Stop Summary) before publishing.
+         ───────────────────────────────────────────── -->
+    <h2>Pace &amp; Performance</h2>
+    <p>
+      Mercedes held the outright pace at the Red Bull Ring, but the margin was small, and Red Bull's upgrade brought Verstappen right into the fight. The clearest sign of Mercedes' speed was the fastest lap, which went to Antonelli on Lap 59 with a 1:10.374 despite him finishing third, and even Laurent Mekies admitted that "Kimi was quickest today".
+    </p>
+    <p>
+      Russell had the pace to control the race from the front, building enough of a gap in the first stint to dictate the pit sequence rather than react to it, while Verstappen was close enough by the end to make Mercedes earn the win. Mekies said Red Bull had closed the gap to the front from "one second to around a couple of tenths" since the start of the season, and felt the team was now "within the last tenth" and within range of winning on pure pace.
+    </p>
+
+    <div class="pace-table-wrapper">
+      <table class="pace-table">
+        <thead>
+          <tr>
+            <th>Pos.</th>
+            <th>Driver</th>
+            <th>Fastest lap</th>
+            <th>On lap</th>
+            <th>Pit stops (lap)</th>
+            <th>Stop times</th>
+            <th>Gap at flag</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>P1</td><td><strong>Russell</strong> (Mercedes)</td><td>1:10.683</td><td>49</td><td>19, 43</td><td>21.204s, 21.221s</td><td>WINNER</td></tr>
+          <tr><td>P2</td><td><strong>Verstappen</strong> (Red Bull)</td><td>1:10.483</td><td>57</td><td>18, 49</td><td>21.317s, 21.252s</td><td>+1.611s</td></tr>
+          <tr><td>P3</td><td><strong>Antonelli</strong> (Mercedes)</td><td>1:10.374</td><td>59</td><td>24, 51</td><td>21.413s, 21.502s</td><td>+1.986s</td></tr>
+          <tr><td>P8</td><td><strong>Leclerc</strong> (Ferrari)</td><td>1:10.606</td><td>67</td><td>13, 37, 59</td><td>21.731s, 21.020s, 22.738s</td><td>+45.659s</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      The lap times show how close the top was and how far Ferrari had dropped. Antonelli's 1:10.374 is the standout, because he set it on the Hard C3 on Lap 59, and it was still 0.232s quicker than Leclerc's best on the Soft C5. That is a direct measure of the gap, with the Mercedes pulling a fastest lap out of the hardest tyre while the Ferrari could not match it even on the softest. Verstappen's quickest lap told a similar story, coming late on Lap 57, which showed he still had energy and tyre life in hand after chasing Russell down.
+    </p>
+    <p>
+      Behind the leaders, the order came down to stint management. Only Verstappen and the two Mercedes could hold their pace through stints longer than 20 laps, and that end-of-stint performance was what let them pull clear of the rest. Ferrari had the opposite problem, and even though Leclerc set the fastest pit stop of the race at 21.020s on Lap 37, no amount of work in the pit lane could cover for a car that was slow on track and hard on its tyres, which left him eighth. McLaren, still short of the leaders on raw pace, used strategy and tyre management to put Piastri ahead of both Ferraris in fourth and Norris ahead of Leclerc in seventh.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         [STAGE 2 ▸ NEW] · SECTION 5 · ENGINEERING QUESTION OF THE RACE
+         Pick ONE specific moment and dig into the "why".
+         This is the section that demonstrates genuine engineering thinking.
+         ───────────────────────────────────────────── -->
+    <h2>Engineering Question of the Race</h2>
+    <h3>"Why didn't the 2026 start-safety system cover for Alpine's lack of boost at the lights?"</h3>
+    <p>
+      The 2026 rules include a start-safety mechanism that watches for a car accelerating abnormally slowly just after the clutch is released, and automatically deploys MGU-K torque to bring it up to a minimum acceleration so it is less likely to be hit from behind. At the Austrian Grand Prix both Alpine drivers, Gasly and Colapinto, reported a lack of boost off the line, so the obvious question is why that safety net did not fill in the missing power.
+    </p>
+    <p>
+      This is where it moves from fact into theory, and my explanation comes down to a conflict between two systems that both have priority at the start. The safety logic wants to deploy power, but the battery has its own protection that can refuse it. At 660m the air is less dense than at sea level, so less of it flows through the radiators and the ERS ducts, and the Energy Store, which sits in the floor, soaks up heat through the slow formation lap and the static hold on the grid.
+    </p>
+    <p>
+      With track temperatures already around 55°C at the start and climbing towards a peak of 62°C, my theory is that the battery reached its thermal limit at the exact moment the start deployment was demanded. When the battery management system sees that, it de-rates, capping the current it will let out to protect the cells from permanent damage, so hypothetically the safety system could have been calling for the boost while the battery quietly refused to supply it.
+    </p>
+    <p>
+      Gasly's radio is the clue that points this way. He reported that "it didn't start the best way with a power issue on the straights during the first few laps, but we've been able to recover after that". The telling detail is that the deficit was not a single missed launch at the lights but a problem that carried into the opening laps, which to me suggests a sustained de-rating rather than a one-off failure of the trigger. What is confirmed is that both Alpine cars had a lasting power deficit at the start. The link to battery de-rating in those temperatures is my best hypothesis for it, not a proven fault, but it fits the pattern of a car protecting itself rather than a safety system that simply did not fire.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 6 · KEY INSIGHT (HIGHLIGHT BOX)
+         One quote or one sentence that summarises the race.
+         ───────────────────────────────────────────── -->
+    <div class="highlight-box reveal">
+      <p>
+        💡 "As expected, a one-stop strategy was not viable due to the high level of thermal degradation. The most effective approach proved to be the one that used Hard tyres for the final two stints, as adopted by the podium finishers. With such high track temperatures, the tyres experienced neither graining nor blistering, a sign that the development work carried out by Pirelli is clearly paying off on track." – Dario Marrafuschi, Pirelli Motorsport Director, confirming that Austria was decided on thermal management and that the Hard was the only compound with the headroom to go the distance.
+      </p>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 7 · RACE RESULT — TOP 10
+         Standard P1–P10 grid. Verify from formula1.com.
+         Flag any position changes vs on-road order with a .position-note
+         and a .penalty-footnote underneath.
+         ───────────────────────────────────────────── -->
+    <h2>Race Result — Top 10</h2>
+    <div class="driver-grid reveal">
+      <div class="driver-card"><div class="driver-pos">P1</div><div class="driver-name">George Russell</div><div class="driver-team">Mercedes</div></div>
+      <div class="driver-card"><div class="driver-pos">P2</div><div class="driver-name">Max Verstappen</div><div class="driver-team">Red Bull Racing</div></div>
+      <div class="driver-card"><div class="driver-pos">P3</div><div class="driver-name">Kimi Antonelli</div><div class="driver-team">Mercedes</div></div>
+      <div class="driver-card"><div class="driver-pos">P4</div><div class="driver-name">Oscar Piastri</div><div class="driver-team">McLaren</div></div>
+      <div class="driver-card"><div class="driver-pos">P5</div><div class="driver-name">Lewis Hamilton</div><div class="driver-team">Ferrari</div></div>
+      <div class="driver-card"><div class="driver-pos">P6</div><div class="driver-name">Isack Hadjar</div><div class="driver-team">Red Bull Racing</div></div>
+      <div class="driver-card"><div class="driver-pos">P7</div><div class="driver-name">Lando Norris</div><div class="driver-team">McLaren</div></div>
+      <div class="driver-card"><div class="driver-pos">P8</div><div class="driver-name">Charles Leclerc</div><div class="driver-team">Ferrari</div></div>
+      <div class="driver-card"><div class="driver-pos">P9</div><div class="driver-name">Liam Lawson</div><div class="driver-team">Racing Bulls</div></div>
+      <div class="driver-card"><div class="driver-pos">P10</div><div class="driver-name">Arvid Lindblad</div><div class="driver-team">Racing Bulls</div></div>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 8 · DNF / DNS
+         Add cards for any retirements or non-starters with reason.
+         ───────────────────────────────────────────── -->
+    <h2>DNF / DNS</h2>
+    <div class="driver-grid reveal">
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">Valtteri Bottas</div>
+        <div class="driver-team">Cadillac</div>
+        <div class="dnf-reason">Retired Lap 2, brake fire</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">Sergio Perez</div>
+        <div class="driver-team">Cadillac</div>
+        <div class="dnf-reason">Retired Lap 4, overheating brakes</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">Carlos Sainz</div>
+        <div class="driver-team">Williams</div>
+        <div class="dnf-reason">Retired Lap 24, power unit failure</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">Lance Stroll</div>
+        <div class="driver-team">Aston Martin</div>
+        <div class="dnf-reason">Retired Lap 46, suspected ERS issue</div>
+      </div>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 9 · KEY TAKEAWAYS
+         What we learned from this race.
+         ───────────────────────────────────────────── -->
+    <h2>Key Takeaways</h2>
+    <p>
+      The clearest lesson from Austria was that thermal management, not outright pace, decided the race. Mercedes handled the Hard C3 better than anyone and turned it into a 1-3 finish that pushed their Constructors' lead out to 98 points. Antonelli's fastest lap of 1:10.374 on Lap 59, set on the Hard and still 0.232s quicker than Leclerc's best on the Soft, showed how much more the Mercedes could pull from a harder, worn tyre. Andrew Shovlin pointed to the same thing, calling "end of stint performance" the decisive factor and noting that only Verstappen and the two Mercedes could hold their pace once a stint passed 20 laps.
+    </p>
+    <p>
+      Red Bull's upgrade was the other big story. A new floor and rear suspension closed much of the gap that had separated them from the front all season, and it let Verstappen recover a deficit of around 10.9s after his final stop to finish just 1.611s behind Russell. Ferrari went the other way. Their power unit update brought no pace, and the car spent the race managing temperature rather than using it, thermally limited and slow on the straights when it mattered most.
+    </p>
+    <p>
+      Reliability was the wildcard, and the altitude was behind a lot of it. Four cars failed to finish, two Cadillacs with brake problems, a Williams with an electrical shutdown, and an Aston Martin with a suspected ERS issue. That leaves every cooling system with less to work with, and once track temperatures climbed past 60°C the cars built with the most aggressive cooling margins were the ones that broke. Strategy came down to track position over tyre life, and Russell's early final stop to cover the undercut was worth more than the fresher tyres Verstappen saved for the end, because following closely enough to attack was so hard behind another car.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         [STAGE 2 ▸ NEW] · SECTION 10 · RACE ENGINEER'S VIEW
+         Closing paragraph in your own voice: what you would have done.
+         This is the key recruiter-facing section. It signals you don't
+         just describe — you make calls.
+         ───────────────────────────────────────────── -->
+    <div class="engineer-box">
+      <span class="engineer-label">🎧 Race Engineer's View</span>
+      <p>
+        The detail that stood out from the field behind the leaders was how close some cars came to the same brake problem that ended Cadillac's race. Liam Lawson reported over the radio that his car was on fire during the opening stint, and while the post-race data showed no actual fire, he had been running very high brake temperatures and had to manage them for several laps until the load came down and they stabilised. It was the same failure mode that took both Cadillacs out of the race, only caught in time.
+      </p>
+      <p>
+        On a stop-and-go lap in this heat, the brakes take a heavy load into every corner and then sit in slow-moving air on the exits, so the cooling never fully recovers, and a driver who cannot back off to let temperatures settle is left waiting for something to give. Lawson working his way through it, while Cadillac could not, was a small measure of how fine the line was between finishing and failing on a weekend when the cars ran right at their thermal limit.
+      </p>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 11 · LOOKING AHEAD
+         Bridge to the next race (Silverstone, Round 09 — Stage 3 begins).
+         ───────────────────────────────────────────── -->
+    <h2>Looking Ahead</h2>
+    <p>
+      The championship now heads to Silverstone for the British Grand Prix, and the change of character could hardly be sharper. Where the Red Bull Ring is short and built around heavy braking, Silverstone is long and flowing, rewarding aerodynamic stability through fast corners rather than traction out of slow ones. It is a home race for Russell, Norris, and Hamilton, and Russell arrives with momentum after turning Mercedes' pace into a win. The big question is the weather, because so much of Austria came down to heat, and cooler British conditions will test whether Ferrari's collapse was purely thermal or something deeper in the car.
+    </p>
+
+    <!-- ===== SOURCES SECTION ===== -->
+    <section class="sources-section reveal">
+      <h2 class="sources-title">Sources</h2>
+      <p class="sources-subtitle">Primary research used for this race report.</p>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Official Race Data</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/results/2026/races/1288/austria/race-result" target="_blank" rel="noopener">Formula1.com — 2026 Austrian Grand Prix Race Result</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1288/austria/qualifying" target="_blank" rel="noopener">Formula1.com — Qualifying Classification</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1288/austria/starting-grid" target="_blank" rel="noopener">Formula1.com — Starting Grid</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1288/austria/fastest-laps" target="_blank" rel="noopener">Formula1.com — Fastest Laps</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1288/austria/pit-stop-summary" target="_blank" rel="noopener">Formula1.com — Pit Stop Summary</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Race Report & Weekend Coverage</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/latest/article/russell-seals-victory-in-thrilling-austrian-grand-prix-ahead-of-verstappen-and-antonelli.5kjw8LmvWRcsaFgjCr8aWw" target="_blank" rel="noopener">Formula1.com — Russell seals victory in thrilling Austrian Grand Prix</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/austria-lowdown-all-the-key-moments-as-russell-triumphs-verstappen-impresses-and-ferrari-struggle.kYlJP2ZACF4ulZVACtFQg" target="_blank" rel="noopener">Formula1.com — AUSTRIA LOWDOWN: All the key moments</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-austria-2026.2c6WyTl6yjshJrSwqRsYAK" target="_blank" rel="noopener">Formula1.com — What the teams said, Race day</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/power-rankings-who-impressed-our-judges-at-the-austrian-grand-prix.7GCpzwebHg9Atm5TQABher" target="_blank" rel="noopener">Formula1.com — POWER RANKINGS: Who impressed at the Austrian Grand Prix</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/circuit-guide-everything-you-need-to-know-about-the-red-bull-ring.76j6twpa7Be26Prj6fO90F" target="_blank" rel="noopener">Formula1.com — CIRCUIT GUIDE: Everything you need to know about the Red Bull Ring</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/need-to-know-the-most-important-facts-stats-and-trivia-ahead-of-the-2026-austrian-grand-prix.5c3It3dAheBaaNuzedrXPx" target="_blank" rel="noopener">Formula1.com — NEED TO KNOW: Facts, stats and trivia ahead of the Austrian Grand Prix</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Qualifying</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/latest/article/russell-beats-leclerc-and-hamilton-to-austrian-gp-pole-after-dramatic-late-verstappen-crash.6oiA7Tyo3B89DFJNLWtG8P" target="_blank" rel="noopener">Formula1.com — Russell beats Leclerc and Hamilton to pole after late Verstappen crash</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/what-the-teams-said-qualifying-in-austria-2026.4lXXUtrZ4wjXQGag18VEeN" target="_blank" rel="noopener">Formula1.com — What the teams said, Qualifying</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/what-the-teams-said-friday-in-austria-2026.4J2mw1Ll8UpeIAvJNqgrya" target="_blank" rel="noopener">Formula1.com — What the teams said, Friday</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/leclerc-expects-ferrari-to-struggle-this-weekend-as-he-explains-difficult-friday-for-the-team-in-austria.2WFPAUQ4UT6BpqrGoPBEZG" target="_blank" rel="noopener">Formula1.com — Leclerc expects Ferrari to struggle after a difficult Friday</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Driver & Team Reaction</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/latest/article/dont-know-why-we-were-so-slow-hamilton-questions-ferraris-lack-of-pace-in-austrian-grand-prix.6lOcYc30QJh6uIq7fSuM2a" target="_blank" rel="noopener">Formula1.com — 'Don't know why we were so slow', Hamilton questions Ferrari's pace</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/it-was-not-a-good-fight-vasseur-explains-main-issue-behind-ferraris-struggles-in-austrian-grand-prix.5XW4G2FJyvBMxRSaHqGQ5S" target="_blank" rel="noopener">Formula1.com — 'It was not a good fight', Vasseur explains Ferrari's struggles</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/leclerc-admits-ferrari-have-been-pushing-like-crazy-to-deliver-power-unit-update-in-austria.25OokiBOGBDr43i6wnVFjh" target="_blank" rel="noopener">Formula1.com — Leclerc admits Ferrari have been 'pushing like crazy' on the power unit update</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/ferrari-confirm-power-unit-update-for-austrian-grand-prix-weekend.3uc4ZjUfz5O75zc7lonna1" target="_blank" rel="noopener">Formula1.com — Ferrari confirm power unit update for the Austrian Grand Prix</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/mekies-hails-verstappen-for-undoubtedly-the-strongest-race-of-the-season-in-austria.3jXcO8zceZHoz0KXKYFysS" target="_blank" rel="noopener">Formula1.com — Mekies hails Verstappen for 'the strongest race' of the season</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/verstappen-reflects-on-extremely-positive-austrian-grand-prix-after-taking-red-bulls-best-result-of-2026-season.bkRo37kOGdE3WwD0gj5tN" target="_blank" rel="noopener">Formula1.com — Verstappen reflects on an 'extremely positive' Austrian Grand Prix</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/red-bull-just-too-slow-to-stop-mercedes-in-austria-says-verstappen.1SK7pX2Cm26qg5KD1G9iBI" target="_blank" rel="noopener">Formula1.com — Red Bull 'just too slow' to stop Mercedes, says Verstappen</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Team Reports</div>
+        <ul class="sources-list">
+          <li><a href="https://www.mercedesamgf1.com/news" target="_blank" rel="noopener">Mercedes-AMG PETRONAS F1 Team — 2026 Austrian GP race report</a></li>
+          <li><a href="https://www.redbullracing.com/int-en" target="_blank" rel="noopener">Oracle Red Bull Racing — 2026 Austrian GP race report</a></li>
+          <li><a href="https://www.ferrari.com/en-EN/formula1" target="_blank" rel="noopener">Scuderia Ferrari — 2026 Austrian GP race report</a></li>
+          <li><a href="https://www.mclaren.com/racing/formula-1/" target="_blank" rel="noopener">McLaren Racing — 2026 Austrian GP race report</a></li>
+          <li><a href="https://www.astonmartinf1.com/en-GB/home" target="_blank" rel="noopener">Aston Martin Aramco F1 Team — 2026 Austrian GP race report</a></li>
+          <li><a href="https://www.alpinecars.com/en/formula-1/" target="_blank" rel="noopener">BWT Alpine F1 Team — 2026 Austrian GP race report</a></li>
+          <li><a href="https://www.audi.com/en/experience-audi/motorsport/formula-1.html" target="_blank" rel="noopener">Audi F1 Team — 2026 Austrian GP race report</a></li>
+          <li><a href="https://www.haasf1team.com/" target="_blank" rel="noopener">MoneyGram Haas F1 Team — 2026 Austrian GP race report</a></li>
+          <li><a href="https://www.williamsf1.com/" target="_blank" rel="noopener">Williams Racing — 2026 Austrian GP race report</a></li>
+          <li><a href="https://www.cadillacf1team.com/" target="_blank" rel="noopener">Cadillac F1 Team — 2026 Austrian GP race report</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Tyre Strategy</div>
+        <ul class="sources-list">
+          <li><a href="https://press.pirelli.com/red-bull-at-home-the-spielberg-weekend/" target="_blank" rel="noopener">Pirelli — Red Bull at home: the Spielberg weekend</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/what-tyres-will-the-teams-and-drivers-have-for-the-2026-austrian-grand-prix.2bhUStvp9xxGLpN2gvTeib" target="_blank" rel="noopener">Formula1.com — What tyres will the teams have for the Austrian Grand Prix</a></li>
+          <li><a href="https://press.pirelli.com/motorsport/" target="_blank" rel="noopener">Pirelli Motorsport — Austrian Grand Prix tyre, stint and pit data</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Regulations</div>
+        <ul class="sources-list">
+          <li><a href="https://www.fia.com/news/refinements-2026-fia-formula-1-regulations-agreed-all-stakeholders" target="_blank" rel="noopener">FIA — Refinements to the 2026 FIA Formula 1 Regulations</a></li>
+          <li><a href="https://www.fia.com/regulation/category/110" target="_blank" rel="noopener">FIA — 2026 Formula 1 Sporting and Technical Regulations</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </article>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="../logo.png" alt="Apex by Milla" style="height:70px;width:auto;opacity:0.55;">
+    </div>
+    <p>© 2026 · Formula One Technical Analysis · All Rights Reserved</p>
+    <p style="font-size: 0.72rem; opacity: 0.65; margin-top: 0.5rem; font-style: italic;">Independent technical analysis. Not affiliated with Formula 1, the FIA, or any F1 team.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+  </script>
+
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+  <script>
+    (function () {
+      var bar = document.getElementById('readingProgress');
+      var endEl = document.querySelector('.sources-section');
+      function update() {
+        var end = endEl ? (endEl.getBoundingClientRect().top + window.scrollY) : document.documentElement.scrollHeight;
+        var target = end - window.innerHeight;
+        var pct = target > 0 ? window.scrollY / target : 1;
+        if (pct < 0) pct = 0; if (pct > 1) pct = 1;
+        bar.style.width = (pct * 100) + '%';
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      window.addEventListener('load', update);
+      update();
+    })();
+  </script>
+</body>
+</html>
