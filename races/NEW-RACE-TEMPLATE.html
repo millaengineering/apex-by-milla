@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
   ╔══════════════════════════════════════════════════════════════════╗
-  ║   APEX BY MILLA — STAGE 2 RACE TEMPLATE                          ║
+  ║   APEX BY MILLA — RACE REPORT TEMPLATE                           ║
   ║                                                                  ║
   ║   HOW TO USE:                                                    ║
   ║   1. Make a copy of this file and rename it to the race          ║
@@ -33,11 +33,55 @@
   ║     • Independence/non-affiliation disclaimer in footer          ║
   ║                                                                  ║
   ║   RULES (from memory — these MUST be followed):                  ║
+  ║                                                                  ║
+  ║   NAMES — the surname-only rule:                                 ║
+  ║     • First mention of a driver in PROSE uses the full name.     ║
+  ║       Every mention after that is surname only.                  ║
+  ║       e.g. "Charles Leclerc seized the lead" ... later ...       ║
+  ║            "Leclerc was forced to defend"                        ║
+  ║     • EXCEPTION 1: pull-quote and highlight-box attributions     ║
+  ║       always keep the FULL name, even late in the report.        ║
+  ║     • EXCEPTION 2: lists of drivers keep everyone's full name,   ║
+  ║       even if one of them was already mentioned.                 ║
+  ║     • EXCEPTION 3: "Kimi" is fine as a first-name reference      ║
+  ║       for Antonelli.                                             ║
+  ║     • NEVER apply this inside result cards, DNF cards, pace      ║
+  ║       tables, or the words of a verbatim quote. Those follow     ║
+  ║       the official classification.                               ║
+  ║                                                                  ║
+  ║   PUNCTUATION:                                                   ║
+  ║     • NO em dashes in prose. Use a comma, or rewrite.            ║
+  ║       Em dashes are allowed ONLY in: title and meta tags,        ║
+  ║       section headings (Race Result — Top 10), aria-labels,      ║
+  ║       and source link text.                                      ║
+  ║     • En dashes are allowed in ONE place only: directly          ║
+  ║       before a quote attribution in the highlight box.           ║
+  ║       Never mid-sentence. Use a comma there instead.             ║
+  ║     • NO semicolons in prose. Split the sentence, or use         ║
+  ║       "and" / "which".                                           ║
+  ║     • Avoid colons in prose, DNF reason cards included.          ║
+  ║       DNF format is "Retired lap 6, start contact".              ║
+  ║     • Oxford comma in every list of three or more.               ║
+  ║                                                                  ║
+  ║   TERMINOLOGY:                                                   ║
+  ║     • Corners are ALWAYS "Turn 4", never a proper name.          ║
+  ║       Only exception is a globally famous nickname stated        ║
+  ║       with the number ("the Wall of Champions at Turn 14").      ║
+  ║     • Tyre compounds are capitalised: Hard, Medium, Soft,        ║
+  ║       with codes C1 to C5. Descriptive adjectives stay           ║
+  ║       lower case ("the softer tyre").                            ║
+  ║                                                                  ║
+  ║   VOICE:                                                         ║
   ║     • Preserve Milla's writing exactly. Only fix typos.          ║
-  ║     • No em dashes in any prose. En dashes OK.                   ║
+  ║     • Race Engineer's View is THIRD PERSON and observational,    ║
+  ║       never "I would have...". See the section note below.       ║
+  ║     • Flag unconfirmed theories in first person instead          ║
+  ║       ("my theory is that...") and say what IS confirmed.        ║
+  ║     • Technical sections carry no literary flourish at all.      ║
+  ║       Race Overview and Looking Ahead may open with one.         ║
   ║     • Split long paragraphs at natural beat breaks.              ║
-  ║     • Verify all engineering claims against the canonical        ║
-  ║       2026 engineering specs in memory.                          ║
+  ║     • Verify all race data and engineering claims against        ║
+  ║       primary sources (F1.com, FIA, Pirelli) before writing.     ║
   ║     • Never describe the site as a "fan" project.                ║
   ╚══════════════════════════════════════════════════════════════════╝
 -->
@@ -119,7 +163,7 @@ img { max-width: 100%; display: block; }
 
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--dark); }
-::-webkit-scrollbar-thumb { background: #E10600; border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: #E10600; border-radius: 3px; } /* SIGNATURE COLOUR */
 
 /* ---------- Navigation ---------- */
 .navbar {
@@ -412,7 +456,7 @@ img { max-width: 100%; display: block; }
     /* Reading progress bar: sits under the navbar in this race's signature colour, visible throughout */
     .reading-progress {
       position: fixed; top: 64px; left: 0; height: 3px; width: 0;
-      background: #E10600; z-index: 90;
+      background: #E10600; z-index: 90; /* SIGNATURE COLOUR */
       transition: width 0.08s linear; will-change: width; pointer-events: none;
     }
   </style>
@@ -431,8 +475,13 @@ img { max-width: 100%; display: block; }
       <li><a href="china.html"     class="race-link">🇨🇳 China</a></li>
       <li><a href="japan.html"     class="race-link">🇯🇵 Japan</a></li>
       <li><a href="miami.html"     class="race-link">🇺🇸 Miami</a></li>
+      <li><a href="canada.html"    class="race-link">🇨🇦 Canada</a></li>
+      <li><a href="monaco.html"    class="race-link">🇲🇨 Monaco</a></li>
+      <li><a href="barcelona.html" class="race-link">🇪🇸 Barcelona</a></li>
+      <li><a href="austria.html"   class="race-link">🇦🇹 Austria</a></li>
       <!-- ✏️ Add the new race link here, with class="race-link active" e.g.:
-           <li><a href="[FILENAME].html" class="race-link active">🏳️ [Race Name]</a></li> -->
+           <li><a href="[FILENAME].html" class="race-link active">🏳️ [Race Name]</a></li>
+           AND add the same <li> to every other race page's navbar. -->
       <li><a href="../apex-index.html">The Apex Index</a></li>
       <li><a href="../index.html#about">About</a></li>
     </ul>
@@ -453,10 +502,13 @@ img { max-width: 100%; display: block; }
       </p>
 
       <div class="blog-meta reveal reveal-delay-2">
+        <!-- ✏️ Stage badge. Update the stage label as the project moves on. -->
+        <span style="background: rgba(225,6,0,0.12); color: var(--red); font-weight: 700; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 4px;">Stage [X] · [Stage Label]</span>
         <span>📅 [RACE DATE]</span>
         <span>📍 [Circuit Name]</span>
         <span>🏁 Round [XX] of 22</span>
         <span>⚡ Sprint Weekend</span> <!-- ✏️ REMOVE this line if non-Sprint weekend -->
+        <span>⏱️ [XX] min read</span>
         <span>✍️ Written by Milla</span>
       </div>
     </div>
@@ -626,8 +678,13 @@ img { max-width: 100%; display: block; }
     <p>
       [The analysis. Walk through the trade-off as if you're on the pit wall: tyre age, undercut threat, traffic on out-lap, energy state, weather window, fuel load. Treat it like a real engineering decision with multiple variables.]
     </p>
+    <!-- ✏️ CLOSING PARAGRAPH. Do NOT open it with a bold "Verdict:" label.
+         State the call plainly instead, e.g. "It was the wrong call." then why.
+         If the conclusion is a theory rather than a confirmed fact, hedge it in
+         first person ("my theory is that...") and say what IS confirmed. -->
     <p>
-      <strong>Verdict:</strong> It was the wrong call. Pitting into traffic with a slow stop neutralised Leclerc's pace advantage. If they had waited only four more laps, the lighter fuel load and clearer air would have allowed him to extend his lead over the midfield "train".
+      [Land the answer. Say plainly whether it was the right call and what the
+      alternative would have produced. Keep it to the facts you can evidence.]
     </p>
 
 
@@ -651,35 +708,23 @@ img { max-width: 100%; display: block; }
          Position changes vs. on-road order are flagged with an asterisk per driver card,
          with a footnote underneath the grid explaining the penalties. -->
     <div class="driver-grid reveal">
-      <div class="driver-card"><div class="driver-pos">P1</div><div class="driver-name">Kimi Antonelli</div><div class="driver-team">Mercedes</div></div>
-      <div class="driver-card"><div class="driver-pos">P2</div><div class="driver-name">Lando Norris</div><div class="driver-team">McLaren</div></div>
-      <div class="driver-card"><div class="driver-pos">P3</div><div class="driver-name">Oscar Piastri</div><div class="driver-team">McLaren</div></div>
-      <div class="driver-card"><div class="driver-pos">P4</div><div class="driver-name">George Russell</div><div class="driver-team">Mercedes</div></div>
-      <div class="driver-card"><div class="driver-pos">P5</div><div class="driver-name">Max Verstappen</div><div class="driver-team">Red Bull Racing</div></div>
-      <div class="driver-card">
-        <div class="driver-pos">P6</div>
-        <div class="driver-name">Lewis Hamilton</div>
-        <div class="driver-team">Ferrari</div>
-        <div class="position-note">* Finished P7 on track. Promoted by Leclerc's post-race penalty.</div>
-      </div>
-      <div class="driver-card">
-        <div class="driver-pos">P7</div>
-        <div class="driver-name">Franco Colapinto</div>
-        <div class="driver-team">Alpine</div>
-        <div class="position-note">* Finished P8 on track. Promoted by Leclerc's post-race penalty.</div>
-      </div>
-      <div class="driver-card">
-        <div class="driver-pos">P8</div>
-        <div class="driver-name">Charles Leclerc</div>
-        <div class="driver-team">Ferrari</div>
-        <div class="position-note">* Finished P6 on track. 20-second penalty for track limits dropped him to P8.</div>
-      </div>
-      <div class="driver-card"><div class="driver-pos">P9</div><div class="driver-name">Carlos Sainz</div><div class="driver-team">Williams</div></div>
-      <div class="driver-card"><div class="driver-pos">P10</div><div class="driver-name">Alexander Albon</div><div class="driver-team">Williams</div></div>
+      <div class="driver-card"><div class="driver-pos">P1</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
+      <div class="driver-card"><div class="driver-pos">P2</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
+      <div class="driver-card"><div class="driver-pos">P3</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
+      <div class="driver-card"><div class="driver-pos">P4</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
+      <div class="driver-card"><div class="driver-pos">P5</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
+      <div class="driver-card"><div class="driver-pos">P6</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
+      <div class="driver-card"><div class="driver-pos">P7</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
+      <div class="driver-card"><div class="driver-pos">P8</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
+      <div class="driver-card"><div class="driver-pos">P9</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
+      <div class="driver-card"><div class="driver-pos">P10</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
     </div>
-    <p class="penalty-footnote">
-      * Post-race penalty changed the classification. Leclerc received a 20-second penalty for repeated track limits violations, dropping him from P6 on the road to P8. Verstappen also received a 5-second penalty for crossing the white line at pit exit, but it did not affect his P5.
-    </p>
+    <!-- ✏️ If a post-race penalty changed the classification, add a
+         .position-note inside each affected card and a footnote below:
+         <div class="position-note">* Finished P7 on track. Promoted by [Driver]'s penalty.</div>
+         <p class="penalty-footnote">* Post-race penalty changed the classification.
+         [Driver] received a [Xs] penalty for [reason], dropping him from P[X] to P[Y].</p>
+         See miami.html for a worked example. -->
 
 
     <!-- ─────────────────────────────────────────────
@@ -694,7 +739,7 @@ img { max-width: 100%; display: block; }
         <div class="dnf-pos">DNF</div>
         <div class="driver-name">[Driver]</div>
         <div class="driver-team">[Team]</div>
-        <div class="dnf-reason">Retired lap [X] — [reason]</div>
+        <div class="dnf-reason">Retired lap [X], [reason]</div>
       </div>
       <!-- Duplicate the block above for each retirement / non-starter -->
     </div>
@@ -719,7 +764,13 @@ img { max-width: 100%; display: block; }
     <div class="engineer-box">
       <span class="engineer-label">🎧 Race Engineer's View</span>
       <p>
-        [In one short paragraph, write what call you would have made on the pit wall and why. Be specific: which lap, which compound, which energy mode, which driver. Disagree with a real-world decision if you think it was wrong. Confidence here is the point — this section signals engineering judgement, not just analysis.]
+        [THIRD PERSON, observational. NOT "I would have...". Walk through one or
+        two specific technical stories from this race that are not already covered
+        elsewhere on the page, explain the cause, and land on a plain closing
+        observation. Be specific about lap, compound, energy mode and driver.
+        Phrases like "the stronger call was..." or "that decision was worth
+        overruling" carry the judgement without switching to first person.
+        Vary the opening and closing wording every race, no fixed formula.]
       </p>
     </div>
 
