@@ -183,6 +183,50 @@ img {
   padding: 4px;
 }
 .hamburger span {
+
+/* ---------- Races dropdown ---------- */
+/* Replaces the long per-race link list so the navbar still fits as the
+   season grows. Desktop opens on hover, mobile and keyboard open on click. */
+.nav-races { position: relative; }
+.nav-races-toggle {
+  font-family: inherit; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--text);
+  background: none; border: none; cursor: pointer;
+  padding: 0.45rem 0.85rem; border-radius: 4px;
+  display: flex; align-items: center; gap: 0.35rem; white-space: nowrap;
+  transition: color 0.2s, background 0.2s;
+}
+.nav-races-toggle:hover,
+.nav-races.current > .nav-races-toggle,
+.nav-races.open > .nav-races-toggle { color: var(--red); background: rgba(225,6,0,0.1); }
+.nav-races-toggle .nav-chev { font-size: 0.6rem; line-height: 1; transition: transform 0.2s; }
+.nav-races.open .nav-chev { transform: rotate(180deg); }
+.nav-races-panel {
+  position: absolute; top: calc(100% + 0.45rem); left: 0;
+  background: var(--dark); border: 1px solid var(--border); border-radius: 6px;
+  padding: 0.6rem; box-shadow: 0 14px 34px rgba(0,0,0,0.6);
+  display: none; z-index: 120;
+}
+.nav-races.open > .nav-races-panel { display: block; }
+/* ✏️ Once you pass about 12 races, change repeat(2 to repeat(3 so the panel
+   stays short rather than tall. */
+.nav-races-grid { display: grid; grid-template-columns: repeat(2, minmax(148px, 1fr)); gap: 0.1rem; }
+.nav-races-panel a {
+  display: block; white-space: nowrap; padding: 0.5rem 0.75rem; border-radius: 4px;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--text); transition: color 0.2s, background 0.2s;
+}
+.nav-races-panel a:hover,
+.nav-races-panel a.active { color: var(--red); background: rgba(225,6,0,0.1); }
+@media (max-width: 768px) {
+  .nav-races-toggle { width: 100%; justify-content: space-between; padding: 0.7rem 1rem; font-size: 0.85rem; }
+  .nav-races-panel {
+    position: static; border: none; background: none; box-shadow: none;
+    padding: 0 0 0.3rem 0.6rem;
+  }
+  .nav-races-grid { grid-template-columns: 1fr; }
+  .nav-races-panel a { padding: 0.55rem 1rem; font-size: 0.85rem; }
+}
   display: block;
   width: 24px;
   height: 2px;
@@ -1456,18 +1500,28 @@ img {
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html" class="active">Home</a></li>
 
-      <!-- ── RACE PAGES ── Add a new <li> here for every new race you write about ── -->
-      <li><a href="races/australia.html" class="race-link">🇦🇺 Australia</a></li>
-      <li><a href="races/china.html"     class="race-link">🇨🇳 China</a></li>
-      <li><a href="races/japan.html"     class="race-link">🇯🇵 Japan</a></li>
-      <li><a href="races/miami.html"     class="race-link">🇺🇸 Miami</a></li>
-      <li><a href="races/canada.html"    class="race-link">🇨🇦 Canada</a></li>
-      <li><a href="races/monaco.html"   class="race-link">🇲🇨 Monaco</a></li>
-      <li><a href="races/barcelona.html" class="race-link">🇪🇸 Barcelona</a></li>
-      <li><a href="races/austria.html"   class="race-link">🇦🇹 Austria</a></li>
-      <!-- ── END RACE PAGES ── -->
-      <li><a href="apex-index.html">The Apex Index</a></li>
+      <!-- ── RACES DROPDOWN ── Add a new <li> inside .nav-races-grid for
+           every new race. Nothing else in the navbar needs to change. -->
+      <li class="nav-races">
+        <button type="button" class="nav-races-toggle" aria-expanded="false" aria-haspopup="true">
+          Races <span class="nav-chev" aria-hidden="true">▾</span>
+        </button>
+        <div class="nav-races-panel">
+          <div class="nav-races-grid">
+            <a href="races/australia.html">🇦🇺 Australia</a>
+            <a href="races/china.html">🇨🇳 China</a>
+            <a href="races/japan.html">🇯🇵 Japan</a>
+            <a href="races/miami.html">🇺🇸 Miami</a>
+            <a href="races/canada.html">🇨🇦 Canada</a>
+            <a href="races/monaco.html">🇲🇨 Monaco</a>
+            <a href="races/barcelona.html">🇪🇸 Barcelona</a>
+            <a href="races/austria.html">🇦🇹 Austria</a>
+          </div>
+        </div>
+      </li>
+      <!-- ── END RACES ── -->
 
+      <li><a href="apex-index.html">The Apex Index</a></li>
       <li><a href="#about">About</a></li>
     </ul>
 
@@ -2085,6 +2139,33 @@ img {
       });
     }, { threshold: 0.12 });
     revealEls.forEach(el => observer.observe(el));
+  </script>
+  <script>
+    /* Races dropdown: hover on desktop, click on touch and keyboard. */
+    (function () {
+      var wrap = document.querySelector('.nav-races');
+      if (!wrap) return;
+      var btn = wrap.querySelector('.nav-races-toggle');
+      function setOpen(open) {
+        wrap.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        setOpen(!wrap.classList.contains('open'));
+      });
+      /* Checked at event time, not once at load, so narrowing a desktop
+         window to phone width hands control back to tap. */
+      var hoverCapable = window.matchMedia('(hover: hover) and (min-width: 769px)');
+      wrap.addEventListener('mouseenter', function () { if (hoverCapable.matches) setOpen(true); });
+      wrap.addEventListener('mouseleave', function () { if (hoverCapable.matches) setOpen(false); });
+      document.addEventListener('click', function (e) {
+        if (!wrap.contains(e.target)) setOpen(false);
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') setOpen(false);
+      });
+    })();
   </script>
 </body>
 </html>
