@@ -313,6 +313,17 @@ img { max-width: 100%; display: block; }
 .driver-name { font-weight: 600; font-size: 0.9rem; color: var(--text); margin-top: 0.25rem; }
 .driver-team { font-size: 0.78rem; color: var(--muted); }
 
+/* ---------- Result card points and gap (Stage 3) ---------- */
+.driver-result {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 0.5rem;
+  margin-top: 0.6rem; padding-top: 0.5rem; border-top: 1px solid var(--border);
+}
+.driver-gap { font-size: 0.78rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.driver-points { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; color: var(--red); white-space: nowrap; }
+/* Sprint cards borrow the gold accent so the two grids read differently */
+.sprint-box .driver-points { color: var(--gold); }
+.dnf-card .driver-result { display: none; }
+
 .dnf-card { border-color: #333333; opacity: 0.75; }
 .dnf-pos { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--muted) !important; line-height: 1; }
 .dnf-reason { font-size: 0.72rem; color: var(--muted); margin-top: 0.3rem; font-style: italic; }
@@ -630,15 +641,56 @@ img { max-width: 100%; display: block; }
       <h3>Sprint Result — Top 8</h3>
       <!-- If any post-Sprint penalty changed positions, use the .position-note + .penalty-footnote pattern.
            See Miami 2026 for a worked example (Antonelli demoted from P4 to P6 by track-limits penalty). -->
+      <!-- ✏️ Sprint points are 8-7-6-5-4-3-2-1 for P1 to P8. -->
       <div class="driver-grid reveal">
-        <div class="driver-card"><div class="driver-pos">P1</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
-        <div class="driver-card"><div class="driver-pos">P2</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
-        <div class="driver-card"><div class="driver-pos">P3</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
-        <div class="driver-card"><div class="driver-pos">P4</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
-        <div class="driver-card"><div class="driver-pos">P5</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
-        <div class="driver-card"><div class="driver-pos">P6</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
-        <div class="driver-card"><div class="driver-pos">P7</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
-        <div class="driver-card"><div class="driver-pos">P8</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
+        <div class="driver-card">
+          <div class="driver-pos">P1</div>
+          <div class="driver-name">[Driver]</div>
+          <div class="driver-team">[Team]</div>
+          <div class="driver-result"><span class="driver-gap">WINNER</span><span class="driver-points">8 pts</span></div>
+        </div>
+        <div class="driver-card">
+          <div class="driver-pos">P2</div>
+          <div class="driver-name">[Driver]</div>
+          <div class="driver-team">[Team]</div>
+          <div class="driver-result"><span class="driver-gap">[+0.000s]</span><span class="driver-points">7 pts</span></div>
+        </div>
+        <div class="driver-card">
+          <div class="driver-pos">P3</div>
+          <div class="driver-name">[Driver]</div>
+          <div class="driver-team">[Team]</div>
+          <div class="driver-result"><span class="driver-gap">[+0.000s]</span><span class="driver-points">6 pts</span></div>
+        </div>
+        <div class="driver-card">
+          <div class="driver-pos">P4</div>
+          <div class="driver-name">[Driver]</div>
+          <div class="driver-team">[Team]</div>
+          <div class="driver-result"><span class="driver-gap">[+0.000s]</span><span class="driver-points">5 pts</span></div>
+        </div>
+        <div class="driver-card">
+          <div class="driver-pos">P5</div>
+          <div class="driver-name">[Driver]</div>
+          <div class="driver-team">[Team]</div>
+          <div class="driver-result"><span class="driver-gap">[+0.000s]</span><span class="driver-points">4 pts</span></div>
+        </div>
+        <div class="driver-card">
+          <div class="driver-pos">P6</div>
+          <div class="driver-name">[Driver]</div>
+          <div class="driver-team">[Team]</div>
+          <div class="driver-result"><span class="driver-gap">[+0.000s]</span><span class="driver-points">3 pts</span></div>
+        </div>
+        <div class="driver-card">
+          <div class="driver-pos">P7</div>
+          <div class="driver-name">[Driver]</div>
+          <div class="driver-team">[Team]</div>
+          <div class="driver-result"><span class="driver-gap">[+0.000s]</span><span class="driver-points">2 pts</span></div>
+        </div>
+        <div class="driver-card">
+          <div class="driver-pos">P8</div>
+          <div class="driver-name">[Driver]</div>
+          <div class="driver-team">[Team]</div>
+          <div class="driver-result"><span class="driver-gap">[+0.000s]</span><span class="driver-points">1 pt</span></div>
+        </div>
       </div>
       <!-- ✏️ If a Sprint penalty changed classification, add a footnote here:
            <p class="penalty-footnote">* Post-Sprint penalty changed the classification. [Driver] received a [Xs] penalty for [reason], dropping him from P[X] on the road to P[Y].</p> -->
@@ -765,17 +817,71 @@ img { max-width: 100%; display: block; }
     <!-- Top 10 verified from formula1.com.
          Position changes vs. on-road order are flagged with an asterisk per driver card,
          with a footnote underneath the grid explaining the penalties. -->
+    <!-- ✏️ Points are the standard 2026 allocation, 25-18-15-12-10-8-6-4-2-1.
+         They are pre-filled, so only change one if a penalty moved a driver.
+         Gap is the time behind the winner from the F1.com race result, and P1
+         reads WINNER. For a lapped car use F1.com's wording, e.g. +1 lap. -->
     <div class="driver-grid reveal">
-      <div class="driver-card"><div class="driver-pos">P1</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
-      <div class="driver-card"><div class="driver-pos">P2</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
-      <div class="driver-card"><div class="driver-pos">P3</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
-      <div class="driver-card"><div class="driver-pos">P4</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
-      <div class="driver-card"><div class="driver-pos">P5</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
-      <div class="driver-card"><div class="driver-pos">P6</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
-      <div class="driver-card"><div class="driver-pos">P7</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
-      <div class="driver-card"><div class="driver-pos">P8</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
-      <div class="driver-card"><div class="driver-pos">P9</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
-      <div class="driver-card"><div class="driver-pos">P10</div><div class="driver-name">[Driver]</div><div class="driver-team">[Team]</div></div>
+      <div class="driver-card">
+        <div class="driver-pos">P1</div>
+        <div class="driver-name">[Driver]</div>
+        <div class="driver-team">[Team]</div>
+        <div class="driver-result"><span class="driver-gap">WINNER</span><span class="driver-points">25 pts</span></div>
+      </div>
+      <div class="driver-card">
+        <div class="driver-pos">P2</div>
+        <div class="driver-name">[Driver]</div>
+        <div class="driver-team">[Team]</div>
+        <div class="driver-result"><span class="driver-gap">[+0.000s]</span><span class="driver-points">18 pts</span></div>
+      </div>
+      <div class="driver-card">
+        <div class="driver-pos">P3</div>
+        <div class="driver-name">[Driver]</div>
+        <div class="driver-team">[Team]</div>
+        <div class="driver-result"><span class="driver-gap">[+0.000s]</span><span class="driver-points">15 pts</span></div>
+      </div>
+      <div class="driver-card">
+        <div class="driver-pos">P4</div>
+        <div class="driver-name">[Driver]</div>
+        <div class="driver-team">[Team]</div>
+        <div class="driver-result"><span class="driver-gap">[+0.000s]</span><span class="driver-points">12 pts</span></div>
+      </div>
+      <div class="driver-card">
+        <div class="driver-pos">P5</div>
+        <div class="driver-name">[Driver]</div>
+        <div class="driver-team">[Team]</div>
+        <div class="driver-result"><span class="driver-gap">[+0.000s]</span><span class="driver-points">10 pts</span></div>
+      </div>
+      <div class="driver-card">
+        <div class="driver-pos">P6</div>
+        <div class="driver-name">[Driver]</div>
+        <div class="driver-team">[Team]</div>
+        <div class="driver-result"><span class="driver-gap">[+0.000s]</span><span class="driver-points">8 pts</span></div>
+      </div>
+      <div class="driver-card">
+        <div class="driver-pos">P7</div>
+        <div class="driver-name">[Driver]</div>
+        <div class="driver-team">[Team]</div>
+        <div class="driver-result"><span class="driver-gap">[+0.000s]</span><span class="driver-points">6 pts</span></div>
+      </div>
+      <div class="driver-card">
+        <div class="driver-pos">P8</div>
+        <div class="driver-name">[Driver]</div>
+        <div class="driver-team">[Team]</div>
+        <div class="driver-result"><span class="driver-gap">[+0.000s]</span><span class="driver-points">4 pts</span></div>
+      </div>
+      <div class="driver-card">
+        <div class="driver-pos">P9</div>
+        <div class="driver-name">[Driver]</div>
+        <div class="driver-team">[Team]</div>
+        <div class="driver-result"><span class="driver-gap">[+0.000s]</span><span class="driver-points">2 pts</span></div>
+      </div>
+      <div class="driver-card">
+        <div class="driver-pos">P10</div>
+        <div class="driver-name">[Driver]</div>
+        <div class="driver-team">[Team]</div>
+        <div class="driver-result"><span class="driver-gap">[+0.000s]</span><span class="driver-points">1 pt</span></div>
+      </div>
     </div>
     <!-- ✏️ If a post-race penalty changed the classification, add a
          .position-note inside each affected card and a footnote below:
