@@ -660,6 +660,48 @@ img {
   gap: 0.4rem;
 }
 
+/* ---------- Apex tooltip (shared engine) ---------- */
+/* Drives the stage badge now and the glossary terms later. Any element with
+   class="apex-tip" holding an .apex-tip-box child works, no extra JS needed. */
+.apex-tip { position: relative; cursor: help; }
+.apex-tip:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+.apex-tip-box {
+  position: absolute; top: calc(100% + 0.55rem); left: 0;
+  width: max-content; max-width: 260px;
+  background: var(--dark); border: 1px solid var(--border); border-radius: 6px;
+  padding: 0.7rem 0.85rem; box-shadow: 0 14px 34px rgba(0,0,0,0.6);
+  display: none; z-index: 130;
+  text-align: left; white-space: normal;
+  font-weight: 400; letter-spacing: 0; text-transform: none;
+}
+.apex-tip.open > .apex-tip-box { display: block; }
+/* flipped when the box would run off the right edge */
+.apex-tip.tip-flip > .apex-tip-box { left: auto; right: 0; }
+.apex-tip-term {
+  display: block; color: var(--red);
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; margin-bottom: 0.3rem;
+}
+.apex-tip-def { display: block; color: var(--text); font-size: 0.8rem; line-height: 1.5; }
+.apex-tip-link {
+  display: inline-block; margin-top: 0.5rem;
+  color: var(--muted); font-size: 0.72rem; font-weight: 600; transition: color 0.2s;
+}
+.apex-tip-link:hover { color: var(--red); }
+/* .blog-meta span sets display:flex on every span inside it, so the tooltip
+   parts need winning back explicitly. */
+.blog-meta .apex-tip-box { display: none; }
+.blog-meta .apex-tip.open > .apex-tip-box { display: block; }
+.blog-meta .apex-tip-term, .blog-meta .apex-tip-def { display: block; }
+.blog-meta .apex-tip-link { display: inline-block; }
+/* Stage badge, moved out of an inline style so the tooltip can anchor to it */
+.stage-badge {
+  background: rgba(225,6,0,0.12); color: var(--red);
+  font-weight: 700; font-size: 0.72rem; letter-spacing: 0.06em;
+  text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 4px;
+}
+@media (max-width: 480px) { .apex-tip-box { max-width: 78vw; } }
+
 .blog-content {
   max-width: 800px;
   margin: 0 auto;
@@ -962,7 +1004,7 @@ img {
         Kimi Antonelli makes history as the youngest championship leader following a perfectly executed strategy and a dominant Mercedes performance in Suzuka.
       </p>
       <div class="blog-meta reveal reveal-delay-2">
-        <span style="background: rgba(225,6,0,0.12); color: var(--red); font-weight: 700; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 4px;">Stage 1 · Core Analysis</span>
+        <span class="apex-tip stage-badge" tabindex="0" role="button" aria-label="Stage 1 , Core Analysis. What do project stages mean?">Stage 1 · Core Analysis<span class="apex-tip-box" role="tooltip"><span class="apex-tip-term">Project stages</span><span class="apex-tip-def">Apex is built in stages. Each one adds more technical depth to the race reports, so the analysis develops visibly across the season.</span><a class="apex-tip-link" href="../index.html#about">→ About the project</a></span></span>
         <span>📅 6 April 2026</span>
         <span>📍 Suzuka International Racing Course</span>
         <span>🏁 Round 3 of 22</span>
@@ -1203,6 +1245,51 @@ img {
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') setOpen(false);
       });
+    })();
+  </script>
+  <script>
+    /* Apex tooltip engine. Hover on desktop, tap on touch, focus for keyboard.
+       Add class="apex-tip" + an .apex-tip-box child to any element to use it. */
+    (function () {
+      var tips = document.querySelectorAll('.apex-tip');
+      if (!tips.length) return;
+      var hoverCapable = window.matchMedia('(hover: hover) and (min-width: 769px)');
+      function closeAll(except) {
+        Array.prototype.forEach.call(document.querySelectorAll('.apex-tip.open'), function (t) {
+          if (t !== except) t.classList.remove('open');
+        });
+      }
+      function open(tip, on) {
+        if (!on) { tip.classList.remove('open'); return; }
+        closeAll(tip);
+        tip.classList.add('open');
+        tip.classList.remove('tip-flip');
+        var box = tip.querySelector('.apex-tip-box');
+        if (box && box.getBoundingClientRect().right > window.innerWidth - 8) {
+          tip.classList.add('tip-flip');
+        }
+      }
+      Array.prototype.forEach.call(tips, function (tip) {
+        tip.addEventListener('mouseenter', function () { if (hoverCapable.matches) open(tip, true); });
+        tip.addEventListener('mouseleave', function () { if (hoverCapable.matches) open(tip, false); });
+        /* A tap fires pointerdown, then focus, then click. Without recording the
+           state up front, focus opens the box and click immediately shuts it,
+           so tapping appears to do nothing. */
+        var wasOpen = false;
+        tip.addEventListener('pointerdown', function () {
+          wasOpen = tip.classList.contains('open');
+        });
+        tip.addEventListener('click', function (e) {
+          if (e.target.closest && e.target.closest('.apex-tip-link')) return;
+          e.stopPropagation();
+          open(tip, !wasOpen);
+        });
+        tip.addEventListener('focus', function () { open(tip, true); });
+        tip.addEventListener('blur', function () { open(tip, false); });
+      });
+      document.addEventListener('click', function () { closeAll(null); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(null); });
+      window.addEventListener('resize', function () { closeAll(null); });
     })();
   </script>
 </body>
