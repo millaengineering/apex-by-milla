@@ -23,7 +23,16 @@
   ║     • Engineering Question of the Race                           ║
   ║     • Race Engineer's View                                       ║
   ║     • Regulation Refinements (only mention if there's something  ║
-  ║       new from FIA; remove or skip otherwise)                    ║
+  ║       new from FIA, remove or skip otherwise)                    ║
+  ║                                                                  ║
+  ║   STAGE 3 SECTIONS INCLUDED (Silverstone, Round 09, onwards):    ║
+  ║     • The short version (TL;DR box at the top, write it LAST)    ║
+  ║     • Practice: FP1, FP2 and FP3 recaps                          ║
+  ║       (sprint weekends run FP1 only, delete the other two)       ║
+  ║     • Compound Choice, with Pirelli-coloured compound pills      ║
+  ║     • Driver of the Day, your own pick with the reasoning        ║
+  ║     • Points and gap columns on both result grids                ║
+  ║     • Stage badge with an explanatory hover tooltip              ║
   ║                                                                  ║
   ║   ALSO INCLUDED:                                                 ║
   ║     • Sprint Box (gold-accented) — remove for non-Sprint races   ║
@@ -463,6 +472,52 @@ img { max-width: 100%; display: block; }
 }
 .engineer-box p { margin: 0; color: var(--text); }
 
+/* ---------- Stage 3: the short version (TL;DR) ---------- */
+.short-version {
+  background: var(--card); border: 1px solid var(--border);
+  border-left: 3px solid var(--red); border-radius: 0 6px 6px 0;
+  padding: 1.3rem 1.6rem; margin: 0 0 2.5rem;
+}
+.short-version-label {
+  font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--red);
+  display: block; margin-bottom: 0.4rem;
+}
+.short-version p { margin: 0; color: var(--text); font-size: 0.95rem; }
+
+/* ---------- Stage 3: compound choice pills ---------- */
+.compound-row { display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 0.9rem 0 1.3rem; }
+.compound-pill {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  background: var(--card); border: 1px solid var(--border); border-radius: 20px;
+  padding: 0.35rem 0.9rem; font-size: 0.78rem; font-weight: 600; color: var(--text);
+}
+.compound-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+/* Pirelli colours: Hard white, Medium yellow, Soft red */
+.compound-hard   .compound-dot { background: #f0f0f0; }
+.compound-medium .compound-dot { background: #F5C842; }
+.compound-soft   .compound-dot { background: #E10600; }
+
+/* ---------- Stage 3: Driver of the Day ---------- */
+.dotd-card {
+  background: var(--card); border: 1px solid var(--border); border-radius: 6px;
+  padding: 1.5rem 1.6rem; margin: 2rem 0; position: relative; overflow: hidden;
+}
+.dotd-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--red), transparent 70%);
+}
+.dotd-label {
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--red); display: block; margin-bottom: 0.7rem;
+}
+.dotd-name {
+  font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: 0.03em;
+  color: var(--white); line-height: 1; margin-bottom: 0.15rem;
+}
+.dotd-team { font-size: 0.8rem; color: var(--muted); margin-bottom: 1rem; }
+.dotd-card p { margin: 0; color: #b0b0b0; font-size: 0.95rem; }
+
 /* ---------- Footer ---------- */
 .footer {
   padding: 2.5rem 2rem; text-align: center;
@@ -628,13 +683,29 @@ img { max-width: 100%; display: block; }
   <!-- ===== BLOG CONTENT ===== -->
   <article class="blog-content">
 
+    <!-- ─────────────────────────────
+         [STAGE 3 ▸ NEW] · THE SHORT VERSION
+         Three or four sentences for a casual reader. Who won, the key
+         technical story, and one strategy takeaway. Write it LAST, once
+         the report is finished, so it reflects what you actually wrote.
+         ───────────────────────────── -->
+    <div class="short-version reveal">
+      <span class="short-version-label">In short:</span>
+      <p>
+        [3 to 4 sentences. Who won and how, the one technical story that defined
+        the weekend, and a single strategy takeaway. No fluff, same voice as the
+        rest of the report.]
+      </p>
+    </div>
+
+
     <!-- ─────────────────────────────────────────────
          SECTION 1 · RACE OVERVIEW
          What happened, the storyline of the weekend.
          ───────────────────────────────────────────── -->
     <h2>Race Overview</h2>
     <p>
-      [Set the scene. Who won, the headline result, and the early-race storyline. SPLIT this paragraph if it covers multiple race beats — start chaos / mid-race incident / lead battle each get their own paragraph. Match Milla's style: direct, technical, no fluff.]
+      [Set the scene. Who won, the headline result, and the early-race storyline. SPLIT this paragraph if it covers multiple race beats, start chaos / mid-race incident / lead battle each get their own paragraph. Match Milla's style: direct, technical, no fluff.]
     </p>
     <p>
       [Optional second paragraph: mid-race phase. Safety car periods, strategic pit moves, key incidents. Drop this paragraph if it doesn't apply.]
@@ -644,6 +715,34 @@ img { max-width: 100%; display: block; }
     </p>
     <p>
       [Optional final paragraph for Race Overview: anything unusual about this specific circuit — heat, humidity, low-grip surface, hard braking zones, layout quirks, weather. Drop if not applicable.]
+    </p>
+
+
+    <!-- ─────────────────────────────
+         [STAGE 3 ▸ NEW] · PRACTICE
+         What each session actually told the teams. Long-run pace, fuel loads,
+         setup directions tried, reliability scares, weather.
+         ✏️ SPRINT WEEKENDS only run FP1, so delete the FP2 and FP3 blocks.
+         ───────────────────────────── -->
+    <h2>Practice</h2>
+
+    <h3>FP1</h3>
+    <p>
+      [What the first session revealed. Who ran what programme, early setup
+      directions, any reliability problems. Tie it to the circuit's demands.]
+    </p>
+
+    <h3>FP2</h3>
+    <p>
+      [The long-run session. Compare race pace on equal fuel where the data
+      allows, note degradation behaviour, and flag anyone who looked quick on
+      low fuel but struggled over a stint.]
+    </p>
+
+    <h3>FP3</h3>
+    <p>
+      [Final preparation. Qualifying simulations, track evolution since Friday,
+      last setup changes, and who looked ready for Q3.]
     </p>
 
 
@@ -659,7 +758,7 @@ img { max-width: 100%; display: block; }
 
     <!-- ─────────────────────────────────────────────
          SECTION 3 · SPRINT WEEKEND
-         Gold-accented box. Sprint Shootout + Sprint Race + Top 8 grid.
+         Gold-accented box. Sprint Qualifying + Sprint Race + Top 8 grid.
          ───────────────────────────────────────────── -->
     <div class="sprint-box">
       <div class="sprint-header">
@@ -667,14 +766,14 @@ img { max-width: 100%; display: block; }
         <h2 class="sprint-title">Sprint Race</h2>
       </div>
 
-      <h3>Sprint Shootout</h3>
+      <h3>Sprint Qualifying</h3>
       <p>
-        [How the Friday Sprint Shootout went. Pole, front row, eliminations, conditions.]
+        [How the Friday Sprint Qualifying went. Pole, front row, eliminations, conditions.]
       </p>
 
       <h3>Sprint Race Breakdown</h3>
       <p>
-        [What happened in the Sprint itself. Energy management is now a real Sprint factor with the 2026 PUs — comment on Overtake Mode usage, key overtakes, any incidents.]
+        [What happened in the Sprint itself. Energy management is now a real Sprint factor with the 2026 PUs, comment on Overtake Mode usage, key overtakes, any incidents.]
       </p>
       <p>
         [Optional second Sprint paragraph: peripheral incidents like reconnaissance-lap retirements, post-Sprint DSQs, pre-Sprint problems. Drop if not applicable.]
@@ -759,12 +858,28 @@ img { max-width: 100%; display: block; }
       [If the FIA has announced refinements that take effect at or affect this race, explain them here in 100-150 words. Tie them to specific moments in the race. If nothing new from FIA, delete this section.]
     </p>
 
+    <!-- [STAGE 3 ▸ NEW] Compound choice. Which compounds Pirelli allocated and
+         WHY, tied to this circuit's demands. Keep the pills in compound order.
+         ✏️ Update the C numbers, Pirelli changes the allocation per race. -->
+    <h3>Compound Choice</h3>
+    <div class="compound-row">
+      <span class="compound-pill compound-hard"><span class="compound-dot"></span>Hard C[X]</span>
+      <span class="compound-pill compound-medium"><span class="compound-dot"></span>Medium C[X]</span>
+      <span class="compound-pill compound-soft"><span class="compound-dot"></span>Soft C[X]</span>
+    </div>
+    <p>
+      [Why Pirelli picked this allocation for this circuit. Tie it to the track's
+      traction, braking and lateral loads, asphalt abrasion, and expected
+      degradation. Say what the choice was meant to encourage, for example a
+      genuine two-stop, and whether it worked out that way in the race.]
+    </p>
+
     <h3>Tyre Strategy</h3>
     <p>
       [Compound choices for the weekend, stint lengths, degradation behaviour. What did Pirelli's debrief say about this circuit? Cite specific compound names (C1-C5) and link to Pirelli's race debrief in Sources.]
     </p>
     <p>
-      [Optional second paragraph: standout tyre stories — extreme stint lengths, undercut/overcut moves, deg-driven incidents.]
+      [Optional second paragraph: standout tyre stories, extreme stint lengths, undercut/overcut moves, deg-driven incidents.]
     </p>
 
     <h3>Aerodynamics & Setup</h3>
@@ -772,7 +887,7 @@ img { max-width: 100%; display: block; }
       [Wing levels, active aero behaviour, ride height compromise. What setup trade-off did the circuit force this weekend?]
     </p>
     <p>
-      [Optional second paragraph: a specific aero story from this race — active aero issues, in-washing bargeboards in action, wake effects in close racing, etc.]
+      [Optional second paragraph: a specific aero story from this race, active aero issues, in-washing bargeboards in action, wake effects in close racing, etc.]
     </p>
 
 
@@ -787,7 +902,7 @@ img { max-width: 100%; display: block; }
          ───────────────────────────────────────────── -->
     <h2>Pace &amp; Performance</h2>
     <p>
-      [INTRO PARAGRAPH: 2 to 3 sentences. Pick the angle the numbers tell — pure pace vs. strategy, undercut threats, fastest lap vs. winner, recovery drives, etc.]
+      [INTRO PARAGRAPH: 2 to 3 sentences. Pick the angle the numbers tell, pure pace vs. strategy, undercut threats, fastest lap vs. winner, recovery drives, etc.]
     </p>
 
     <div class="pace-table-wrapper">
@@ -955,6 +1070,24 @@ img { max-width: 100%; display: block; }
          SECTION 10 · KEY TAKEAWAYS
          What we learned from this race.
          ───────────────────────────────────────────── -->
+
+    <!-- ─────────────────────────────
+         [STAGE 3 ▸ NEW] · DRIVER OF THE DAY
+         YOUR pick, not the official fan vote, and say so if they differ.
+         Justify it on what happened on track, not reputation. A recovery
+         drive, a stint nobody else managed, or a defensive job under pressure.
+         ───────────────────────────── -->
+    <div class="dotd-card reveal">
+      <span class="dotd-label">⭐ Driver of the Day</span>
+      <div class="dotd-name">[Full Driver Name]</div>
+      <div class="dotd-team">[Team]</div>
+      <p>
+        [Why they were the best on track. Be specific and use evidence, lap
+        numbers, stint lengths, gaps, positions gained. If your pick differs
+        from the official fan vote, say so and explain why.]
+      </p>
+    </div>
+
     <h2>Key Takeaways</h2>
     <p>
       [2 to 4 takeaways. Mix of championship implications and technical lessons. What did this race teach us about the 2026 era?]
