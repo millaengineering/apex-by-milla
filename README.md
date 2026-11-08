@@ -19,8 +19,8 @@ The site is designed to deepen in analytical depth over the course of the 2026 s
 The analytical depth of the writing is deliberately scaled across the season, in four stages, so the progression is visible to anyone reading the site chronologically:
 
 - **Stage 1 (Rounds 1-3 — complete):** Foundations. Race overview, qualifying breakdown, technical breakdown covering tyre strategy and aerodynamics, race results, and DNF analysis.
-- **Stage 2 (Rounds 4-8 — in progress):** Comparative and quantitative analysis. Added a Pace & Performance table comparing drivers by fastest lap, pit stop time, and gap at flag. Added an Engineering Question of the Race section that picks one specific pit-wall moment and dissects the trade-off. Added a Race Engineer's View paragraph offering my own pit-wall verdict. Added Sources sections citing primary FIA, F1, and Pirelli references.
-- **Stage 3 (Rounds 9-14 — planned):** Data-driven analysis. Will introduce charts via the FastF1 Python library, a glossary page called The Apex Index explaining technical terms, and component reference graphics.
+- **Stage 2 (Rounds 4-8 — complete):** Comparative and quantitative analysis. Added a Pace & Performance table comparing drivers by fastest lap, pit stop time, and gap at flag. Added an Engineering Question of the Race section that picks one specific pit-wall moment and dissects the trade-off. Added a Race Engineer's View paragraph offering my own pit-wall verdict. Added Sources sections citing primary FIA, F1, and Pirelli references.
+- **Stage 3 (Rounds 9-14 — in progress, from the British GP):** Technical deep dive. Each report now opens with an "In short:" summary and adds a Practice section, a Compound Choice section with Pirelli's allocation, a Driver of the Day pick, and points and gap columns on the result grids. Interactive charts built from official timing data (lap times, gap to leader, tyre strategy, and telemetry) show the details for each lap on hover or tap, and technical terms in the text open glossary tooltips linked to The Apex Index.
 - **Stage 4 (Rounds 15-22 — planned):** Cross-race trend analysis, team upgrade tracking, season-long championship context.
 
 ---
@@ -35,8 +35,11 @@ Deliberately simple, so iteration is fast and the site is easy to maintain:
   - Mobile navigation hamburger toggle
   - Scroll-reveal animations via IntersectionObserver
   - Date-based "NEW" banner that auto-fades to "LATEST" seven days after a race publishes
+  - Races dropdown in the navbar, reading progress bar, and hover/tap glossary tooltips
+  - Interactive SVG race charts with hover and tap details, written without any chart library
 - **GitHub Pages** for hosting
 - **Custom domain** via Namecheap with HTTPS enforced
+- **Python (pandas, matplotlib)** with free timing data from OpenF1 to build the race charts
 - **Python + Pillow** for one-off image processing (generating the 1200×630 social-share image with a solid background for link previews)
 - **No framework, no build step** — kept simple so I can focus on the content and learn the fundamentals properly
 
@@ -62,7 +65,15 @@ apex-by-milla/
 │   ├── china.html                  Round 02 — Chinese GP (Sprint)
 │   ├── japan.html                  Round 03 — Japanese GP
 │   ├── miami.html                  Round 04 — Miami GP (Sprint, first Stage 2 post)
-│   └── NEW-RACE-TEMPLATE.html      Stage 2 template for future races
+│   ├── canada.html                 Round 05 — Canadian GP (Sprint)
+│   ├── monaco.html                 Round 06 — Monaco GP
+│   ├── barcelona.html              Round 07 — Spanish GP
+│   ├── austria.html                Round 08 — Austrian GP (last Stage 2 post)
+│   ├── silverstone.html            Round 09 — British GP (Sprint, first Stage 3 post)
+│   └── NEW-RACE-TEMPLATE.html      Stage 3 template for future races
+├── images/
+│   └── silverstone/                Race charts and track outline for the British GP
+├── apex-index.html                 The Apex Index (technical glossary)
 ├── logo.png                        Site logo (transparent background)
 ├── social-share.png                1200×630 link-preview image (solid dark bg)
 ├── me.jpg                          About-section portrait
@@ -78,9 +89,9 @@ apex-by-milla/
 ## What's Next
 
 Immediate roadmap:
-- The Apex Index (glossary page explaining technical terms across the site)
-- Static graphics for each indexed component (in-washing bargeboards, active aero modes, MGU-K, etc.)
-- FastF1 integration for actual lap-by-lap charts in race reports (Stage 3)
+- Component reference graphics for the parts discussed in each report
+- A track outline graphic in each race page's header
+- Email notifications for new reports
 
 ---
 

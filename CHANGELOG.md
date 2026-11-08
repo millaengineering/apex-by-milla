@@ -4,6 +4,24 @@ A summary of significant changes to Apex by Milla, listed newest first.
 
 ---
 
+## v3.0 — November 2026 (Stage 3 launch with the British GP)
+
+The second big step up in depth, starting at Silverstone (Round 09).
+
+- Added the British GP race report (Round 09) as the first Stage 3 post, with British racing green (#004225) as its signature colour
+- Introduced the "In short:" summary box at the top of each report
+- Introduced a Practice section (FP1 only on Sprint weekends) and a Compound Choice section showing Pirelli's allocation with compound badges
+- Introduced a Driver of the Day pick with my reasoning, compared against the official fan vote
+- Added points and gap to leader on both result grids
+- Added interactive race charts built from official timing data via OpenF1: lap times, gap to leader, tyre strategy for the race and Sprint, and a telemetry comparison, each with hover and tap details and a data table view
+- Added glossary tooltips on technical terms, linked to The Apex Index
+- Replaced the long navbar race list with a Races dropdown so the bar stays usable as the season grows
+- Added an explanatory tooltip to the stage badge in each report's meta line
+- Renamed "Sprint Shootout" to "Sprint Qualifying" across every Sprint report and The Apex Index, and set every report's published date to its race date
+- Homepage: Stage 3 section with the British GP card, season progress updated to 9 of 22, and a banner celebrating Kimi Antonelli's 2026 title
+
+---
+
 ## v2.1 — May 2026 (Stage 2 polish pass)
 
 - Added a Sources section to every race report, grouped by category (Official Race Data, Tyre Strategy, Race Report & Driver Quotes, plus race-specific groups where relevant)
