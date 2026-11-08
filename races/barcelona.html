@@ -132,6 +132,9 @@ img { max-width: 100%; display: block; }
   display: none; z-index: 120;
 }
 .nav-races.open > .nav-races-panel { display: block; }
+/* Invisible bridge over the gap between the button and the panel, so the
+   mouse never leaves the dropdown on its way down to a race. */
+.nav-races-panel::before { content: ""; position: absolute; left: 0; right: 0; top: -0.6rem; height: 0.6rem; }
 /* ✏️ Once you pass about 12 races, change repeat(2 to repeat(3 so the panel
    stays short rather than tall. */
 .nav-races-grid { display: grid; grid-template-columns: repeat(2, minmax(148px, 1fr)); gap: 0.1rem; }
@@ -948,8 +951,17 @@ img { max-width: 100%; display: block; }
       /* Checked at event time, not once at load, so narrowing a desktop
          window to phone width hands control back to tap. */
       var hoverCapable = window.matchMedia('(hover: hover) and (min-width: 769px)');
-      wrap.addEventListener('mouseenter', function () { if (hoverCapable.matches) setOpen(true); });
-      wrap.addEventListener('mouseleave', function () { if (hoverCapable.matches) setOpen(false); });
+      /* Short delay before closing, so a slightly wobbly mouse path from the
+         button to a race does not snap the panel shut. */
+      var closeTimer;
+      wrap.addEventListener('mouseenter', function () {
+        clearTimeout(closeTimer);
+        if (hoverCapable.matches) setOpen(true);
+      });
+      wrap.addEventListener('mouseleave', function () {
+        if (!hoverCapable.matches) return;
+        closeTimer = setTimeout(function () { setOpen(false); }, 300);
+      });
       document.addEventListener('click', function (e) {
         if (!wrap.contains(e.target)) setOpen(false);
       });
