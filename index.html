@@ -1423,6 +1423,35 @@ img {
 .loading-dots span:nth-child(3) { animation-delay: 0.5s; }
 @keyframes dotSeq { 0% { opacity: 0; } 15% { opacity: 1; } 80% { opacity: 1; } 100% { opacity: 0; } }
 
+/* ---------- Champion Banner (Antonelli 2026) ---------- */
+.champ-banner {
+  position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(90deg, #C9971C, #F5C842 50%, #C9971C);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  text-align: center;
+}
+.champ-text {
+  position: relative; z-index: 1;
+  color: #0a0a0a; font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.35rem; letter-spacing: 0.08em;
+}
+.confetti { position: absolute; inset: 0; pointer-events: none; }
+.confetti i {
+  position: absolute; top: -12px; display: block;
+  background: #ffffff; border-radius: 1px; opacity: 0.9;
+  animation-name: confettiFall; animation-timing-function: linear; animation-iteration-count: infinite;
+}
+@keyframes confettiFall {
+  0% { transform: translateY(0) rotate(var(--r)); opacity: 0; }
+  10% { opacity: 0.95; }
+  100% { transform: translateY(70px) rotate(calc(var(--r) + 360deg)); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .confetti i { animation: none; opacity: 0.6; top: 30%; }
+}
+
 /* ---------- Stage Groups (race blogs) ---------- */
 .stage-group { margin-bottom: 3.5rem; }
 .stage-group:last-child { margin-bottom: 0; }
@@ -1539,11 +1568,42 @@ img {
     The "NEW" badge automatically pulses for 7 days from the publish date,
     then auto-switches to "LATEST" with a calmer look. No edits needed for that.
   -->
+  <!-- ===== CHAMPION BANNER (Antonelli, 2026 title, added 2026-11-08) =====
+       The old Stage 3 under-construction banner is kept below, commented out. -->
+  <div class="champ-banner" role="status">
+    <div class="confetti" aria-hidden="true">
+      <i style="left:1.5%;width:4px;height:10px;--r:0deg;animation-delay:0.48s;animation-duration:3.31s"></i>
+      <i style="left:6.1%;width:4px;height:7px;--r:90deg;animation-delay:0.19s;animation-duration:3.11s"></i>
+      <i style="left:10.8%;width:4px;height:10px;--r:0deg;animation-delay:0.77s;animation-duration:3.17s"></i>
+      <i style="left:16.8%;width:4px;height:10px;--r:120deg;animation-delay:2.02s;animation-duration:3.22s"></i>
+      <i style="left:19.7%;width:4px;height:8px;--r:90deg;animation-delay:3.12s;animation-duration:2.47s"></i>
+      <i style="left:23.4%;width:6px;height:7px;--r:0deg;animation-delay:0.38s;animation-duration:2.83s"></i>
+      <i style="left:29.2%;width:6px;height:10px;--r:0deg;animation-delay:2.04s;animation-duration:2.92s"></i>
+      <i style="left:33.7%;width:6px;height:8px;--r:60deg;animation-delay:1.98s;animation-duration:3.09s"></i>
+      <i style="left:37.9%;width:4px;height:7px;--r:30deg;animation-delay:2.96s;animation-duration:2.91s"></i>
+      <i style="left:41.2%;width:5px;height:10px;--r:90deg;animation-delay:0.96s;animation-duration:3.09s"></i>
+      <i style="left:46.4%;width:5px;height:7px;--r:60deg;animation-delay:3.14s;animation-duration:2.57s"></i>
+      <i style="left:50.5%;width:6px;height:7px;--r:120deg;animation-delay:1.56s;animation-duration:2.45s"></i>
+      <i style="left:56.2%;width:6px;height:8px;--r:120deg;animation-delay:2.8s;animation-duration:2.84s"></i>
+      <i style="left:60.5%;width:4px;height:8px;--r:90deg;animation-delay:2.55s;animation-duration:2.5s"></i>
+      <i style="left:65.6%;width:5px;height:10px;--r:120deg;animation-delay:0.21s;animation-duration:3.42s"></i>
+      <i style="left:71.0%;width:5px;height:10px;--r:60deg;animation-delay:2.63s;animation-duration:2.8s"></i>
+      <i style="left:72.6%;width:4px;height:8px;--r:0deg;animation-delay:1.48s;animation-duration:2.64s"></i>
+      <i style="left:77.7%;width:5px;height:8px;--r:90deg;animation-delay:0.92s;animation-duration:3.43s"></i>
+      <i style="left:81.7%;width:4px;height:8px;--r:120deg;animation-delay:1.44s;animation-duration:3.17s"></i>
+      <i style="left:86.8%;width:5px;height:7px;--r:30deg;animation-delay:1.33s;animation-duration:2.9s"></i>
+      <i style="left:90.7%;width:4px;height:8px;--r:120deg;animation-delay:0.48s;animation-duration:3.32s"></i>
+      <i style="left:95.5%;width:6px;height:8px;--r:120deg;animation-delay:0.9s;animation-duration:2.6s"></i>
+    </div>
+    <span class="champ-text">🏆 Antonelli champion! 🏆</span>
+  </div>
+  <!--
   <div class="stage-banner">
     <span class="hat">🏗️</span>
     <span>Stage 3 in development, preparing for launch<span class="loading-dots"><span>.</span><span>.</span><span>.</span></span></span>
     <span class="hat">🏗️</span>
   </div>
+  -->
 
   <!-- ===== HERO ===== -->
   <div style="position:relative; background: var(--black);">
