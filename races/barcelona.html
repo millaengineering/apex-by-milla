@@ -467,6 +467,7 @@ img { max-width: 100%; display: block; }
             <a href="barcelona.html" class="active">🇪🇸 Barcelona</a>
             <a href="austria.html">🇦🇹 Austria</a>
             <a href="silverstone.html">🇬🇧 Silverstone</a>
+            <a href="belgium.html">🇧🇪 Belgium</a>
           </div>
         </div>
       </li>
@@ -988,9 +989,15 @@ img { max-width: 100%; display: block; }
         tip.classList.add('open');
         tip.classList.remove('tip-flip');
         var box = tip.querySelector('.apex-tip-box');
-        if (box && box.getBoundingClientRect().right > window.innerWidth - 8) {
-          tip.classList.add('tip-flip');
-        }
+        if (!box) return;
+        /* Keep the whole box on screen. Measure it at its default spot, then
+           shift it left or right by exactly the overflow, 8px from either edge. */
+        box.style.left = ''; box.style.right = '';
+        var vw = document.documentElement.clientWidth || window.innerWidth;
+        var r = box.getBoundingClientRect(), shift = 0;
+        if (r.right > vw - 8) shift = (vw - 8) - r.right;
+        if (r.left + shift < 8) shift = 8 - r.left;
+        if (shift) box.style.left = Math.round(shift) + 'px';
       }
       Array.prototype.forEach.call(tips, function (tip) {
         tip.addEventListener('mouseenter', function () { if (hoverCapable.matches) open(tip, true); });
