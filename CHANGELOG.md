@@ -4,6 +4,16 @@ A summary of significant changes to Apex by Milla, listed newest first.
 
 ---
 
+## v3.1 — November 2026 (Belgian GP)
+
+- Added the Belgian GP race report (Round 10), the second Stage 3 post, with Spa Rain Slate (#5E7A96) as its signature colour and the Spa-Francorchamps track outline in the hero
+- Interactive charts for the race: lap times, gap to leader, tyre strategy, and a telemetry comparison of Antonelli and Leclerc
+- New Apex Index terms: Aero Rake, Grid Penalty, and Unsafe Release
+- Fixed glossary tooltips running off the edge of the screen on phones, on every page that uses them
+- Homepage: Belgian GP card in the Stage 3 group, season progress updated to 10 of 22, and Belgium added to the Races dropdown on every page
+
+---
+
 ## v3.0 — November 2026 (Stage 3 launch with the British GP)
 
 The second big step up in depth, starting at Silverstone (Round 09).

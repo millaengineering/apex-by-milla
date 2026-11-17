@@ -70,9 +70,11 @@ apex-by-milla/
 │   ├── barcelona.html              Round 07 — Spanish GP
 │   ├── austria.html                Round 08 — Austrian GP (last Stage 2 post)
 │   ├── silverstone.html            Round 09 — British GP (Sprint, first Stage 3 post)
+│   ├── belgium.html                Round 10 — Belgian GP
 │   └── NEW-RACE-TEMPLATE.html      Stage 3 template for future races
 ├── images/
-│   └── silverstone/                Race charts and track outline for the British GP
+│   ├── silverstone/                Race charts and track outline for the British GP
+│   └── belgium/                    Race charts for the Belgian GP
 ├── apex-index.html                 The Apex Index (technical glossary)
 ├── logo.png                        Site logo (transparent background)
 ├── social-share.png                1200×630 link-preview image (solid dark bg)
