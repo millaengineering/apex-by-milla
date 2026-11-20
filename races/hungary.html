@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<!--
+  HUNGARY · ROUND 11 · THIRD STAGE 3 REPORT · signature colour #6A3FA0 (Tokaji Violet), track tint #A98BD6
+  Built from a copy of belgium.html on 2026-11-20. Normal weekend, FP1, FP2, and FP3.
+
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║   APEX BY MILLA — RACE REPORT TEMPLATE                           ║
+  ║                                                                  ║
+  ║   HOW TO USE:                                                    ║
+  ║   1. Make a copy of this file and rename it to the race          ║
+  ║      (e.g. canada.html, monaco.html).                            ║
+  ║   2. Find every [SQUARE BRACKET] placeholder and replace it      ║
+  ║      with the real info.                                         ║
+  ║   3. Pick a signature race colour and update the two CSS spots   ║
+  ║      flagged with /* SIGNATURE COLOUR */ (see memory for         ║
+  ║      country-by-country palette).                                ║
+  ║   4. Update the navbar in this file AND in all other race        ║
+  ║      pages to add a link to this new race.                       ║
+  ║   5. Update index.html: navbar, about-stat counter, season       ║
+  ║      progress (counter + bar width), race cards grid, footer.    ║
+  ║   6. Update the new-blog-banner in index.html: href, date, text. ║
+  ║                                                                  ║
+  ║   STAGE 2 SECTIONS INCLUDED:                                     ║
+  ║     • Pace & Performance Comparison (with mobile-responsive      ║
+  ║       table wrapper)                                             ║
+  ║     • Engineering Question of the Race                           ║
+  ║     • Race Engineer's View                                       ║
+  ║     • Regulation Refinements (only mention if there's something  ║
+  ║       new from FIA, remove or skip otherwise)                    ║
+  ║                                                                  ║
+  ║   STAGE 3 SECTIONS INCLUDED (Silverstone, Round 09, onwards):    ║
+  ║     • The short version (TL;DR box at the top, write it LAST)    ║
+  ║     • Practice: FP1, FP2 and FP3 recaps                          ║
+  ║       (sprint weekends run FP1 only, delete the other two)       ║
+  ║     • Compound Choice, with Pirelli-coloured compound pills      ║
+  ║     • Driver of the Day, your own pick with the reasoning        ║
+  ║     • Points and gap columns on both result grids                ║
+  ║     • Stage badge with an explanatory hover tooltip              ║
+  ║                                                                  ║
+  ║   ALSO INCLUDED:                                                 ║
+  ║     • Sprint Box (gold-accented) — remove for non-Sprint races   ║
+  ║     • Post-race penalty asterisk CSS — apply if penalties        ║
+  ║       changed the on-road order                                  ║
+  ║     • Sources section at the bottom — fill with primary sources  ║
+  ║     • Independence/non-affiliation disclaimer in footer          ║
+  ║                                                                  ║
+  ║   RULES (from memory — these MUST be followed):                  ║
+  ║                                                                  ║
+  ║   NAMES — the surname-only rule:                                 ║
+  ║     • First mention of a driver in PROSE uses the full name.     ║
+  ║       Every mention after that is surname only.                  ║
+  ║       e.g. "Charles Leclerc seized the lead" ... later ...       ║
+  ║            "Leclerc was forced to defend"                        ║
+  ║     • EXCEPTION 1: pull-quote and highlight-box attributions     ║
+  ║       always keep the FULL name, even late in the report.        ║
+  ║     • EXCEPTION 2: lists of drivers keep everyone's full name,   ║
+  ║       even if one of them was already mentioned.                 ║
+  ║     • EXCEPTION 3: "Kimi" is fine as a first-name reference      ║
+  ║       for Antonelli.                                             ║
+  ║     • NEVER apply this inside result cards, DNF cards, pace      ║
+  ║       tables, or the words of a verbatim quote. Those follow     ║
+  ║       the official classification.                               ║
+  ║                                                                  ║
+  ║   PUNCTUATION:                                                   ║
+  ║     • NO em dashes in prose. Use a comma, or rewrite.            ║
+  ║       Em dashes are allowed ONLY in: title and meta tags,        ║
+  ║       section headings (Race Result — Top 10), aria-labels,      ║
+  ║       and source link text.                                      ║
+  ║     • En dashes are allowed in ONE place only: directly          ║
+  ║       before a quote attribution in the highlight box.           ║
+  ║       Never mid-sentence. Use a comma there instead.             ║
+  ║     • NO semicolons in prose. Split the sentence, or use         ║
+  ║       "and" / "which".                                           ║
+  ║     • Avoid colons in prose, DNF reason cards included.          ║
+  ║       DNF format is "Retired lap 6, start contact".              ║
+  ║     • Oxford comma in every list of three or more.               ║
+  ║                                                                  ║
+  ║   TERMINOLOGY:                                                   ║
+  ║     • Corners are ALWAYS "Turn 4", never a proper name.          ║
+  ║       Only exception is a globally famous nickname stated        ║
+  ║       with the number ("the Wall of Champions at Turn 14").      ║
+  ║     • Tyre compounds are capitalised: Hard, Medium, Soft,        ║
+  ║       with codes C1 to C5. Descriptive adjectives stay           ║
+  ║       lower case ("the softer tyre").                            ║
+  ║                                                                  ║
+  ║   VOICE:                                                         ║
+  ║     • Preserve Milla's writing exactly. Only fix typos.          ║
+  ║     • Race Engineer's View is THIRD PERSON and observational,    ║
+  ║       never "I would have...". See the section note below.       ║
+  ║     • Flag unconfirmed theories in first person instead          ║
+  ║       ("my theory is that...") and say what IS confirmed.        ║
+  ║     • Technical sections carry no literary flourish at all.      ║
+  ║       Race Overview and Looking Ahead may open with one.         ║
+  ║     • Split long paragraphs at natural beat breaks.              ║
+  ║     • Verify all race data and engineering claims against        ║
+  ║       primary sources (F1.com, FIA, Pirelli) before writing.     ║
+  ║     • Never describe the site as a "fan" project.                ║
+  ╚══════════════════════════════════════════════════════════════════╝
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 Hungarian GP Technical Analysis — Apex by Milla</title>
+  <meta name="description" content="Technical analysis of the 2026 Hungarian Grand Prix, where Norris won from pole by 15 seconds, Piastri retired after a backmarker collision, and a late VSC decided the podium." />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://apexbymilla.com/races/hungary.html" />
+  <meta property="og:title"       content="2026 Hungarian GP Technical Analysis — Apex by Milla" />
+  <meta property="og:description" content="Technical analysis of the 2026 Hungarian Grand Prix, where Norris won from pole by 15 seconds, Piastri retired after a backmarker collision, and a late VSC decided the podium." />
+  <meta property="og:image"       content="https://apexbymilla.com/social-share.png" />
+  <meta property="article:published_time" content="2026-07-26" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@apexbymilla" />
+  <meta name="twitter:title"       content="2026 Hungarian GP Technical Analysis — Apex by Milla" />
+  <meta name="twitter:description" content="Technical analysis of the 2026 Hungarian Grand Prix, where Norris won from pole by 15 seconds, Piastri retired after a backmarker collision, and a late VSC decided the podium." />
+  <meta name="twitter:image"       content="https://apexbymilla.com/social-share.png" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://apexbymilla.com/races/hungary.html" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "2026 Hungarian GP Technical Analysis",
+    "description": "Technical analysis of the 2026 Hungarian Grand Prix, where Norris won from pole by 15 seconds, Piastri retired after a backmarker collision, and a late VSC decided the podium.",
+    "author": { "@type": "Person", "name": "Milla", "url": "https://apexbymilla.com" },
+    "publisher": { "@type": "Organization", "name": "Apex by Milla", "url": "https://apexbymilla.com" },
+    "datePublished": "2026-07-26",
+    "url": "https://apexbymilla.com/races/hungary.html",
+    "mainEntityOfPage": "https://apexbymilla.com/races/hungary.html"
+  }
+  </script>
+
+  <style>
+/* ================================================
+   APEX BY MILLA — Global Stylesheet (inline)
+   ================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Bebas+Neue&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --red:       #E10600;
+  --red-dark:  #b00400;
+  --black:     #0a0a0a;
+  --dark:      #111111;
+  --card:      #181818;
+  --border:    #2a2a2a;
+  --text:      #f0f0f0;
+  --muted:     #888888;
+  --white:     #ffffff;
+  --gold:      #F5C842;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--black);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: #6A3FA0; border-radius: 3px; } /* SIGNATURE COLOUR: Hungary, Tokaji Violet */
+
+/* ---------- Navigation ---------- */
+.navbar {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(10,10,10,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+.nav-logo { display: flex; align-items: center; flex-shrink: 0; }
+.nav-links { display: flex; align-items: center; gap: 0.25rem; list-style: none; }
+.nav-links a {
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted);
+  padding: 0.45rem 0.85rem; border-radius: 4px;
+  transition: color 0.2s, background 0.2s; white-space: nowrap;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--white); background: var(--border); }
+.nav-links a.race-link { color: var(--text); }
+.nav-links a.race-link:hover { color: var(--red); background: rgba(225,6,0,0.1); }
+.nav-links a.race-link.active { color: var(--red); background: rgba(225,6,0,0.1); }
+
+.hamburger {
+  display: none; flex-direction: column; gap: 5px; cursor: pointer;
+  background: none; border: none; padding: 4px;
+}
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+
+/* ---------- Races dropdown ---------- */
+/* Replaces the long per-race link list so the navbar still fits as the
+   season grows. Desktop opens on hover, mobile and keyboard open on click. */
+.nav-races { position: relative; }
+.nav-races-toggle {
+  font-family: inherit; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--text);
+  background: none; border: none; cursor: pointer;
+  padding: 0.45rem 0.85rem; border-radius: 4px;
+  display: flex; align-items: center; gap: 0.35rem; white-space: nowrap;
+  transition: color 0.2s, background 0.2s;
+}
+.nav-races-toggle:hover,
+.nav-races.current > .nav-races-toggle,
+.nav-races.open > .nav-races-toggle { color: var(--red); background: rgba(225,6,0,0.1); }
+.nav-races-toggle .nav-chev { font-size: 0.6rem; line-height: 1; transition: transform 0.2s; }
+.nav-races.open .nav-chev { transform: rotate(180deg); }
+.nav-races-panel {
+  position: absolute; top: calc(100% + 0.45rem); left: 0;
+  background: var(--dark); border: 1px solid var(--border); border-radius: 6px;
+  padding: 0.6rem; box-shadow: 0 14px 34px rgba(0,0,0,0.6);
+  display: none; z-index: 120;
+}
+.nav-races.open > .nav-races-panel { display: block; }
+/* Invisible bridge over the gap between the button and the panel, so the
+   mouse never leaves the dropdown on its way down to a race. */
+.nav-races-panel::before { content: ""; position: absolute; left: 0; right: 0; top: -0.6rem; height: 0.6rem; }
+/* ✏️ Once you pass about 12 races, change repeat(2 to repeat(3 so the panel
+   stays short rather than tall. */
+.nav-races-grid { display: grid; grid-template-columns: repeat(2, minmax(148px, 1fr)); gap: 0.1rem; }
+.nav-races-panel a {
+  display: block; white-space: nowrap; padding: 0.5rem 0.75rem; border-radius: 4px;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--text); transition: color 0.2s, background 0.2s;
+}
+.nav-races-panel a:hover,
+.nav-races-panel a.active { color: var(--red); background: rgba(225,6,0,0.1); }
+@media (max-width: 768px) {
+  .nav-races-toggle { width: 100%; justify-content: space-between; padding: 0.7rem 1rem; font-size: 0.85rem; }
+  .nav-races-panel {
+    position: static; border: none; background: none; box-shadow: none;
+    padding: 0 0 0.3rem 0.6rem;
+  }
+  .nav-races-grid { grid-template-columns: 1fr; }
+  .nav-races-panel a { padding: 0.55rem 1rem; font-size: 0.85rem; }
+}
+
+/* ---------- Blog Hero ---------- */
+.blog-hero {
+  background: var(--dark);
+  border-bottom: 1px solid var(--border);
+  border-top: 3px solid #6A3FA0; /* SIGNATURE COLOUR: Hungary, Tokaji Violet */
+  padding: 5rem 2rem 3rem;
+  position: relative;
+}
+.blog-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 220px;
+  background: radial-gradient(ellipse 60% 100% at 90% 0%, rgba(106,63,160,0.34) 0%, transparent 70%); /* SIGNATURE COLOUR: #6A3FA0 as rgb */
+  pointer-events: none;
+}
+.blog-hero-inner { max-width: 800px; margin: 0 auto; position: relative; }
+/* Hungaroring track outline, decorative, lies across the whole hero behind the text.
+   preserveAspectRatio meet scales it to fit, so no edge is ever cut off. */
+.hero-track {
+  position: absolute;
+  top: 1.25rem;
+  bottom: 1.25rem;
+  left: 2rem;
+  right: 2rem;
+  width: calc(100% - 4rem);
+  height: calc(100% - 2.5rem);
+  stroke-width: 7px;
+  color: #A98BD6; /* brighter tint of #6A3FA0 so it shows on the dark background */
+  opacity: 0.16;
+  pointer-events: none;
+}
+@media (max-width: 768px) { .hero-track { stroke-width: 5px; opacity: 0.12; left: 1rem; right: 1rem; width: calc(100% - 2rem); } }
+.blog-back {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 2rem; transition: color 0.2s;
+}
+.blog-back:hover { color: var(--text); }
+.blog-round {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--red); margin-bottom: 0.8rem;
+}
+.blog-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  letter-spacing: 0.03em; color: var(--white); line-height: 1; margin-bottom: 1rem;
+}
+.blog-meta {
+  display: flex; gap: 1.5rem; flex-wrap: wrap;
+  font-size: 0.8rem; color: var(--muted);
+  margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border);
+}
+.blog-meta span { display: flex; align-items: center; gap: 0.4rem; }
+
+/* ---------- Apex tooltip (shared engine) ---------- */
+/* Drives the stage badge now and the glossary terms later. Any element with
+   class="apex-tip" holding an .apex-tip-box child works, no extra JS needed. */
+.apex-tip { position: relative; cursor: help; }
+.apex-tip:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+.apex-tip-box {
+  position: absolute; top: calc(100% + 0.55rem); left: 0;
+  width: max-content; max-width: 260px;
+  background: var(--dark); border: 1px solid var(--border); border-radius: 6px;
+  padding: 0.7rem 0.85rem; box-shadow: 0 14px 34px rgba(0,0,0,0.6);
+  display: none; z-index: 130;
+  text-align: left; white-space: normal;
+  font-weight: 400; letter-spacing: 0; text-transform: none;
+}
+.apex-tip.open > .apex-tip-box { display: block; }
+/* Invisible bridge over the gap between the term and the box, so moving the
+   mouse down onto the box (and its Apex Index link) does not close it */
+.apex-tip-box::before { content: ""; position: absolute; left: 0; right: 0; top: -0.7rem; height: 0.7rem; }
+.apex-tip.tip-up > .apex-tip-box { top: auto; bottom: calc(100% + 0.55rem); }
+.apex-tip.tip-up > .apex-tip-box::before { top: auto; bottom: -0.7rem; }
+/* flipped when the box would run off the right edge */
+.apex-tip.tip-flip > .apex-tip-box { left: auto; right: 0; }
+.apex-tip-term {
+  display: block; color: var(--red);
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; margin-bottom: 0.3rem;
+}
+.apex-tip-def { display: block; color: var(--text); font-size: 0.8rem; line-height: 1.5; }
+.apex-tip-link {
+  display: inline-block; margin-top: 0.5rem;
+  color: var(--muted); font-size: 0.72rem; font-weight: 600; transition: color 0.2s;
+}
+.apex-tip-link:hover { color: var(--red); }
+/* .blog-meta span sets display:flex on every span inside it, so the tooltip
+   parts need winning back explicitly. */
+.blog-meta .apex-tip-box { display: none; }
+.blog-meta .apex-tip.open > .apex-tip-box { display: block; }
+.blog-meta .apex-tip-term, .blog-meta .apex-tip-def { display: block; }
+.blog-meta .apex-tip-link { display: inline-block; }
+/* Stage badge, moved out of an inline style so the tooltip can anchor to it */
+.stage-badge {
+  background: rgba(225,6,0,0.12); color: var(--red);
+  font-weight: 700; font-size: 0.72rem; letter-spacing: 0.06em;
+  text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 4px;
+}
+@media (max-width: 480px) { .apex-tip-box { max-width: 78vw; } }
+
+/* ---------- Blog Content ---------- */
+.blog-content { max-width: 800px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+.blog-content h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem; letter-spacing: 0.04em; color: var(--white);
+  margin-top: 2.5rem; margin-bottom: 1rem;
+  padding-bottom: 0.5rem; border-bottom: 2px solid var(--red); display: inline-block;
+}
+.blog-content h3 {
+  font-size: 1.1rem; font-weight: 600; color: var(--text);
+  margin-top: 2rem; margin-bottom: 0.75rem;
+}
+.blog-content p { color: #b0b0b0; margin-bottom: 1.2rem; font-size: 0.97rem; }
+.blog-content strong { color: var(--text); font-weight: 600; }
+
+.highlight-box {
+  background: rgba(225,6,0,0.08);
+  border-left: 3px solid var(--red);
+  padding: 1.2rem 1.5rem; border-radius: 0 4px 4px 0;
+  margin: 2rem 0;
+}
+.highlight-box p { margin: 0; color: var(--text); font-style: italic; }
+
+/* ---------- Driver / DNF Cards ---------- */
+.driver-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem; margin: 1.5rem 0;
+}
+.driver-card { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 1rem; }
+.driver-pos { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--red); line-height: 1; }
+.driver-name { font-weight: 600; font-size: 0.9rem; color: var(--text); margin-top: 0.25rem; }
+.driver-team { font-size: 0.78rem; color: var(--muted); }
+
+/* ---------- Result card points and gap (Stage 3) ---------- */
+.driver-result {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 0.5rem;
+  margin-top: 0.6rem; padding-top: 0.5rem; border-top: 1px solid var(--border);
+}
+.driver-gap { font-size: 0.78rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.driver-points { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; color: var(--red); white-space: nowrap; }
+/* Sprint cards borrow the gold accent so the two grids read differently */
+.sprint-box .driver-points { color: var(--gold); }
+.dnf-card .driver-result { display: none; }
+
+.dnf-card { border-color: #333333; opacity: 0.75; }
+.dnf-pos { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--muted) !important; line-height: 1; }
+.dnf-reason { font-size: 0.72rem; color: var(--muted); margin-top: 0.3rem; font-style: italic; }
+
+/* Penalty / position-change note under driver cards */
+.position-note {
+  font-size: 0.7rem;
+  color: var(--gold);
+  margin-top: 0.4rem;
+  font-style: italic;
+  line-height: 1.3;
+}
+.penalty-footnote {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 1rem;
+  padding-left: 0.8rem;
+  border-left: 2px solid var(--gold);
+}
+
+/* ---------- Sprint Weekend ---------- */
+.sprint-box {
+  background: rgba(255, 180, 0, 0.05);
+  border: 1px solid rgba(255, 180, 0, 0.25);
+  border-radius: 6px;
+  padding: 1.8rem;
+  margin: 2.5rem 0;
+}
+.sprint-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem; }
+.sprint-badge {
+  background: rgba(255, 180, 0, 0.15);
+  border: 1px solid rgba(255, 180, 0, 0.4);
+  color: #f0b400;
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 2px; white-space: nowrap;
+}
+.sprint-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem; letter-spacing: 0.04em; color: var(--white);
+  border-bottom: 2px solid #f0b400 !important;
+  display: inline-block; padding-bottom: 0.3rem; margin: 0 !important;
+}
+.sprint-box h3 { font-size: 1rem; font-weight: 600; color: var(--text); margin-top: 1.5rem; margin-bottom: 0.6rem; }
+.sprint-box p { color: #b0b0b0; font-size: 0.97rem; margin-bottom: 1rem; }
+
+/* ---------- Stage 2 Pace Table ---------- */
+.pace-table-wrapper {
+  margin: 1.2rem 0 2rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+.pace-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 0.9rem;
+}
+.pace-table th, .pace-table td {
+  padding: 0.7rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.pace-table th {
+  background: rgba(225,6,0,0.08);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.pace-table tr:last-child td { border-bottom: none; }
+.pace-table td { color: #b0b0b0; }
+.pace-table td strong { color: var(--text); }
+
+/* ---------- Engineer's View Box ---------- */
+.engineer-box {
+  background: rgba(0, 120, 200, 0.06);
+  border-left: 3px solid #2898d8;
+  padding: 1.2rem 1.5rem;
+  border-radius: 0 4px 4px 0;
+  margin: 2rem 0;
+}
+.engineer-box .engineer-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #2898d8;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.engineer-box p { margin: 0; color: var(--text); }
+
+/* ---------- Stage 3: the short version (TL;DR) ---------- */
+.short-version {
+  background: var(--card); border: 1px solid var(--border);
+  border-left: 3px solid var(--red); border-radius: 0 6px 6px 0;
+  padding: 1.3rem 1.6rem; margin: 0 0 2.5rem;
+}
+.short-version-label {
+  font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--red);
+  display: block; margin-bottom: 0.4rem;
+}
+.short-version p { margin: 0; color: var(--text); font-size: 0.95rem; }
+
+/* ---------- Stage 3: compound choice pills ---------- */
+.compound-row { display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 0.9rem 0 1.3rem; }
+.compound-pill {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  background: var(--card); border: 1px solid var(--border); border-radius: 20px;
+  padding: 0.35rem 0.9rem; font-size: 0.78rem; font-weight: 600; color: var(--text);
+}
+.compound-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+/* Pirelli colours: Hard white, Medium yellow, Soft red */
+.compound-hard   .compound-dot { background: #f0f0f0; }
+.compound-medium .compound-dot { background: #F5C842; }
+.compound-soft   .compound-dot { background: #E10600; }
+
+/* ---------- Stage 3: Driver of the Day ---------- */
+.dotd-card {
+  background: var(--card); border: 1px solid var(--border); border-radius: 6px;
+  padding: 1.5rem 1.6rem; margin: 2rem 0; position: relative; overflow: hidden;
+}
+.dotd-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--red), transparent 70%);
+}
+.dotd-label {
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--red); display: block; margin-bottom: 0.7rem;
+}
+.dotd-name {
+  font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: 0.03em;
+  color: var(--white); line-height: 1; margin-bottom: 0.15rem;
+}
+.dotd-team { font-size: 0.8rem; color: var(--muted); margin-bottom: 1rem; }
+.dotd-card p { margin: 0; color: #b0b0b0; font-size: 0.95rem; }
+
+/* ---------- Footer ---------- */
+.footer {
+  padding: 2.5rem 2rem; text-align: center;
+  color: var(--muted); font-size: 0.8rem;
+  border-top: 1px solid var(--border);
+}
+.footer span { color: var(--red); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; position: fixed; top: 64px; left: 0; right: 0;
+    background: var(--dark); border-bottom: 1px solid var(--border);
+    flex-direction: column; align-items: stretch; padding: 1rem; gap: 0.25rem;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 0.7rem 1rem; font-size: 0.85rem; }
+  .hamburger { display: flex; }
+  .blog-hero { padding: 3.5rem 1.5rem 2rem; }
+  .blog-meta { gap: 0.8rem; font-size: 0.75rem; }
+  .blog-content { padding: 2.5rem 1.5rem 4rem; }
+  .blog-content h2 { font-size: 1.4rem; }
+  .driver-grid { grid-template-columns: 1fr; }
+  .pace-table { font-size: 0.82rem; }
+  .pace-table th, .pace-table td { padding: 0.55rem 0.7rem; }
+}
+
+/* ---------- Sources Section ---------- */
+.sources-section {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+.sources-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+}
+.sources-subtitle {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+.sources-group { margin-bottom: 1.4rem; }
+.sources-group-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 0.5rem;
+}
+.sources-list { list-style: none; padding: 0; margin: 0; }
+.sources-list li {
+  font-size: 0.84rem;
+  color: #b0b0b0;
+  margin-bottom: 0.45rem;
+  line-height: 1.55;
+}
+.sources-list a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--border);
+  transition: color 0.2s, border-color 0.2s;
+}
+.sources-list a:hover {
+  color: var(--red);
+  border-bottom-color: var(--red);
+}
+
+/* ---------- Scroll Animations ---------- */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+/* Stage 3 charts and inline glossary terms (added for Silverstone) */
+.chart-figure { margin: 2rem 0; }
+.chart-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--border); border-radius: 6px; }
+.chart-figure figcaption { color: var(--muted); font-size: 0.8rem; margin-top: 0.6rem; line-height: 1.5; }
+.blog-content p .apex-tip { border-bottom: 1px dotted var(--muted); white-space: nowrap; } /* a term never splits across two lines, so its box always sits right under it */
+
+/* Interactive charts (Stage 3). The PNG stays as the fallback if the script cannot run. */
+.chart-figure.is-live > img { display: none; }
+.chart-figure:not(.is-live) .ichart-hint { display: none; }
+.ichart-legend { display: flex; flex-wrap: wrap; gap: 0.35rem 1.1rem; font-size: 0.8rem; color: var(--text); margin-bottom: 0.6rem; }
+.ichart-legend-item { display: inline-flex; align-items: center; gap: 0.45rem; }
+.ichart-legend-key { display: inline-block; flex-shrink: 0; }
+.ichart-legend-key.line { width: 16px; height: 3px; border-radius: 2px; }
+.ichart-legend-key.box { width: 11px; height: 11px; border-radius: 3px; }
+.ichart-plot { position: relative; background: var(--black, #0a0a0a); border: 1px solid var(--border); border-radius: 6px; padding: 10px 6px 2px; }
+.ichart-svg { display: block; width: 100%; height: auto; touch-action: pan-y; }
+.ichart-svg:focus { outline: none; }
+.ichart-svg:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+.ichart-axis { fill: var(--muted); font-size: 11px; font-family: 'Inter', sans-serif; }
+.ichart-row-label { fill: var(--text); font-size: 11px; font-family: 'Inter', sans-serif; }
+.ichart-seg-label { font-size: 10px; font-weight: 700; font-family: 'Inter', sans-serif; pointer-events: none; }
+.ichart-seg { cursor: pointer; outline: none; }
+.ichart-seg:hover rect, .ichart-seg:focus rect { stroke: #ffffff; stroke-width: 1.5; }
+.ichart-tip { position: absolute; z-index: 5; pointer-events: none; min-width: 160px; background: var(--dark); border: 1px solid var(--border); border-radius: 6px; padding: 0.55rem 0.7rem; font-size: 0.78rem; line-height: 1.5; box-shadow: 0 10px 28px rgba(0,0,0,0.55); }
+.ichart-tip[hidden] { display: none; }
+.ichart-tip-title { color: var(--muted); font-size: 0.72rem; margin-bottom: 0.25rem; }
+.ichart-tip-row { display: flex; align-items: center; gap: 0.45rem; white-space: nowrap; }
+.ichart-tip-row strong { color: var(--text); font-weight: 600; }
+.ichart-tip-label { color: #b0b0b0; }
+.ichart-tip-note { color: var(--muted); font-size: 0.72rem; }
+.ichart-tip-key { display: inline-block; width: 12px; height: 3px; border-radius: 2px; flex-shrink: 0; }
+.ichart-table { margin-top: 0.6rem; }
+.ichart-table summary { color: var(--muted); font-size: 0.8rem; cursor: pointer; }
+.ichart-table-scroll { max-height: 320px; overflow: auto; margin-top: 0.5rem; border: 1px solid var(--border); border-radius: 6px; }
+.ichart-table table { width: 100%; border-collapse: collapse; font-size: 0.75rem; }
+.ichart-table caption { text-align: left; color: var(--muted); padding: 0.4rem 0.6rem; }
+.ichart-table th, .ichart-table td { padding: 0.3rem 0.6rem; border-top: 1px solid var(--border); text-align: left; white-space: nowrap; color: #b0b0b0; }
+.ichart-table th { color: var(--text); position: sticky; top: 0; background: var(--dark); }
+</style>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-tab.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon.png" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="shortcut icon" href="../favicon.ico" />
+  <style>
+    /* Reading progress bar: sits under the navbar in this race's signature colour, visible throughout */
+    .reading-progress {
+      position: fixed; top: 64px; left: 0; height: 3px; width: 0;
+      background: #6A3FA0; z-index: 90; /* SIGNATURE COLOUR */
+      transition: width 0.08s linear; will-change: width; pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo" aria-label="Apex by Milla — Home">
+      <img src="../logo.png" alt="Apex by Milla" style="height:48px;width:auto;">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+
+      <!-- ── RACES DROPDOWN ── Add a new <li> inside .nav-races-grid for
+           every new race. Nothing else in the navbar needs to change. -->
+      <li class="nav-races current">
+        <button type="button" class="nav-races-toggle" aria-expanded="false" aria-haspopup="true">
+          Races <span class="nav-chev" aria-hidden="true">▾</span>
+        </button>
+        <div class="nav-races-panel">
+          <div class="nav-races-grid">
+            <a href="australia.html">🇦🇺 Australia</a>
+            <a href="china.html">🇨🇳 China</a>
+            <a href="japan.html">🇯🇵 Japan</a>
+            <a href="miami.html">🇺🇸 Miami</a>
+            <a href="canada.html">🇨🇦 Canada</a>
+            <a href="monaco.html">🇲🇨 Monaco</a>
+            <a href="barcelona.html">🇪🇸 Barcelona</a>
+            <a href="austria.html">🇦🇹 Austria</a>
+            <a href="silverstone.html">🇬🇧 Silverstone</a>
+            <a href="belgium.html">🇧🇪 Belgium</a>
+            <a href="hungary.html" class="active">🇭🇺 Hungary</a>
+          </div>
+        </div>
+      </li>
+      <!-- ── END RACES ── -->
+
+      <li><a href="../apex-index.html">The Apex Index</a></li>
+      <li><a href="../index.html#about">About</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== BLOG HERO ===== -->
+  <div class="blog-hero">
+    <svg class="hero-track" viewBox="0 0 1024 896" preserveAspectRatio="xMidYMid meet" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true" focusable="false">
+      <!-- Hungaroring outline (4,381 m Grand Prix layout), rotated 101 degrees so it sits as wide as the shape allows.
+           Geometry from bacinger/f1-circuits, Copyright (c) 2019-2025 Tomislav Bacinger, MIT License,
+           https://github.com/bacinger/f1-circuits . Stroke uses currentColor so CSS sets the colour. -->
+      <path vector-effect="non-scaling-stroke" d="M321.8,196.8 L484.6,57.5 L531.9,16.2 L540.0,13.2 L547.8,12.0 L555.9,14.3 L561.6,18.9 L565.0,24.5 L566.7,31.3 L566.3,40.7 L563.7,54.3 L555.4,91.8 L546.3,116.2 L534.9,138.0 L520.8,160.3 L506.9,176.7 L494.7,188.7 L362.9,302.6 L355.9,311.4 L351.9,320.5 L350.0,330.1 L351.2,338.3 L352.6,347.3 L356.4,354.9 L361.3,361.5 L366.2,366.3 L373.3,371.1 L383.8,374.3 L389.9,375.1 L398.7,373.7 L407.3,372.8 L479.6,346.9 L492.4,345.2 L502.0,346.3 L509.7,350.1 L519.4,355.0 L528.2,360.5 L604.1,419.4 L741.0,524.3 L762.4,542.5 L780.4,562.4 L799.3,586.5 L804.9,591.8 L810.8,596.0 L817.9,598.1 L826.6,597.5 L962.1,588.2 L972.0,589.3 L981.3,592.2 L990.3,596.7 L998.5,602.5 L1004.4,611.2 L1009.1,621.2 L1012.0,631.3 L1012.0,640.8 L1009.4,652.1 L1004.6,662.5 L996.5,674.7 L984.1,687.8 L974.7,697.0 L963.3,707.7 L950.4,718.9 L930.1,732.1 L840.8,787.7 L832.9,789.6 L827.1,789.6 L821.1,788.0 L816.7,783.4 L812.3,776.4 L808.5,770.7 L804.6,768.1 L796.8,767.0 L787.8,767.1 L687.0,774.1 L673.1,777.1 L667.1,780.1 L661.7,783.2 L656.3,787.9 L652.9,794.1 L647.9,806.1 L629.9,857.6 L623.4,867.8 L617.4,873.8 L611.5,878.8 L602.3,882.3 L594.7,882.7 L585.7,883.3 L576.2,881.4 L566.3,877.6 L476.5,846.5 L460.2,842.9 L449.7,842.0 L438.5,842.8 L427.3,844.9 L334.8,880.9 L321.4,883.6 L312.5,883.0 L304.3,881.8 L296.0,879.0 L287.7,875.5 L280.7,870.3 L274.2,863.0 L191.9,754.3 L115.9,657.0 L91.1,624.1 L88.5,616.7 L88.8,610.4 L90.9,604.7 L94.9,600.1 L100.5,595.9 L172.1,553.5 L182.4,546.4 L223.9,511.5 L229.2,505.0 L233.6,498.3 L236.6,489.7 L237.3,481.8 L234.5,470.6 L228.9,463.1 L222.4,457.3 L216.5,453.5 L208.0,451.1 L199.2,450.5 L190.4,452.6 L183.0,456.1 L101.8,525.1 L85.2,537.4 L77.0,540.4 L66.1,541.7 L53.8,540.8 L42.9,537.5 L34.1,532.1 L25.9,525.9 L19.5,517.5 L14.5,504.7 L12.0,492.1 L12.8,478.9 L17.1,465.7 L24.2,454.5 L34.2,444.7 L321.8,196.8 Z"/>
+    </svg>
+
+    <div class="blog-hero-inner">
+      <a href="../index.html" class="blog-back">← Back to All Races</a>
+      <div class="blog-round reveal">Round 11 · Hungaroring, Hungary · 26 July 2026</div>
+      <h1 class="blog-title reveal reveal-delay-1">Hungarian Grand Prix 2026</h1>
+
+      <p style="color: var(--muted); font-size: 0.95rem; margin-top: 1rem;">
+        Lando Norris wins the Hungarian Grand Prix by 15 seconds, the first race of 2026 not won by Mercedes or Ferrari, as a late Virtual Safety Car shapes the podium behind him and Kimi Antonelli extends his championship lead to 50 points.
+      </p>
+
+      <div class="blog-meta reveal reveal-delay-2">
+        <!-- ✏️ Stage badge. Update the stage label as the project moves on. -->
+        <span class="apex-tip stage-badge" tabindex="0" role="button" aria-label="Stage 3, Technical Deep Dive. What do project stages mean?">Stage 3 · Technical Deep Dive<span class="apex-tip-box" role="tooltip"><span class="apex-tip-term">Project stages</span><span class="apex-tip-def">Apex is built in stages. Each one adds more technical depth to the race reports, so the analysis develops visibly across the season.</span><a class="apex-tip-link" href="../index.html#about">→ About the project</a></span></span>
+        <span>📅 26 July 2026</span>
+        <span>📍 Hungaroring</span>
+        <span>🏁 Round 11 of 22</span>
+        <span>⏱️ 27 min read</span>
+        <span>✍️ Written by Milla</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BLOG CONTENT ===== -->
+  <article class="blog-content">
+
+    <!-- ─────────────────────────────
+         [STAGE 3] · THE SHORT VERSION
+         ✏️ Written LAST, once every other section is final.
+         ───────────────────────────── -->
+    <div class="short-version reveal">
+      <span class="short-version-label">In short:</span>
+      <p>
+        Lando Norris won the 2026 Hungarian Grand Prix from pole by 15.080s, McLaren's first win of the season, on the weekend their first redirected upgrade package arrived. Oscar Piastri led the first half of the race but was hit by a lapped Carlos Sainz after the steering wheel blue lights failed, then retired with a gearbox failure, and the Virtual Safety Car that followed let Red Bull keep Max Verstappen out for second. Kimi Antonelli finished third and extended his championship lead to 50 points, while George Russell recovered from nineteenth to seventh after an anti-stall start.
+      </p>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 1 · RACE OVERVIEW
+         ───────────────────────────────────────────── -->
+    <h2>Race Overview</h2>
+    <p>
+      The Hungaroring is one of the slowest and twistiest circuits on the calendar, and it gave McLaren their first win of 2026. Lando Norris won the Hungarian Grand Prix from pole by 15.080s, ahead of Max Verstappen and Kimi Antonelli, and it was the first race of the season not won by Mercedes or Ferrari, after Mercedes won eight of the first ten rounds and Ferrari won the other two.
+    </p>
+    <p>
+      Norris did not lead for long at the start. Oscar Piastri, who started third, passed Charles Leclerc off the line and then went past Norris into Turn 2, with a cut-back on the exit, so McLaren were still in front, but with Piastri leading. Verstappen also passed Leclerc, and Lewis Hamilton, who started fifth after his <span class="apex-tip" tabindex="0" role="button">grid penalty<span class="apex-tip-box" role="tooltip"><span class="apex-tip-term">Grid Penalty</span><span class="apex-tip-def">Places a driver drops on the starting grid, for a rules breach or for using more power unit elements than allowed.</span><a class="apex-tip-link" href="../apex-index.html#grid-penalty">→ Apex Index</a></span></span>, passed his teammate as well, so Leclerc finished the first lap fifth after starting second. George Russell's start was much worse. His Mercedes went into <span class="apex-tip" tabindex="0" role="button">anti-stall<span class="apex-tip-box" role="tooltip"><span class="apex-tip-term">Anti-stall</span><span class="apex-tip-def">A safety system that opens the clutch when the engine speed drops too low, so the engine does not stall. It saves the car but costs several seconds.</span><a class="apex-tip-link" href="../apex-index.html#anti-stall">→ Apex Index</a></span></span> as the lights went out, and he dropped from sixth on the grid to nineteenth by the end of the first lap.
+    </p>
+    <p>
+      For the first half of the race, Piastri led Norris by around a second. Hamilton was the first of the front-runners to pit, on Lap 13, and Verstappen pitted a lap later, briefly fell behind him, and then passed him into Turn 1 on Lap 16. Piastri and Leclerc pitted on Lap 16 and Norris on Lap 17, all switching to the Hard, while Antonelli stayed out on his Mediums until Lap 22 and led the race during the stops. Piastri was back in front once the stops had cycled through, but when he made his second stop on Lap 33, Norris got clear air for the first time, and his pace on the Hards was enough to come out ahead of Piastri after his own second stop on Lap 39.
+    </p>
+    <p>
+      Piastri's race then fell apart. Shortly after his second stop, Carlos Sainz, who was fighting Fernando Alonso for fourteenth while being lapped, cut back across the track between Turn 2 and Turn 3 and hit the front of the McLaren. The <span class="apex-tip" tabindex="0" role="button">steering wheel blue lights<span class="apex-tip-box" role="tooltip"><span class="apex-tip-term">Blue Flag Lights</span><span class="apex-tip-def">Lights on the steering wheel and on track-side panels that warn a driver they are about to be lapped, worked out from GPS data.</span><a class="apex-tip-link" href="../apex-index.html#blue-lights">→ Apex Index</a></span></span>, which warn drivers when they are about to be lapped, had been switched off early in the race because of a GPS problem, and Sainz said he had no idea Piastri was there. Sainz was given a <span class="apex-tip" tabindex="0" role="button">five-second penalty<span class="apex-tip-box" role="tooltip"><span class="apex-tip-term">Time Penalty</span><span class="apex-tip-def">Seconds added to a driver's race time by the stewards, served at a pit stop or added at the end.</span><a class="apex-tip-link" href="../apex-index.html#time-penalty">→ Apex Index</a></span></span>, but Piastri lost the time he needed to stay in the fight with Norris, and on Lap 56 he stopped near Turn 3 with a gearbox failure.
+    </p>
+    <p>
+      By then Norris was already leading. Antonelli had tried to make a one-stop strategy work and led from Lap 41, but Norris caught him on newer Hards and passed him for the lead on Lap 46, and Mercedes eventually gave up on the one-stop and pitted Antonelli on Lap 53. Piastri's stoppage brought out a <span class="apex-tip" tabindex="0" role="button">Virtual Safety Car<span class="apex-tip-box" role="tooltip"><span class="apex-tip-term">Virtual Safety Car (VSC)</span><span class="apex-tip-def">A neutralisation where every driver holds a set delta time instead of following a physical Safety Car.</span><a class="apex-tip-link" href="../apex-index.html#vsc">→ Apex Index</a></span></span> on Lap 56, and Norris, Hamilton, and Leclerc all pitted under it for Softs. Red Bull kept Verstappen out on the Softs he had fitted on Lap 41, which moved him up to second, and he held that place to the flag. Hamilton came out of the pits ahead of Antonelli but had to give the place back because replays showed Antonelli had reached the white line at the end of the pit straight first, and Antonelli then held off both Ferraris for the rest of the race, on Hards against their Softs. Hamilton was also given a five-second penalty for speeding in the pit lane, which dropped him behind Leclerc to fifth, while Isack Hadjar was sixth and Russell recovered to seventh.
+    </p>
+
+
+    <!-- ─────────────────────────────
+         [STAGE 3] · PRACTICE
+         Normal weekend, so FP1, FP2, and FP3.
+         ───────────────────────────── -->
+    <h2>Practice</h2>
+
+    <h3>FP1</h3>
+    <p>
+      Ferrari set the early pace in Hungary. Leclerc topped the first session with a 1:19.075, 0.484s ahead of Verstappen and 0.543s ahead of Hamilton, with Hadjar fourth and Russell fifth. The track was dusty at the start of the session and cleared up quickly as more cars ran, and Red Bull's Pierre Waché said afterwards that "The grip is very low, it's dusty and very bumpy." Five teams ran a different driver in at least one car, including Fred Vesti in Antonelli's Mercedes, who finished seventh, and Leonardo Fornaroli in Piastri's McLaren, who tested the rotating rear wing that McLaren first ran in Austria.
+    </p>
+    <p>
+      The session was stopped with just over 20 minutes left, after the left-rear suspension on Lance Stroll's Aston Martin failed on the exit of Turn 3 and spun him, which meant he also missed FP2. Leclerc's session ended early too. Something broke on his Ferrari at Turn 13 after he had set the fastest time, and he coasted to a stop at the pit lane entry. Verstappen was not happy with his car either, complaining that "the downshifts are horrendous," while Norris, running McLaren's new upgrade package, was only eleventh, 1.949s off the pace.
+    </p>
+
+    <h3>FP2</h3>
+    <p>
+      Hamilton was fastest in FP2 with a 1:18.729, 0.148s ahead of Leclerc, so Ferrari finished Friday first and second. Norris improved to third, 0.499s back, with Verstappen fourth and Russell fifth. The wind picked up during the session, which made the balance of the cars harder to manage, and the track temperature stayed between 28°C and 34°C, much cooler than it would be for the rest of the weekend.
+    </p>
+    <p>
+      Franco Colapinto brought out a red flag when he lost the rear of his Alpine at Turn 14, the final corner, and spun backwards into the barrier, which left him with only 11 laps. The stoppage also forced Antonelli to abort a flying lap, and he finished thirteenth, 1.964s back. Mercedes struggled in general, with Russell describing his car as "dreadful," although he also said that "our long run looked more competitive." Pierre Gasly had a difficult session as well, saying that "It just feels broken in Turn 12." Piastri, in his first session of the weekend, was eighth, and McLaren said he ran the <span class="apex-tip" tabindex="0" role="button">old floor specification<span class="apex-tip-box" role="tooltip"><span class="apex-tip-term">Floor</span><span class="apex-tip-def">The underside of the car, which produces most of its downforce through the shaped tunnels underneath.</span><a class="apex-tip-link" href="../apex-index.html#floor">→ Apex Index</a></span></span> while Norris ran the new parts.
+    </p>
+    <p>
+      Pirelli said after Friday that the Soft was around 0.8s quicker than the Medium, and that six teams had kept both of their sets of Hards for the race, which suggested the teams did not yet agree on the best strategy.
+    </p>
+
+    <h3>FP3</h3>
+    <p>
+      Norris was fastest in FP3 with a 1:17.939, 0.117s ahead of Hamilton and 0.129s ahead of Antonelli, with Leclerc fourth and Piastri fifth. It was the first sign that McLaren's upgrade was working, and the track temperature had risen to between 49°C and 55°C, much closer to the conditions expected for the race.
+    </p>
+    <p>
+      The third red flag of the weekend came when Sergio Pérez's Cadillac lost power as he left the pit lane and stopped approaching Turn 2. Pérez said, "It looks like the brakes are on fire at the back," and he completed only one lap. Arvid Lindblad only managed six laps, because his Racing Bulls spent most of the session on jacks with a power unit issue, after the team had already broken the overnight curfew to fix a similar problem on Liam Lawson's car. Antonelli also asked the team to check his floor after hitting the kerb at Turn 4.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 2 · STARTING GRID & QUALIFYING
+         Grid drops: Hamilton 3 places (impeding Piastri, P2 to P5), Antonelli 3 places (yellow flag, P4 to P7), Pérez pit lane start.
+         ───────────────────────────────────────────── -->
+    <h2>Starting Grid & Qualifying</h2>
+    <p>
+      Norris took pole with a 1:17.207 on his final Q3 lap, only 0.012s ahead of Hamilton, with Leclerc third, 0.238s back, and Antonelli fourth. Piastri was fifth, 0.477s off his teammate, ahead of Verstappen, Russell, Hadjar, Lindblad, and Nico Hulkenberg. Norris credited the upgrade straight away, saying, "the team has done a brilliant job with the new upgrades," while Hamilton said, "I didn't quite have the grip I needed on my final Q3 run."
+    </p>
+
+    <!-- POLE-FIGHT: Norris vs Hamilton telemetry paragraph and chart go here once the OpenF1 data lands -->
+
+    <p>
+      Verstappen had a difficult session and said, "The car was oversteering a lot and each lap it wasn't improving." He then spun at the final corner at the end of Q3, which brought out yellow flags while other drivers were still on their final laps. Antonelli lifted for the yellow, but the stewards decided he had not slowed enough. The telemetry showed he lifted 16 metres earlier than on his previous push lap and was 14 km/h slower entering the yellow flag sector, but because he braked less, he was 3 km/h faster passing the incident, and his mini sector was only 0.03s slower than his best. Antonelli said, "I lifted on the final corner because of the yellow flag for Max (Verstappen) and I lost just under two tenths of a second." The guideline penalty was five grid places, but the stewards reduced it to three because he did slow down and had limited time to react.
+    </p>
+    <p>
+      Hamilton was also given a three-place grid penalty, for impeding Piastri at Turn 1 at the end of Q3, and Piastri said that "we had more in us" before being held up. Russell's session ended with a water leak on his final lap, and he said, "we stopped as a precaution once we'd finished our effort," which meant Mercedes had to change a component before the race. Further down the order, Lawson missed Q3 in eleventh after locking up on his first lap, and Alonso reached Q2 for Aston Martin on the first weekend of their new upgrade package.
+    </p>
+    <p>
+      Because of the two penalties, the starting grid was very different from the qualifying order. Leclerc moved up to second, Piastri to third, and Verstappen to fourth, with Hamilton fifth, Russell sixth, and Antonelli seventh. Pérez <span class="apex-tip" tabindex="0" role="button">started from the pit lane<span class="apex-tip-box" role="tooltip"><span class="apex-tip-term">Pit Lane Start</span><span class="apex-tip-def">Starting the race from the pit lane instead of a grid slot, usually after changes made under parc fermé.</span><a class="apex-tip-link" href="../apex-index.html#pit-lane-start">→ Apex Index</a></span></span>, because Cadillac changed the setup of his car while it was under <span class="apex-tip" tabindex="0" role="button">parc fermé<span class="apex-tip-box" role="tooltip"><span class="apex-tip-term">Parc Fermé</span><span class="apex-tip-def">The rule that stops teams changing setup or major parts between the start of qualifying and the race without FIA permission.</span><a class="apex-tip-link" href="../apex-index.html#parc-ferme">→ Apex Index</a></span></span> conditions.
+    </p>
+
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 3 · TECHNICAL BREAKDOWN
+         ───────────────────────────────────────────── -->
+    <h2>Technical Breakdown</h2>
+    <p>
+      The Hungaroring measures 4.381 km and has 14 corners, with one main straight, the pit straight into Turn 1. In the telemetry from Norris's pole lap, the throttle was fully open for around 46% of the lap, compared with around 65% on the fastest race laps at Spa a week earlier. Because of this, <span class="apex-tip" tabindex="0" role="button">energy deployment<span class="apex-tip-box" role="tooltip"><span class="apex-tip-term">ERS (Energy Recovery System)</span><span class="apex-tip-def">The battery, control electronics, and MGU-K that recover energy under braking and deploy it as extra power.</span><a class="apex-tip-link" href="../apex-index.html#ers">→ Apex Index</a></span></span> was expected to matter less than it did in Belgium, and the weekend was decided more by balance, traction out of the slow corners, and how well each car looked after its rear tyres in the heat. Turn 1 and Turn 12 were also resurfaced before the weekend.
+    </p>
+
+    <!-- Regulation Refinements: only if the FIA changed something for this race. Nothing found so far, so no heading. -->
+
+    <h3>Compound Choice</h3>
+    <div class="compound-row">
+      <span class="compound-pill compound-hard"><span class="compound-dot"></span>Hard C3</span>
+      <span class="compound-pill compound-medium"><span class="compound-dot"></span>Medium C4</span>
+      <span class="compound-pill compound-soft"><span class="compound-dot"></span>Soft C5</span>
+    </div>
+    <p>
+      Pirelli brought the C3, C4, and C5 as the Hard, Medium, and Soft, the three softest compounds in the range and the same selection as in 2025. Each driver had two sets of Hards, three sets of Mediums, and eight sets of Softs, and with a dry race, every driver had to use at least two different compounds. Pirelli said before the weekend that "C3, C4 and C5 are the ideal selection for a slow track where traction and braking stability are crucial," and that track temperatures at the Hungaroring "are typically the highest recorded throughout the season," so <span class="apex-tip" tabindex="0" role="button">thermal degradation<span class="apex-tip-box" role="tooltip"><span class="apex-tip-term">Thermal Degradation</span><span class="apex-tip-def">Loss of tyre grip caused by the rubber overheating beyond its working window.</span><a class="apex-tip-link" href="../apex-index.html#thermal-degradation">→ Apex Index</a></span></span>, especially on the <span class="apex-tip" tabindex="0" role="button">rear axle<span class="apex-tip-box" role="tooltip"><span class="apex-tip-term">Rear Axle</span><span class="apex-tip-def">The line through the two rear wheels, where the power unit puts its drive down to the road.</span><a class="apex-tip-link" href="../apex-index.html#rear-axle">→ Apex Index</a></span></span>, was the main concern.
+    </p>
+    <p>
+      That concern grew during the weekend. After qualifying, Pirelli's Dario Marrafuschi said, "Degradation, which has been higher than expected, has effectively brought the two strategic options into line," meaning a one-stop and a two-stop were expected to take a similar total time. The race was run in an air temperature of between 30°C and 32°C and a track temperature of between 44°C and 53°C, which matched Pirelli's warning about the heat.
+    </p>
+
+    <h3>Tyre Strategy</h3>
+    <p>
+      Charles Leclerc, Lewis Hamilton, Gabriel Bortoleto, Fernando Alonso, Carlos Sainz, and Lance Stroll started on the Soft C5, while everyone else started on the Medium C4. Leclerc's Softs were a used set, three laps old, and F1.com's report said Ferrari's Soft start was meant to help them gain places on the opening lap, which did not work, since Leclerc lost three places. Twelve drivers made two stops, five made three, and only Bortoleto and Lindblad made one, with Lindblad running 49 laps on a single set of Hards, the longest Hard stint of the race.
+    </p>
+    <p>
+      The front-runners split into two approaches. Ferrari ran Soft, Hard, Hard, and Soft with both cars, and Marrafuschi said, "Ferrari demonstrated particular effectiveness in extracting performance from the red-marked tyre." Mercedes built their race around the Hard instead, and Antonelli ran the Medium, then a <span class="apex-tip" tabindex="0" role="button">long stint<span class="apex-tip-box" role="tooltip"><span class="apex-tip-term">Tyre Stint</span><span class="apex-tip-def">The period a driver runs one set of tyres before pitting. A long stint stretches close to the limit of the tyre's life.</span><a class="apex-tip-link" href="../apex-index.html#stint">→ Apex Index</a></span></span> on the Hard, aiming for one stop. But, his rear tyres did not last, and he said they were "too much on the limit," so Mercedes pitted him again on Lap 53 for a new set of Hards. Hadjar said his first stint on the Medium "probably cost us getting anything more out of today," and his pace improved once he switched to the Hard.
+    </p>
+    <p>
+      The Virtual Safety Car on Lap 56 decided the final order. Norris, Hamilton, Leclerc, Alexander Albon, Sainz, and Gasly all pitted under it, which cost them less time in the pit lane relative to the cars on track, and the three front-runners all fitted Softs that were three laps old. Russell had pitted just over a lap before it was called, on Lap 54, and Antonelli on Lap 53, so both paid for full green-flag stops. Red Bull did the opposite and kept Verstappen out on the Softs he fitted on Lap 41, which were already three laps old when they went on, so he ran the last 29 laps of the race on the same set.
+    </p>
+
+    <figure class="chart-figure reveal" data-chart="race-tyre-strategy">
+      <img src="../images/hungary/race-tyre-strategy.png" alt="Race tyre strategy chart for the 2026 Hungarian Grand Prix" loading="lazy" width="1600" height="1224" />
+      <figcaption>Race tyre strategy in finishing order. <span class="ichart-hint">Hover or tap the chart for the details.</span></figcaption>
+    </figure>
+
+    <h3>Aerodynamics & Setup</h3>
+    <p>
+      The Hungaroring needs as much downforce as possible, so the teams focused on balance and rear grip rather than straight-line speed. McLaren brought their first redirected upgrade package, and Andrea Stella said after qualifying that "The new upgrades we brought to the track performed exactly as we had anticipated." After the race he went further, saying, "The performance step we saw this weekend can be entirely ascribed to the upgrades," and Norris said, "The car was beautiful to drive and I felt very confident."
+    </p>
+    <p>
+      The telemetry from the two McLarens' best qualifying laps shows where that confidence was worth the most. Norris and Piastri reached almost the same top speed, 331 km/h and 330 km/h, and the gap between them was small for most of the lap. Most of the 0.477s difference came between around 3,250 m and 3,750 m into the lap, in the slower corners near the end, where Norris carried around 5 to 6 km/h more minimum speed. The data is only sampled around four times a second, so these numbers are approximate, but they suggest Norris had more confidence in the rear of the car in the low-speed corners than Piastri, who had less running on the new parts after missing FP1.
+    </p>
+    <p>
+      Red Bull struggled with balance all weekend. Laurent Mekies said, "I think we never managed to give Max and Isack a car they could push with," and both drivers complained over the radio about gear shifts, balance, and deployment. Aston Martin's new package worked better, and Adrian Newey said, "It's clear we've taken a very encouraging first step forward with the upgrade," while Stroll called it "the most encouraging upgrade we've had in a long time." Racing Bulls brought Lindblad's upgrade to Lawson's car, as planned after Spa, and Lawson said "the car just felt super strong throughout" on his way to eighth.
+    </p>
+
+    <figure class="chart-figure reveal" data-chart="quali-telemetry">
+      <img src="../images/hungary/qualifying-telemetry-nor-pia.png" alt="Speed and throttle telemetry comparing Norris and Piastri on their best qualifying laps" loading="lazy" width="1600" height="1000" />
+      <figcaption>Speed and throttle on Norris's and Piastri's best qualifying laps, both with the new McLaren upgrade package, Piastri with less running on it after missing FP1. The data is sampled around four times a second, so minimum corner speeds are approximate. <span class="ichart-hint">Hover or tap the chart for the details.</span></figcaption>
+    </figure>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 4 · PACE & PERFORMANCE
+         All numbers verified from formula1.com (Race Result, Fastest Laps, Pit Stop Summary). Antonelli's second stop is missing from F1.com, time from OpenF1.
+         ───────────────────────────────────────────── -->
+    <h2>Pace &amp; Performance</h2>
+    <p>
+      The fastest lap of the race went to Leclerc, with a 1:22.000 on Lap 58, the second lap of his final stint on Softs. Hamilton was second fastest with a 1:22.300 on Lap 59, and Antonelli third with a 1:22.415 on Lap 58, which is notable because he set it on the Hard while the two Ferraris were on Softs. Norris's best was a 1:22.491 on Lap 64, and Verstappen's was only a 1:23.433, the slowest of the top five, which fits with his comment after the race that "We were still struggling with the same things we had in Qualifying."
+    </p>
+
+    <div class="pace-table-wrapper">
+      <table class="pace-table">
+        <thead>
+          <tr>
+            <th>Pos.</th>
+            <th>Driver</th>
+            <th>Fastest lap</th>
+            <th>On lap</th>
+            <th>Pit stops (lap)</th>
+            <th>Stop times</th>
+            <th>Gap at flag</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>P1</td><td><strong>Norris</strong> (McLaren)</td><td>1:22.491</td><td>64</td><td>17, 39, 56</td><td>22.147s, 22.112s, 21.878s</td><td>WINNER</td></tr>
+          <tr><td>P2</td><td><strong>Verstappen</strong> (Red Bull)</td><td>1:23.433</td><td>66</td><td>14, 41</td><td>21.625s, 22.015s</td><td>+15.080s</td></tr>
+          <tr><td>P3</td><td><strong>Antonelli</strong> (Mercedes)</td><td>1:22.415</td><td>58</td><td>22, 53</td><td>21.326s, 21.300s&dagger;</td><td>+18.728s</td></tr>
+          <tr><td>P4</td><td><strong>Leclerc</strong> (Ferrari)</td><td>1:22.000</td><td>58</td><td>16, 36, 56</td><td>21.931s, 21.763s, 21.945s</td><td>+23.840s</td></tr>
+          <tr><td>P5</td><td><strong>Hamilton</strong> (Ferrari)</td><td>1:22.300</td><td>59</td><td>13, 30, 56</td><td>21.748s, 21.693s, 22.420s</td><td>+24.540s*</td></tr>
+          <tr><td>P6</td><td><strong>Hadjar</strong> (Red Bull)</td><td>1:23.218</td><td>45</td><td>19, 42</td><td>21.822s, 22.211s</td><td>+55.488s</td></tr>
+          <tr><td>P7</td><td><strong>Russell</strong> (Mercedes)</td><td>1:22.589</td><td>58</td><td>27, 54</td><td>22.247s, 22.019s</td><td>+57.503s</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="penalty-footnote">* Includes Hamilton's five-second penalty for speeding in the pit lane. &dagger; Antonelli's second stop is missing from the F1.com pit stop summary, so this time is from OpenF1. Stop times are total pit lane time.</p>
+
+    <p>
+      For the first two stints, the two McLarens had very similar pace. From Lap 2 to Lap 12, Norris's typical green-flag lap was a 1:25.307 and Piastri's a 1:25.339, and from Lap 19 to Lap 32, Piastri was actually slightly quicker, at 1:25.040 against 1:25.156 for Norris. The difference came in the third stint. Between Lap 42 and Lap 52, Norris's typical lap was a 1:23.780, 0.593s quicker than Piastri, who had just been hit by Sainz, and around a second a lap quicker than Antonelli, whose Hards were 17 laps older. This is why Norris was able to catch Antonelli so quickly and pass him for the lead on Lap 46, and he said afterwards that "My pace today was probably some of the best pace I've ever had."
+    </p>
+    <p>
+      The last 13 laps show why nobody could challenge Norris after the VSC. From Lap 58 to the flag, Norris and Leclerc both ran a typical lap of 1:22.93, but Leclerc was stuck behind Antonelli, whose new Hards were only around 0.1s a lap slower at 1:23.050. Antonelli said, "It was very difficult to overtake, even when we had significantly more pace than the cars ahead," and the same applied to the cars behind him. Verstappen was the slowest of the top five over this period, at 1:23.667, on Softs that were more than 15 laps old, and his gap to Norris grew from 5.4s on Lap 57 to 15.080s at the flag. But, with Hamilton 8.6s behind him on Lap 57 and the Ferraris then stuck behind Antonelli, he had more than enough margin to keep second.
+    </p>
+
+    <figure class="chart-figure reveal" data-chart="race-lap-times">
+      <img src="../images/hungary/race-lap-times.png" alt="Lap time chart for the top five finishers of the 2026 Hungarian Grand Prix" loading="lazy" width="1600" height="900" />
+      <figcaption>Lap times for the top five finishers. Lap 1, pit laps, and laps run under the VSC are removed. <span class="ichart-hint">Hover or tap the chart for the details.</span></figcaption>
+    </figure>
+
+    <figure class="chart-figure reveal" data-chart="race-gap-to-leader">
+      <img src="../images/hungary/race-gap-to-leader.png" alt="Gap to leader chart for the top five finishers of the 2026 Hungarian Grand Prix" loading="lazy" width="1600" height="900" />
+      <figcaption>Gap to the race leader at the end of each lap, on the road, so before Hamilton's five-second penalty. The grey band marks the VSC. <span class="ichart-hint">Hover or tap the chart for the details.</span></figcaption>
+    </figure>
+
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 5 · ENGINEERING QUESTION OF THE RACE
+         Theories in first person ("my theory is that..."), no Verdict label. Topic chosen by Milla: Russell's anti-stall start.
+         ───────────────────────────────────────────── -->
+    <h2>Engineering Question of the Race</h2>
+    <h3>"Why did Russell's Mercedes go into anti-stall at the start?"</h3>
+    <p>
+      Russell started sixth and was nineteenth by the end of the first lap, and Mercedes have explained what happened in some detail. Bradley Lord said the drivers "hold what are called their <span class="apex-tip" tabindex="0" role="button">wait revs<span class="apex-tip-box" role="tooltip"><span class="apex-tip-term">Wait Revs</span><span class="apex-tip-def">The engine speed a driver holds on the grid while waiting for the start lights to go out, ready for the launch.</span><a class="apex-tip-link" href="../apex-index.html#wait-revs">→ Apex Index</a></span></span>, so the engine's RPM, at a specific level" while they wait for the lights, but on Russell's car the engine speed kept rising beyond what his throttle was asking for, until "The revs hit the rev limiter at the maximum RPM that the engine allows at that point." Russell tried to bring the revs back down, and "as he was lifting right off the throttle to under 10% of throttle demand, the lights went out." Lord's conclusion was that "He made a start with effectively much too little throttle through no fault of his own." On the radio, Russell asked, "What happened there?" and his engineer replied, "Anti-stall."
+    </p>
+    <p>
+      Anti-stall is a safety system that protects the engine at low speed. If the engine speed drops too low while the clutch is engaged, the system opens the clutch so the engine does not stall, and the driver then has to get the car moving again. That protects the car from stalling on the grid, which would be much more dangerous, but it costs several seconds, and at the start of a race that means losing places to most of the field. In Russell's case, the very low throttle at the moment the lights went out meant the engine could not hold its revs once the clutch was released, which is what triggered it.
+    </p>
+    <p>
+      What is confirmed is the sequence of the revs rising to the limiter, Russell lifting to under 10% throttle, and the anti-stall triggering, and that Mercedes say the driver was not at fault. Toto Wolff described it the same way, saying Russell "gave about 10% throttle and the whole thing revved maximum," and added, "His problem at the start was fully on us as a team and it isn't good enough." What Mercedes have not explained is why the revs kept rising in the first place.
+    </p>
+    <p>
+      My theory is that the problem was in how the engine speed is controlled while the car waits on the grid, rather than in Russell's driving. The wait revs are held by the engine's control system, so if that control did not respond to his throttle input, lifting off was the only thing he could do to stop the revs climbing, and that left him with almost no throttle exactly when he needed the most. Russell also had a water leak in qualifying that needed a component change, but Mercedes have not linked the two problems, so I would not connect them without more information.
+    </p>
+    <p>
+      The cost was significant. Russell finished seventh, 2.015s behind Hadjar, and Lord called it an "incredible recovery drive," but he also lost the chance to fight for the podium, and he is now 59 points behind Antonelli in the championship.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 6 · KEY INSIGHT (HIGHLIGHT BOX)
+         ───────────────────────────────────────────── -->
+    <div class="highlight-box reveal">
+      <p>
+        💡 "We didn't have blue lights on the steering" – Carlos Sainz. The steering wheel blue lights rely on GPS data, and after a communication fault sent false warnings early in the race, the system was switched off, and the blue light panels around the track stopped showing car numbers, so Sainz had only the waved blue flags to tell him Piastri was about to lap him when the two collided.
+      </p>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 7 · RACE RESULT — TOP 10
+         Verified from formula1.com. Hamilton's 5s pit lane speeding penalty dropped him from P4 to P5.
+         ───────────────────────────────────────────── -->
+    <h2>Race Result — Top 10</h2>
+    <div class="driver-grid reveal">
+      <div class="driver-card">
+        <div class="driver-pos">P1</div>
+        <div class="driver-name">Lando Norris</div>
+        <div class="driver-team">McLaren</div>
+        <div class="driver-result"><span class="driver-gap">WINNER</span><span class="driver-points">25 pts</span></div>
+      </div>
+      <div class="driver-card">
+        <div class="driver-pos">P2</div>
+        <div class="driver-name">Max Verstappen</div>
+        <div class="driver-team">Red Bull</div>
+        <div class="driver-result"><span class="driver-gap">+15.080s</span><span class="driver-points">18 pts</span></div>
+      </div>
+      <div class="driver-card">
+        <div class="driver-pos">P3</div>
+        <div class="driver-name">Kimi Antonelli</div>
+        <div class="driver-team">Mercedes</div>
+        <div class="driver-result"><span class="driver-gap">+18.728s</span><span class="driver-points">15 pts</span></div>
+      </div>
+      <div class="driver-card">
+        <div class="driver-pos">P4</div>
+        <div class="driver-name">Charles Leclerc</div>
+        <div class="driver-team">Ferrari</div>
+        <div class="driver-result"><span class="driver-gap">+23.840s</span><span class="driver-points">12 pts</span></div>
+      </div>
+      <div class="driver-card">
+        <div class="driver-pos">P5</div>
+        <div class="driver-name">Lewis Hamilton</div>
+        <div class="driver-team">Ferrari</div>
+        <div class="driver-result"><span class="driver-gap">+24.540s*</span><span class="driver-points">10 pts</span></div>
+      </div>
+      <div class="driver-card">
+        <div class="driver-pos">P6</div>
+        <div class="driver-name">Isack Hadjar</div>
+        <div class="driver-team">Red Bull</div>
+        <div class="driver-result"><span class="driver-gap">+55.488s</span><span class="driver-points">8 pts</span></div>
+      </div>
+      <div class="driver-card">
+        <div class="driver-pos">P7</div>
+        <div class="driver-name">George Russell</div>
+        <div class="driver-team">Mercedes</div>
+        <div class="driver-result"><span class="driver-gap">+57.503s</span><span class="driver-points">6 pts</span></div>
+      </div>
+      <div class="driver-card">
+        <div class="driver-pos">P8</div>
+        <div class="driver-name">Liam Lawson</div>
+        <div class="driver-team">Racing Bulls</div>
+        <div class="driver-result"><span class="driver-gap">+1 lap</span><span class="driver-points">4 pts</span></div>
+      </div>
+      <div class="driver-card">
+        <div class="driver-pos">P9</div>
+        <div class="driver-name">Nico Hulkenberg</div>
+        <div class="driver-team">Audi</div>
+        <div class="driver-result"><span class="driver-gap">+1 lap</span><span class="driver-points">2 pts</span></div>
+      </div>
+      <div class="driver-card">
+        <div class="driver-pos">P10</div>
+        <div class="driver-name">Arvid Lindblad</div>
+        <div class="driver-team">Racing Bulls</div>
+        <div class="driver-result"><span class="driver-gap">+1 lap</span><span class="driver-points">1 pt</span></div>
+      </div>
+    </div>
+    <p class="penalty-footnote">* Includes a five-second penalty for speeding in the pit lane, which dropped Hamilton from fourth to fifth.</p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 8 · DNF / DNS
+         Piastri stopped on track near Turn 3 after 55 laps (VSC), so lap 56. Pérez (48 laps) came into the pits. Bottas classified 13 laps, no yellow, most likely the garage.
+         ───────────────────────────────────────────── -->
+    <h2>DNF / DNS</h2>
+    <div class="driver-grid reveal">
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">Oscar Piastri</div>
+        <div class="driver-team">McLaren</div>
+        <div class="dnf-reason">Retired lap 56, gearbox failure</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">Sergio Pérez</div>
+        <div class="driver-team">Cadillac</div>
+        <div class="dnf-reason">Retired lap 48, front suspension issue</div>
+      </div>
+      <div class="driver-card dnf-card">
+        <div class="dnf-pos">DNF</div>
+        <div class="driver-name">Valtteri Bottas</div>
+        <div class="driver-team">Cadillac</div>
+        <div class="dnf-reason">Retired lap 13, overheating brakes</div>
+      </div>
+    </div>
+
+
+    <!-- ─────────────────────────────
+         [STAGE 3] · DRIVER OF THE DAY
+         Milla's pick is Russell. Fan vote: Verstappen 18.9%, Norris 17.1%, Antonelli 11.2%, Russell 11.0%, Piastri 8.9%.
+         ───────────────────────────── -->
+    <div class="dotd-card reveal">
+      <span class="dotd-label">⭐ Driver of the Day</span>
+      <div class="dotd-name">George Russell</div>
+      <div class="dotd-team">Mercedes</div>
+      <p>
+        My pick is Russell, which is different from the official fan vote, where Verstappen won with 18.9% and Russell was fourth on 11.0%. Russell started sixth, dropped to nineteenth on the opening lap after the anti-stall, which was not his fault, and still finished seventh, only 2.015s behind Hadjar. He was in traffic for most of the race, passing cars one by one in the first stint, and he was also unlucky with the timing of the VSC, which came just over a lap after his second stop. Verstappen's second place was impressive in a car he described as oversteering all weekend, but he started fourth, and second place came mainly from Red Bull's decision not to pit him under the VSC, while Russell gained twelve places from where he was after the first lap.
+      </p>
+    </div>
+
+    <h2>Key Takeaways</h2>
+    <p>
+      Antonelli's third place extends his championship lead to 50 points over Hamilton, with Russell 59 points behind, going into the summer break. Antonelli called it "big damage limitation," and Wolff was open about the weekend, saying, "the prevailing feeling is that we should have done better," after Antonelli missed FP1, the team did not get the setup right, and Russell's race was lost at the start. Mercedes still lead Ferrari by 72 points in the Teams' Championship.
+    </p>
+    <p>
+      McLaren's win is the clearest result of an upgrade so far this season. Their first redirected package arrived in Hungary, and within one weekend Norris went from eleventh in FP1 to pole and a 15-second win. The question now is whether that step was specific to a slow, high-downforce circuit like the Hungaroring, or whether it carries over to faster tracks. Gearbox reliability is also a concern, since Piastri's retirement came from an apparent gearbox failure.
+    </p>
+    <p>
+      Ferrari were fastest on Friday and left Hungary with fourth and fifth. Fred Vasseur said, "Everything went wrong, but for sure we have to do a much better job in some way," pointing to the start, Hamilton's pit lane penalty, and losing time in the stops, saying that "at each time that we are doing a pit stop, we are losing our position for 0.2 or 0.3 seconds." Red Bull's result was the opposite, with a car that Mekies admitted was difficult all weekend turned into second place by the VSC call.
+    </p>
+    <p>
+      In the midfield, Racing Bulls scored with both cars, with Lawson eighth and Lindblad tenth for his sixth points finish in a row, and Hulkenberg scored his first points of the season in ninth. Aston Martin's upgrade did not score points, but Stroll and Alonso finished thirteenth and fourteenth, and Alonso said the car performed well in the race.
+    </p>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 9 · RACE ENGINEER'S VIEW
+         Third person and observational, never "I would have...". Vary the opening and closing.
+         ───────────────────────────────────────────── -->
+    <div class="engineer-box">
+      <span class="engineer-label">🎧 Race Engineer's View</span>
+      <p>
+        The VSC on Lap 56 put Red Bull in a difficult position with Verstappen. He was on Softs that had already done 14 laps, plus the three they had done before they were fitted, and the cars around him were about to stop for fresher tyres at a reduced cost. Pitting would have given him new rubber for the last 14 laps, but it would most likely have put him back behind Antonelli and both Ferraris, at a circuit where Antonelli said it was very difficult to overtake even with a big pace advantage. By staying out, Red Bull traded tyre life for track position, and the numbers show why it worked. Verstappen lost around 0.7s a lap to Norris in the final stint, but the gap behind him to Hamilton was already 8.6s on Lap 57, and the Ferraris then spent the rest of the race stuck behind Antonelli. Mekies admitted that "there have been a number of quite spicy strategy calls made by the guys today."
+      </p>
+      <p style="margin-top: 1rem;">
+        Mercedes' decision with Antonelli is the other side of the same VSC. He had run a long middle stint on the Hard, trying to make one stop work, and when the rear tyres went past their limit, Mercedes pitted him on Lap 53, three laps before Piastri stopped. A later stop would have meant losing more time on worn tyres with no guarantee of a neutralisation, so the call itself was reasonable, but it meant he paid for a full green-flag stop while the Ferraris stopped under the VSC. Wolff said, "We were unlucky with the VSC again, that could have been a P2." Antonelli still kept third, which shows how much track position was worth around the Hungaroring, since a car on new Hards was able to hold off two cars on Softs for the last 13 laps.
+      </p>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────
+         SECTION 10 · LOOKING AHEAD
+         ───────────────────────────────────────────── -->
+    <h2>Looking Ahead</h2>
+    <p>
+      Hungary was the last race before the summer break, and Formula 1 returns at Zandvoort for the Dutch Grand Prix, Round 12, from 21 to 23 August. It is a Sprint weekend, so the teams will have only one practice session to set up their cars before Sprint Qualifying, which makes it harder for anyone bringing new parts to understand them before they count.
+    </p>
+    <p>
+      The main question is whether McLaren's step carries over. Zandvoort is faster than the Hungaroring, but it still has a lot of medium and high-speed corners where downforce matters, so it should show whether the upgrade is a general improvement or something that suited a slow circuit. Aston Martin are also expecting Honda's power unit update at Zandvoort, after Alonso said Hungary was a good baseline for it, and Zandvoort is Verstappen's home race, at a time when Red Bull are still trying to understand their car's balance.
+    </p>
+    <p>
+      In the championship, Antonelli goes into the break 50 points ahead of Hamilton, with eleven races left. He said "the second half is going to be hard," and with McLaren now able to win, Ferrari fastest on Friday in Hungary, and Russell 59 points back after another difficult weekend, the gap is large but not yet decisive.
+    </p>
+
+    <!-- ===== SOURCES SECTION ===== -->
+    <section class="sources-section reveal">
+      <h2 class="sources-title">Sources</h2>
+      <p class="sources-subtitle">Primary research used for this race report.</p>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Official Race Data</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/results/2026/races/1291/hungary/race-result" target="_blank" rel="noopener">Formula1.com — 2026 Hungarian Grand Prix Race Result</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1291/hungary/fastest-laps" target="_blank" rel="noopener">Formula1.com — Fastest Laps</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1291/hungary/pit-stop-summary" target="_blank" rel="noopener">Formula1.com — Pit Stop Summary</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1291/hungary/starting-grid" target="_blank" rel="noopener">Formula1.com — Starting Grid</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1291/hungary/qualifying" target="_blank" rel="noopener">Formula1.com — Qualifying</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1291/hungary/practice/1" target="_blank" rel="noopener">Formula1.com — Practice 1</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1291/hungary/practice/2" target="_blank" rel="noopener">Formula1.com — Practice 2</a></li>
+          <li><a href="https://www.formula1.com/en/results/2026/races/1291/hungary/practice/3" target="_blank" rel="noopener">Formula1.com — Practice 3</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Timing Data &amp; Charts</div>
+        <ul class="sources-list">
+          <li><a href="https://openf1.org" target="_blank" rel="noopener">OpenF1 — lap, stint, telemetry and race control data used for the charts</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Tyre Strategy</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/latest/article/what-tyres-will-the-teams-and-drivers-have-for-the-2026-hungarian-grand-prix.RikSxOCPXMkPloK0RRmqQ" target="_blank" rel="noopener">Formula1.com — What tyres will the teams and drivers have for the 2026 Hungarian Grand Prix?</a></li>
+          <li><a href="https://press.pirelli.com/the-compounds-selected-for-belgium-and-hungary/" target="_blank" rel="noopener">Pirelli — The compounds selected for Belgium and Hungary</a></li>
+          <li><a href="https://press.pirelli.com/norris-wins-in-hungary-with-a-late-charge-on-softs/" target="_blank" rel="noopener">Pirelli — Norris wins in Hungary with a late charge on Softs</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Race Report &amp; Driver Quotes</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/latest/article/norris-beats-verstappen-and-antonelli-to-victory-in-dramatic-hungarian-gp.5JQmohRAKABD2asRsMWogj" target="_blank" rel="noopener">Formula1.com — Norris beats Verstappen and Antonelli to victory in dramatic Hungarian GP</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/hungary-lowdown-all-the-key-moments-as-mclaren-win-again-russell-experiences-more-pain-and-ferrari-fall-back.4jn57FPqFeYQ1Q2GXGHrUU" target="_blank" rel="noopener">Formula1.com — Hungary lowdown, all the key moments</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-hungary-2026.40qHMaNrP6jNXwrULAwt9J" target="_blank" rel="noopener">Formula1.com — What the teams said, race day in Hungary</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/what-the-teams-said-qualifying-in-hungary-2026.3feA3778bfyv3miQvTeRha" target="_blank" rel="noopener">Formula1.com — What the teams said, qualifying in Hungary</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/what-the-teams-said-friday-in-hungary-2026.7kcx4JhVRG7YBAlyxu9DnD" target="_blank" rel="noopener">Formula1.com — What the teams said, Friday in Hungary</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/official-grid-who-starts-where-for-the-hungarian-grand-prix-2026.M8O8JJmpq3V29izYYaaRA" target="_blank" rel="noopener">Formula1.com — Official grid for the Hungarian Grand Prix</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/fp1-leclerc-leads-verstappen-before-suffering-mechanical-problem-ahead-of-hungarian-grand-prix.32cQFweYzhr1Gr3UmYc5YU" target="_blank" rel="noopener">Formula1.com — FP1 report</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/fp2-hamilton-beats-leclerc-to-top-spot-in-tricky-second-practice-for-hungarian-grand-prix.7qr57bgnk0ba1rXSyrijLw" target="_blank" rel="noopener">Formula1.com — FP2 report</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/fp3-norris-edges-out-hamilton-and-antonelli-during-tight-final-practice-session-in-hungary.7EE5f5Y4pJR4TvgXJU7t5L" target="_blank" rel="noopener">Formula1.com — FP3 report</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/driver-of-the-day-verstappens-punchy-hungary-performance-gets-fan-vote.7GQoBY4cBpBOhuLTzcZGIS" target="_blank" rel="noopener">Formula1.com — Driver of the Day</a></li>
+        </ul>
+      </div>
+
+      <div class="sources-group">
+        <div class="sources-group-label">Technical &amp; Team Analysis</div>
+        <ul class="sources-list">
+          <li><a href="https://www.formula1.com/en/latest/article/mercedes-explain-what-led-to-russells-nightmare-p6-p21-start-in-hungary.7g7raB1EXxbGmDlfcP5Fo8" target="_blank" rel="noopener">Formula1.com — Mercedes explain what led to Russell's start in Hungary</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/we-should-have-done-better-rueful-wolff-on-not-great-hungarian-weekend-for-mercedes.33DSQcpsLIC5dhiIteebDT" target="_blank" rel="noopener">Formula1.com — Wolff on Mercedes' Hungarian weekend</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/mekies-says-verstappens-p2-finish-in-hungary-helped-by-spicy-red-bull-strategy-calls.4I8azSuEJKW2QswuwHllm4" target="_blank" rel="noopener">Formula1.com — Mekies on Red Bull's strategy calls</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/everything-went-wrong-vasseur-critical-of-ferraris-hungarian-grand-prix-performance.7u9mA10W6pQaMYYNe7q1Y5" target="_blank" rel="noopener">Formula1.com — Vasseur on Ferrari's Hungarian Grand Prix</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/sainz-explains-how-blue-light-issue-caught-him-out-in-piastri-collision.OD1D0DiIZApJZmL6jHZkr" target="_blank" rel="noopener">Formula1.com — Sainz on the blue light issue</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/piastri-reacts-to-getting-taken-out-by-a-backmarker-in-unusual-hungarian-gp-incident.7D4Ic8FN4rvg9rvqzY2cbW" target="_blank" rel="noopener">Formula1.com — Piastri on the Sainz collision</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/antonelli-pleased-to-extend-standings-lead-after-tough-race-in-hungary.5LwUUWOKnbqMrxONe28Uou" target="_blank" rel="noopener">Formula1.com — Antonelli on extending his lead</a></li>
+          <li><a href="https://www.formula1.com/en/latest/article/antonelli-hit-with-grid-penalty-for-hungarian-gp-after-yellow-flag-breach-in-qualifying.1C9AT9OzLEOIUNzDfTsgdL" target="_blank" rel="noopener">Formula1.com — Stewards' decision on Antonelli's grid penalty</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </article>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="../logo.png" alt="Apex by Milla" style="height:70px;width:auto;opacity:0.55;">
+    </div>
+    <p>© 2026 · Formula One Technical Analysis · All Rights Reserved</p>
+    <p style="font-size: 0.72rem; opacity: 0.65; margin-top: 0.5rem; font-style: italic;">Independent technical analysis. Not affiliated with Formula 1, the FIA, or any F1 team.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+  </script>
+
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+  <script>
+    (function () {
+      var bar = document.getElementById('readingProgress');
+      var endEl = document.querySelector('.sources-section');
+      function update() {
+        var end = endEl ? (endEl.getBoundingClientRect().top + window.scrollY) : document.documentElement.scrollHeight;
+        var target = end - window.innerHeight;
+        var pct = target > 0 ? window.scrollY / target : 1;
+        if (pct < 0) pct = 0; if (pct > 1) pct = 1;
+        bar.style.width = (pct * 100) + '%';
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      window.addEventListener('load', update);
+      update();
+    })();
+  </script>
+  <script>
+    /* Races dropdown: hover on desktop, click on touch and keyboard. */
+    (function () {
+      var wrap = document.querySelector('.nav-races');
+      if (!wrap) return;
+      var btn = wrap.querySelector('.nav-races-toggle');
+      function setOpen(open) {
+        wrap.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        setOpen(!wrap.classList.contains('open'));
+      });
+      /* Checked at event time, not once at load, so narrowing a desktop
+         window to phone width hands control back to tap. */
+      var hoverCapable = window.matchMedia('(hover: hover) and (min-width: 769px)');
+      /* Short delay before closing, so a slightly wobbly mouse path from the
+         button to a race does not snap the panel shut. */
+      var closeTimer;
+      wrap.addEventListener('mouseenter', function () {
+        clearTimeout(closeTimer);
+        if (hoverCapable.matches) setOpen(true);
+      });
+      wrap.addEventListener('mouseleave', function () {
+        if (!hoverCapable.matches) return;
+        closeTimer = setTimeout(function () { setOpen(false); }, 300);
+      });
+      document.addEventListener('click', function (e) {
+        if (!wrap.contains(e.target)) setOpen(false);
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') setOpen(false);
+      });
+    })();
+  </script>
+  <script>
+    /* Apex tooltip engine. Hover on desktop, tap on touch, focus for keyboard.
+       Add class="apex-tip" + an .apex-tip-box child to any element to use it. */
+    (function () {
+      var tips = document.querySelectorAll('.apex-tip');
+      if (!tips.length) return;
+      var hoverCapable = window.matchMedia('(hover: hover) and (min-width: 769px)');
+      function closeAll(except) {
+        Array.prototype.forEach.call(document.querySelectorAll('.apex-tip.open'), function (t) {
+          if (t !== except) t.classList.remove('open');
+        });
+      }
+      function open(tip, on) {
+        if (!on) { tip.classList.remove('open'); return; }
+        closeAll(tip);
+        tip.classList.add('open');
+        tip.classList.remove('tip-flip');
+        tip.classList.remove('tip-up');
+        var box = tip.querySelector('.apex-tip-box');
+        if (!box) return;
+        /* Keep the whole box on screen. Measure it at its default spot, then
+           shift it left or right by exactly the overflow, 8px from either edge. */
+        box.style.left = ''; box.style.right = '';
+        var vw = document.documentElement.clientWidth || window.innerWidth;
+        var r = box.getBoundingClientRect(), shift = 0;
+        if (r.right > vw - 8) shift = (vw - 8) - r.right;
+        if (r.left + shift < 8) shift = 8 - r.left;
+        if (shift) box.style.left = Math.round(shift) + 'px';
+        /* Open upwards instead when the box would run off the bottom of the
+           screen and there is room above (64px clears the navbar). */
+        var vh = document.documentElement.clientHeight || window.innerHeight;
+        if (r.bottom > vh - 8 && tip.getBoundingClientRect().top - r.height - 16 > 64) tip.classList.add('tip-up');
+      }
+      Array.prototype.forEach.call(tips, function (tip) {
+        /* Close after a short delay rather than straight away, so the mouse can
+           cross the gap down to the box and reach the Apex Index link
+           (the same fix as the Races dropdown). */
+        var closeTimer;
+        tip.addEventListener('mouseenter', function () {
+          if (!hoverCapable.matches) return;
+          clearTimeout(closeTimer);
+          if (!tip.classList.contains('open')) open(tip, true);
+        });
+        tip.addEventListener('mouseleave', function () {
+          if (!hoverCapable.matches) return;
+          clearTimeout(closeTimer);
+          closeTimer = setTimeout(function () { open(tip, false); }, 300);
+        });
+        /* A tap fires pointerdown, then focus, then click. Without recording the
+           state up front, focus opens the box and click immediately shuts it,
+           so tapping appears to do nothing. */
+        var wasOpen = false;
+        tip.addEventListener('pointerdown', function () {
+          wasOpen = tip.classList.contains('open');
+        });
+        tip.addEventListener('click', function (e) {
+          if (e.target.closest && e.target.closest('.apex-tip-link')) return;
+          e.stopPropagation();
+          open(tip, !wasOpen);
+        });
+        tip.addEventListener('focus', function () { open(tip, true); });
+        tip.addEventListener('blur', function () { open(tip, false); });
+      });
+      document.addEventListener('click', function () { closeAll(null); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(null); });
+      window.addEventListener('resize', function () { closeAll(null); });
+    })();
+  </script>
+
+  <!-- ===== INTERACTIVE CHARTS (Stage 3) ===== -->
+  <script type="application/json" id="apexChartData">{"drivers":{"NOR":"#00e5ff","VER":"#ffb300","ANT":"#2f9bff","LEC":"#ff2a1f","HAM":"#00d68f"},"laps":{"series":[{"id":"NOR","color":"#00e5ff","pts":[{"l":1,"t":91.587,"x":"Lap 1","c":"Medium","a":0,"g":0.878},{"l":2,"t":86.103,"x":null,"c":"Medium","a":1,"g":0.952},{"l":3,"t":85.307,"x":null,"c":"Medium","a":2,"g":1.072},{"l":4,"t":85.184,"x":null,"c":"Medium","a":3,"g":1.058},{"l":5,"t":85.223,"x":null,"c":"Medium","a":4,"g":1.184},{"l":6,"t":85.091,"x":null,"c":"Medium","a":5,"g":1.102},{"l":7,"t":85.36,"x":null,"c":"Medium","a":6,"g":1.614},{"l":8,"t":85.53,"x":null,"c":"Medium","a":7,"g":1.953},{"l":9,"t":85.194,"x":null,"c":"Medium","a":8,"g":1.797},{"l":10,"t":85.269,"x":null,"c":"Medium","a":9,"g":1.344},{"l":11,"t":85.335,"x":null,"c":"Medium","a":10,"g":1.313},{"l":12,"t":85.719,"x":null,"c":"Medium","a":11,"g":1.109},{"l":13,"t":85.845,"x":null,"c":"Medium","a":12,"g":1.168},{"l":14,"t":85.579,"x":null,"c":"Medium","a":13,"g":0.936},{"l":15,"t":85.613,"x":null,"c":"Medium","a":14,"g":1.078},{"l":16,"t":85.878,"x":null,"c":"Medium","a":15,"g":0.0},{"l":17,"t":87.912,"x":"Pit in","c":"Medium","a":16,"g":0.0},{"l":18,"t":105.312,"x":"Pit out","c":"Hard","a":0,"g":13.753},{"l":19,"t":85.351,"x":null,"c":"Hard","a":1,"g":13.279},{"l":20,"t":84.374,"x":null,"c":"Hard","a":2,"g":12.389},{"l":21,"t":84.349,"x":null,"c":"Hard","a":3,"g":11.058},{"l":22,"t":84.689,"x":null,"c":"Hard","a":4,"g":7.006},{"l":23,"t":84.405,"x":null,"c":"Hard","a":5,"g":1.0},{"l":24,"t":84.496,"x":null,"c":"Hard","a":6,"g":0.786},{"l":25,"t":84.973,"x":null,"c":"Hard","a":7,"g":0.672},{"l":26,"t":85.464,"x":null,"c":"Hard","a":8,"g":0.656},{"l":27,"t":85.532,"x":null,"c":"Hard","a":9,"g":0.869},{"l":28,"t":85.071,"x":null,"c":"Hard","a":10,"g":0.594},{"l":29,"t":86.546,"x":null,"c":"Hard","a":11,"g":1.547},{"l":30,"t":85.241,"x":null,"c":"Hard","a":12,"g":1.048},{"l":31,"t":85.577,"x":null,"c":"Hard","a":13,"g":0.75},{"l":32,"t":85.882,"x":null,"c":"Hard","a":14,"g":0.704},{"l":33,"t":85.414,"x":null,"c":"Hard","a":15,"g":0.0},{"l":34,"t":84.624,"x":null,"c":"Hard","a":16,"g":0.0},{"l":35,"t":84.668,"x":null,"c":"Hard","a":17,"g":0.0},{"l":36,"t":84.736,"x":null,"c":"Hard","a":18,"g":0.0},{"l":37,"t":84.461,"x":null,"c":"Hard","a":19,"g":0.0},{"l":38,"t":84.507,"x":null,"c":"Hard","a":20,"g":0.0},{"l":39,"t":87.437,"x":"Pit in","c":"Hard","a":21,"g":0.0},{"l":40,"t":102.596,"x":"Pit out","c":"Hard","a":0,"g":10.432},{"l":41,"t":82.718,"x":null,"c":"Hard","a":1,"g":5.116},{"l":42,"t":83.051,"x":null,"c":"Hard","a":2,"g":3.279},{"l":43,"t":83.162,"x":null,"c":"Hard","a":3,"g":1.688},{"l":44,"t":83.392,"x":null,"c":"Hard","a":4,"g":0.344},{"l":45,"t":84.546,"x":null,"c":"Hard","a":5,"g":0.406},{"l":46,"t":83.423,"x":null,"c":"Hard","a":6,"g":0.0},{"l":47,"t":83.369,"x":null,"c":"Hard","a":7,"g":0.0},{"l":48,"t":84.421,"x":null,"c":"Hard","a":8,"g":0.0},{"l":49,"t":83.977,"x":null,"c":"Hard","a":9,"g":0.0},{"l":50,"t":83.783,"x":null,"c":"Hard","a":10,"g":0.0},{"l":51,"t":83.78,"x":null,"c":"Hard","a":11,"g":0.0},{"l":52,"t":84.12,"x":null,"c":"Hard","a":12,"g":0.0},{"l":53,"t":83.943,"x":null,"c":"Hard","a":13,"g":0.0},{"l":54,"t":84.437,"x":null,"c":"Hard","a":14,"g":0.0},{"l":55,"t":84.147,"x":null,"c":"Hard","a":15,"g":0.0},{"l":56,"t":92.344,"x":"Pit in","c":"Hard","a":16,"g":0.0},{"l":57,"t":111.054,"x":"Pit out","c":"Soft","a":3,"g":0.0},{"l":58,"t":82.928,"x":null,"c":"Soft","a":4,"g":0.0},{"l":59,"t":83.671,"x":null,"c":"Soft","a":5,"g":0.0},{"l":60,"t":83.616,"x":null,"c":"Soft","a":6,"g":0.0},{"l":61,"t":82.562,"x":null,"c":"Soft","a":7,"g":0.0},{"l":62,"t":82.659,"x":null,"c":"Soft","a":8,"g":0.0},{"l":63,"t":82.722,"x":null,"c":"Soft","a":9,"g":0.0},{"l":64,"t":82.491,"x":null,"c":"Soft","a":10,"g":0.0},{"l":65,"t":83.104,"x":null,"c":"Soft","a":11,"g":0.0},{"l":66,"t":82.901,"x":null,"c":"Soft","a":12,"g":0.0},{"l":67,"t":83.016,"x":null,"c":"Soft","a":13,"g":0.0},{"l":68,"t":82.796,"x":null,"c":"Soft","a":14,"g":0.0},{"l":69,"t":83.364,"x":null,"c":"Soft","a":15,"g":0.0},{"l":70,"t":83.625,"x":null,"c":"Soft","a":16,"g":0.0}]},{"id":"VER","color":"#ffb300","pts":[{"l":1,"t":92.396,"x":"Lap 1","c":"Medium","a":0,"g":1.687},{"l":2,"t":85.958,"x":null,"c":"Medium","a":1,"g":1.702},{"l":3,"t":85.597,"x":null,"c":"Medium","a":2,"g":1.99},{"l":4,"t":85.359,"x":null,"c":"Medium","a":3,"g":2.218},{"l":5,"t":85.743,"x":null,"c":"Medium","a":4,"g":2.907},{"l":6,"t":85.396,"x":null,"c":"Medium","a":5,"g":3.072},{"l":7,"t":85.388,"x":null,"c":"Medium","a":6,"g":3.671},{"l":8,"t":85.474,"x":null,"c":"Medium","a":7,"g":3.953},{"l":9,"t":85.635,"x":null,"c":"Medium","a":8,"g":4.157},{"l":10,"t":85.622,"x":null,"c":"Medium","a":9,"g":4.079},{"l":11,"t":85.627,"x":null,"c":"Medium","a":10,"g":4.316},{"l":12,"t":85.733,"x":null,"c":"Medium","a":11,"g":4.281},{"l":13,"t":85.957,"x":null,"c":"Medium","a":12,"g":4.433},{"l":14,"t":88.509,"x":"Pit in","c":"Medium","a":13,"g":6.889},{"l":15,"t":103.352,"x":"Pit out","c":"Hard","a":0,"g":24.962},{"l":16,"t":84.985,"x":null,"c":"Hard","a":1,"g":22.922},{"l":17,"t":84.969,"x":null,"c":"Hard","a":2,"g":19.928},{"l":18,"t":85.979,"x":null,"c":"Hard","a":3,"g":14.393},{"l":19,"t":85.648,"x":null,"c":"Hard","a":4,"g":14.373},{"l":20,"t":84.965,"x":null,"c":"Hard","a":5,"g":13.912},{"l":21,"t":85.211,"x":null,"c":"Hard","a":6,"g":13.401},{"l":22,"t":85.317,"x":null,"c":"Hard","a":7,"g":10.037},{"l":23,"t":85.073,"x":null,"c":"Hard","a":8,"g":4.672},{"l":24,"t":85.027,"x":null,"c":"Hard","a":9,"g":5.023},{"l":25,"t":85.172,"x":null,"c":"Hard","a":10,"g":5.064},{"l":26,"t":85.446,"x":null,"c":"Hard","a":11,"g":5.078},{"l":27,"t":85.47,"x":null,"c":"Hard","a":12,"g":5.235},{"l":28,"t":85.114,"x":null,"c":"Hard","a":13,"g":5.109},{"l":29,"t":85.496,"x":null,"c":"Hard","a":14,"g":4.813},{"l":30,"t":85.064,"x":null,"c":"Hard","a":15,"g":4.185},{"l":31,"t":85.398,"x":null,"c":"Hard","a":16,"g":3.719},{"l":32,"t":85.494,"x":null,"c":"Hard","a":17,"g":3.376},{"l":33,"t":85.772,"x":null,"c":"Hard","a":18,"g":2.995},{"l":34,"t":85.394,"x":null,"c":"Hard","a":19,"g":3.524},{"l":35,"t":85.763,"x":null,"c":"Hard","a":20,"g":4.866},{"l":36,"t":85.424,"x":null,"c":"Hard","a":21,"g":5.453},{"l":37,"t":86.041,"x":null,"c":"Hard","a":22,"g":7.057},{"l":38,"t":85.724,"x":null,"c":"Hard","a":23,"g":8.337},{"l":39,"t":85.712,"x":null,"c":"Hard","a":24,"g":6.618},{"l":40,"t":85.63,"x":null,"c":"Hard","a":25,"g":0.0},{"l":41,"t":88.414,"x":"Pit in","c":"Hard","a":26,"g":0.291},{"l":42,"t":103.103,"x":"Pit out","c":"Soft","a":3,"g":18.739},{"l":43,"t":84.373,"x":null,"c":"Soft","a":4,"g":18.345},{"l":44,"t":84.514,"x":null,"c":"Soft","a":5,"g":18.056},{"l":45,"t":83.97,"x":null,"c":"Soft","a":6,"g":17.609},{"l":46,"t":84.094,"x":null,"c":"Soft","a":7,"g":17.785},{"l":47,"t":83.922,"x":null,"c":"Soft","a":8,"g":18.39},{"l":48,"t":83.783,"x":null,"c":"Soft","a":9,"g":17.677},{"l":49,"t":83.978,"x":null,"c":"Soft","a":10,"g":17.812},{"l":50,"t":83.888,"x":null,"c":"Soft","a":11,"g":17.811},{"l":51,"t":83.86,"x":null,"c":"Soft","a":12,"g":17.941},{"l":52,"t":83.925,"x":null,"c":"Soft","a":13,"g":17.721},{"l":53,"t":83.925,"x":null,"c":"Soft","a":14,"g":17.819},{"l":54,"t":83.954,"x":null,"c":"Soft","a":15,"g":17.191},{"l":55,"t":83.884,"x":null,"c":"Soft","a":16,"g":17.039},{"l":56,"t":97.468,"x":"VSC","c":"Soft","a":17,"g":21.904},{"l":57,"t":94.468,"x":"VSC","c":"Soft","a":18,"g":5.378},{"l":58,"t":83.652,"x":null,"c":"Soft","a":19,"g":5.977},{"l":59,"t":83.483,"x":null,"c":"Soft","a":20,"g":5.938},{"l":60,"t":83.995,"x":null,"c":"Soft","a":21,"g":6.356},{"l":61,"t":84.073,"x":null,"c":"Soft","a":22,"g":7.879},{"l":62,"t":84.262,"x":null,"c":"Soft","a":23,"g":9.636},{"l":63,"t":84.066,"x":null,"c":"Soft","a":24,"g":10.906},{"l":64,"t":83.587,"x":null,"c":"Soft","a":25,"g":11.897},{"l":65,"t":83.445,"x":null,"c":"Soft","a":26,"g":12.362},{"l":66,"t":83.433,"x":null,"c":"Soft","a":27,"g":12.719},{"l":67,"t":83.667,"x":null,"c":"Soft","a":28,"g":13.332},{"l":68,"t":83.477,"x":null,"c":"Soft","a":29,"g":14.219},{"l":69,"t":83.709,"x":null,"c":"Soft","a":30,"g":14.46},{"l":70,"t":84.22,"x":null,"c":"Soft","a":31,"g":15.055}]},{"id":"ANT","color":"#2f9bff","pts":[{"l":1,"t":94.256,"x":"Lap 1","c":"Medium","a":0,"g":3.547},{"l":2,"t":85.919,"x":null,"c":"Medium","a":1,"g":3.483},{"l":3,"t":85.93,"x":null,"c":"Medium","a":2,"g":4.055},{"l":4,"t":85.64,"x":null,"c":"Medium","a":3,"g":4.624},{"l":5,"t":85.817,"x":null,"c":"Medium","a":4,"g":5.5},{"l":6,"t":85.636,"x":null,"c":"Medium","a":5,"g":5.888},{"l":7,"t":85.751,"x":null,"c":"Medium","a":6,"g":6.831},{"l":8,"t":85.733,"x":null,"c":"Medium","a":7,"g":7.277},{"l":9,"t":85.491,"x":null,"c":"Medium","a":8,"g":7.375},{"l":10,"t":85.502,"x":null,"c":"Medium","a":9,"g":7.203},{"l":11,"t":85.972,"x":null,"c":"Medium","a":10,"g":7.644},{"l":12,"t":86.066,"x":null,"c":"Medium","a":11,"g":7.984},{"l":13,"t":86.163,"x":null,"c":"Medium","a":12,"g":8.255},{"l":14,"t":86.08,"x":null,"c":"Medium","a":13,"g":8.359},{"l":15,"t":86.052,"x":null,"c":"Medium","a":14,"g":9.031},{"l":16,"t":85.974,"x":null,"c":"Medium","a":15,"g":8.212},{"l":17,"t":85.77,"x":null,"c":"Medium","a":16,"g":5.912},{"l":18,"t":85.554,"x":null,"c":"Medium","a":17,"g":0.0},{"l":19,"t":85.632,"x":null,"c":"Medium","a":18,"g":0.0},{"l":20,"t":85.51,"x":null,"c":"Medium","a":19,"g":0.0},{"l":21,"t":85.702,"x":null,"c":"Medium","a":20,"g":0.0},{"l":22,"t":88.51,"x":"Pit in","c":"Medium","a":21,"g":0.0},{"l":23,"t":104.538,"x":"Pit out","c":"Hard","a":0,"g":13.991},{"l":24,"t":84.119,"x":null,"c":"Hard","a":1,"g":13.191},{"l":25,"t":84.444,"x":null,"c":"Hard","a":2,"g":12.777},{"l":26,"t":84.498,"x":null,"c":"Hard","a":3,"g":11.781},{"l":27,"t":85.295,"x":null,"c":"Hard","a":4,"g":11.654},{"l":28,"t":84.85,"x":null,"c":"Hard","a":5,"g":11.375},{"l":29,"t":85.213,"x":null,"c":"Hard","a":6,"g":10.828},{"l":30,"t":85.261,"x":null,"c":"Hard","a":7,"g":10.265},{"l":31,"t":85.139,"x":null,"c":"Hard","a":8,"g":9.688},{"l":32,"t":85.207,"x":null,"c":"Hard","a":9,"g":8.982},{"l":33,"t":85.548,"x":null,"c":"Hard","a":10,"g":8.42},{"l":34,"t":86.092,"x":null,"c":"Hard","a":11,"g":9.683},{"l":35,"t":86.265,"x":null,"c":"Hard","a":12,"g":11.422},{"l":36,"t":85.849,"x":null,"c":"Hard","a":13,"g":12.453},{"l":37,"t":84.732,"x":null,"c":"Hard","a":14,"g":12.682},{"l":38,"t":84.954,"x":null,"c":"Hard","a":15,"g":13.209},{"l":39,"t":84.937,"x":null,"c":"Hard","a":16,"g":10.813},{"l":40,"t":84.792,"x":null,"c":"Hard","a":17,"g":3.365},{"l":41,"t":84.709,"x":null,"c":"Hard","a":18,"g":0.0},{"l":42,"t":84.752,"x":null,"c":"Hard","a":19,"g":0.0},{"l":43,"t":84.815,"x":null,"c":"Hard","a":20,"g":0.0},{"l":44,"t":84.639,"x":null,"c":"Hard","a":21,"g":0.0},{"l":45,"t":84.563,"x":null,"c":"Hard","a":22,"g":0.0},{"l":46,"t":86.304,"x":null,"c":"Hard","a":23,"g":2.413},{"l":47,"t":84.835,"x":null,"c":"Hard","a":24,"g":3.899},{"l":48,"t":84.673,"x":null,"c":"Hard","a":25,"g":4.21},{"l":49,"t":84.882,"x":null,"c":"Hard","a":26,"g":5.076},{"l":50,"t":84.837,"x":null,"c":"Hard","a":27,"g":6.199},{"l":51,"t":84.827,"x":null,"c":"Hard","a":28,"g":7.189},{"l":52,"t":84.817,"x":null,"c":"Hard","a":29,"g":7.875},{"l":53,"t":87.057,"x":"Pit in","c":"Hard","a":30,"g":10.976},{"l":54,"t":102.02,"x":"Pit out","c":"Hard","a":0,"g":28.707},{"l":55,"t":82.508,"x":null,"c":"Hard","a":1,"g":26.972},{"l":56,"t":99.702,"x":"VSC","c":"Hard","a":2,"g":34.244},{"l":57,"t":92.221,"x":"VSC","c":"Hard","a":3,"g":15.435},{"l":58,"t":82.415,"x":null,"c":"Hard","a":4,"g":14.58},{"l":59,"t":82.427,"x":null,"c":"Hard","a":5,"g":13.687},{"l":60,"t":82.679,"x":null,"c":"Hard","a":6,"g":12.729},{"l":61,"t":82.764,"x":null,"c":"Hard","a":7,"g":12.974},{"l":62,"t":84.749,"x":null,"c":"Hard","a":8,"g":15.157},{"l":63,"t":85.064,"x":null,"c":"Hard","a":9,"g":17.411},{"l":64,"t":83.913,"x":null,"c":"Hard","a":10,"g":18.973},{"l":65,"t":82.967,"x":null,"c":"Hard","a":11,"g":18.69},{"l":66,"t":83.062,"x":null,"c":"Hard","a":12,"g":18.837},{"l":67,"t":82.941,"x":null,"c":"Hard","a":13,"g":18.707},{"l":68,"t":83.05,"x":null,"c":"Hard","a":14,"g":18.994},{"l":69,"t":83.214,"x":null,"c":"Hard","a":15,"g":18.782},{"l":70,"t":83.472,"x":null,"c":"Hard","a":16,"g":18.629}]},{"id":"LEC","color":"#ff2a1f","pts":[{"l":1,"t":93.396,"x":"Lap 1","c":"Soft","a":3,"g":2.687},{"l":2,"t":85.916,"x":null,"c":"Soft","a":4,"g":2.624},{"l":3,"t":85.679,"x":null,"c":"Soft","a":5,"g":3.1},{"l":4,"t":85.701,"x":null,"c":"Soft","a":6,"g":3.593},{"l":5,"t":85.811,"x":null,"c":"Soft","a":7,"g":4.299},{"l":6,"t":85.434,"x":null,"c":"Soft","a":8,"g":4.576},{"l":7,"t":85.468,"x":null,"c":"Soft","a":9,"g":5.279},{"l":8,"t":85.435,"x":null,"c":"Soft","a":10,"g":5.453},{"l":9,"t":85.532,"x":null,"c":"Soft","a":11,"g":5.485},{"l":10,"t":85.797,"x":null,"c":"Soft","a":12,"g":5.656},{"l":11,"t":85.824,"x":null,"c":"Soft","a":13,"g":6.16},{"l":12,"t":86.055,"x":null,"c":"Soft","a":14,"g":6.375},{"l":13,"t":86.069,"x":null,"c":"Soft","a":15,"g":6.425},{"l":14,"t":86.049,"x":null,"c":"Soft","a":16,"g":6.623},{"l":15,"t":86.066,"x":null,"c":"Soft","a":17,"g":7.344},{"l":16,"t":88.909,"x":"Pit in","c":"Soft","a":18,"g":9.411},{"l":17,"t":104.646,"x":"Pit out","c":"Hard","a":0,"g":26.053},{"l":18,"t":84.536,"x":null,"c":"Hard","a":1,"g":19.004},{"l":19,"t":84.876,"x":null,"c":"Hard","a":2,"g":18.326},{"l":20,"t":85.034,"x":null,"c":"Hard","a":3,"g":17.77},{"l":21,"t":84.871,"x":null,"c":"Hard","a":4,"g":17.058},{"l":22,"t":84.869,"x":null,"c":"Hard","a":5,"g":13.24},{"l":23,"t":84.944,"x":null,"c":"Hard","a":6,"g":7.734},{"l":24,"t":84.989,"x":null,"c":"Hard","a":7,"g":8.035},{"l":25,"t":85.074,"x":null,"c":"Hard","a":8,"g":8.085},{"l":26,"t":85.75,"x":null,"c":"Hard","a":9,"g":8.297},{"l":27,"t":85.974,"x":null,"c":"Hard","a":10,"g":8.908},{"l":28,"t":85.156,"x":null,"c":"Hard","a":11,"g":8.859},{"l":29,"t":85.633,"x":null,"c":"Hard","a":12,"g":8.75},{"l":30,"t":85.781,"x":null,"c":"Hard","a":13,"g":8.664},{"l":31,"t":85.357,"x":null,"c":"Hard","a":14,"g":8.328},{"l":32,"t":85.531,"x":null,"c":"Hard","a":15,"g":7.904},{"l":33,"t":85.782,"x":null,"c":"Hard","a":16,"g":7.789},{"l":34,"t":86.27,"x":null,"c":"Hard","a":17,"g":9.042},{"l":35,"t":86.394,"x":null,"c":"Hard","a":18,"g":10.992},{"l":36,"t":88.451,"x":"Pit in","c":"Hard","a":19,"g":14.617},{"l":37,"t":104.285,"x":"Pit out","c":"Hard","a":0,"g":34.517},{"l":38,"t":84.77,"x":null,"c":"Hard","a":1,"g":34.629},{"l":39,"t":84.108,"x":null,"c":"Hard","a":2,"g":31.419},{"l":40,"t":84.198,"x":null,"c":"Hard","a":3,"g":23.472},{"l":41,"t":83.789,"x":null,"c":"Hard","a":4,"g":19.107},{"l":42,"t":85.41,"x":null,"c":"Hard","a":5,"g":19.844},{"l":43,"t":84.266,"x":null,"c":"Hard","a":6,"g":19.297},{"l":44,"t":84.421,"x":null,"c":"Hard","a":7,"g":19.114},{"l":45,"t":84.141,"x":null,"c":"Hard","a":8,"g":18.577},{"l":46,"t":84.611,"x":null,"c":"Hard","a":9,"g":19.306},{"l":47,"t":84.174,"x":null,"c":"Hard","a":10,"g":20.285},{"l":48,"t":84.95,"x":null,"c":"Hard","a":11,"g":20.624},{"l":49,"t":84.92,"x":null,"c":"Hard","a":12,"g":21.716},{"l":50,"t":84.662,"x":null,"c":"Hard","a":13,"g":22.53},{"l":51,"t":84.365,"x":null,"c":"Hard","a":14,"g":23.125},{"l":52,"t":84.693,"x":null,"c":"Hard","a":15,"g":23.617},{"l":53,"t":84.873,"x":null,"c":"Hard","a":16,"g":24.642},{"l":54,"t":84.648,"x":null,"c":"Hard","a":17,"g":24.847},{"l":55,"t":84.738,"x":null,"c":"Hard","a":18,"g":25.41},{"l":56,"t":100.087,"x":"Pit in","c":"Hard","a":19,"g":33.052},{"l":57,"t":102.194,"x":"Pit out","c":"Soft","a":3,"g":24.243},{"l":58,"t":82.0,"x":null,"c":"Soft","a":4,"g":23.063},{"l":59,"t":82.383,"x":null,"c":"Soft","a":5,"g":21.979},{"l":60,"t":82.34,"x":null,"c":"Soft","a":6,"g":20.729},{"l":61,"t":82.318,"x":null,"c":"Soft","a":7,"g":21.006},{"l":62,"t":82.661,"x":null,"c":"Soft","a":8,"g":20.648},{"l":63,"t":84.106,"x":null,"c":"Soft","a":9,"g":22.1},{"l":64,"t":84.57,"x":null,"c":"Soft","a":10,"g":23.864},{"l":65,"t":83.363,"x":null,"c":"Soft","a":11,"g":24.252},{"l":66,"t":82.927,"x":null,"c":"Soft","a":12,"g":24.24},{"l":67,"t":83.295,"x":null,"c":"Soft","a":13,"g":24.553},{"l":68,"t":82.927,"x":null,"c":"Soft","a":14,"g":24.794},{"l":69,"t":83.003,"x":null,"c":"Soft","a":15,"g":24.374},{"l":70,"t":83.098,"x":null,"c":"Soft","a":16,"g":23.847}]},{"id":"HAM","color":"#00d68f","pts":[{"l":1,"t":92.896,"x":"Lap 1","c":"Soft","a":0,"g":2.187},{"l":2,"t":85.911,"x":null,"c":"Soft","a":1,"g":1.955},{"l":3,"t":85.598,"x":null,"c":"Soft","a":2,"g":2.372},{"l":4,"t":85.616,"x":null,"c":"Soft","a":3,"g":2.765},{"l":5,"t":85.806,"x":null,"c":"Soft","a":4,"g":3.531},{"l":6,"t":85.228,"x":null,"c":"Soft","a":5,"g":3.615},{"l":7,"t":85.474,"x":null,"c":"Soft","a":6,"g":4.313},{"l":8,"t":85.369,"x":null,"c":"Soft","a":7,"g":4.407},{"l":9,"t":85.91,"x":null,"c":"Soft","a":8,"g":4.938},{"l":10,"t":85.401,"x":null,"c":"Soft","a":9,"g":4.641},{"l":11,"t":85.732,"x":null,"c":"Soft","a":10,"g":4.87},{"l":12,"t":85.803,"x":null,"c":"Soft","a":11,"g":4.953},{"l":13,"t":88.64,"x":"Pit in","c":"Soft","a":12,"g":7.714},{"l":14,"t":103.085,"x":"Pit out","c":"Hard","a":0,"g":24.875},{"l":15,"t":84.937,"x":null,"c":"Hard","a":1,"g":24.376},{"l":16,"t":86.092,"x":null,"c":"Hard","a":2,"g":23.812},{"l":17,"t":85.064,"x":null,"c":"Hard","a":3,"g":20.709},{"l":18,"t":85.654,"x":null,"c":"Hard","a":4,"g":14.846},{"l":19,"t":86.384,"x":null,"c":"Hard","a":5,"g":15.561},{"l":20,"t":85.255,"x":null,"c":"Hard","a":6,"g":15.284},{"l":21,"t":85.207,"x":null,"c":"Hard","a":7,"g":14.89},{"l":22,"t":85.231,"x":null,"c":"Hard","a":8,"g":11.506},{"l":23,"t":85.575,"x":null,"c":"Hard","a":9,"g":6.469},{"l":24,"t":85.25,"x":null,"c":"Hard","a":10,"g":7.107},{"l":25,"t":85.153,"x":null,"c":"Hard","a":11,"g":7.174},{"l":26,"t":85.54,"x":null,"c":"Hard","a":12,"g":7.203},{"l":27,"t":85.926,"x":null,"c":"Hard","a":13,"g":7.938},{"l":28,"t":85.511,"x":null,"c":"Hard","a":14,"g":8.125},{"l":29,"t":85.619,"x":null,"c":"Hard","a":15,"g":7.985},{"l":30,"t":88.24,"x":"Pit in","c":"Hard","a":16,"g":10.422},{"l":31,"t":103.95,"x":"Pit out","c":"Hard","a":0,"g":28.797},{"l":32,"t":83.671,"x":null,"c":"Hard","a":1,"g":26.326},{"l":33,"t":84.184,"x":null,"c":"Hard","a":2,"g":24.472},{"l":34,"t":84.224,"x":null,"c":"Hard","a":3,"g":23.996},{"l":35,"t":84.27,"x":null,"c":"Hard","a":4,"g":23.776},{"l":36,"t":84.239,"x":null,"c":"Hard","a":5,"g":23.044},{"l":37,"t":84.789,"x":null,"c":"Hard","a":6,"g":23.298},{"l":38,"t":85.685,"x":null,"c":"Hard","a":7,"g":24.562},{"l":39,"t":84.42,"x":null,"c":"Hard","a":8,"g":21.573},{"l":40,"t":84.617,"x":null,"c":"Hard","a":9,"g":14.146},{"l":41,"t":84.748,"x":null,"c":"Hard","a":10,"g":10.784},{"l":42,"t":84.743,"x":null,"c":"Hard","a":11,"g":10.652},{"l":43,"t":84.697,"x":null,"c":"Hard","a":12,"g":10.655},{"l":44,"t":84.445,"x":null,"c":"Hard","a":13,"g":10.385},{"l":45,"t":84.665,"x":null,"c":"Hard","a":14,"g":10.495},{"l":46,"t":84.536,"x":null,"c":"Hard","a":15,"g":11.219},{"l":47,"t":84.049,"x":null,"c":"Hard","a":16,"g":11.947},{"l":48,"t":84.404,"x":null,"c":"Hard","a":17,"g":11.879},{"l":49,"t":84.786,"x":null,"c":"Hard","a":18,"g":12.606},{"l":50,"t":84.311,"x":null,"c":"Hard","a":19,"g":13.215},{"l":51,"t":84.214,"x":null,"c":"Hard","a":20,"g":13.656},{"l":52,"t":84.407,"x":null,"c":"Hard","a":21,"g":14.031},{"l":53,"t":84.295,"x":null,"c":"Hard","a":22,"g":14.235},{"l":54,"t":84.59,"x":null,"c":"Hard","a":23,"g":14.3},{"l":55,"t":84.403,"x":null,"c":"Hard","a":24,"g":14.791},{"l":56,"t":96.308,"x":"Pit in","c":"Hard","a":25,"g":18.52},{"l":57,"t":106.522,"x":"Pit out","c":"Soft","a":3,"g":14.028},{"l":58,"t":84.461,"x":null,"c":"Soft","a":4,"g":15.423},{"l":59,"t":82.3,"x":null,"c":"Soft","a":5,"g":14.238},{"l":60,"t":83.832,"x":null,"c":"Soft","a":6,"g":14.447},{"l":61,"t":83.088,"x":null,"c":"Soft","a":7,"g":14.962},{"l":62,"t":83.291,"x":null,"c":"Soft","a":8,"g":15.675},{"l":63,"t":85.078,"x":null,"c":"Soft","a":9,"g":18.137},{"l":64,"t":83.842,"x":null,"c":"Soft","a":10,"g":19.259},{"l":65,"t":83.031,"x":null,"c":"Soft","a":11,"g":19.283},{"l":66,"t":83.401,"x":null,"c":"Soft","a":12,"g":19.637},{"l":67,"t":83.257,"x":null,"c":"Soft","a":13,"g":20.0},{"l":68,"t":83.128,"x":null,"c":"Soft","a":14,"g":20.482},{"l":69,"t":83.178,"x":null,"c":"Soft","a":15,"g":20.157},{"l":70,"t":83.03,"x":null,"c":"Soft","a":16,"g":19.562}]}],"bands":[[56,57,"VSC"]],"leaders":{"1":"PIA","2":"PIA","3":"PIA","4":"PIA","5":"PIA","6":"PIA","7":"PIA","8":"PIA","9":"PIA","10":"PIA","11":"PIA","12":"PIA","13":"PIA","14":"PIA","15":"PIA","16":"NOR","17":"NOR","18":"ANT","19":"ANT","20":"ANT","21":"ANT","22":"ANT","23":"PIA","24":"PIA","25":"PIA","26":"PIA","27":"PIA","28":"PIA","29":"PIA","30":"PIA","31":"PIA","32":"PIA","33":"NOR","34":"NOR","35":"NOR","36":"NOR","37":"NOR","38":"NOR","39":"NOR","40":"VER","41":"ANT","42":"ANT","43":"ANT","44":"ANT","45":"ANT","46":"NOR","47":"NOR","48":"NOR","49":"NOR","50":"NOR","51":"NOR","52":"NOR","53":"NOR","54":"NOR","55":"NOR","56":"NOR","57":"NOR","58":"NOR","59":"NOR","60":"NOR","61":"NOR","62":"NOR","63":"NOR","64":"NOR","65":"NOR","66":"NOR","67":"NOR","68":"NOR","69":"NOR","70":"NOR"},"total":70},"raceStints":{"rows":[{"id":"NOR","pos":"P1","dnf":false,"laps":70,"stints":[{"n":1,"c":"Medium","a":1,"b":17,"age":0},{"n":2,"c":"Hard","a":18,"b":39,"age":0},{"n":3,"c":"Hard","a":40,"b":56,"age":0},{"n":4,"c":"Soft","a":57,"b":70,"age":3}],"pits":[{"lap":17,"lane":22.1},{"lap":39,"lane":22.1},{"lap":56,"lane":21.8}]},{"id":"VER","pos":"P2","dnf":false,"laps":70,"stints":[{"n":1,"c":"Medium","a":1,"b":14,"age":0},{"n":2,"c":"Hard","a":15,"b":41,"age":0},{"n":3,"c":"Soft","a":42,"b":70,"age":3}],"pits":[{"lap":14,"lane":21.625},{"lap":41,"lane":22.015}]},{"id":"ANT","pos":"P3","dnf":false,"laps":70,"stints":[{"n":1,"c":"Medium","a":1,"b":22,"age":0},{"n":2,"c":"Hard","a":23,"b":53,"age":0},{"n":3,"c":"Hard","a":54,"b":70,"age":0}],"pits":[{"lap":22,"lane":21.3},{"lap":53,"lane":21.3}]},{"id":"LEC","pos":"P4","dnf":false,"laps":70,"stints":[{"n":1,"c":"Soft","a":1,"b":16,"age":3},{"n":2,"c":"Hard","a":17,"b":36,"age":0},{"n":3,"c":"Hard","a":37,"b":56,"age":0},{"n":4,"c":"Soft","a":57,"b":70,"age":3}],"pits":[{"lap":16,"lane":21.931},{"lap":36,"lane":21.763},{"lap":56,"lane":21.945}]},{"id":"HAM","pos":"P5","dnf":false,"laps":70,"stints":[{"n":1,"c":"Soft","a":1,"b":13,"age":0},{"n":2,"c":"Hard","a":14,"b":30,"age":0},{"n":3,"c":"Hard","a":31,"b":56,"age":0},{"n":4,"c":"Soft","a":57,"b":70,"age":3}],"pits":[{"lap":13,"lane":21.748},{"lap":30,"lane":21.6},{"lap":56,"lane":22.4}]},{"id":"HAD","pos":"P6","dnf":false,"laps":70,"stints":[{"n":1,"c":"Medium","a":1,"b":19,"age":0},{"n":2,"c":"Hard","a":20,"b":42,"age":0},{"n":3,"c":"Hard","a":43,"b":70,"age":0}],"pits":[{"lap":19,"lane":21.822},{"lap":42,"lane":22.211}]},{"id":"RUS","pos":"P7","dnf":false,"laps":70,"stints":[{"n":1,"c":"Medium","a":1,"b":27,"age":0},{"n":2,"c":"Hard","a":28,"b":54,"age":0},{"n":3,"c":"Hard","a":55,"b":70,"age":0}],"pits":[{"lap":27,"lane":22.247},{"lap":54,"lane":22.019}]},{"id":"LAW","pos":"P8","dnf":false,"laps":69,"stints":[{"n":1,"c":"Medium","a":1,"b":21,"age":0},{"n":2,"c":"Hard","a":22,"b":42,"age":0},{"n":3,"c":"Soft","a":43,"b":69,"age":0}],"pits":[{"lap":21,"lane":21.923},{"lap":42,"lane":21.598}]},{"id":"HUL","pos":"P9","dnf":false,"laps":69,"stints":[{"n":1,"c":"Medium","a":1,"b":19,"age":0},{"n":2,"c":"Hard","a":20,"b":39,"age":0},{"n":3,"c":"Soft","a":40,"b":69,"age":3}],"pits":[{"lap":19,"lane":21.42},{"lap":39,"lane":22.1}]},{"id":"LIN","pos":"P10","dnf":false,"laps":69,"stints":[{"n":1,"c":"Medium","a":1,"b":20,"age":0},{"n":2,"c":"Hard","a":21,"b":69,"age":0}],"pits":[{"lap":20,"lane":21.395}]},{"id":"BOR","pos":"P11","dnf":false,"laps":69,"stints":[{"n":1,"c":"Soft","a":1,"b":29,"age":0},{"n":2,"c":"Hard","a":30,"b":69,"age":0}],"pits":[{"lap":29,"lane":21.749}]},{"id":"GAS","pos":"P12","dnf":false,"laps":69,"stints":[{"n":1,"c":"Medium","a":1,"b":16,"age":0},{"n":2,"c":"Hard","a":17,"b":39,"age":0},{"n":3,"c":"Hard","a":40,"b":55,"age":0},{"n":4,"c":"Soft","a":56,"b":69,"age":0}],"pits":[{"lap":16,"lane":21.458},{"lap":39,"lane":21.574},{"lap":55,"lane":21.74}]},{"id":"STR","pos":"P13","dnf":false,"laps":69,"stints":[{"n":1,"c":"Soft","a":1,"b":8,"age":0},{"n":2,"c":"Medium","a":9,"b":37,"age":0},{"n":3,"c":"Soft","a":38,"b":69,"age":0}],"pits":[{"lap":8,"lane":21.789},{"lap":37,"lane":24.241}]},{"id":"ALO","pos":"P14","dnf":false,"laps":69,"stints":[{"n":1,"c":"Soft","a":1,"b":34,"age":0},{"n":2,"c":"Medium","a":35,"b":55,"age":0},{"n":3,"c":"Soft","a":56,"b":69,"age":3}],"pits":[{"lap":34,"lane":22.1},{"lap":55,"lane":22.6}]},{"id":"COL","pos":"P15","dnf":false,"laps":68,"stints":[{"n":1,"c":"Medium","a":1,"b":15,"age":0},{"n":2,"c":"Hard","a":16,"b":37,"age":0},{"n":3,"c":"Hard","a":38,"b":68,"age":0}],"pits":[{"lap":15,"lane":22.995},{"lap":37,"lane":22.206}]},{"id":"OCO","pos":"P16","dnf":false,"laps":68,"stints":[{"n":1,"c":"Medium","a":1,"b":17,"age":0},{"n":2,"c":"Hard","a":18,"b":35,"age":0},{"n":3,"c":"Hard","a":36,"b":68,"age":0}],"pits":[{"lap":17,"lane":22.505},{"lap":35,"lane":22.399}]},{"id":"ALB","pos":"P17","dnf":false,"laps":68,"stints":[{"n":1,"c":"Medium","a":1,"b":26,"age":0},{"n":2,"c":"Hard","a":27,"b":54,"age":0},{"n":3,"c":"Soft","a":55,"b":68,"age":0}],"pits":[{"lap":26,"lane":22.105},{"lap":54,"lane":22.757}]},{"id":"SAI","pos":"P18","dnf":false,"laps":68,"stints":[{"n":1,"c":"Soft","a":1,"b":18,"age":0},{"n":2,"c":"Medium","a":19,"b":43,"age":0},{"n":3,"c":"Soft","a":44,"b":54,"age":3},{"n":4,"c":"Soft","a":55,"b":68,"age":3}],"pits":[{"lap":18,"lane":21.614},{"lap":43,"lane":28.658},{"lap":54,"lane":22.082}]},{"id":"BEA","pos":"P19","dnf":false,"laps":68,"stints":[{"n":1,"c":"Medium","a":1,"b":22,"age":0},{"n":2,"c":"Hard","a":23,"b":42,"age":0},{"n":3,"c":"Hard","a":43,"b":68,"age":0}],"pits":[{"lap":22,"lane":22.504},{"lap":42,"lane":22.336}]},{"id":"PIA","pos":"DNF","dnf":false,"laps":55,"stints":[{"n":1,"c":"Medium","a":1,"b":16,"age":0},{"n":2,"c":"Hard","a":17,"b":33,"age":0},{"n":3,"c":"Hard","a":34,"b":55,"age":0}],"pits":[{"lap":16,"lane":21.7},{"lap":33,"lane":21.7}]},{"id":"PER","pos":"DNF","dnf":false,"laps":48,"stints":[{"n":1,"c":"Medium","a":1,"b":21,"age":0},{"n":2,"c":"Medium","a":22,"b":46,"age":0},{"n":3,"c":"Soft","a":47,"b":48,"age":0}],"pits":[{"lap":21,"lane":23.212},{"lap":46,"lane":24.261}]},{"id":"BOT","pos":"DNF","dnf":false,"laps":13,"stints":[{"n":1,"c":"Medium","a":1,"b":13,"age":0}],"pits":[]}],"total":70},"telemetry":{"what":"fastest race laps","series":[{"id":"NOR","color":"#00e5ff","lap":64,"time":"1:22.491","tyre":"Soft"},{"id":"VER","color":"#ffb300","lap":66,"time":"1:23.433","tyre":"Soft"}],"data":{"NOR":{"d":[0,15,26,45,63,79,94,106,119,132,154,176,202,225,244,277,304,320,344,384,398,418,449,490,504,525,549,567,580,615,629,643,657,675,699,734,777,791,808,833,861,878,915,938,960,979,1007,1035,1055,1067,1079,1144,1153,1170,1187,1205,1213,1220,1233,1246,1258,1268,1277,1282,1287,1297,1301,1312,1316,1320,1324,1333,1338,1343,1348,1357,1360,1370,1378,1385,1389,1394,1400,1404,1410,1415,1426,1430,1436,1443,1449,1455,1461,1467,1476,1483,1494,1499,1504,1511,1558,1567,1582,1596,1608,1616,1630,1654,1669,1684,1702,1716,1727,1743,1753,1770,1784,1796,1806,1816,1827,1847,1860,1876,1905,1918,1931,1953,1983,2002,2013,2030,2050,2061,2089,2100,2114,2128,2159,2181,2195,2210,2233,2254,2264,2281,2289,2310,2318,2329,2347,2383,2391,2401,2415,2423,2435,2451,2461,2472,2477,2484,2491,2498,2506,2515,2526,2534,2541,2549,2553,2559,2567,2576,2584,2589,2594,2602,2610,2620,2627,2632,2640,2646,2651,2659,2668,2675,2683,2694,2704,2710,2718,2728,2737,2757,2766,2776,2784,2798,2807,2824,2840,2854,2862,2874,2886,2897,2906,2926,2940,2957,2968,2980,2989,3011,3021,3040,3055,3064,3074,3089,3109,3135,3148,3170,3185,3200,3212,3227,3242,3255,3274,3299,3314,3336,3346,3358,3369,3383,3399,3420,3434,3450,3464,3475,3483,3493,3512,3523,3540,3557,3572,3580,3591,3608,3632,3651,3669,3690,3700,3710,3732,3747,3770,3798,3822,3840,3861,3883,3896,3910,3923,3937,3953,3972,3988,3999,4018,4048,4067,4087,4098,4120,4137,4162,4183,4196,4216,4232,4244,4258,4271,4290,4302,4309,4319,4330,4343,4350,4361,4370,4376,4381],"s":[283,283,283,298,298,298,298,300,307,307,307,307,311,311,311,321,321,321,321,327,327,327,333,333,333,333,335,335,335,337,337,337,337,337,337,338,338,338,338,338,338,338,312,312,300,300,300,300,232,232,232,232,232,164,164,132,132,132,132,118,118,118,118,118,118,118,92,92,92,92,92,92,92,92,83,83,83,83,83,83,83,89,89,89,89,94,94,94,94,94,94,94,94,129,129,129,129,129,129,129,170,170,194,194,194,194,206,206,206,217,217,217,217,231,231,231,231,231,247,247,247,247,247,254,254,254,262,262,262,268,269,269,269,269,269,269,269,269,272,272,272,272,227,227,227,198,198,198,198,157,157,143,143,143,127,127,127,127,127,127,127,127,127,127,127,127,127,107,107,107,107,107,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,149,155,155,155,155,170,170,170,174,174,174,174,174,191,191,191,191,215,215,215,215,224,224,224,224,230,230,230,230,236,236,236,236,236,236,236,236,240,240,240,240,239,239,239,239,239,239,239,222,222,222,222,222,222,222,222,222,200,200,200,200,206,206,206,206,206,206,206,221,221,221,233,233,233,233,248,248,248,256,256,256,259,259,259,259,259,259,259,259,259,266,266,266,270,270,270,270,254,254,254,223,223,223,223,223,167,167,167,167,167,167,167,167,131,131,131],"th":[100,100,100,100,100,100,100,100,104,104,104,104,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,35,35,35,35,9,9,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14,14,14,14,27,27,27,27,39,45,45,45,51,51,51,51,104,104,104,104,96,96,96,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,104,104,104,104,104,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,20,20,20,20,104,0,0,0,0,0,0,0,0,52,52,52,52,52,52,52,52,77,77,77,99,99,99,99,99,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,99,99,99,99,12,12,12,0,0,0,0,0,0,0,0,0,46,46,46,46,94,94,94,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,74,74,74,74,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"g":[7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,5,5,4,4,4,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,4,5,5,5,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,5,5,5,5,4,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,5,5,5,5,4,3,3,3,3,3,3]},"VER":{"d":[0,11,16,26,34,43,56,70,81,94,102,109,113,122,128,134,141,147,151,156,162,166,171,179,185,191,199,206,214,221,228,237,244,250,259,273,285,296,305,312,323,335,348,368,379,401,412,421,434,443,458,476,491,506,516,535,551,566,580,593,604,618,631,648,662,673,687,710,721,739,765,776,800,815,826,841,859,879,903,918,936,966,983,1039,1051,1061,1079,1089,1103,1113,1123,1133,1142,1162,1176,1196,1202,1213,1219,1226,1237,1243,1248,1258,1270,1280,1286,1293,1302,1312,1320,1328,1339,1351,1359,1370,1383,1397,1407,1416,1429,1438,1452,1464,1473,1479,1492,1503,1517,1557,1567,1588,1596,1605,1618,1627,1640,1655,1676,1688,1697,1714,1739,1749,1758,1772,1792,1816,1826,1841,1856,1875,1885,1902,1922,1936,1960,1980,1997,2011,2034,2060,2077,2103,2127,2146,2167,2186,2220,2235,2254,2274,2294,2316,2391,2421,2441,2455,2478,2498,2522,2548,2565,2592,2619,2646,2666,2683,2700,2723,2745,2769,2792,2813,2834,2857,2869,2893,2908,2934,2952,2978,3001,3020,3033,3045,3061,3070,3081,3093,3110,3124,3136,3157,3172,3184,3193,3206,3223,3248,3258,3270,3280,3292,3312,3328,3346,3369,3415,3429,3443,3455,3473,3482,3500,3510,3525,3531,3538,3546,3558,3569,3577,3589,3597,3606,3619,3633,3646,3657,3669,3675,3690,3696,3703,3718,3735,3741,3750,3763,3772,3787,3794,3805,3816,3834,3848,3866,3881,3891,3904,3921,3933,3952,3963,3983,3995,4015,4032,4047,4061,4076,4091,4109,4127,4140,4156,4169,4192,4206,4214,4223,4236,4245,4263,4276,4292,4313,4329,4346,4352,4358,4368,4372,4381],"s":[117,117,117,114,114,114,114,114,114,88,88,82,82,82,82,81,81,81,81,86,86,86,86,86,86,86,86,111,111,111,111,130,130,130,130,150,160,160,160,160,166,166,166,195,195,195,195,195,195,195,195,218,218,218,218,218,236,236,236,236,246,246,246,246,246,253,253,253,253,253,262,262,262,262,262,262,262,262,267,267,267,267,236,236,182,182,182,175,175,175,175,175,150,150,150,150,150,150,150,126,126,126,126,126,116,116,116,116,114,114,114,108,108,108,108,108,108,116,116,116,125,125,125,136,136,136,136,155,155,181,181,186,194,194,194,194,194,207,207,207,207,207,207,207,207,218,218,218,218,218,218,218,218,218,218,218,253,253,253,253,253,253,253,269,269,269,276,276,276,276,290,290,290,290,290,298,298,298,298,298,298,298,298,302,302,302,296,296,296,296,263,263,263,263,263,263,263,263,263,263,263,204,204,204,204,204,204,204,204,211,211,211,211,214,214,214,214,220,220,220,220,218,218,218,218,203,203,203,203,203,159,159,159,151,146,146,146,142,142,142,142,135,135,135,135,133,133,133,134,134,134,134,134,134,134,150,150,150,150,150,150,150,150,175,175,175,175,186,186,186,186,186,186,186,218,218,218,218,218,218,218,218,231,231,231,231,231,231,231,173,163,163,163,163,163,163,163,163,163,163,109,109,109,109,109],"th":[0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,7,7,7,7,21,21,21,21,28,28,28,28,28,28,28,28,69,71,71,71,88,88,88,88,88,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,20,20,23,23,37,46,46,46,57,57,57,57,77,77,88,88,100,100,100,100,100,100,100,100,100,100,53,53,53,71,98,98,98,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,104,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,7,7,7,42,42,59,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,104,104,104,104,1,1,1,1,1,1,1,37,37,37,47,47,47,47,77,77,77,77,82,82,82,82,82,82,82,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"g":[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,5,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,4,4,4,4,3,3,3,3,3,3,3,3,3,3]}}},"qualiTelemetry":{"what":"best qualifying laps","series":[{"id":"NOR","color":"#00e5ff","lap":15,"time":"1:17.207","tyre":"Soft"},{"id":"PIA","color":"#ff4fb4","lap":12,"time":"1:17.684","tyre":"Soft"}],"data":{"NOR":{"d":[0,29,66,103,117,131,152,191,206,231,246,272,297,320,342,364,387,405,428,457,482,509,526,537,551,568,577,585,595,604,613,620,632,642,648,654,659,665,680,686,694,716,724,776,791,802,823,840,866,877,898,914,935,963,979,1013,1024,1035,1049,1060,1074,1083,1099,1107,1115,1121,1129,1136,1144,1153,1170,1177,1189,1200,1208,1217,1224,1232,1249,1258,1267,1279,1291,1314,1327,1349,1365,1379,1396,1408,1428,1443,1477,1493,1509,1526,1542,1573,1596,1617,1641,1740,1763,1784,1815,1831,1850,1865,1876,1890,1914,1930,1946,1969,1983,1998,2006,2020,2033,2048,2067,2075,2084,2095,2104,2111,2120,2134,2144,2152,2168,2181,2195,2205,2228,2244,2260,2279,2309,2320,2335,2352,2367,2382,2388,2401,2415,2422,2428,2437,2444,2457,2464,2475,2485,2497,2510,2526,2544,2554,2565,2576,2596,2608,2623,2632,2644,2660,2676,2690,2698,2712,2723,2730,2748,2755,2767,2776,2790,2800,2815,2829,2841,2856,2869,2890,2912,2923,2951,2963,2980,3001,3025,3046,3072,3088,3102,3124,3142,3160,3192,3203,3214,3225,3242,3263,3278,3299,3323,3342,3361,3377,3393,3412,3428,3441,3456,3466,3478,3487,3502,3509,3517,3527,3539,3547,3552,3564,3576,3588,3597,3609,3626,3637,3650,3659,3670,3687,3705,3716,3734,3741,3750,3759,3771,3779,3791,3796,3803,3811,3822,3830,3839,3847,3853,3864,3870,3880,3890,3903,3912,3922,3937,3948,3964,3974,3991,4000,4010,4019,4030,4048,4055,4065,4075,4084,4092,4099,4115,4126,4139,4151,4165,4173,4190,4201,4214,4234,4246,4259,4275,4291,4310,4322,4333,4348,4381],"s":[284,290,300,306,309,310,314,319,321,324,324,327,328,329,330,331,331,331,331,324,315,273,243,216,194,156,150,133,121,111,107,103,96,92,95,99,104,110,129,135,146,173,183,221,228,235,245,247,260,264,268,271,275,280,280,265,240,228,199,185,169,160,150,144,139,136,132,129,126,124,121,126,137,144,152,160,169,179,193,199,206,214,220,231,235,243,244,250,256,256,265,270,279,283,288,292,295,301,305,307,309,296,278,259,239,237,234,235,237,238,237,239,239,213,201,185,177,172,166,158,150,151,154,157,161,164,168,176,184,187,200,206,213,220,232,236,242,247,222,199,169,140,125,118,113,111,122,132,133,135,138,149,159,167,175,186,195,203,208,203,195,187,176,170,167,169,174,180,178,170,168,164,160,155,154,154,161,166,177,186,199,207,215,225,231,239,245,249,255,256,260,262,266,265,247,240,233,220,225,232,240,246,247,251,258,261,265,270,274,278,280,282,283,284,284,280,250,221,197,186,155,149,138,129,122,119,115,115,122,136,145,161,178,187,201,204,208,219,219,202,178,164,155,143,129,121,112,108,105,98,99,103,105,109,115,123,129,140,149,163,172,181,194,203,213,216,207,196,185,179,167,153,151,145,141,136,133,132,139,144,148,153,170,178,190,197,208,217,223,230,236,244,250,255,259,263,270],"th":[100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,0,0,0,22,32,36,41,51,63,79,92,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,36,45,57,67,72,79,94,99,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,20,44,67,100,100,100,100,100,3,0,0,0,0,0,3,0,30,49,50,51,54,57,64,74,89,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,1,31,60,46,24,32,58,88,100,100,100,100,100,100,0,0,0,0,1,10,37,47,69,61,0,5,8,0,0,0,47,51,62,73,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,59,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,94,0,0,0,0,0,0,0,0,0,0,0,1,32,47,65,86,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,0,6,27,28,31,37,42,55,61,72,79,98,100,100,100,100,100,31,0,0,0,0,0,0,0,0,0,0,3,32,45,50,57,67,80,100,100,100,100,100,100,100,100,100,100,100,100,100,100],"g":[7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,5,3,2,2,2,2,2,2,2,2,2,2,3,3,4,4,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,6,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,5,5,5,5,5,6,6,6,6,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,6,6,6,6,6,6,6,6,6,6,5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,6,6,6,6,6,6,6,6,6,4,3,3,3,3,3,3,3,3,3,3,3,4,4,5,5,5,5,5,5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,6,6,6,6,7,7,7,7,7,7,7,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,5,3,3,3,3,3,3,3,3,3,4,4,5,5,5,5,5,5,5,5,4,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,3,3,4,4,4,4,5,5,5,5,5,5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,6,6,6,6,7,7,7,7]},"PIA":{"d":[0,16,36,80,115,129,147,165,190,223,241,278,293,319,349,371,386,412,431,445,470,507,523,541,561,573,579,587,594,602,607,612,620,628,636,641,647,656,666,677,683,691,707,715,730,746,765,783,801,826,855,866,887,915,933,959,975,987,1000,1014,1032,1043,1057,1072,1083,1094,1101,1107,1116,1123,1135,1144,1153,1162,1176,1182,1197,1209,1225,1245,1256,1266,1288,1298,1320,1333,1358,1378,1392,1413,1425,1443,1458,1483,1496,1509,1539,1553,1566,1587,1614,1645,1659,1680,1698,1768,1779,1804,1817,1831,1844,1854,1870,1886,1912,1934,1950,1969,1988,1996,2012,2029,2048,2063,2084,2094,2111,2123,2135,2148,2164,2173,2182,2192,2213,2226,2247,2261,2275,2292,2305,2319,2335,2350,2357,2363,2370,2380,2393,2407,2420,2426,2437,2445,2454,2471,2485,2507,2518,2527,2544,2557,2574,2586,2607,2616,2626,2641,2649,2665,2675,2689,2698,2707,2720,2734,2741,2749,2762,2776,2790,2799,2813,2834,2846,2888,2912,2929,2955,2975,2995,3010,3030,3057,3070,3092,3104,3127,3149,3165,3186,3207,3224,3252,3269,3296,3326,3338,3353,3368,3396,3421,3447,3476,3489,3497,3506,3512,3519,3529,3536,3544,3550,3555,3565,3575,3581,3594,3606,3619,3631,3640,3648,3662,3674,3694,3708,3721,3735,3747,3758,3768,3775,3786,3796,3800,3805,3812,3819,3829,3833,3839,3850,3859,3865,3876,3892,3901,3911,3928,3953,3970,3986,4011,4032,4042,4059,4070,4080,4088,4097,4104,4112,4122,4134,4146,4153,4169,4179,4199,4215,4235,4245,4266,4279,4313,4327,4342,4354,4381],"s":[286,290,296,305,311,314,316,319,321,324,326,328,329,330,330,330,330,330,326,322,311,238,224,180,139,126,122,114,110,106,103,99,95,93,97,101,106,113,124,138,138,152,168,183,193,205,217,228,239,250,260,260,266,275,278,281,282,278,269,241,206,191,173,160,150,144,139,134,130,125,120,117,118,125,133,140,153,168,183,200,209,216,225,231,236,242,250,252,258,262,267,271,275,282,287,291,296,299,300,303,306,309,309,310,309,257,249,237,235,234,234,233,233,234,235,237,229,210,193,184,173,166,157,150,155,157,169,175,186,194,204,207,215,221,231,235,242,245,248,247,222,188,162,137,127,124,121,115,110,120,129,134,143,151,161,173,184,197,203,209,204,196,184,174,163,163,164,172,177,183,177,168,164,158,154,155,157,159,166,178,191,194,205,215,221,239,246,249,253,256,259,259,263,250,241,228,223,219,226,229,234,240,247,253,257,263,269,271,272,273,274,276,240,179,153,141,133,126,123,118,112,111,109,111,117,128,132,147,157,173,188,193,202,210,216,221,203,179,159,143,132,126,119,108,102,100,96,93,97,102,106,111,118,125,133,145,162,171,180,193,209,217,207,185,164,157,148,144,140,133,134,136,141,149,153,159,164,180,186,201,211,221,225,237,243,253,257,262,265,271],"th":[99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,0,0,0,0,0,0,0,0,0,0,0,0,4,23,31,37,41,50,53,74,74,96,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,44,59,69,82,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,100,100,99,99,99,99,99,99,99,99,99,99,99,0,0,31,49,63,73,85,92,99,100,98,0,0,0,0,0,0,4,14,51,62,72,78,97,99,97,99,99,99,99,99,99,99,99,0,0,0,0,0,0,0,0,0,26,52,51,52,62,81,85,90,99,99,99,97,0,0,0,0,18,39,54,70,74,1,0,0,0,0,29,43,46,52,79,91,99,99,99,99,99,99,99,99,99,99,99,99,10,0,0,0,10,62,98,99,99,99,99,99,99,99,99,99,99,99,99,99,0,0,0,0,0,0,0,0,0,8,27,30,54,67,68,81,86,97,99,99,99,99,99,70,0,0,0,0,0,0,0,0,0,0,0,23,27,37,42,43,55,60,63,79,87,98,99,99,99,20,0,0,0,0,0,0,0,22,34,53,58,72,74,61,71,87,89,97,99,99,99,99,99,99,99,99,99,99],"g":[8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,6,3,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,4,4,5,5,5,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,5,4,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,5,5,5,6,6,6,6,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,6,6,6,6,6,6,6,6,6,6,6,5,5,4,4,4,4,4,4,4,4,4,4,5,5,5,5,6,6,6,6,6,6,6,6,6,5,3,3,3,3,3,3,3,3,3,3,3,3,4,5,5,5,5,5,5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,6,6,6,6,7,7,7,7,7,7,7,7,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,4,3,3,3,3,3,3,3,3,3,3,3,4,4,5,5,5,5,5,5,5,4,4,3,3,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,6,6,6,6,7,7,7,7,7]}}}}</script>
+  <script>
+/* Apex by Milla · interactive race charts (Stage 3, Silverstone onward)
+   Plain JS, no libraries. Each <figure class="chart-figure" data-chart="..."> gets an
+   interactive SVG built from the JSON in #apexChartData. If anything fails, the PNG stays. */
+(function () {
+  'use strict';
+  var dataEl = document.getElementById('apexChartData');
+  if (!dataEl) return;
+  var DATA;
+  try { DATA = JSON.parse(dataEl.textContent); } catch (e) { return; }
+
+  var NS = 'http://www.w3.org/2000/svg';
+  var INK = '#f0f0f0', MUTED = '#888888', GRID = '#2a2a2a', SURF = '#0a0a0a';
+  var COMPOUND = { Soft: '#E10600', Medium: '#F5C842', Hard: '#f0f0f0', Intermediate: '#43B02A', Wet: '#0067AD' };
+
+  function svgEl(tag, attrs, parent) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  function htmlEl(tag, cls, parent, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  function fmtLap(s) {
+    if (s == null) return '–';
+    var m = Math.floor(s / 60), r = s - m * 60;
+    return m + ':' + (r < 10 ? '0' : '') + r.toFixed(3);
+  }
+  function niceTicks(lo, hi, n) {
+    var span = hi - lo, step = Math.pow(10, Math.floor(Math.log10(span / n)));
+    var err = span / n / step;
+    if (err >= 7.5) step *= 10; else if (err >= 3.5) step *= 5; else if (err >= 1.5) step *= 2;
+    var out = [];
+    for (var v = Math.ceil(lo / step) * step; v <= hi + 1e-9; v += step) out.push(+v.toFixed(6));
+    return out;
+  }
+
+  /* ---------- shared tooltip ---------- */
+  function makeTip(wrap) {
+    var tip = htmlEl('div', 'ichart-tip', wrap);
+    tip.setAttribute('role', 'status');
+    tip.hidden = true;
+    return {
+      show: function (title, rows, x, y) {
+        tip.textContent = '';
+        htmlEl('div', 'ichart-tip-title', tip, title);
+        rows.forEach(function (r) {
+          var row = htmlEl('div', 'ichart-tip-row', tip);
+          if (r.color) { var k = htmlEl('span', 'ichart-tip-key', row); k.style.background = r.color; }
+          htmlEl('strong', null, row, r.value);
+          htmlEl('span', 'ichart-tip-label', row, r.label);
+          if (r.note) htmlEl('span', 'ichart-tip-note', row, r.note);
+        });
+        tip.hidden = false;
+        var W = wrap.clientWidth, tw = tip.offsetWidth, th = tip.offsetHeight;
+        var left = x + 14; if (left + tw > W - 4) left = Math.max(4, x - tw - 14);
+        var top = Math.max(4, y - th / 2);
+        tip.style.left = left + 'px'; tip.style.top = top + 'px';
+      },
+      hide: function () { tip.hidden = true; }
+    };
+  }
+
+  function legend(wrap, items, shape) {
+    var lg = htmlEl('div', 'ichart-legend', wrap);
+    items.forEach(function (it) {
+      var s = htmlEl('span', 'ichart-legend-item', lg);
+      var k = htmlEl('span', 'ichart-legend-key ' + (shape || 'line'), s);
+      k.style.background = it.color;
+      htmlEl('span', null, s, it.label);
+    });
+    return lg;
+  }
+
+  function dataTable(wrap, caption, head, rows) {
+    var det = htmlEl('details', 'ichart-table', wrap);
+    htmlEl('summary', null, det, 'Show the data as a table');
+    var sc = htmlEl('div', 'ichart-table-scroll', det);
+    var t = htmlEl('table', null, sc);
+    htmlEl('caption', null, t, caption);
+    var tr = htmlEl('tr', null, htmlEl('thead', null, t));
+    head.forEach(function (h) { htmlEl('th', null, tr, h); });
+    var tb = htmlEl('tbody', null, t);
+    rows.forEach(function (r) { var row = htmlEl('tr', null, tb); r.forEach(function (c) { htmlEl('td', null, row, c); }); });
+  }
+
+  /* ---------- line chart with crosshair (laps, gap) ---------- */
+  function lineChart(wrap, opt) {
+    var holder = htmlEl('div', 'ichart-plot', wrap);
+    var tip = makeTip(holder);
+    var svg;
+    function draw() {
+      if (svg) svg.remove();
+      var W = Math.max(300, holder.clientWidth), H = Math.round(Math.min(460, Math.max(260, W * 0.52)));
+      var m = { l: W < 500 ? 46 : 62, r: 12, t: 22, b: 34 };
+      svg = svgEl('svg', { viewBox: '0 0 ' + W + ' ' + H, width: W, height: H, role: 'img', 'aria-label': opt.aria, tabindex: 0, class: 'ichart-svg' });
+      holder.insertBefore(svg, holder.firstChild);
+      var x0 = opt.xMin, x1 = opt.xMax, y0 = opt.yMin, y1 = opt.yMax;
+      var X = function (v) { return m.l + (v - x0) / (x1 - x0) * (W - m.l - m.r); };
+      var Y = opt.invert
+        ? function (v) { return m.t + (v - y0) / (y1 - y0) * (H - m.t - m.b); }
+        : function (v) { return H - m.b - (v - y0) / (y1 - y0) * (H - m.t - m.b); };
+      (opt.bands || []).forEach(function (b) {
+        svgEl('rect', { x: X(b[0] - 0.5), y: m.t, width: X(b[1] + 0.5) - X(b[0] - 0.5), height: H - m.t - m.b, fill: INK, 'fill-opacity': 0.07 }, svg);
+        var t = svgEl('text', { x: (X(b[0] - 0.5) + X(b[1] + 0.5)) / 2, y: m.t - 7, 'text-anchor': 'middle', class: 'ichart-axis' }, svg); t.textContent = b[2];
+      });
+      niceTicks(y0, y1, 5).forEach(function (v) {
+        svgEl('line', { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), stroke: GRID, 'stroke-width': 1 }, svg);
+        var t = svgEl('text', { x: m.l - 8, y: Y(v) + 4, 'text-anchor': 'end', class: 'ichart-axis' }, svg); t.textContent = opt.yFmt(v);
+      });
+      niceTicks(x0, x1, W < 500 ? 5 : 10).forEach(function (v) {
+        var t = svgEl('text', { x: X(v), y: H - m.b + 18, 'text-anchor': 'middle', class: 'ichart-axis' }, svg); t.textContent = v;
+      });
+      var xl = svgEl('text', { x: (m.l + W - m.r) / 2, y: H - 4, 'text-anchor': 'middle', class: 'ichart-axis' }, svg); xl.textContent = opt.xLabel;
+      opt.series.forEach(function (s) {
+        var d = '', pen = false;
+        s.pts.forEach(function (p) {
+          var v = opt.val(p);
+          if (v == null) { pen = false; return; }
+          var vy = Math.max(Math.min(v, Math.max(y0, y1)), Math.min(y0, y1));
+          d += (pen ? 'L' : 'M') + X(p.l).toFixed(1) + ',' + Y(vy).toFixed(1); pen = true;
+        });
+        svgEl('path', { d: d, fill: 'none', stroke: s.color, 'stroke-width': 2, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }, svg);
+      });
+      var cross = svgEl('line', { y1: m.t, y2: H - m.b, stroke: MUTED, 'stroke-width': 1, 'stroke-dasharray': '3 3', visibility: 'hidden' }, svg);
+      var dots = opt.series.map(function (s) { return svgEl('circle', { r: 4.5, fill: s.color, stroke: SURF, 'stroke-width': 2, visibility: 'hidden' }, svg); });
+      var hit = svgEl('rect', { x: m.l, y: m.t, width: W - m.l - m.r, height: H - m.t - m.b, fill: 'transparent' }, svg);
+      var cur = null;
+      function at(lap) {
+        lap = Math.max(x0, Math.min(x1, Math.round(lap))); cur = lap;
+        cross.setAttribute('x1', X(lap)); cross.setAttribute('x2', X(lap)); cross.setAttribute('visibility', 'visible');
+        var rows = [], ys = [];
+        opt.series.forEach(function (s, i) {
+          var p = s.pts.filter(function (q) { return q.l === lap; })[0];
+          var v = p ? opt.val(p) : null;
+          if (v != null && v >= Math.min(y0, y1) && v <= Math.max(y0, y1)) {
+            dots[i].setAttribute('cx', X(lap)); dots[i].setAttribute('cy', Y(v)); dots[i].setAttribute('visibility', 'visible'); ys.push(Y(v));
+          } else dots[i].setAttribute('visibility', 'hidden');
+          rows.push(opt.row(s, p));
+        });
+        rows.sort(opt.sort || function () { return 0; });
+        var y = ys.length ? ys.reduce(function (a, b) { return a + b; }, 0) / ys.length : H / 2;
+        tip.show(opt.title(lap), rows, X(lap), y);
+      }
+      function off() { cross.setAttribute('visibility', 'hidden'); dots.forEach(function (d) { d.setAttribute('visibility', 'hidden'); }); tip.hide(); }
+      function fromEvent(e) {
+        var r = svg.getBoundingClientRect();
+        var px = (e.clientX - r.left) * (W / r.width);
+        return x0 + (px - m.l) / (W - m.l - m.r) * (x1 - x0);
+      }
+      hit.addEventListener('pointermove', function (e) { at(fromEvent(e)); });
+      hit.addEventListener('pointerdown', function (e) { at(fromEvent(e)); });
+      hit.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') off(); });
+      svg.addEventListener('focus', function () { at(cur == null ? x0 + 1 : cur); });
+      svg.addEventListener('blur', off);
+      svg.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+          e.preventDefault(); at((cur == null ? x0 : cur) + (e.key === 'ArrowRight' ? 1 : -1));
+        } else if (e.key === 'Escape') off();
+      });
+    }
+    draw();
+    return draw;
+  }
+
+  /* ---------- tyre stint chart ---------- */
+  function stintChart(wrap, data, label) {
+    var holder = htmlEl('div', 'ichart-plot', wrap);
+    var tip = makeTip(holder);
+    var svg;
+    function draw() {
+      if (svg) svg.remove();
+      var W = Math.max(300, holder.clientWidth), rowH = W < 500 ? 18 : 22;
+      var m = { l: W < 500 ? 70 : 92, r: 10, t: 6, b: 34 };
+      var rows = data.rows, H = m.t + m.b + rows.length * rowH;
+      svg = svgEl('svg', { viewBox: '0 0 ' + W + ' ' + H, width: W, height: H, role: 'img', 'aria-label': label, class: 'ichart-svg' });
+      holder.insertBefore(svg, holder.firstChild);
+      var X = function (v) { return m.l + v / data.total * (W - m.l - m.r); };
+      niceTicks(0, data.total, W < 500 ? 5 : 10).forEach(function (v) {
+        svgEl('line', { x1: X(v), x2: X(v), y1: m.t, y2: H - m.b, stroke: GRID, 'stroke-width': 1 }, svg);
+        var t = svgEl('text', { x: X(v), y: H - m.b + 16, 'text-anchor': 'middle', class: 'ichart-axis' }, svg); t.textContent = v;
+      });
+      var xl = svgEl('text', { x: (m.l + W - m.r) / 2, y: H - 4, 'text-anchor': 'middle', class: 'ichart-axis' }, svg); xl.textContent = 'Lap';
+      rows.forEach(function (r, i) {
+        var y = m.t + i * rowH;
+        var t = svgEl('text', { x: m.l - 8, y: y + rowH / 2 + 4, 'text-anchor': 'end', class: 'ichart-row-label' }, svg);
+        t.textContent = r.id + '  ' + r.pos;
+        r.stints.forEach(function (s, j) {
+          var x = X(s.a - 1) + 1, w = Math.max(2, X(s.b) - X(s.a - 1) - 2);
+          var g = svgEl('g', { tabindex: 0, class: 'ichart-seg', role: 'button' }, svg);
+          var col = COMPOUND[s.c] || MUTED;
+          svgEl('rect', { x: x, y: y + 3, width: w, height: rowH - 6, rx: 3, fill: col }, g);
+          var n = s.b - s.a + 1;
+          if (w > 22) {
+            var lt = svgEl('text', { x: x + w / 2, y: y + rowH / 2 + 4, 'text-anchor': 'middle', class: 'ichart-seg-label', fill: (s.c === 'Soft' ? INK : SURF) }, g);
+            lt.textContent = n;
+          }
+          var pit = r.pits.filter(function (p) { return p.lap === s.b; })[0];
+          var info = [
+            { value: s.c, label: 'compound', color: col },
+            { value: 'Laps ' + s.a + '–' + s.b, label: '(' + n + (n === 1 ? ' lap)' : ' laps)') },
+            { value: s.age === 0 ? 'New set' : s.age + ' laps old', label: 'when fitted' }
+          ];
+          if (pit && j < r.stints.length - 1) info.push({ value: pit.lane.toFixed(3) + 's', label: 'pit lane time, Lap ' + pit.lap });
+          function show(px, py) { tip.show(r.id + (r.dnf ? ' (DNF)' : '') + ' · Stint ' + s.n, info, px, py); }
+          g.addEventListener('pointermove', function (e) { var b = svg.getBoundingClientRect(); show(e.clientX - b.left, e.clientY - b.top); });
+          g.addEventListener('pointerdown', function (e) { var b = svg.getBoundingClientRect(); show(e.clientX - b.left, e.clientY - b.top); });
+          g.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') tip.hide(); });
+          g.addEventListener('focus', function () { var b = svg.getBoundingClientRect(); var sx = b.width / W; show((x + w / 2) * sx, (y + rowH / 2) * sx); });
+          g.addEventListener('blur', function () { tip.hide(); });
+        });
+      });
+    }
+    draw();
+    return draw;
+  }
+
+  /* ---------- telemetry (speed + throttle, shared crosshair) ---------- */
+  function telemetryChart(wrap, T) {
+    var holder = htmlEl('div', 'ichart-plot', wrap);
+    var tip = makeTip(holder);
+    var svg;
+    var maxD = Math.max.apply(null, T.series.map(function (s) { var a = T.data[s.id].d; return a[a.length - 1]; }));
+    function nearest(arr, v) {
+      var lo = 0, hi = arr.length - 1;
+      while (hi - lo > 1) { var mid = (lo + hi) >> 1; if (arr[mid] < v) lo = mid; else hi = mid; }
+      return (v - arr[lo] < arr[hi] - v) ? lo : hi;
+    }
+    function draw() {
+      if (svg) svg.remove();
+      var W = Math.max(300, holder.clientWidth), H = Math.round(Math.min(520, Math.max(320, W * 0.6)));
+      var m = { l: W < 500 ? 42 : 56, r: 12, t: 10, b: 34 }, gap = 26;
+      var hTop = (H - m.t - m.b - gap) * 0.68, hBot = H - m.t - m.b - gap - hTop;
+      svg = svgEl('svg', { viewBox: '0 0 ' + W + ' ' + H, width: W, height: H, role: 'img', 'aria-label': 'Speed and throttle telemetry for ' + T.series.map(function (q) { return q.id; }).join(' and ') + ' on their ' + (T.what || 'fastest race laps'), tabindex: 0, class: 'ichart-svg' });
+      holder.insertBefore(svg, holder.firstChild);
+      var X = function (v) { return m.l + v / maxD * (W - m.l - m.r); };
+      var sMin = 60, sMax = 330;
+      var YS = function (v) { return m.t + hTop - (v - sMin) / (sMax - sMin) * hTop; };
+      var bTop = m.t + hTop + gap;
+      var YT = function (v) { return bTop + hBot - v / 100 * hBot; };
+      [100, 150, 200, 250, 300].forEach(function (v) {
+        svgEl('line', { x1: m.l, x2: W - m.r, y1: YS(v), y2: YS(v), stroke: GRID }, svg);
+        var t = svgEl('text', { x: m.l - 6, y: YS(v) + 4, 'text-anchor': 'end', class: 'ichart-axis' }, svg); t.textContent = v;
+      });
+      [0, 50, 100].forEach(function (v) {
+        svgEl('line', { x1: m.l, x2: W - m.r, y1: YT(v), y2: YT(v), stroke: GRID }, svg);
+        var t = svgEl('text', { x: m.l - 6, y: YT(v) + 4, 'text-anchor': 'end', class: 'ichart-axis' }, svg); t.textContent = v + '%';
+      });
+      var a1 = svgEl('text', { x: m.l, y: m.t + 10, class: 'ichart-axis', 'text-anchor': 'start', dx: 6 }, svg); a1.textContent = 'Speed (km/h)';
+      var a2 = svgEl('text', { x: m.l, y: bTop - 6, class: 'ichart-axis', dx: 6 }, svg); a2.textContent = 'Throttle';
+      niceTicks(0, maxD, W < 500 ? 4 : 8).forEach(function (v) {
+        var t = svgEl('text', { x: X(v), y: H - m.b + 16, 'text-anchor': 'middle', class: 'ichart-axis' }, svg); t.textContent = v;
+      });
+      var xl = svgEl('text', { x: (m.l + W - m.r) / 2, y: H - 4, 'text-anchor': 'middle', class: 'ichart-axis' }, svg); xl.textContent = 'Distance (m)';
+      T.series.forEach(function (s) {
+        var D = T.data[s.id], d1 = '', d2 = '';
+        D.d.forEach(function (dv, i) {
+          d1 += (i ? 'L' : 'M') + X(dv).toFixed(1) + ',' + YS(D.s[i]).toFixed(1);
+          d2 += (i ? 'L' : 'M') + X(dv).toFixed(1) + ',' + YT(D.th[i]).toFixed(1);
+        });
+        svgEl('path', { d: d1, fill: 'none', stroke: s.color, 'stroke-width': 2, 'stroke-linejoin': 'round' }, svg);
+        svgEl('path', { d: d2, fill: 'none', stroke: s.color, 'stroke-width': 1.6, 'stroke-linejoin': 'round' }, svg);
+      });
+      var cross = svgEl('line', { y1: m.t, y2: H - m.b, stroke: MUTED, 'stroke-dasharray': '3 3', visibility: 'hidden' }, svg);
+      var dots = T.series.map(function (s) { return svgEl('circle', { r: 4.5, fill: s.color, stroke: SURF, 'stroke-width': 2, visibility: 'hidden' }, svg); });
+      var hit = svgEl('rect', { x: m.l, y: m.t, width: W - m.l - m.r, height: H - m.t - m.b, fill: 'transparent' }, svg);
+      var cur = null;
+      function at(dist) {
+        dist = Math.max(0, Math.min(maxD, dist)); cur = dist;
+        cross.setAttribute('x1', X(dist)); cross.setAttribute('x2', X(dist)); cross.setAttribute('visibility', 'visible');
+        var rows = [], sp = [];
+        T.series.forEach(function (s, i) {
+          var D = T.data[s.id], k = nearest(D.d, dist);
+          sp.push(D.s[k]);
+          dots[i].setAttribute('cx', X(D.d[k])); dots[i].setAttribute('cy', YS(D.s[k])); dots[i].setAttribute('visibility', 'visible');
+          rows.push({ color: s.color, value: D.s[k] + ' km/h', label: s.id, note: 'throttle ' + D.th[k] + '%' + (D.g[k] ? ', gear ' + D.g[k] : '') });
+        });
+        var diff = sp[0] - sp[1];
+        rows.push({ value: (diff > 0 ? '+' : '') + diff + ' km/h', label: T.series[0].id + ' vs ' + T.series[1].id });
+        tip.show('Around ' + Math.round(dist / 10) * 10 + ' m into the lap', rows, X(dist), m.t + hTop / 2);
+      }
+      function off() { cross.setAttribute('visibility', 'hidden'); dots.forEach(function (d) { d.setAttribute('visibility', 'hidden'); }); tip.hide(); }
+      function fromEvent(e) { var r = svg.getBoundingClientRect(); return ((e.clientX - r.left) * (W / r.width) - m.l) / (W - m.l - m.r) * maxD; }
+      hit.addEventListener('pointermove', function (e) { at(fromEvent(e)); });
+      hit.addEventListener('pointerdown', function (e) { at(fromEvent(e)); });
+      hit.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') off(); });
+      svg.addEventListener('focus', function () { at(cur == null ? 0 : cur); });
+      svg.addEventListener('blur', off);
+      svg.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); at((cur || 0) + (e.key === 'ArrowRight' ? 50 : -50)); }
+        else if (e.key === 'Escape') off();
+      });
+    }
+    draw();
+    return draw;
+  }
+
+  /* ---------- build each figure ---------- */
+  var L = DATA.laps;
+  function lapRow(s, p) {
+    if (!p) return { color: s.color, value: '–', label: s.id };
+    var tyre = p.c ? p.c + ', ' + ageTxt(p.a) : '';
+    return { color: s.color, value: fmtLap(p.t), label: s.id, note: p.x ? p.x + (tyre ? ' · ' + tyre : '') : tyre, sortv: p.x ? 9e9 : p.t };
+  }
+  function ageTxt(a) { return a === 0 ? 'new set' : a === 1 ? '1 lap old' : a + ' laps old'; }
+  function bandAt(lap) { for (var i = 0; i < L.bands.length; i++) if (lap >= L.bands[i][0] && lap <= L.bands[i][1]) return ' · ' + L.bands[i][2]; return ''; }
+  /* Gap axis sized to this race's largest gap (rounded up to the next 5s) */
+  function gapMax() { var m = 0; L.series.forEach(function (s) { s.pts.forEach(function (p) { if (p.g != null && p.g > m) m = p.g; }); }); return Math.max(10, Math.ceil((m + 1) / 5) * 5); }
+  var builders = {
+    'race-lap-times': function (wrap) {
+      legend(wrap, L.series.map(function (s) { return { color: s.color, label: s.id }; }));
+      var clean = [];
+      L.series.forEach(function (s) { s.pts.forEach(function (p) { if (!p.x && p.t != null) clean.push(p.t); }); });
+      var lo = Math.min.apply(null, clean) - 0.4, hi = Math.max.apply(null, clean) + 0.4;
+      var redraw = lineChart(wrap, {
+        aria: 'Lap times for the top five finishers, with pit, Safety Car and VSC laps removed',
+        series: L.series, xMin: 1, xMax: L.total, yMin: lo, yMax: hi, xLabel: 'Lap',
+        yFmt: function (v) { return fmtLap(v).replace(/(\.\d)\d\d$/, '$1'); }, bands: L.bands,
+        val: function (p) { return p.x ? null : p.t; },
+        title: function (lap) { return 'Lap ' + lap + bandAt(lap); },
+        row: lapRow, sort: function (a, b) { return (a.sortv || 9e9) - (b.sortv || 9e9); }
+      });
+      var rows = [];
+      for (var l = 1; l <= L.total; l++) rows.push([String(l)].concat(L.series.map(function (s) {
+        var p = s.pts.filter(function (q) { return q.l === l; })[0];
+        return p ? fmtLap(p.t) + (p.x ? ' (' + p.x + ')' : '') : '–';
+      })));
+      dataTable(wrap, 'Lap times by lap, top five finishers', ['Lap'].concat(L.series.map(function (s) { return s.id; })), rows);
+      return redraw;
+    },
+    'race-gap-to-leader': function (wrap) {
+      legend(wrap, L.series.map(function (s) { return { color: s.color, label: s.id }; }));
+      var redraw = lineChart(wrap, {
+        aria: 'Gap to the race leader at the end of each lap for the top five finishers',
+        series: L.series, xMin: 1, xMax: L.total, yMin: -1, yMax: gapMax(), invert: true, xLabel: 'Lap',
+        yFmt: function (v) { return v + 's'; }, bands: L.bands,
+        val: function (p) { return p.g; },
+        title: function (lap) { return 'Lap ' + lap + bandAt(lap) + ' · leader ' + (L.leaders[lap] || '–'); },
+        row: function (s, p) {
+          var g = p && p.g != null ? (p.g === 0 ? 'Leading' : '+' + p.g.toFixed(1) + 's') : '–';
+          return { color: s.color, value: g, label: s.id, note: p && p.c ? p.c + ', ' + ageTxt(p.a) : '', sortv: p && p.g != null ? p.g : 9e9 };
+        },
+        sort: function (a, b) { return a.sortv - b.sortv; }
+      });
+      var rows = [];
+      for (var l = 1; l <= L.total; l++) rows.push([String(l), L.leaders[l] || '–'].concat(L.series.map(function (s) {
+        var p = s.pts.filter(function (q) { return q.l === l; })[0];
+        return p && p.g != null ? p.g.toFixed(1) : '–';
+      })));
+      dataTable(wrap, 'Gap to the leader in seconds at the end of each lap', ['Lap', 'Leader'].concat(L.series.map(function (s) { return s.id; })), rows);
+      return redraw;
+    },
+    'race-tyre-strategy': function (wrap) { return stints(wrap, DATA.raceStints, 'Race tyre strategy for every driver, in finishing order'); },
+    'sprint-tyre-strategy': function (wrap) { return stints(wrap, DATA.sprintStints, 'Sprint tyre strategy for every driver, in finishing order'); },
+    'race-telemetry': function (wrap) { return telBuild(wrap, DATA.telemetry, function (s) { return s.id + ' · ' + s.time + ' on Lap ' + s.lap + ' (' + s.tyre + ')'; }); },
+    'quali-telemetry': function (wrap) {
+      if (!DATA.qualiTelemetry) throw new Error('no qualifying telemetry yet');
+      return telBuild(wrap, DATA.qualiTelemetry, function (s) { return s.id + ' · ' + s.time + ' (' + s.tyre + ')'; });
+    }
+  };
+  function telBuild(wrap, T, lbl) {
+    {
+      legend(wrap, T.series.map(function (s) { return { color: s.color, label: lbl(s) }; }));
+      var redraw = telemetryChart(wrap, T);
+      var A = T.data[T.series[0].id], rows = [];
+      for (var i = 0; i < A.d.length; i += 4) rows.push([String(A.d[i])].concat(T.series.map(function (s) {
+        var D = T.data[s.id], lo = 0, best = 0, bd = 1e9;
+        for (var k = 0; k < D.d.length; k++) { var dd = Math.abs(D.d[k] - A.d[i]); if (dd < bd) { bd = dd; best = k; } }
+        return D.s[best] + ' km/h, ' + D.th[best] + '%';
+      })));
+      dataTable(wrap, 'Speed and throttle every few metres (sampled about four times a second)', ['Distance (m)'].concat(T.series.map(function (s) { return s.id; })), rows);
+      return redraw;
+    }
+  }
+  function stints(wrap, D, label) {
+    var used = {};
+    D.rows.forEach(function (r) { r.stints.forEach(function (s) { used[s.c] = 1; }); });
+    legend(wrap, ['Soft', 'Medium', 'Hard', 'Intermediate', 'Wet'].filter(function (c) { return used[c]; }).map(function (c) { return { color: COMPOUND[c], label: c }; }), 'box');
+    var redraw = stintChart(wrap, D, label);
+    dataTable(wrap, label, ['Driver', 'Result', 'Stints (compound, laps)', 'Pit stops (lap, pit lane time)'], D.rows.map(function (r) {
+      return [r.id, r.pos,
+        r.stints.map(function (s) { return s.c + ' ' + s.a + '–' + s.b; }).join(', '),
+        r.pits.map(function (p) { return 'Lap ' + p.lap + ', ' + p.lane.toFixed(3) + 's'; }).join('; ') || '–'];
+    }));
+    return redraw;
+  }
+
+  document.querySelectorAll('figure.chart-figure[data-chart]').forEach(function (fig) {
+    var build = builders[fig.getAttribute('data-chart')];
+    if (!build) return;
+    try {
+      var wrap = document.createElement('div');
+      wrap.className = 'ichart';
+      fig.insertBefore(wrap, fig.querySelector('figcaption'));
+      var redraw = build(wrap);
+      fig.classList.add('is-live');
+      var lastW = wrap.clientWidth;
+      if (window.ResizeObserver) new ResizeObserver(function () {
+        if (Math.abs(wrap.clientWidth - lastW) > 4) { lastW = wrap.clientWidth; redraw(); }
+      }).observe(wrap);
+    } catch (e) { if (wrap && wrap.parentNode) wrap.remove(); fig.classList.remove('is-live'); }
+  });
+  document.addEventListener('pointerdown', function (e) {
+    if (!e.target.closest || !e.target.closest('.ichart-plot')) document.querySelectorAll('.ichart-tip').forEach(function (t) { t.hidden = true; });
+  });
+})();
+
+  </script>
+</body>
+</html>
