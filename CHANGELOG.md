@@ -4,6 +4,15 @@ A summary of significant changes to Apex by Milla, listed newest first.
 
 ---
 
+## v3.2 — November 2026 (Hungarian GP)
+
+- Added the Hungarian GP race report (Round 11), the third Stage 3 post, with Tokaji Violet (#6A3FA0) as its signature colour and the Hungaroring track outline in the hero
+- Interactive charts for the race: lap times, gap to leader, and tyre strategy, plus qualifying telemetry comparing Norris with Piastri on the new McLaren upgrade
+- New Apex Index terms: Wait Revs, Anti-stall, and Blue Flag Lights
+- Homepage: Hungarian GP card in the Stage 3 group, season progress updated to 11 of 22, and Hungary added to the Races dropdown on every page
+
+---
+
 ## v3.1 — November 2026 (Belgian GP)
 
 - Added the Belgian GP race report (Round 10), the second Stage 3 post, with Spa Rain Slate (#5E7A96) as its signature colour and the Spa-Francorchamps track outline in the hero
