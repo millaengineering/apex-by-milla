@@ -1327,5 +1327,37 @@ img { max-width: 100%; display: block; }
       window.addEventListener('resize', function () { closeAll(null); });
     })();
   </script>
+  <script>
+    /* Reading tracker (Stage 3): remembers how far this visitor has read this report,
+       in their own browser only (localStorage, nothing is sent anywhere). The homepage
+       race cards read it to show "Finished" or "x% read". Same end point as the progress bar. */
+    (function () {
+      var slug = (location.pathname.split('/').pop() || '').replace(/\.html$/, '');
+      if (!slug || slug === 'NEW-RACE-TEMPLATE') return;
+      var KEY = 'apexReading', best = 0, timer = null;
+      function load() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+      function pct() {
+        var endEl = document.querySelector('.sources-section');
+        var end = endEl ? endEl.getBoundingClientRect().top + window.scrollY : document.documentElement.scrollHeight;
+        var target = end - window.innerHeight;
+        var p = target > 0 ? window.scrollY / target : 1;
+        return Math.round(Math.max(0, Math.min(1, p)) * 100);
+      }
+      function save() {
+        timer = null;
+        var p = pct();
+        if (p <= best) return;
+        best = p;
+        var all = load();
+        if (!all[slug] || p > all[slug]) {
+          all[slug] = p;
+          try { localStorage.setItem(KEY, JSON.stringify(all)); } catch (e) {}
+        }
+      }
+      best = load()[slug] || 0;
+      window.addEventListener('scroll', function () { if (!timer) timer = setTimeout(save, 400); }, { passive: true });
+      window.addEventListener('pagehide', save);
+    })();
+  </script>
 </body>
 </html>
