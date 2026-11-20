@@ -325,6 +325,11 @@ img { max-width: 100%; display: block; }
   font-weight: 400; letter-spacing: 0; text-transform: none;
 }
 .apex-tip.open > .apex-tip-box { display: block; }
+/* Invisible bridge over the gap between the term and the box, so moving the
+   mouse down onto the box (and its Apex Index link) does not close it */
+.apex-tip-box::before { content: ""; position: absolute; left: 0; right: 0; top: -0.7rem; height: 0.7rem; }
+.apex-tip.tip-up > .apex-tip-box { top: auto; bottom: calc(100% + 0.55rem); }
+.apex-tip.tip-up > .apex-tip-box::before { top: auto; bottom: -0.7rem; }
 /* flipped when the box would run off the right edge */
 .apex-tip.tip-flip > .apex-tip-box { left: auto; right: 0; }
 .apex-tip-term {
@@ -626,7 +631,7 @@ img { max-width: 100%; display: block; }
 .chart-figure { margin: 2rem 0; }
 .chart-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--border); border-radius: 6px; }
 .chart-figure figcaption { color: var(--muted); font-size: 0.8rem; margin-top: 0.6rem; line-height: 1.5; }
-.blog-content p .apex-tip { border-bottom: 1px dotted var(--muted); }
+.blog-content p .apex-tip { border-bottom: 1px dotted var(--muted); white-space: nowrap; } /* a term never splits across two lines, so its box always sits right under it */
 
 /* Interactive charts (Stage 3). The PNG stays as the fallback if the script cannot run. */
 .chart-figure.is-live > img { display: none; }
@@ -740,7 +745,7 @@ img { max-width: 100%; display: block; }
         <span>📅 19 July 2026</span>
         <span>📍 Circuit de Spa-Francorchamps</span>
         <span>🏁 Round 10 of 22</span>
-        <span>⏱️ 22 min read</span>
+        <span>⏱️ 23 min read</span>
         <span>✍️ Written by Milla</span>
       </div>
     </div>
@@ -769,16 +774,16 @@ img { max-width: 100%; display: block; }
       Spa-Francorchamps is the longest lap on the calendar, and for almost all of its 44 laps Kimi Antonelli and Charles Leclerc were separated by only a few seconds. Antonelli won the 2026 Belgian Grand Prix from pole by 1.952s, his sixth win of the season and his first since Monaco, after Ferrari used a <span class="apex-tip" tabindex="0" role="button">Virtual Safety Car<span class="apex-tip-box" role="tooltip"><span class="apex-tip-term">Virtual Safety Car (VSC)</span><span class="apex-tip-def">A neutralisation where every driver holds a set delta time instead of following a physical Safety Car.</span><a class="apex-tip-link" href="../apex-index.html#vsc">→ Apex Index</a></span></span> to put Leclerc in front for the middle part of the race.
     </p>
     <p>
-      Max Verstappen started second and made the best launch, leading Antonelli through the famous Eau Rouge and Raidillon sequence at Turns 2 to 4. However, Antonelli took the lead back on the Kemmel Straight. Behind them, George Russell, who started third, lost boost out of Turn 1, which let Leclerc and Lewis Hamilton past. Russell tried to come back at Hamilton around the outside, and the contact at Turn 6 put him in the gravel and out of the race on the opening lap. Hamilton was given a <span class="apex-tip" tabindex="0" role="button">five-second time penalty<span class="apex-tip-box" role="tooltip"><span class="apex-tip-term">Time Penalty</span><span class="apex-tip-def">Seconds added to a driver's race time by the stewards, served at a pit stop or added at the end.</span><a class="apex-tip-link" href="../apex-index.html#time-penalty">→ Apex Index</a></span></span> for causing the collision.
+      Max Verstappen got the best launch from second and led through the famous Eau Rouge and Raidillon sequence at Turns 2 to 4, but his lead only lasted as far as the Kemmel Straight, where Antonelli went back past him. George Russell's start was much worse. His Mercedes lost boost out of Turn 1, and without full deployment he had nothing to defend with, so Leclerc and Lewis Hamilton both went by. Russell then tried to fight back around the outside of Hamilton, but the two touched at Turn 6, and his race was over in the gravel before he had completed a single lap. Hamilton was given a <span class="apex-tip" tabindex="0" role="button">five-second time penalty<span class="apex-tip-box" role="tooltip"><span class="apex-tip-term">Time Penalty</span><span class="apex-tip-def">Seconds added to a driver's race time by the stewards, served at a pit stop or added at the end.</span><a class="apex-tip-link" href="../apex-index.html#time-penalty">→ Apex Index</a></span></span> for causing the collision.
     </p>
     <p>
       The <span class="apex-tip" tabindex="0" role="button">Safety Car<span class="apex-tip-box" role="tooltip"><span class="apex-tip-term">Safety Car</span><span class="apex-tip-def">A road car that leads the field at a controlled speed while a hazard is cleared. Overtaking is banned.</span><a class="apex-tip-link" href="../apex-index.html#safety-car">→ Apex Index</a></span></span> came out on Lap 1 and stayed out until the end of Lap 4. Several cars used it to pit, including Isack Hadjar, who stopped on Laps 1 and 2 to cycle through his compounds, and both Haas drivers, who had picked up punctures in the opening lap. Once racing resumed on Lap 5, Verstappen passed Leclerc for second on Lap 6, and two laps later Leclerc and Oscar Piastri made contact at Turn 5, which damaged the floor of Piastri's McLaren. The stewards took no further action, and Hamilton passed Piastri for fourth on Lap 9.
     </p>
     <p>
-      The race was decided in the pit stop phase. Verstappen pitted from second on Lap 17, and a very short Virtual Safety Car followed on Lap 18, lasting only 33 seconds. Mercedes brought Antonelli in on Lap 18 to cover Verstappen, but his stop came after the VSC had already ended. A second VSC was then called on Lap 20, and Ferrari pitted both cars under it, which brought Leclerc out ahead of Antonelli. Hamilton served his penalty during the same stop and was released into the path of a mechanic, who was unhurt, and Ferrari were fined €30,000 after the race. Antonelli summed it up afterwards, saying, "We lost first place with a VSC but then we managed to make our way back."
+      In the end, the pit stops decided the race. Verstappen came in from second on Lap 17, and a lap later a Virtual Safety Car was called, although it lasted just 33 seconds. Mercedes reacted by pitting Antonelli on Lap 18 to cover Verstappen, but by the time he reached the pit lane the VSC was already over, so he paid the full cost of a green-flag stop. Ferrari were luckier. A second VSC came out on Lap 20, both Ferraris pitted under it, and Leclerc rejoined in front of Antonelli. Hamilton served his penalty during the same stop and was released into the path of a mechanic, who was unhurt, and Ferrari were fined €30,000 after the race. Antonelli summed it up afterwards, saying, "We lost first place with a VSC but then we managed to make our way back."
     </p>
     <p>
-      Lando Norris, who started thirteenth on the Hard tyre, led Laps 21 and 22 before Leclerc passed him at the end of the Kemmel Straight on Lap 23. Antonelli then passed Norris on Lap 26 and closed the gap to Leclerc to around half a second by Lap 33, before taking the lead back on Lap 34. From there he pulled away to win by 1.952s, with Verstappen third, 11.586s behind. Hamilton recovered from his penalty and the damage to his car to pass Piastri for fourth on Lap 40, and Hadjar finished sixth after starting twenty-first, just ahead of Norris.
+      For two laps the race had an unexpected leader. Lando Norris, who started thirteenth and was still on his first set of Hards, led Laps 21 and 22 before Leclerc went past him at the end of the Kemmel Straight on Lap 23. Antonelli cleared Norris on Lap 26 and spent the next seven laps chasing Leclerc down, cutting a gap of around three seconds to half a second by Lap 33. He took the lead back on Lap 34 and controlled the gap from there, winning by 1.952s. Verstappen finished third, 11.586s behind, while Hamilton recovered from his penalty and the damage to his car to pass Piastri for fourth on Lap 40. Further back, Hadjar finished sixth after starting twenty-first, just ahead of Norris.
     </p>
 
 
@@ -790,7 +795,7 @@ img { max-width: 100%; display: block; }
 
     <h3>FP1</h3>
     <p>
-      Verstappen topped the first session with a 1:47.070, 0.145s ahead of Hamilton and 0.207s ahead of Leclerc, with Hadjar fourth to put both Red Bulls in the top four. Notably, Red Bull ran Verstappen with an older specification rear wing after his crashes in Austria and Silverstone. Hadjar was the only driver on the Soft in the opening stage of the session, while Norris ran <span class="apex-tip" tabindex="0" role="button">aero rakes<span class="apex-tip-box" role="tooltip"><span class="apex-tip-term">Aero Rake</span><span class="apex-tip-def">A frame of pressure sensors fitted to the car in practice to measure the airflow and check it against the wind tunnel and CFD.</span><a class="apex-tip-link" href="../apex-index.html#aero-rake">→ Apex Index</a></span></span> early on to collect data rather than setting a representative time.
+      Red Bull set the early pace at Spa. Verstappen topped the first session with a 1:47.070, 0.145s ahead of Hamilton and 0.207s ahead of Leclerc, with Hadjar fourth to put both Red Bulls in the top four. That pace came on an older specification rear wing, which Red Bull went back to after Verstappen's crashes in Austria and Silverstone. The teams were running very different programmes. Hadjar was the only driver to use the Soft in the opening stage, and Norris spent his early laps collecting data with <span class="apex-tip" tabindex="0" role="button">aero rakes<span class="apex-tip-box" role="tooltip"><span class="apex-tip-term">Aero Rake</span><span class="apex-tip-def">A frame of pressure sensors fitted to the car in practice to measure the airflow and check it against the wind tunnel and CFD.</span><a class="apex-tip-link" href="../apex-index.html#aero-rake">→ Apex Index</a></span></span> rather than chasing a lap time.
     </p>
     <p>
       Mercedes were further back, with Antonelli sixth, 0.533s off the pace, and Russell eighth, after both drivers switched to long runs. Piastri reported a hydraulic pressure issue late in the session and was told to drive slowly back to the pits. Jak Crawford drove Fernando Alonso's Aston Martin in the session and finished twenty-second.
@@ -804,12 +809,12 @@ img { max-width: 100%; display: block; }
       The session was stopped twice. The first red flag came out approaching the 15-minute mark to clear gravel from the track after Verstappen dipped a wheel into the gravel at Turn 14. The second came in the final 15 minutes, when Pierre Gasly lost the rear of his Alpine on the exit of Turn 13 and hit the barrier, which tore the rear wing off the car. Alpine's Steve Nielsen said afterwards, "Pierre is fine, the car is not fine," and added that the team had already planned to change the power unit on that car overnight.
     </p>
     <p>
-      Piastri lost 20 minutes at the start of the session while McLaren repaired a hydraulic leak, which limited him to 11 laps. Russell was only eighth, 1.285s off Antonelli, and his radio message, "the rears felt too cold, but not 1.2s cold," suggested the gap was not only down to tyre temperature.
+      McLaren had a frustrating afternoon with Piastri, who missed the first 20 minutes while the team repaired a hydraulic leak and only managed 11 laps. Russell's problem was harder to explain. He was eighth, 1.285s off his teammate, and when he radioed that "the rears felt too cold, but not 1.2s cold," it suggested that tyre temperature was not the whole story.
     </p>
 
     <h3>FP3</h3>
     <p>
-      Antonelli was fastest again in FP3 with a 1:45.990, 0.139s ahead of Norris and 0.148s ahead of Verstappen, while Russell was fourth, 0.367s back. Russell lost six tenths in the first sector alone and reported a lack of straight-line speed, which was the first sign of the problem that would affect him for the rest of the weekend.
+      FP3 followed the same pattern, with Antonelli on top again with a 1:45.990. Norris and Verstappen were only 0.139s and 0.148s behind him, but Russell, in fourth, was 0.367s back, and at one stage of the session he lost six tenths in the first sector alone. He reported a lack of straight-line speed, which turned out to be the first sign of the problem that would affect him for the rest of the weekend.
     </p>
     <p>
       Hamilton set the fifth-fastest time, but he lost the rear through the left-hander at Turn 13 on his final lap, the same corner where Gasly crashed in FP2, and hit the barrier. Ferrari had to rebuild the suspension, the floor, and the rear wing on his car before qualifying. Hadjar also had a difficult session, stopping at the pit lane exit and then aborting a flying lap after reporting, "nothing is ready, everything is too cold."
@@ -830,7 +835,7 @@ img { max-width: 100%; display: block; }
       Q3 was also briefly stopped to clear gravel from the track, and its start had already been delayed after Nico Hulkenberg stopped on track with a hydraulic problem as Q2 ended, following gearbox shift issues from early in the session. Further down the order, Arvid Lindblad qualified eighth with the Racing Bulls upgrade package, and Gabriel Bortoleto was ninth for Audi. Liam Lawson missed Q3 by 0.038s in eleventh, and Alexander Albon missed Q2 by only 0.007s.
     </p>
     <p>
-      Five drivers took <span class="apex-tip" tabindex="0" role="button">grid penalties<span class="apex-tip-box" role="tooltip"><span class="apex-tip-term">Grid Penalty</span><span class="apex-tip-def">Places a driver drops on the starting grid, most often for using more power unit elements than the season allocation allows.</span><a class="apex-tip-link" href="../apex-index.html#grid-penalty">→ Apex Index</a></span></span> for using additional power unit elements, which changed the order significantly. Norris dropped ten places from third to thirteenth, Carlos Sainz from fifteenth to nineteenth, and Lance Stroll from twenty-second to twentieth, while Hadjar and Alonso were moved to the back, starting twenty-first and twenty-second. Because of this, Russell moved up to third, Leclerc to fourth, and Hamilton to fifth, with Lindblad moving up to seventh, Bortoleto to eighth, and Lawson to ninth.
+      The starting grid looked very different from the qualifying order, because five drivers took <span class="apex-tip" tabindex="0" role="button">grid penalties<span class="apex-tip-box" role="tooltip"><span class="apex-tip-term">Grid Penalty</span><span class="apex-tip-def">Places a driver drops on the starting grid, most often for using more power unit elements than the season allocation allows.</span><a class="apex-tip-link" href="../apex-index.html#grid-penalty">→ Apex Index</a></span></span> for using additional power unit elements. Norris lost the most from a strong session, dropping ten places from third to thirteenth, while Carlos Sainz went from fifteenth to nineteenth and Lance Stroll from twenty-second to twentieth. Hadjar and Alonso were sent to the back, starting twenty-first and twenty-second. Because of this, Russell moved up to third, Leclerc to fourth, and Hamilton to fifth, with Lindblad, Bortoleto, and Lawson starting seventh, eighth, and ninth.
     </p>
 
 
@@ -899,7 +904,7 @@ img { max-width: 100%; display: block; }
          ───────────────────────────────────────────── -->
     <h2>Pace &amp; Performance</h2>
     <p>
-      The fastest lap of the race went to Norris, who set a 1:48.890 on the final lap, on Mediums that were 14 laps old while the cars around him were on Hards that were more than 20 laps old. Antonelli's best was a 1:49.098 on Lap 41, and Hadjar was third fastest with a 1:49.298, also on the final lap. Leclerc's best, a 1:49.333, came on Lap 23, his third lap on new Hards.
+      The lap times show why Antonelli was able to win the race back on track. The fastest lap of the race went to Norris, who set a 1:48.890 on the final lap, on Mediums that were 14 laps old while the cars around him were on Hards that were more than 20 laps old. Antonelli's best was a 1:49.098 on Lap 41, and Hadjar was third fastest with a 1:49.298, also on the final lap. Leclerc's best, a 1:49.333, came on Lap 23, his third lap on new Hards.
     </p>
 
     <div class="pace-table-wrapper">
@@ -1090,7 +1095,7 @@ img { max-width: 100%; display: block; }
       Antonelli's sixth win of the season extends his championship lead to 45 points over Hamilton, with Russell 50 points behind. For Russell, Spa was another weekend without points, and he said afterwards, "It's one thing after another, after another, after another."
     </p>
     <p>
-      Straight-line speed and energy deployment decided more of this weekend than tyres did. Mercedes still won, but they also reported a deployment loss they could not explain, and Andrew Shovlin admitted, "Despite winning here, we are still finding issues with these regulations." Red Bull were down on straight-line speed all weekend but still finished on the podium, and Mekies said, "Kimi was probably beyond us today, but behind him Max was right there." The result was Red Bull's 300th podium and Verstappen's 130th.
+      Straight-line speed and energy deployment decided more of this weekend than tyres did. Mercedes still won, but even they could not explain their deployment loss. As Andrew Shovlin admitted, "Despite winning here, we are still finding issues with these regulations." Red Bull were down on straight-line speed all weekend but still finished on the podium, and Mekies said, "Kimi was probably beyond us today, but behind him Max was right there." The result was Red Bull's 300th podium and Verstappen's 130th.
     </p>
     <p>
       Ferrari's result came from strategy as much as pace, with the VSC stop keeping Leclerc ahead of Antonelli until Lap 34, and Hamilton recovering to fourth despite his crash in FP3, the damage from Lap 1, and his penalty. However, the <span class="apex-tip" tabindex="0" role="button">unsafe release<span class="apex-tip-box" role="tooltip"><span class="apex-tip-term">Unsafe Release</span><span class="apex-tip-def">When a team sends a car out of its pit box in a way that endangers people or other cars in the pit lane.</span><a class="apex-tip-link" href="../apex-index.html#unsafe-release">→ Apex Index</a></span></span> cost the team a €30,000 fine, €10,000 of which is suspended, and the stewards found that Hamilton himself was not at fault.
@@ -1123,7 +1128,7 @@ img { max-width: 100%; display: block; }
       Formula 1 goes straight from the longest lap of the season to one of the slowest, with the Hungarian Grand Prix, Round 11, the following weekend. The Hungaroring has short straights and far fewer long full-throttle sections, so the deployment problems that affected Mercedes and Red Bull at Spa should matter less, and downforce and traction will matter more.
     </p>
     <p>
-      Hungary is also where McLaren's first redirected upgrades are due, after both Norris and Piastri showed strong pace at Spa before their problems. Racing Bulls will also bring Lindblad's upgrade to Lawson's car, which will show whether the package works on a slower circuit. At the front, Antonelli goes to Hungary with a 45-point lead, and Mercedes will need to find the cause of Russell's deployment loss before the gap becomes too big to close.
+      Hungary is also where McLaren's first redirected upgrades are due, after both Norris and Piastri showed strong pace at Spa before their problems. Racing Bulls will also bring Lindblad's upgrade to Lawson's car, which will show whether the package works on a slower circuit. At the front, Antonelli goes to Hungary with a 45-point lead over Hamilton. Ferrari showed at Spa that they can beat Mercedes on strategy, but to close that gap they will need to beat them on pace as well. For Russell, the priority is simpler. Mercedes need to find the cause of his deployment loss quickly, because he is already 50 points behind his teammate, and another weekend like Spa could take him out of the championship fight altogether.
     </p>
 
     <!-- ===== SOURCES SECTION ===== -->
@@ -1290,6 +1295,7 @@ img { max-width: 100%; display: block; }
         closeAll(tip);
         tip.classList.add('open');
         tip.classList.remove('tip-flip');
+        tip.classList.remove('tip-up');
         var box = tip.querySelector('.apex-tip-box');
         if (!box) return;
         /* Keep the whole box on screen. Measure it at its default spot, then
@@ -1300,10 +1306,26 @@ img { max-width: 100%; display: block; }
         if (r.right > vw - 8) shift = (vw - 8) - r.right;
         if (r.left + shift < 8) shift = 8 - r.left;
         if (shift) box.style.left = Math.round(shift) + 'px';
+        /* Open upwards instead when the box would run off the bottom of the
+           screen and there is room above (64px clears the navbar). */
+        var vh = document.documentElement.clientHeight || window.innerHeight;
+        if (r.bottom > vh - 8 && tip.getBoundingClientRect().top - r.height - 16 > 64) tip.classList.add('tip-up');
       }
       Array.prototype.forEach.call(tips, function (tip) {
-        tip.addEventListener('mouseenter', function () { if (hoverCapable.matches) open(tip, true); });
-        tip.addEventListener('mouseleave', function () { if (hoverCapable.matches) open(tip, false); });
+        /* Close after a short delay rather than straight away, so the mouse can
+           cross the gap down to the box and reach the Apex Index link
+           (the same fix as the Races dropdown). */
+        var closeTimer;
+        tip.addEventListener('mouseenter', function () {
+          if (!hoverCapable.matches) return;
+          clearTimeout(closeTimer);
+          if (!tip.classList.contains('open')) open(tip, true);
+        });
+        tip.addEventListener('mouseleave', function () {
+          if (!hoverCapable.matches) return;
+          clearTimeout(closeTimer);
+          closeTimer = setTimeout(function () { open(tip, false); }, 300);
+        });
         /* A tap fires pointerdown, then focus, then click. Without recording the
            state up front, focus opens the box and click immediately shuts it,
            so tapping appears to do nothing. */

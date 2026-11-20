@@ -306,6 +306,11 @@ img { max-width: 100%; display: block; }
   font-weight: 400; letter-spacing: 0; text-transform: none;
 }
 .apex-tip.open > .apex-tip-box { display: block; }
+/* Invisible bridge over the gap between the term and the box, so moving the
+   mouse down onto the box (and its Apex Index link) does not close it */
+.apex-tip-box::before { content: ""; position: absolute; left: 0; right: 0; top: -0.7rem; height: 0.7rem; }
+.apex-tip.tip-up > .apex-tip-box { top: auto; bottom: calc(100% + 0.55rem); }
+.apex-tip.tip-up > .apex-tip-box::before { top: auto; bottom: -0.7rem; }
 /* flipped when the box would run off the right edge */
 .apex-tip.tip-flip > .apex-tip-box { left: auto; right: 0; }
 .apex-tip-term {
@@ -1270,6 +1275,7 @@ img { max-width: 100%; display: block; }
         closeAll(tip);
         tip.classList.add('open');
         tip.classList.remove('tip-flip');
+        tip.classList.remove('tip-up');
         var box = tip.querySelector('.apex-tip-box');
         if (!box) return;
         /* Keep the whole box on screen. Measure it at its default spot, then
@@ -1280,10 +1286,26 @@ img { max-width: 100%; display: block; }
         if (r.right > vw - 8) shift = (vw - 8) - r.right;
         if (r.left + shift < 8) shift = 8 - r.left;
         if (shift) box.style.left = Math.round(shift) + 'px';
+        /* Open upwards instead when the box would run off the bottom of the
+           screen and there is room above (64px clears the navbar). */
+        var vh = document.documentElement.clientHeight || window.innerHeight;
+        if (r.bottom > vh - 8 && tip.getBoundingClientRect().top - r.height - 16 > 64) tip.classList.add('tip-up');
       }
       Array.prototype.forEach.call(tips, function (tip) {
-        tip.addEventListener('mouseenter', function () { if (hoverCapable.matches) open(tip, true); });
-        tip.addEventListener('mouseleave', function () { if (hoverCapable.matches) open(tip, false); });
+        /* Close after a short delay rather than straight away, so the mouse can
+           cross the gap down to the box and reach the Apex Index link
+           (the same fix as the Races dropdown). */
+        var closeTimer;
+        tip.addEventListener('mouseenter', function () {
+          if (!hoverCapable.matches) return;
+          clearTimeout(closeTimer);
+          if (!tip.classList.contains('open')) open(tip, true);
+        });
+        tip.addEventListener('mouseleave', function () {
+          if (!hoverCapable.matches) return;
+          clearTimeout(closeTimer);
+          closeTimer = setTimeout(function () { open(tip, false); }, 300);
+        });
         /* A tap fires pointerdown, then focus, then click. Without recording the
            state up front, focus opens the box and click immediately shuts it,
            so tapping appears to do nothing. */
