@@ -7,10 +7,10 @@ A summary of significant changes to Apex by Milla, listed newest first.
 ## v3.2 — November 2026 (Hungarian GP)
 
 - Added the Hungarian GP race report (Round 11), the third Stage 3 post, with Tokaji Violet (#6A3FA0) as its signature colour and the Hungaroring track outline in the hero
-- Interactive charts for the race: lap times, gap to leader, and tyre strategy, plus qualifying telemetry comparing Norris with Piastri on the new McLaren upgrade
+- Interactive charts for the race: lap times, gap to leader, and tyre strategy, plus qualifying telemetry for the pole fight between Norris and Hamilton and for Norris and Piastri on the new McLaren upgrade
 - New Apex Index terms: Wait Revs, Anti-stall, and Blue Flag Lights
 - Homepage: Hungarian GP card in the Stage 3 group, season progress updated to 11 of 22, and Hungary added to the Races dropdown on every page
-- Added a reading tracker: each race card on the homepage now shows "Finished" or how much of the report you have read, remembered in your own browser only (nothing is sent anywhere)
+- Added a reading tracker: each race card on the homepage now shows "Finished" or how much of the report you have read, remembered in your own browser only (nothing is sent anywhere), and a small "Report finished" message pops up the first time you reach the end of a report
 
 ---
 
