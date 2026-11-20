@@ -681,6 +681,21 @@ img {
   justify-content: space-between;
 }
 
+/* ── Reading tracker pill (Stage 3). Filled in by the script at the end of the page. ── */
+.card-read-state {
+  display: inline-block;
+  margin-left: 0.6rem;
+  padding: 0.12rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+.card-read-state.is-read { color: var(--text); background: rgba(240,240,240,0.1); border: 1px solid rgba(240,240,240,0.25); }
+.card-read-state.is-partial { color: var(--muted); border: 1px solid var(--border); }
+
 .card-date {
   font-size: 0.75rem;
   color: var(--muted);
@@ -2304,6 +2319,26 @@ img {
       });
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') setOpen(false);
+      });
+    })();
+  </script>
+  <script>
+    /* Reading tracker (Stage 3): shows "Finished" or "x% read" on each race card, from what
+       this visitor has read in this browser (saved by each race page, localStorage only). */
+    (function () {
+      var all;
+      try { all = JSON.parse(localStorage.getItem('apexReading')) || {}; } catch (e) { return; }
+      document.querySelectorAll('a.race-card[href^="races/"]').forEach(function (card) {
+        var slug = card.getAttribute('href').replace('races/', '').replace('.html', '');
+        var p = all[slug];
+        if (!p || p < 5) return;
+        var date = card.querySelector('.card-date');
+        if (!date) return;
+        var pill = document.createElement('span');
+        pill.className = 'card-read-state ' + (p >= 95 ? 'is-read' : 'is-partial');
+        pill.textContent = p >= 95 ? '✓ Finished' : p + '% read';
+        pill.setAttribute('aria-label', p >= 95 ? 'You have read this report' : 'You have read ' + p + '% of this report');
+        date.appendChild(pill);
       });
     })();
   </script>
